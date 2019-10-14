@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tile
+namespace State
 {
-    public Location[] locations;
+    public class Tile
+    {
+        public Location[] locations;
 
+    }
 }

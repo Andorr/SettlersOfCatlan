@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Location 
+namespace State
 {
-    public string id;
-    public Vector3 position;
+    [System.Serializable]
+    public class Location 
+    {
+        public string id;
+        public Vector3 position;
+    }
 }

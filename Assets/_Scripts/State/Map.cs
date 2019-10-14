@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Map 
+namespace State
 {
-    public Player[] players;
-    public Location[] locations;
-    public Tile[] tiles;
-    public Path[] paths;
+    public class Map 
+    {
+        public Player[] players;
+        public Location[] locations;
+        public Tile[] tiles;
+        public Path[] paths;
+    }
 }

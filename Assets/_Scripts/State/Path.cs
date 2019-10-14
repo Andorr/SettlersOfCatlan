@@ -3,7 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Path
+namespace State
 {
-    public Tuple<Location, Location> between; 
+    public class Path
+    {
+        public Tuple<Location, Location> between; 
+    }
+
 }
