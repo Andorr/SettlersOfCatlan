@@ -6,4 +6,5 @@ using UnityEngine;
 public class Location 
 {
     public string id;
+    public Vector3 position;
 }
