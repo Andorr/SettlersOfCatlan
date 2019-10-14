@@ -1,9 +1,3 @@
-[merge]
-	tool = unityyamlmerge
-
-[mergetool "unityyamlmerge"]
-	trustExitCode = false
-	keepTemporaries = true
-	keepBackup = false
-	path = '/Applications/Unity/Unity.app/Contents/Tools/UnityYAMLMerge'
-	cmd = '/Applications/Unity/Unity.app/Contents/Tools/UnityYAMLMerge' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
+[include]
+    path = ./.gitignore-windows
+    path = ./.gitignore-macos
