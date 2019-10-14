@@ -1,0 +1,3 @@
+[include]
+path = ./.gitignore-windows
+path = ./.gitignore-macos
