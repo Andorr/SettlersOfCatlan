@@ -58,5 +58,11 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+#Mac_OS
+.DS_Store
+*/.DS_Store
+*/*/.DS_Store
+
+
 
 .gitconfig
