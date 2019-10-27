@@ -7,7 +7,7 @@ namespace State
     [System.Serializable]
     public class Location 
     {
-        public string id;
+        public int id;
         public Vector3 position;
     }
 }

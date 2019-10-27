@@ -6,6 +6,14 @@ using System;
 
 public static class MapUtil
 {
+    public enum MapShape {
+        HexagonalLattice = 0,
+    }
+
+    public enum TileGeneration {
+        Random = 0,
+    }
+
     public static Vector3[] HexagonalLattice(Vector2 origin, int size = 5, float radius = 1, float offset = 0)
     {
         if(size%2 == 0) {
@@ -46,4 +54,129 @@ public static class MapUtil
         }
         return points;
     }
+
+    public static Map GenerateMap(int size, float radius, MapShape shape, TileGeneration generation)
+    {
+        Dictionary<string, Location> locations = new Dictionary<string, Location>();
+        Dictionary<(int, int), Path> paths = new Dictionary<(int, int), Path>();
+        List<Tile> tiles = new List<Tile>();
+        int currentLocationId = 0;
+        int currentPathId = 0;
+        int currentTileId = 0;
+
+        // Generate tiles with given map shape
+        Vector3[] tileLocations = GenerateTilesOfShape(shape, size, radius);
+
+        // Generate all tiles, locations, and paths 
+        foreach(Vector3 l in tileLocations)
+        {
+            // Initialize tile
+            Tile tile = new Tile() {
+                id = currentTileId,
+                position = l,
+            };
+            tiles.Add(tile);
+            currentTileId++;
+            
+            Vector3[] surroundingPoints = MapUtil.HexagonFromPoint(new Vector2(l.x, l.z), radius);
+            tile.locations = new Location[surroundingPoints.Length];
+            Location startLocation = null;
+            Location prevLocation = null;
+            for(int i = 0; i < surroundingPoints.Length; i++)
+            {
+                Vector3 point = surroundingPoints[i];
+                Location location = null;
+                String pointKey = point.x.ToString("0.00000") + "_" + point.z.ToString("0.00000");
+                if(!locations.ContainsKey(pointKey)) {
+                    // Locatino does not already exist, add it to the dictionary
+                    location = new Location() {
+                        id = currentLocationId,
+                        position = point,
+                    };
+                    locations.Add(pointKey, location);
+                    currentLocationId++;
+                } else {
+                    // Location already exist, extract it from the dictionary
+                    location = locations[pointKey];
+                }
+
+                // Check if the location is the first location of the tile
+                if(startLocation == null) {
+                    startLocation = location;
+                }
+                
+                // Add path between the previous location
+                if(prevLocation != null) {
+                    // Check if there already is an existing path between the locations
+                    if(!paths.ContainsKey((location.id, prevLocation.id)) && !paths.ContainsKey((prevLocation.id, location.id)))
+                    {
+                        paths.Add((location.id, prevLocation.id), new Path() {
+                            id = currentPathId,
+                            between = new Tuple<Location, Location>(location, prevLocation)
+                        });
+                        currentPathId++;
+                    }
+                }
+                prevLocation = location;
+                tile.locations[i] = location;
+            }
+
+            // Add a path between the previous location and the start location
+            // Check if there already is an existing path between the locations
+            if(!paths.ContainsKey((startLocation.id, prevLocation.id)) && !paths.ContainsKey((startLocation.id, prevLocation.id)))
+            {
+                paths.Add((startLocation.id, prevLocation.id), new Path() {
+                    id = currentPathId,
+                    between = new Tuple<Location, Location>(startLocation, prevLocation)
+                });
+                currentPathId++;
+            }
+            // Reset the locations
+            prevLocation = null;
+            startLocation = null;
+        }
+
+        // Generate map tile types
+        tiles = GenerateTileTypes(generation, tiles);
+
+        // Convert map attributes to 
+        Map map = new Map();
+        map.AddLocations(locations.Values);
+        map.AddTiles(tiles);
+        map.AddPaths(paths.Values);
+        return map;
+    }
+
+    public static Vector3[] GenerateTilesOfShape(MapShape shape, int size, float radius)
+    {
+        switch(shape)
+        {
+            case MapShape.HexagonalLattice: {
+                return MapUtil.HexagonalLattice(Vector3.zero, size, radius, 0f);
+            }
+
+            default: {
+                return null;
+            }
+        }
+    }
+
+    public static List<Tile> GenerateTileTypes(TileGeneration generation, List<Tile> tiles)
+    {
+        switch(generation) {
+            case TileGeneration.Random: {
+                System.Random r = new System.Random();
+                foreach(Tile t in tiles) {
+                    Array values = Enum.GetValues(typeof(TileType));
+                    t.type = (TileType)values.GetValue(r.Next(values.Length));
+                }
+                return tiles;
+            }
+
+            default: {
+                return tiles;
+            }
+        }
+    }
+
 }

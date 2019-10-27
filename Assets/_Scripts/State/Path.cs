@@ -7,6 +7,7 @@ namespace State
 {
     public class Path
     {
+        public int id;
         public Tuple<Location, Location> between; 
     }
 
