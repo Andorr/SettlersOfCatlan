@@ -75,7 +75,6 @@ public static class MapUtil
                 id = currentTileId,
                 position = l,
             };
-            tiles.Add(tile);
             currentTileId++;
             
             Vector3[] surroundingPoints = MapUtil.HexagonFromPoint(new Vector2(l.x, l.z), radius);
@@ -134,6 +133,8 @@ public static class MapUtil
             // Reset the locations
             prevLocation = null;
             startLocation = null;
+
+            tiles.Add(tile);
         }
 
         // Generate map tile types

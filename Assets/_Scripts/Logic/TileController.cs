@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class TileController : MonoBehaviour
 {
+    [SerializeField]
     public Tile tile;
     public Transform prefabHolder;
 
