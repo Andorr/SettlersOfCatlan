@@ -11,7 +11,10 @@ public class TileController : MonoBehaviour
     [Header("Prefabs")]
     public GameObject forestPrefab;
     public GameObject mountainPrefab;
-    public GameObject arablePrefab;
+    public GameObject fieldPrefab;
+    public GameObject pasturePrefab;
+    public GameObject hillPrefab;
+
 
     public void Initialize(Tile newTile, float radius) {
         tile = newTile;
@@ -31,8 +34,18 @@ public class TileController : MonoBehaviour
                 break;
             }
 
-            case TileType.Arable: {
-                envPrefab = GameObject.Instantiate(arablePrefab, transform.position, Quaternion.identity);
+            case TileType.Field: {
+                envPrefab = GameObject.Instantiate(fieldPrefab, transform.position, Quaternion.identity);
+                break;
+            }
+
+            case TileType.Pasture: {
+                envPrefab = GameObject.Instantiate(pasturePrefab, transform.position, Quaternion.identity);
+                break;
+            }
+
+            case TileType.Hill: {
+                envPrefab = GameObject.Instantiate(hillPrefab, transform.position, Quaternion.identity);
                 break;
             }
         }

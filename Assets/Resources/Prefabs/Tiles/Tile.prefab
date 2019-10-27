@@ -49,7 +49,11 @@ MonoBehaviour:
     type: 3}
   mountainPrefab: {fileID: 5711558636588302791, guid: a6b45971cf4619c4fb92b83b495bf67a,
     type: 3}
-  arablePrefab: {fileID: 3271494264850210164, guid: 2842b14f93b6e7644a755e8df03ca679,
+  fieldPrefab: {fileID: 3271494264850210164, guid: 2842b14f93b6e7644a755e8df03ca679,
+    type: 3}
+  pasturePrefab: {fileID: 5711558636588302791, guid: 3ced3da389a7b2744ada6d4eb46324aa,
+    type: 3}
+  hillPrefab: {fileID: 5711558636588302791, guid: 25851ff091448454585b0433a0a10b19,
     type: 3}
 --- !u!1 &4274676266312855027
 GameObject:

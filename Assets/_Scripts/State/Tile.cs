@@ -7,7 +7,9 @@ namespace State
     public enum TileType {
         Forest = 0,
         Mountain = 1,
-        Arable = 2,
+        Field = 2, 
+        Pasture = 3, // Grass field
+        Hill = 4, 
     }
 
     public class Tile
