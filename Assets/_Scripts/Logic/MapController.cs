@@ -3,7 +3,7 @@ using State;
 using UnityEngine;
 using static MapUtil;
 
-public class MapController : MonoBehaviour
+public partial class MapController : MonoBehaviour
 {
     private Map map;
 
@@ -67,6 +67,5 @@ public class MapController : MonoBehaviour
             loc.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             loc.transform.SetParent(pathParent.transform);
         }
-
     }
 }

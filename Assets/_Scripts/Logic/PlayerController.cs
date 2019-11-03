@@ -8,6 +8,10 @@ public class PlayerController : MonoBehaviour
     private MapController mapController;
     public List<Location> locations;
     public List<Path> paths;
+
+    public enum State {
+        
+    }
     
     [Header("Resources")]
     public int wood = 0;
@@ -21,6 +25,4 @@ public class PlayerController : MonoBehaviour
         paths = new List<Path>();
         mapController = GameObject.FindGameObjectWithTag("GameController").GetComponent<MapController>();
     }
-
-   
 }
