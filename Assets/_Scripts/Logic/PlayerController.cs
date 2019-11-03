@@ -8,12 +8,13 @@ public class PlayerController : MonoBehaviour
     private MapController mapController;
     public List<Location> locations;
     public List<Path> paths;
+    public List<Worker> workers;
 
     public enum State {
         None,
     }
     
-    
+
     [Header("Resources")]
     public int wood = 0;
     public int stone = 0;

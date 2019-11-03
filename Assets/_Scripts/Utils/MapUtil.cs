@@ -90,7 +90,6 @@ public static class MapUtil
                     location = new Location() {
                         id = currentLocationId,
                         position = point,
-                        worker = new Worker(),
                     };
                     locations.Add(pointKey, location);
                     currentLocationId++;
