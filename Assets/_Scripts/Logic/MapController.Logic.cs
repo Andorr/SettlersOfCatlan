@@ -20,4 +20,11 @@ public partial class MapController
 
         return locations.ToArray();
     }
+
+    public void EnableLocationBoxColliders(bool enable)
+    {
+        foreach(var location in locations.Values) {
+            location.GetComponent<BoxCollider>().enabled = enable;
+        }
+    }
 }

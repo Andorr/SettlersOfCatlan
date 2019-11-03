@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using State;
 using UnityEngine;
 using static MapUtil;
@@ -6,12 +7,12 @@ using static MapUtil;
 public partial class MapController : MonoBehaviour
 {
     private Map map;
+    private Dictionary<int, GameObject> locations;
 
     [Header("GameObjects")]
     public GameObject tilePrefab;
     public GameObject locationPrefab;
     public GameObject workerPrefab;
-    private Transform mapHolder;
 
     [Header("Map Configurations")]
     public float radius = 3f;
@@ -27,16 +28,17 @@ public partial class MapController : MonoBehaviour
     public void GenerateMap()
     {
         // Delete existing map from the scene
-        if(mapHolder != null) {
-            DestroyImmediate(mapHolder.gameObject);
+        GameObject existingMapHolder = GameObject.FindGameObjectWithTag("Map");
+        if(existingMapHolder != null) {
+            DestroyImmediate(existingMapHolder);
         }
 
         GameObject mapParent = new GameObject();
         mapParent.transform.position = Vector3.zero;
         mapParent.name = "Map";
-        mapHolder = mapParent.transform;
 
         map = MapUtil.GenerateMap(size, radius, shape, generation);
+        locations = new Dictionary<int, GameObject>();
 
         // Visualize tiles
         GameObject tileParent = new GameObject();
@@ -57,6 +59,7 @@ public partial class MapController : MonoBehaviour
             GameObject location = GameObject.Instantiate(locationPrefab, l.position, Quaternion.identity);
             location.GetComponent<LocationController>().Initialize(l, radius);
             location.transform.SetParent(locationParent.transform);
+            locations.Add(l.id, location);
         }
 
         // Visualize paths

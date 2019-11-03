@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    private MapController mapController;
+    public MapController mapController;
+    public UIController uIController;
     public PlayerController localPlayer { get; private set; }
     public IActionHandler handler;
 
@@ -17,6 +18,10 @@ public class GameController : MonoBehaviour
 
     public void Start() {  
         mapController = GetComponent<MapController>();
+        uIController = GetComponent<UIController>();
+
+        mapController.GenerateMap();
+        mapController.EnableLocationBoxColliders(true);
         localPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
@@ -35,7 +40,7 @@ public class GameController : MonoBehaviour
     {
         if(state == GameState.PlayersCreateWorker && newState == GameState.Play)
         {
-            
+            mapController.EnableLocationBoxColliders(false);
         }
         state = newState;
     }

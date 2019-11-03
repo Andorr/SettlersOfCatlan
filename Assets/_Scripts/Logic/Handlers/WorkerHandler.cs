@@ -7,13 +7,14 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
         Debug.Log("Hello world! :D");
     }
 
-    public OnSelected(GameController controller)
+    public void OnSelected(GameController controller)
     {
         Debug.Log("I am clicked!");
-        Debug.Log(this.GetComponent<WorkerController>().worker);
+        controller.uIController.EnableActionPanel(true);
     }
 
     public void OnUnselected(GameController controller)
     {
+        controller.uIController.EnableActionPanel(false);
     }
 }
