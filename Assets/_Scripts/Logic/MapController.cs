@@ -18,11 +18,6 @@ public class MapController : MonoBehaviour
     public MapShape shape = MapShape.HexagonalLattice;
     public TileGeneration generation = TileGeneration.Random;
 
-    void Start() {
-        
-        
-    }
-
     public void GenerateMap()
     {
         // Delete existing map from the scene
