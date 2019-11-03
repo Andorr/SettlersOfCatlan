@@ -26,13 +26,14 @@ public class GameController : MonoBehaviour
         RaycastHit hit;
         Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
         if(Physics.Raycast(r, out hit)) {
-            Debug.Log("Hit: " + hit.collider.name);
             var actionHandler = hit.collider.gameObject.GetComponent<IActionHandler>();
             if(actionHandler == null) {
                 return;
             }
-   
-            handler.OnUnselected(this);
+
+            if(handler != null) {
+                handler.OnUnselected(this);
+            }
             handler = actionHandler;
             handler.OnSelected(this);
         }
