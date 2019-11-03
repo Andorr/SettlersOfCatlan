@@ -10,6 +10,7 @@ public partial class MapController : MonoBehaviour
     [Header("GameObjects")]
     public GameObject tilePrefab;
     public GameObject locationPrefab;
+    public GameObject workerPrefab;
     private Transform mapHolder;
 
     [Header("Map Configurations")]
@@ -17,6 +18,11 @@ public partial class MapController : MonoBehaviour
     public int size = 9;
     public MapShape shape = MapShape.HexagonalLattice;
     public TileGeneration generation = TileGeneration.Random;
+
+    void Start() {
+        
+        
+    }
 
     public void GenerateMap()
     {
@@ -51,6 +57,11 @@ public partial class MapController : MonoBehaviour
             GameObject location = GameObject.Instantiate(locationPrefab, l.position, Quaternion.identity);
             location.GetComponent<LocationController>().Initialize(l, radius);
             location.transform.SetParent(locationParent.transform);
+            if (l.worker != null) {
+                GameObject worker = GameObject.Instantiate(workerPrefab, l.position, Quaternion.identity);
+                worker.GetComponent<WorkerController>().Initialize(l.worker, l, radius);
+                worker.transform.SetParent(location.transform);
+            }
         }
 
         // Visualize paths
@@ -68,4 +79,5 @@ public partial class MapController : MonoBehaviour
             loc.transform.SetParent(pathParent.transform);
         }
     }
+
 }
