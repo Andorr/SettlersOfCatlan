@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private MapClient mapClient;
+    private MapController mapController;
     public List<Location> locations;
     public List<Path> paths;
     
@@ -19,15 +19,8 @@ public class PlayerController : MonoBehaviour
     public void Start() {
         locations = new List<Location>();
         paths = new List<Path>();
+        mapController = GameObject.FindGameObjectWithTag("GameController").GetComponent<MapController>();
     }
 
-    public void GetAdjecentLocations()
-    {
-        Dictionary<int, Location> adjecentLocations = new Dictionary<int, Location>();
-        
-        foreach(Location l in locations) 
-        {
-
-        }
-    }
+   
 }
