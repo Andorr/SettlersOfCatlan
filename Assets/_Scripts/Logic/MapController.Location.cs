@@ -6,19 +6,22 @@ using UnityEngine;
 
 public partial class MapController
 {
-    public Location[] GetAdjecentLocations(Location location, bool mustBeAvailable = false) {
+    public LocationController[] GetAdjecentLocations(Location location, bool mustBeAvailable = false) {
         // Get the paths connected to the location
         var connectedPaths = map.paths.Values.Where(path => path.between.Item1.id == location.id || path.between.Item2.id == location.id);
 
-        // The the locations from the paths
-        var locations = connectedPaths.Select((path) => path.between.Item1.id == location.id ? path.between.Item2 : path.between.Item1);
+        // The locations from the paths
+        var adjecentLocations = connectedPaths.Select((path) => path.between.Item1.id == location.id ? path.between.Item2 : path.between.Item1);
+
+        // Get the controllers
+        var controllers = adjecentLocations.Select(l => locations[l.id].GetComponent<LocationController>());
 
         // Filter away unavailable locations if not there
         if(mustBeAvailable) {
-            locations = locations.Where((l) => l.type == LocationType.Available);
+            controllers = controllers.Where((l) => l.location.type == LocationType.Available);
         }
 
-        return locations.ToArray();
+        return controllers.ToArray();
     }
 
     public void EnableLocationBoxColliders(bool enable)

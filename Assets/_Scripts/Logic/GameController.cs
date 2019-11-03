@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public MapController mapController;
-    public UIController uIController;
+    public UIController uiController;
     public PlayerController localPlayer { get; private set; }
     public IActionHandler handler;
 
@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
 
     public void Start() {  
         mapController = GetComponent<MapController>();
-        uIController = GetComponent<UIController>();
+        uiController = GetComponent<UIController>();
 
         mapController.GenerateMap();
         mapController.EnableLocationBoxColliders(true);
