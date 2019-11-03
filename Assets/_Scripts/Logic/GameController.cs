@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    private PlayerController currentPlayer;
+    public PlayerController currentPlayer { get; private set; }
 
     public void Start() {
         currentPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();

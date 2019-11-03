@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public List<Path> paths;
 
     public enum State {
-        
+        None,
     }
     
     [Header("Resources")]
