@@ -25,7 +25,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     public override void OnRoomListUpdate(List<Photon.Realtime.RoomInfo> roomList)
     {
-        roomList[0].
+        
     }
     
 }

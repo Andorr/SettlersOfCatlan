@@ -5,10 +5,11 @@ using static MapUtil;
 
 public class MapController : MonoBehaviour
 {
-    Vector3[] locations;
+    private Map map;
 
     [Header("GameObjects")]
     public GameObject tilePrefab;
+    public GameObject locationPrefab;
     private Transform mapHolder;
 
     [Header("Map Configurations")]
@@ -34,7 +35,7 @@ public class MapController : MonoBehaviour
         mapParent.name = "Map";
         mapHolder = mapParent.transform;
 
-        Map map = MapUtil.GenerateMap(size, radius, shape, generation);
+        map = MapUtil.GenerateMap(size, radius, shape, generation);
 
         // Visualize tiles
         GameObject tileParent = new GameObject();
@@ -52,13 +53,9 @@ public class MapController : MonoBehaviour
         locationParent.transform.SetParent(mapParent.transform);
         locationParent.name = "Locations";
         foreach(Location l in map.locations.Values) {
-            Color c = UnityEngine.Random.ColorHSV();
-            Material mat = new Material(Shader.Find("Specular"));
-            mat.color = c;
-            GameObject loc = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            loc.transform.position = l.position;
-            loc.GetComponent<MeshRenderer>().material = mat;
-            loc.transform.SetParent(locationParent.transform);
+            GameObject location = GameObject.Instantiate(locationPrefab, l.position, Quaternion.identity);
+            location.GetComponent<LocationController>().Initialize(l, radius);
+            location.transform.SetParent(locationParent.transform);
         }
 
         // Visualize paths
@@ -76,17 +73,5 @@ public class MapController : MonoBehaviour
             loc.transform.SetParent(pathParent.transform);
         }
 
-    }
-
-    void OnDrawGizmos()
-    {
-        if(locations == null) {
-            return;
-        }
-
-        foreach(Vector3 l in locations)
-        {
-            Gizmos.DrawSphere(l, 0.3f);
-        }
     }
 }
