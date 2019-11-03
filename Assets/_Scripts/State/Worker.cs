@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
 
 namespace State
 {
     public class Worker
     {
-        public int id;
-        
+        public Guid id;
+        public Location location;
     }
 }

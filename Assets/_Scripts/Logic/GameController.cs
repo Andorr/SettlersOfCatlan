@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public PlayerController currentPlayer { get; private set; }
+    private MapController mapController;
+    public PlayerController localPlayer { get; private set; }
     public IActionHandler handler;
 
-    public void Start() {   
-        currentPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+    public enum GameState {
+        PlayersCreateWorker,
+        Play,
+        End,
+    }
+    public GameState state = GameState.PlayersCreateWorker;
+
+    public void Start() {  
+        mapController = GetComponent<MapController>();
+        localPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
-    public PlayerController GetCurrentPlayer() {
-        return currentPlayer;
+    public PlayerController GetLocalPlayer() {
+        return localPlayer;
     }
 
     public void Update() {
@@ -20,6 +29,25 @@ public class GameController : MonoBehaviour
             HandleMouseClick();
         }
         HandleMouseHover();
+    }
+
+    public void ChangeState(GameState newState)
+    {
+        if(state == GameState.PlayersCreateWorker && newState == GameState.Play)
+        {
+            
+        }
+        state = newState;
+    }
+
+    public void EndTurn()
+    {
+        if(state == GameState.PlayersCreateWorker) {
+            // TODO: Check if all players have created a worker
+            ChangeState(GameState.Play);
+        } else {
+
+        }
     }
 
     public void HandleMouseClick() {

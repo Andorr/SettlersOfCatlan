@@ -57,11 +57,6 @@ public partial class MapController : MonoBehaviour
             GameObject location = GameObject.Instantiate(locationPrefab, l.position, Quaternion.identity);
             location.GetComponent<LocationController>().Initialize(l, radius);
             location.transform.SetParent(locationParent.transform);
-            if (l.worker != null) {
-                GameObject worker = GameObject.Instantiate(workerPrefab, l.position, Quaternion.identity);
-                worker.GetComponent<WorkerController>().Initialize(l.worker, l, radius);
-                worker.transform.SetParent(location.transform);
-            }
         }
 
         // Visualize paths
