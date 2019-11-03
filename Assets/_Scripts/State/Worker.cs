@@ -2,18 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Worker : MonoBehaviour
+namespace State
 {
-    public int id;
-    // Start is called before the first frame update
-    void Start()
+    public class Worker
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        public int id;
         
     }
 }
