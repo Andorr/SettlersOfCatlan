@@ -33,6 +33,9 @@ public class GameController : MonoBehaviour
         if(Input.GetMouseButtonDown(0)) {
             HandleMouseClick();
         }
+        if(Input.GetKeyDown(KeyCode.Escape)) {
+            UnselectHandler();
+        }
         HandleMouseHover();
     }
 
@@ -81,6 +84,13 @@ public class GameController : MonoBehaviour
             }
    
             actionHandler.OnHover(this);
+        }
+    }
+
+    public void UnselectHandler() {
+        if(handler != null) {
+            handler.OnUnselected(this);
+            handler = null;
         }
     }
 }
