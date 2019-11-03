@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class LocationHandler : MonoBehaviour, IActionHandler
 {
+    private bool shouldTryOverride = false;
+    public bool TryOverride => shouldTryOverride;
+
     public void OnHover(GameController controller)
     {
 
@@ -10,7 +13,6 @@ public class LocationHandler : MonoBehaviour, IActionHandler
 
     public void OnSelected(GameController controller)
     {
-
         if(controller.state == GameController.GameState.PlayersCreateWorker)
         {
             var location = this.GetComponent<LocationController>().location;
@@ -21,6 +23,11 @@ public class LocationHandler : MonoBehaviour, IActionHandler
         {
             Debug.Log("Times change!");
         }
+    }
+
+    public bool OnTryOverride(GameController controller, GameObject other)
+    {
+        return false;
     }
 
     public void OnUnselected(GameController controller)

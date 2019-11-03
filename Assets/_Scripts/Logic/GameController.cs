@@ -67,11 +67,22 @@ public class GameController : MonoBehaviour
                 return;
             }
 
+            bool shouldOverride = false;
             if(handler != null) {
+                
+                // Check for override
+                if(handler.TryOverride)
+                {
+                    shouldOverride = handler.OnTryOverride(this, hit.collider.gameObject);
+                }
+
                 handler.OnUnselected(this);
             }
-            handler = actionHandler;
-            handler.OnSelected(this);
+            if(!shouldOverride)
+            {
+                handler = actionHandler;
+                handler.OnSelected(this);
+            }
         }
     }
     public void HandleMouseHover() {
