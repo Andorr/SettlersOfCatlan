@@ -2,18 +2,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class LobbyManager : MonoBehaviour
+public class LobbyManager : MonoBehaviourPunCallbacks
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        Debug.Log("Hello World!");   
+    [Header("RoomPanel")]
+    public GameObject roomPanel;
+    public Dictionary<string, RoomInfo> roomList;
+
+    [Header("CreateRoomPanel")]
+    public GameObject createRoomPanel;
+    
+    public void Start() {
+        roomPanel.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void ConnectToServer() {
+        PhotonNetwork.ConnectUsingSettings();
+
     }
+
+    public override void OnRoomListUpdate(List<Photon.Realtime.RoomInfo> roomList)
+    {
+        roomList[0].
+    }
+    
 }
