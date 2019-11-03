@@ -1,14 +1,17 @@
+using UnityEngine;
 
-public class WorkerHandler : IActionHandler
+public class WorkerHandler : MonoBehaviour, IActionHandler
 {
+    public void OnHover(GameController controller)
+    {
+        Debug.Log("Hello world! :D");
+    }
 
     public void OnSelected(GameController controller)
     {
-        throw new System.NotImplementedException();
     }
 
     public void OnUnselected(GameController controller)
     {
-        throw new System.NotImplementedException();
     }
 }

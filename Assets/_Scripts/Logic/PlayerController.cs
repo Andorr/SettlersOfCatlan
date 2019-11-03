@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
         None,
     }
     
+    
     [Header("Resources")]
     public int wood = 0;
     public int stone = 0;
