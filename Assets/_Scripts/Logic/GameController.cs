@@ -6,23 +6,33 @@ public class GameController : MonoBehaviour
 {
     public MapController mapController;
     public UIController uiController;
-    public PlayerController localPlayer { get; private set; }
     public IActionHandler handler;
 
+    public PlayerController localPlayer { get; private set; }
+    private PlayerController currentPlayer;
     public enum GameState {
         PlayersCreateWorker,
         Play,
         End,
     }
+
     public GameState state = GameState.PlayersCreateWorker;
 
-    public void Start() {  
+    private PlayerController[] players;
+
+    public void Start() {
         mapController = GetComponent<MapController>();
         uiController = GetComponent<UIController>();
 
         mapController.GenerateMap();
         mapController.EnableLocationBoxColliders(true);
+
+        // TODO: When on multiplayer, initiate player objects and set this to PhotonView.isMine
         localPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        players = new PlayerController[1] {
+            localPlayer,
+        };
+        currentPlayer = localPlayer;
     }
 
     public PlayerController GetLocalPlayer() {
@@ -54,6 +64,9 @@ public class GameController : MonoBehaviour
             // TODO: Check if all players have created a worker
             ChangeState(GameState.Play);
         } else {
+            currentPlayer.SetState(PlayerController.State.WaitForTurn);
+            currentPlayer.EnableWorkers(false);
+
 
         }
     }

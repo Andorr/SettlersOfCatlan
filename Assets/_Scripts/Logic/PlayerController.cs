@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private MapController mapController;
     public enum State {
         None,
+        WaitForTurn,
         WorkerMovement,
     }
 
@@ -49,6 +50,18 @@ public class PlayerController : MonoBehaviour
     }
 
     public void SetState(State newState) {
+        if(newState == State.WaitForTurn)
+        {
+            
+        }
         state = newState;
+    }
+
+    public void EnableWorkers(bool enable)
+    {
+        foreach(WorkerController w in workers)
+        {
+            w.enabled = enable;
+        }
     }
 }
