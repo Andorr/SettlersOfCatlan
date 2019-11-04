@@ -8,6 +8,8 @@ using Photon.Realtime;
 
 public class LobbyManager : MonoBehaviourPunCallbacks
 {
+    const string playerNamePrefKey = "PlayerName";
+
     private PlayerInfo player;
     private MainMenu menu;
     public InputField inputField;
@@ -16,14 +18,11 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public Button exitGameButton;
     
     public LobbyManager(){
-        this.player = new PlayerInfo(inputField);
+        this.player = new PlayerInfo();
         this.menu = new MainMenu(newGameButton, findGameButton, exitGameButton);
-        
     }
 
-
-
-    [Header("Room Panel")]
+    [Header("Name Panel")]
     public GameObject namePanel;
     [Header("Menu Panel")]
     public GameObject menuPanel;
@@ -41,7 +40,10 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
 
     public void CreateNewUser(){
-        PhotonNetwork.NickName = player.SetPlayerName();
+        Debug.Log("starting to create user");
+        this.player.SetPlayerName(this.inputField.text);
+
+        PhotonNetwork.NickName = PlayerPrefs.GetString(playerNamePrefKey);
         this.ActivePanel(menuPanel.name);
     }
 

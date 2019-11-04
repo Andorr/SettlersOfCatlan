@@ -9,19 +9,15 @@ using Photon.Realtime;
 public class PlayerInfo
 {    
     private InputField _inputField;
-    private string _defaultName = "Default Name";
-    public PlayerInfo(InputField inputField){
-        this._inputField = inputField;
-    }
+    const string playerNamePrefKey = "PlayerName";
+    const string _defaultName = "Default Name";
 
     // return true if the name is valid and return false if its not
-    public string SetPlayerName(){
-        string name = this._inputField.text;
-
+    public void SetPlayerName(string name){
         if(!string.IsNullOrEmpty(name)){
             name = name.Trim();
-            return name;
+            PlayerPrefs.SetString(playerNamePrefKey,name);
         }
-        return _defaultName;
+        PlayerPrefs.SetString(playerNamePrefKey, _defaultName);
     }
 }
