@@ -2,16 +2,17 @@
 using UnityEngine;
 using State;
 using System;
+using System.Linq;
 
 public static class MapUtil
 {
     public enum MapShape {
         HexagonalLattice = 0,
+        Doughnut = 1,
     }
 
     public enum TileGeneration {
         Random = 0,
-        Doughnut = 0,
     }
 
     public static Vector3[] HexagonalLattice(Vector2 origin, int size = 5, float radius = 1, float offset = 0)
@@ -44,7 +45,7 @@ public static class MapUtil
         return tiles;
     }
 
-    public static Vector3[] HexagonFromPoint(Vector2 origin, float radius)
+  public static Vector3[] HexagonFromPoint(Vector2 origin, float radius)
     {
         Vector3[] points = new Vector3[6];
         float angle30 = Mathf.Deg2Rad*30;
@@ -155,7 +156,17 @@ public static class MapUtil
             case MapShape.HexagonalLattice: {
                 return MapUtil.HexagonalLattice(Vector3.zero, size, radius, 0f);
             }
-
+            case MapShape.Doughnut: {
+                Vector3[] tiles = MapUtil.HexagonalLattice(Vector3.zero, size, radius, 0f); 
+                Vector3 pos = Vector3.zero;
+                foreach (Vector3 t in tiles) {
+                  pos += t;
+                }
+                pos /= tiles.Length;
+                return tiles
+                  .Where(t => Vector3.Distance(t, pos) > 10f)
+                  .ToArray();
+            }
             default: {
                 return null;
             }
@@ -167,9 +178,10 @@ public static class MapUtil
         switch(generation) {
             case TileGeneration.Random: {
                 System.Random r = new System.Random(seed);
-                foreach(Tile t in tiles) {
+                int index = 0;
+                foreach(Tile t in tiles.OrderBy(t => r.Next(1000000))) {
                     Array values = Enum.GetValues(typeof(TileType));
-                    t.type = (TileType)values.GetValue(r.Next(values.Length));
+                    t.type = (TileType)values.GetValue(index++ % values.Length);
                 }
                 return tiles;
             }
