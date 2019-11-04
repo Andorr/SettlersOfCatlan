@@ -11,24 +11,26 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     const string playerNamePrefKey = "PlayerName";
 
     private PlayerInfo player;
-    private MainMenu menu;
+
+    [Header("Input fields")]
     public InputField inputField;
+    public InputField gameName;
+
+    [Header("Buttons")]
     public Button newGameButton;
     public Button findGameButton;
     public Button exitGameButton;
     
+
+    [Header("Panels")]
+    public GameObject namePanel;
+    public GameObject menuPanel;
+    public GameObject newGamePanel;
+
+
     public LobbyManager(){
         this.player = new PlayerInfo();
-        this.menu = new MainMenu(newGameButton, findGameButton, exitGameButton);
     }
-
-    [Header("Name Panel")]
-    public GameObject namePanel;
-    [Header("Menu Panel")]
-    public GameObject menuPanel;
-
-    [Header("CreateRoomPanel")]
-    public GameObject createRoomPanel;
     
     public void Start() {
         this.ActivePanel(namePanel.name);
@@ -38,7 +40,6 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
     }
 
-
     public void CreateNewUser(){
         Debug.Log("starting to create user");
         this.player.SetPlayerName(this.inputField.text);
@@ -47,10 +48,36 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         this.ActivePanel(menuPanel.name);
     }
 
+    public void CreateGame(){
+        Debug.Log("create a game");
+        string gameName = this.gameName.text.Trim();
+
+        if(!string.IsNullOrEmpty(gameName)){
+            PhotonNetwork.CreateRoom(gameName, new RoomOptions{MaxPlayers = 4});
+            Debug.Log("game created");
+            // change to the game
+        }
+        // cant create a game with null or nothing as name.
+    }
+
+
     public void ActivePanel(string panel)
     {
         namePanel.SetActive(namePanel.name.Equals(panel));
         menuPanel.SetActive(menuPanel.name.Equals(panel));
+        newGamePanel.SetActive(newGamePanel.name.Equals(panel));
     }
+
+    // Menu selection functions
+
+
+    public void newGame(){
+        this.ActivePanel(newGamePanel.name);
+    }
+
+    public void FindGame(){
+    }
+
+    public void ExitGame(){}
     
 }
