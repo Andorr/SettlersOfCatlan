@@ -19,6 +19,7 @@ public partial class MapController : MonoBehaviour
     public int size = 9;
     public MapShape shape = MapShape.HexagonalLattice;
     public TileGeneration generation = TileGeneration.Random;
+    public int seed = 0;
 
     void Start() {
         
@@ -37,7 +38,7 @@ public partial class MapController : MonoBehaviour
         mapParent.transform.position = Vector3.zero;
         mapParent.name = "Map";
 
-        map = MapUtil.GenerateMap(size, radius, shape, generation);
+        map = MapUtil.GenerateMap(size, radius, shape, generation, seed);
         locations = new Dictionary<int, GameObject>();
 
         // Visualize tiles

@@ -11,6 +11,7 @@ public static class MapUtil
 
     public enum TileGeneration {
         Random = 0,
+        Doughnut = 0,
     }
 
     public static Vector3[] HexagonalLattice(Vector2 origin, int size = 5, float radius = 1, float offset = 0)
@@ -54,7 +55,7 @@ public static class MapUtil
         return points;
     }
 
-    public static Map GenerateMap(int size, float radius, MapShape shape, TileGeneration generation)
+    public static Map GenerateMap(int size, float radius, MapShape shape, TileGeneration generation, int seed)
     {
         Dictionary<string, Location> locations = new Dictionary<string, Location>();
         Dictionary<(int, int), Path> paths = new Dictionary<(int, int), Path>();
@@ -137,7 +138,7 @@ public static class MapUtil
         }
 
         // Generate map tile types
-        tiles = GenerateTileTypes(generation, tiles);
+        tiles = GenerateTileTypes(generation, tiles, seed);
 
         // Convert map attributes to 
         Map map = new Map();
@@ -161,11 +162,11 @@ public static class MapUtil
         }
     }
 
-    public static List<Tile> GenerateTileTypes(TileGeneration generation, List<Tile> tiles)
+    public static List<Tile> GenerateTileTypes(TileGeneration generation, List<Tile> tiles, int seed)
     {
         switch(generation) {
             case TileGeneration.Random: {
-                System.Random r = new System.Random();
+                System.Random r = new System.Random(seed);
                 foreach(Tile t in tiles) {
                     Array values = Enum.GetValues(typeof(TileType));
                     t.type = (TileType)values.GetValue(r.Next(values.Length));
