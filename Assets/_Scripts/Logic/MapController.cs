@@ -1,15 +1,18 @@
 using System;
+using System.Collections.Generic;
 using State;
 using UnityEngine;
 using static MapUtil;
 
-public class MapController : MonoBehaviour
+public partial class MapController : MonoBehaviour
 {
-    Vector3[] locations;
+    private Map map;
+    private Dictionary<int, GameObject> locations;
 
     [Header("GameObjects")]
     public GameObject tilePrefab;
-    private Transform mapHolder;
+    public GameObject locationPrefab;
+    public GameObject workerPrefab;
 
     [Header("Map Configurations")]
     public float radius = 3f;
@@ -25,16 +28,17 @@ public class MapController : MonoBehaviour
     public void GenerateMap()
     {
         // Delete existing map from the scene
-        if(mapHolder != null) {
-            DestroyImmediate(mapHolder.gameObject);
+        GameObject existingMapHolder = GameObject.FindGameObjectWithTag("Map");
+        if(existingMapHolder != null) {
+            DestroyImmediate(existingMapHolder);
         }
 
         GameObject mapParent = new GameObject();
         mapParent.transform.position = Vector3.zero;
         mapParent.name = "Map";
-        mapHolder = mapParent.transform;
 
-        Map map = MapUtil.GenerateMap(size, radius, shape, generation);
+        map = MapUtil.GenerateMap(size, radius, shape, generation);
+        locations = new Dictionary<int, GameObject>();
 
         // Visualize tiles
         GameObject tileParent = new GameObject();
@@ -52,13 +56,10 @@ public class MapController : MonoBehaviour
         locationParent.transform.SetParent(mapParent.transform);
         locationParent.name = "Locations";
         foreach(Location l in map.locations.Values) {
-            Color c = UnityEngine.Random.ColorHSV();
-            Material mat = new Material(Shader.Find("Specular"));
-            mat.color = c;
-            GameObject loc = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            loc.transform.position = l.position;
-            loc.GetComponent<MeshRenderer>().material = mat;
-            loc.transform.SetParent(locationParent.transform);
+            GameObject location = GameObject.Instantiate(locationPrefab, l.position, Quaternion.identity);
+            location.GetComponent<LocationController>().Initialize(l, radius);
+            location.transform.SetParent(locationParent.transform);
+            locations.Add(l.id, location);
         }
 
         // Visualize paths
@@ -75,18 +76,6 @@ public class MapController : MonoBehaviour
             loc.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             loc.transform.SetParent(pathParent.transform);
         }
-
     }
 
-    void OnDrawGizmos()
-    {
-        if(locations == null) {
-            return;
-        }
-
-        foreach(Vector3 l in locations)
-        {
-            Gizmos.DrawSphere(l, 0.3f);
-        }
-    }
 }

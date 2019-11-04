@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4007762157227569787}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,6 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f18606e9ae5d04582dff6e43f104fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tile:
+    id: 0
+    type: 0
+    position: {x: 0, y: 0, z: 0}
+    locations: []
   prefabHolder: {fileID: 1088948464826199427}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
