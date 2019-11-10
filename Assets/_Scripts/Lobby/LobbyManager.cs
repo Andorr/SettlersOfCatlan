@@ -6,8 +6,10 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
+
 public class LobbyManager : MonoBehaviourPunCallbacks
 {
+    const int GAMESCENE = 1;
     const string playerNamePrefKey = "PlayerName";
 
     private PlayerInfo player;
@@ -146,6 +148,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     public void StartGame(){
         // Here to player starts the game! by clicking the button
+        PhotonNetwork.LoadLevel(GAMESCENE);
     }
 
     private void ClearRoomList()
