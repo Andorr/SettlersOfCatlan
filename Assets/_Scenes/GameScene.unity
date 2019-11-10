@@ -1043,6 +1043,8 @@ MonoBehaviour:
   state: 0
   workerPrefab: {fileID: 8651527530645712605, guid: 8122e650f7061564ebe2e21e253a3b60,
     type: 3}
+  pathTargetPrefab: {fileID: 4159655122282813737, guid: 39b9cf63fdb03464ebfa30bf06529638,
+    type: 3}
 --- !u!4 &18474580
 Transform:
   m_ObjectHideFlags: 0
@@ -40074,7 +40076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapController: {fileID: 833180596}
-  uiController: {fileID: 0}
+  uiController: {fileID: 833180599}
   state: 0
 --- !u!114 &833180599
 MonoBehaviour:
