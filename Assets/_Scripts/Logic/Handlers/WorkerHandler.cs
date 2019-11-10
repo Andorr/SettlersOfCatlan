@@ -1,9 +1,11 @@
+using State;
 using UnityEngine;
 
 public class WorkerHandler : MonoBehaviour, IActionHandler
 {
     private WorkerController workerController;
     private LocationController[] currentAvailableMoves;
+    private PathController[] adjecentPaths;
 
     private bool shouldTryOverride = false;
     public bool TryOverride => shouldTryOverride;
@@ -21,7 +23,11 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
     {
 
         // Show UI action panel
-        controller.uiController.EnableActionPanel(true);
+        controller.uiController.EnableActionPanel(
+            true, 
+            () => EnableRoadPlacement(controller),
+            () => EnableHousePlacement(controller)
+        );
 
         // Initialize moves to show
         if(workerController.state == WorkerController.WorkerState.Movable)
@@ -48,8 +54,18 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
                 lc.SetSelectable(false);
             }
             currentAvailableMoves = null;
-            shouldTryOverride = false;
         }
+        
+        if(adjecentPaths != null)
+        {
+            foreach(var pc in adjecentPaths)
+            {
+                pc.SetSelectable(false);
+            }
+            adjecentPaths = null;
+        }
+
+        shouldTryOverride = false;
     }
 
     public bool OnTryOverride(GameController controller, GameObject other)
@@ -62,9 +78,20 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
                 return false;
             }
             controller.localPlayer.MoveWorker(workerController, lc.location);
-            workerController.state = WorkerController.WorkerState.Immovable;
+            // workerController.state = WorkerController.WorkerState.Immovable;
             return true;
         }
         return false;
+    }
+
+    private void EnableRoadPlacement(GameController controller) {
+        // Enable all path colliders to adjecent paths
+        adjecentPaths = controller.mapController.GetAdjecentPaths(workerController.worker.location);
+        controller.GetLocalPlayer().StartPathPlacement(workerController, adjecentPaths);
+        
+    }
+
+    private void EnableHousePlacement(GameController controller) {
+
     }
 }

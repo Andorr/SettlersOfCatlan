@@ -8,11 +8,13 @@ public partial class MapController : MonoBehaviour
 {
     private Map map;
     private Dictionary<int, GameObject> locations;
+    private Dictionary<int, GameObject> paths;
 
     [Header("GameObjects")]
     public GameObject tilePrefab;
     public GameObject locationPrefab;
     public GameObject workerPrefab;
+    public GameObject pathPrefab;
 
     [Header("Map Configurations")]
     public float radius = 3f;
@@ -38,9 +40,11 @@ public partial class MapController : MonoBehaviour
         GameObject mapParent = new GameObject();
         mapParent.transform.position = Vector3.zero;
         mapParent.name = "Map";
+        mapParent.tag = "Map";
 
         map = MapUtil.GenerateMap(size, radius, shape, generation, seed);
         locations = new Dictionary<int, GameObject>();
+        paths = new Dictionary<int, GameObject>();
 
         // Visualize tiles
         GameObject tileParent = new GameObject();
@@ -73,10 +77,10 @@ public partial class MapController : MonoBehaviour
             Vector3 dir = p.between.Item1.position - p.between.Item2.position;
             Vector3 pathPos = p.between.Item2.position + dir*0.5f;
 
-            GameObject loc = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            loc.transform.position = new Vector3(pathPos.x, 0.5f, pathPos.z);
-            loc.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-            loc.transform.SetParent(pathParent.transform);
+            GameObject path = GameObject.Instantiate(pathPrefab, pathPos, Quaternion.identity);
+            path.GetComponent<PathController>().Initialize(p, radius);
+            path.transform.SetParent(pathParent.transform);
+            paths.Add(p.id, path);
         }
     }
 
