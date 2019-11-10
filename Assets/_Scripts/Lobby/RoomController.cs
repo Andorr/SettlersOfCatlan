@@ -10,12 +10,11 @@ public class RoomController
     private Dictionary<string, RoomInfo> rooms;
 
     // Use this function to filter all the rooms to give gameObject rooms.
-    public void UpdateRooms(Dictionary<string, RoomInfo> new_rooms){
+    public void UpdateRooms(List<RoomInfo> new_rooms){
         
-        foreach(RoomInfo room in new_rooms.Values)
+        foreach(RoomInfo room in new_rooms)
         {
-            Debug.Log(room.Name);
-            if(!room.IsOpen || !room.IsVisible || room.RemovedFromList) {
+            if(!room.IsVisible || room.RemovedFromList) {
                 if(rooms.ContainsKey(room.Name))
                 {
                     rooms.Remove(room.Name);
