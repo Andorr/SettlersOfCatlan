@@ -80,6 +80,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         menuPanel.SetActive(menuPanel.name.Equals(panel));
         newGamePanel.SetActive(newGamePanel.name.Equals(panel));
         detailGamePanel.SetActive(detailGamePanel.name.Equals(panel));
+        allGamesPanel.SetActive(allGamesPanel.name.Equals(panel));
     }
 
     // Menu selection functions
@@ -97,7 +98,9 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     }
 
-    public void ExitGame(){}
+    public void ExitGame(){
+        Application.Quit();
+    }
 
     public void BackToMenu(){
         if(PhotonNetwork.InLobby){
@@ -105,8 +108,6 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         }
         this.ActivePanel(menuPanel.name);
     }
-
-
 
     public override void OnRoomListUpdate(List<RoomInfo> roomList){
         ClearRoomList();
