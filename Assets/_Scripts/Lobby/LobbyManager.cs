@@ -14,6 +14,9 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     private PlayerInfo player;
     private RoomController roomController;
+    
+    private Dictionary<int, GameObject> players;
+    private Dictionary<string, GameObject> roomListGameObjects;
 
     [Header("Input fields")]
     public InputField inputField;
@@ -24,21 +27,21 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public Button findGameButton;
     public Button exitGameButton;
     public Button startGameButton;
-
     
     [Header("Prefabs")]
     public GameObject listObject;
+    public GameObject playerObject;
 
     [Header("GameList Objects")]
     public GameObject listParent;
-    private Dictionary<string, GameObject> roomListGameObjects;
+    public GameObject listPlayerParent;
+
 
     [Header("Panels")]
     public GameObject namePanel;
     public GameObject menuPanel;
     public GameObject newGamePanel;
     public GameObject detailGamePanel;
-
     public GameObject allGamesPanel;
 
     
@@ -47,6 +50,8 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         this.player = new PlayerInfo();
         this.roomController = new RoomController();
         roomListGameObjects = new Dictionary<string, GameObject>();
+        ConnectToServer();
+        PhotonNetwork.AutomaticallySyncScene = true;
 
     }
 
@@ -57,22 +62,17 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public void CreateNewUser(){
         this.player.SetPlayerName(this.inputField.text);
 
-        PhotonNetwork.NickName = PlayerPrefs.GetString(playerNamePrefKey);
+        PhotonNetwork.LocalPlayer.NickName = PlayerPrefs.GetString(playerNamePrefKey);
         this.ActivePanel(menuPanel.name);
     }
 
     public void CreateGame(){
-        Debug.Log("create a game");
         string gameName = this.gameName.text.Trim();
 
         if(!string.IsNullOrEmpty(gameName)){
             PhotonNetwork.CreateRoom(gameName, new RoomOptions{MaxPlayers = 4});
-            Debug.Log("game created");
-            // change to the game
         }
-        // cant create a game with null or nothing as name.
     }
-
 
     public void ActivePanel(string panel)
     {
@@ -95,7 +95,6 @@ public class LobbyManager : MonoBehaviourPunCallbacks
             PhotonNetwork.JoinLobby();
         }
         this.ActivePanel(allGamesPanel.name);
-
     }
 
     public void ExitGame(){
@@ -145,6 +144,39 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         } else {
             startGameButton.gameObject.SetActive(false);
         }
+        foreach(Photon.Realtime.Player player in PhotonNetwork.PlayerList){
+            AddPlayer(player);
+        }
+    }
+    public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer){
+        Destroy(players[otherPlayer.ActorNumber].gameObject);
+        players.Remove(otherPlayer.ActorNumber);
+
+        if(PhotonNetwork.LocalPlayer.IsMasterClient)
+        {
+            startGameButton.gameObject.SetActive(true);
+        }
+    }
+    public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer){
+        AddPlayer(newPlayer);
+    }
+
+    public override void OnLeftLobby()
+    {
+        ClearRoomList();
+        roomController.Clear();
+    }
+
+    public override void OnLeftRoom()
+    {
+        ActivePanel(menuPanel.name);
+
+        foreach(GameObject player in players.Values)
+        {
+            Destroy(player);
+        }
+        players.Clear();
+        players = null;
     }
 
     public void StartGame(){
@@ -160,5 +192,15 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         }
         roomListGameObjects.Clear();
     }
-    
+
+
+    private void AddPlayer(Photon.Realtime.Player player){
+        GameObject playerListEntryObject = Instantiate(playerObject);
+        playerListEntryObject.transform.SetParent(listPlayerParent.transform);
+        playerListEntryObject.transform.localScale = Vector3.one;
+
+        playerListEntryObject.transform.Find("PlayerNameText").GetComponent<Text>().text  = player.NickName;
+
+        players.Add(player.ActorNumber, playerListEntryObject);
+    }
 }

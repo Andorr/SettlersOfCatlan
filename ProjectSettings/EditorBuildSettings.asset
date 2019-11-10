@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Lobby.unity
     guid: 077eb8b074517b9448e9f8f7ce63b13f
+  - enabled: 1
+    path: Assets/_Scenes/GameScene.unity
+    guid: 5f105b9414d7b9c4391ba27288393d89
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 65151fe59116d4dada876acfd7ce7f6e,
       type: 2}
