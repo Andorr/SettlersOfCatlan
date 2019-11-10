@@ -8,7 +8,8 @@ namespace State
     public class Path
     {
         public int id;
-        public Tuple<Location, Location> between; 
+        public Tuple<Location, Location> between;
+        public Player occupiedBy;
     }
 
 }

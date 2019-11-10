@@ -16,8 +16,6 @@ public class WorkerController : MonoBehaviour
     }
     public WorkerState state = WorkerState.Movable;
 
-    private bool isSelectable = false;
-
     public void Start()
     {
         anim = GetComponentInChildren<Animator>();

@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
 
     private PlayerController[] players;
 
+    # region Unity Methods
     public void Start() {
         mapController = GetComponent<MapController>();
         uiController = GetComponent<UIController>();
@@ -35,10 +36,6 @@ public class GameController : MonoBehaviour
         currentPlayer = localPlayer;
     }
 
-    public PlayerController GetLocalPlayer() {
-        return localPlayer;
-    }
-
     public void Update() {
         if(Input.GetMouseButtonDown(0)) {
             HandleMouseClick();
@@ -48,6 +45,13 @@ public class GameController : MonoBehaviour
         }
         HandleMouseHover();
     }
+    # endregion
+
+    # region Game Logic
+    public PlayerController GetLocalPlayer() {
+        return localPlayer;
+    }
+
 
     public void ChangeState(GameState newState)
     {
@@ -70,7 +74,9 @@ public class GameController : MonoBehaviour
 
         }
     }
+    # endregion
 
+    # region Handler Logic
     public void HandleMouseClick() {
         RaycastHit hit;
         Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -117,4 +123,5 @@ public class GameController : MonoBehaviour
             handler = null;
         }
     }
+    #endregion
 }
