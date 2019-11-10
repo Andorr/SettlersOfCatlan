@@ -2,11 +2,13 @@
 using UnityEngine;
 using State;
 using System;
+using System.Linq;
 
 public static class MapUtil
 {
     public enum MapShape {
         HexagonalLattice = 0,
+        Doughnut = 1,
     }
 
     public enum TileGeneration {
@@ -43,7 +45,7 @@ public static class MapUtil
         return tiles;
     }
 
-    public static Vector3[] HexagonFromPoint(Vector2 origin, float radius)
+  public static Vector3[] HexagonFromPoint(Vector2 origin, float radius)
     {
         Vector3[] points = new Vector3[6];
         float angle30 = Mathf.Deg2Rad*30;
@@ -54,7 +56,7 @@ public static class MapUtil
         return points;
     }
 
-    public static Map GenerateMap(int size, float radius, MapShape shape, TileGeneration generation)
+    public static Map GenerateMap(int size, float radius, MapShape shape, TileGeneration generation, int seed)
     {
         Dictionary<string, Location> locations = new Dictionary<string, Location>();
         Dictionary<(int, int), Path> paths = new Dictionary<(int, int), Path>();
@@ -137,7 +139,7 @@ public static class MapUtil
         }
 
         // Generate map tile types
-        tiles = GenerateTileTypes(generation, tiles);
+        tiles = GenerateTileTypes(generation, tiles, seed);
 
         // Convert map attributes to 
         Map map = new Map();
@@ -154,21 +156,32 @@ public static class MapUtil
             case MapShape.HexagonalLattice: {
                 return MapUtil.HexagonalLattice(Vector3.zero, size, radius, 0f);
             }
-
+            case MapShape.Doughnut: {
+                Vector3[] tiles = MapUtil.HexagonalLattice(Vector3.zero, size, radius, 0f); 
+                Vector3 pos = Vector3.zero;
+                foreach (Vector3 t in tiles) {
+                  pos += t;
+                }
+                pos /= tiles.Length;
+                return tiles
+                  .Where(t => Vector3.Distance(t, pos) > 10f)
+                  .ToArray();
+            }
             default: {
                 return null;
             }
         }
     }
 
-    public static List<Tile> GenerateTileTypes(TileGeneration generation, List<Tile> tiles)
+    public static List<Tile> GenerateTileTypes(TileGeneration generation, List<Tile> tiles, int seed)
     {
         switch(generation) {
             case TileGeneration.Random: {
-                System.Random r = new System.Random();
-                foreach(Tile t in tiles) {
+                System.Random r = new System.Random(seed);
+                int index = 0;
+                foreach(Tile t in tiles.OrderBy(t => r.Next(1000000))) {
                     Array values = Enum.GetValues(typeof(TileType));
-                    t.type = (TileType)values.GetValue(r.Next(values.Length));
+                    t.type = (TileType)values.GetValue(index++ % values.Length);
                 }
                 return tiles;
             }

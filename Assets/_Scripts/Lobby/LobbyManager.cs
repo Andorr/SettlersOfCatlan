@@ -6,7 +6,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class LobbyManager : MonoBehaviourPunCallbacks, IPointerClickHandler
+public class LobbyManager : MonoBehaviourPunCallbacks
 {
     const string playerNamePrefKey = "PlayerName";
 
@@ -119,7 +119,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks, IPointerClickHandler
             roomListEntryGameObject.transform.Find("nameValue").GetComponent<Text>().text = room.Name;
             roomListEntryGameObject.transform.Find("playerValue").GetComponent<Text>().text = room.PlayerCount + "/" + room.MaxPlayers;
             roomListEntryGameObject.transform.Find("openValue").GetComponent<Text>().text = room.IsOpen ? "Open" :  "Closed";
-            roomListEntryGameObject.GetComponent<Clickable>().OnClick +=
+            roomListEntryGameObject.GetComponent<Clickable>().OnClick += () => {};
             roomListGameObjects.Add(room.Name, roomListEntryGameObject);
         }
     }
