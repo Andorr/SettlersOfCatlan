@@ -140,9 +140,9 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
         if(PhotonNetwork.LocalPlayer.IsMasterClient)
         {
-            startGameButton.SetActive(true);
+            startGameButton.gameObject.SetActive(true);
         } else {
-            startGameButton.SetActive(false);
+            startGameButton.gameObject.SetActive(false);
         }
     }
 

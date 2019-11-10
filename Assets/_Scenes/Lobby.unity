@@ -2529,7 +2529,7 @@ GameObject:
   - component: {fileID: 1220137777}
   - component: {fileID: 1220137776}
   m_Layer: 5
-  m_Name: Button
+  m_Name: startGameButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2597,7 +2597,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1220137777}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1714109354}
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1220137777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4022,12 +4033,14 @@ MonoBehaviour:
   newGameButton: {fileID: 66910652}
   findGameButton: {fileID: 1901355314}
   exitGameButton: {fileID: 2052121803}
+  startGameButton: {fileID: 1220137776}
   listObject: {fileID: 8703714552056980477, guid: 30618f965e59446d8b9dc8fc77def603,
     type: 3}
   listParent: {fileID: 1582584668}
   namePanel: {fileID: 63975798}
   menuPanel: {fileID: 1781819147}
   newGamePanel: {fileID: 1168187191}
+  detailGamePanel: {fileID: 0}
   allGamesPanel: {fileID: 1389373190}
 --- !u!1 &1781819147
 GameObject:
@@ -5179,6 +5192,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gameline
       objectReference: {fileID: 0}
+    - target: {fileID: 8703714552056980477, guid: 30618f965e59446d8b9dc8fc77def603,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6980246374510582033, guid: 30618f965e59446d8b9dc8fc77def603,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5237,7 +5255,7 @@ PrefabInstance:
     - target: {fileID: 6980246374510582033, guid: 30618f965e59446d8b9dc8fc77def603,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 861.5
+      value: 910.5
       objectReference: {fileID: 0}
     - target: {fileID: 6980246374510582033, guid: 30618f965e59446d8b9dc8fc77def603,
         type: 3}
