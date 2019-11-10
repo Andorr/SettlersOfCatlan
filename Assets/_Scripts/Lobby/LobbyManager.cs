@@ -21,6 +21,8 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public Button newGameButton;
     public Button findGameButton;
     public Button exitGameButton;
+    public Button startGameButton;
+
     
     [Header("Prefabs")]
     public GameObject listObject;
@@ -33,6 +35,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public GameObject namePanel;
     public GameObject menuPanel;
     public GameObject newGamePanel;
+    public GameObject detailGamePanel;
 
     public GameObject allGamesPanel;
 
@@ -74,6 +77,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         namePanel.SetActive(namePanel.name.Equals(panel));
         menuPanel.SetActive(menuPanel.name.Equals(panel));
         newGamePanel.SetActive(newGamePanel.name.Equals(panel));
+        detailGamePanel.SetActive(detailGamePanel.name.Equals(panel));
     }
 
     // Menu selection functions
@@ -119,12 +123,30 @@ public class LobbyManager : MonoBehaviourPunCallbacks
             roomListEntryGameObject.transform.Find("nameValue").GetComponent<Text>().text = room.Name;
             roomListEntryGameObject.transform.Find("playerValue").GetComponent<Text>().text = room.PlayerCount + "/" + room.MaxPlayers;
             roomListEntryGameObject.transform.Find("openValue").GetComponent<Text>().text = room.IsOpen ? "Open" :  "Closed";
-            roomListEntryGameObject.GetComponent<Clickable>().OnClick += () => {};
+            roomListEntryGameObject.GetComponent<Clickable>().OnClick += () => {
+                PhotonNetwork.JoinRoom(room.Name);
+            };
             roomListGameObjects.Add(room.Name, roomListEntryGameObject);
         }
     }
+    
+    // Called when joinroom or createRoom is called. 
+    public override void OnJoinedRoom()
+    {
+        Debug.Log(PhotonNetwork.LocalPlayer.NickName + " joined to " + PhotonNetwork.CurrentRoom.Name);
+        ActivePanel(detailGamePanel.name);
 
+        if(PhotonNetwork.LocalPlayer.IsMasterClient)
+        {
+            startGameButton.SetActive(true);
+        } else {
+            startGameButton.SetActive(false);
+        }
+    }
 
+    public void StartGame(){
+        // Here to player starts the game! by clicking the button
+    }
 
     private void ClearRoomList()
     {
