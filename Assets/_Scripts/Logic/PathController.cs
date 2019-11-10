@@ -6,11 +6,11 @@ using UnityEngine;
 public class PathController : MonoBehaviour
 {
 
-    private Path path;
+    public Path path;
 
     [Header("GameObjects")]
     public GameObject pathPrefab;
-    private Transform pathHolder;
+    public Transform pathHolder;
     public GameObject selectableIndicator;
 
     private bool isSelectable = false;
@@ -18,10 +18,13 @@ public class PathController : MonoBehaviour
     public void Initialize(Path newPath, float radius)
     {
         path = newPath;
+
+        transform.GetComponent<BoxCollider>().size = new Vector3(radius/2, 1.5f, radius/2);
     }
 
     public void SetSelectable(bool selectable) {
         isSelectable = selectable;
+        transform.GetComponent<BoxCollider>().enabled = selectable;
         selectableIndicator.SetActive(selectable);
     }
 }

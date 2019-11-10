@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     }
 
     [Header("Player Belongings")]
+    public Player player;
     public List<Location> locations;
     public List<Path> paths;
     public List<WorkerController> workers;
@@ -25,11 +26,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("GameObject")]
     public GameObject workerPrefab;
-    public GameObject pathTargetPrefab;
-
-    [Header("Placement variables")]
-    private PathController[] selectablePaths;
-    private GameObject pathTarget;
+    public GameObject pathPrefab;
     
     
     public void Start() {
@@ -59,11 +56,7 @@ public class PlayerController : MonoBehaviour
 
     public void SetState(State newState) {
         // CLEAN PREVIOUS STATE
-        if(state == State.PathPlacement)
-        {
-            pathTarget.SetActive(false);
-            selectablePaths = null;
-        }
+
 
         // NEW STATE LOGIC
         if(newState == State.WaitForTurn)
@@ -82,37 +75,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void StartHousePlacement(WorkerController worker) {
+    public void BuildPath(PathController controller)
+    {   
+        // Set path as occupied by player
+        controller.path.occupiedBy = player;
 
-    }
+        // Calculate the rotation of the object
+        Path path = controller.path;
+        Vector3 between = path.between.Item2.position - path.between.Item1.position;
+        var angle = (float)(Mathf.Atan2(between.x, between.z) * Mathf.Rad2Deg + 90f);
 
-    public void StartPathPlacement(WorkerController worker, PathController[] pathControllers) {
-        
-        selectablePaths = pathControllers;
+        // Instantiate path object
+        GameObject pathObject = GameObject.Instantiate(pathPrefab, controller.transform.position, Quaternion.Euler(0, angle, 0));
+        pathObject.transform.SetParent(controller.pathHolder.transform);
 
-        // Instatiate path target holder
-        if(pathTarget == null)
-        {
-            pathTarget = GameObject.Instantiate(pathTargetPrefab, Vector3.zero, Quaternion.identity);
-        }
-        pathTarget.SetActive(true);
-
-        // Show selectable indicator
-        foreach(var pathC in selectablePaths)
-        {
-            pathC.SetSelectable(true);
-        }
-
-        // Change state
-        SetState(State.PathPlacement);
-    }
-
-    public void Update()
-    {
-        if(state == State.PathPlacement)
-        {
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            pathTarget.transform.position = new Vector3(mousePos.x, 0, mousePos.z);
-        }
     }
 }

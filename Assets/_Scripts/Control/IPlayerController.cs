@@ -6,5 +6,5 @@ public interface IPlayerController {
   // Move worker
   // Upgrade location
   // Build road
-  // Jeg vil dø
+  // Jeg vil dø <--------- xD
 }

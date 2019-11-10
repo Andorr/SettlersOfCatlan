@@ -47,25 +47,12 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
     {
         controller.uiController.EnableActionPanel(false);
 
-        if(currentAvailableMoves != null)
-        {
-            foreach(var lc in currentAvailableMoves)
-            {
-                lc.SetSelectable(false);
-            }
-            currentAvailableMoves = null;
-        }
         
-        if(adjecentPaths != null)
-        {
-            foreach(var pc in adjecentPaths)
-            {
-                pc.SetSelectable(false);
-            }
-            adjecentPaths = null;
-        }
+        DisableMovement();
+        DisablePathPlacement();
+        EnableWorker(true);
 
-        shouldTryOverride = false;
+        controller.GetLocalPlayer().SetState(PlayerController.State.None);
     }
 
     public bool OnTryOverride(GameController controller, GameObject other)
@@ -78,7 +65,18 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
                 return false;
             }
             controller.localPlayer.MoveWorker(workerController, lc.location);
-            // workerController.state = WorkerController.WorkerState.Immovable;
+            workerController.state = WorkerController.WorkerState.Immovable;
+            shouldTryOverride = true;
+            return true;
+        }
+        else if(controller.localPlayer.state == PlayerController.State.PathPlacement)
+        {
+            var pc = other.GetComponent<PathController>();
+            if(pc == null) {
+                return false;
+            }
+            
+            controller.GetLocalPlayer().BuildPath(pc);
             return true;
         }
         return false;
@@ -87,11 +85,46 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
     private void EnableRoadPlacement(GameController controller) {
         // Enable all path colliders to adjecent paths
         adjecentPaths = controller.mapController.GetAdjecentPaths(workerController.worker.location);
-        controller.GetLocalPlayer().StartPathPlacement(workerController, adjecentPaths);
-        
+        foreach(var path in adjecentPaths)
+        {
+            path.SetSelectable(true);
+        }
+        controller.GetLocalPlayer().SetState(PlayerController.State.PathPlacement);
+        shouldTryOverride = true;
+        DisableMovement();
+        EnableWorker(false);
     }
 
     private void EnableHousePlacement(GameController controller) {
 
+    }
+
+    private void DisableMovement()
+    {
+        if(currentAvailableMoves != null)
+        {
+            foreach(var lc in currentAvailableMoves)
+            {
+                lc.SetSelectable(false);
+            }
+            currentAvailableMoves = null;
+        }
+    }
+
+    private void DisablePathPlacement()
+    {
+        if(adjecentPaths != null)
+        {
+            foreach(var pc in adjecentPaths)
+            {
+                pc.SetSelectable(false);
+            }
+            adjecentPaths = null;
+        }
+    }
+
+    private void EnableWorker(bool enable)
+    {
+        GetComponent<BoxCollider>().enabled = enable;
     }
 }
