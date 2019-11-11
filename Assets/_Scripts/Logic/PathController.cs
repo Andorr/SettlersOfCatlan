@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PathController : MonoBehaviour
 {
-
+    [SerializeField]
     public Path path;
 
     [Header("GameObjects")]
@@ -26,5 +26,16 @@ public class PathController : MonoBehaviour
         isSelectable = selectable;
         transform.GetComponent<BoxCollider>().enabled = selectable;
         selectableIndicator.SetActive(selectable);
+    }
+
+    public void BuildPath(Player player)
+    {
+        Vector3 between = path.between.Item2.position - path.between.Item1.position;
+        var angle = (float)(Mathf.Atan2(between.x, between.z) * Mathf.Rad2Deg + 90f);
+
+        // Instantiate path object
+        GameObject pathObject = GameObject.Instantiate(pathPrefab, transform.position, Quaternion.Euler(0, angle, 0));
+        pathObject.transform.SetParent(pathHolder.transform);
+        pathObject.GetComponentInChildren<MeshRenderer>().material.SetColor("_BaseColor", player.GetColor());
     }
 }

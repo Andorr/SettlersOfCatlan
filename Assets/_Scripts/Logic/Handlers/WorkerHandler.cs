@@ -20,13 +20,14 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
     }
 
     public void OnSelected(GameController controller)
-    {
+    {   
 
         // Show UI action panel
+        controller.uiController.EnableActionButtons(true, workerController.worker.location.type == LocationType.Available);
         controller.uiController.EnableActionPanel(
             true, 
             () => EnableRoadPlacement(controller),
-            () => EnableHousePlacement(controller)
+            () => BuildHouse(controller)
         );
 
         // Initialize moves to show
@@ -84,7 +85,7 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
 
     private void EnableRoadPlacement(GameController controller) {
         // Enable all path colliders to adjecent paths
-        adjecentPaths = controller.mapController.GetAdjecentPaths(workerController.worker.location);
+        adjecentPaths = controller.mapController.GetAdjecentPaths(workerController.worker.location, true);
         foreach(var path in adjecentPaths)
         {
             path.SetSelectable(true);
@@ -95,8 +96,14 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
         EnableWorker(false);
     }
 
-    private void EnableHousePlacement(GameController controller) {
-
+    private void BuildHouse(GameController controller)
+    {
+        var exists = controller.mapController.GetLocationController(workerController.worker.location, out LocationController lc);
+        if(!exists)
+        {
+            return;
+        }
+        controller.GetLocalPlayer().BuildHouse(lc);
     }
 
     private void DisableMovement()

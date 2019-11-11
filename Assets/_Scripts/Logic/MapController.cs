@@ -23,12 +23,6 @@ public partial class MapController : MonoBehaviour
     public TileGeneration generation = TileGeneration.Random;
     public int seed = 0;
 
-
-    void Start() {
-        
-        
-    }
-
     public void GenerateMap()
     {
         // Delete existing map from the scene

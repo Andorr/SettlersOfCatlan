@@ -24,4 +24,11 @@ public class UIController : MonoBehaviour
             btns[1].onClick.AddListener(houseAction);
         }
     }
+
+    public void EnableActionButtons(bool pathButton, bool houseButton)
+    {
+        var btns = actionPanel.GetComponentsInChildren<Button>();
+        btns[0].interactable = pathButton;
+        btns[1].interactable = houseButton;
+    }
 }

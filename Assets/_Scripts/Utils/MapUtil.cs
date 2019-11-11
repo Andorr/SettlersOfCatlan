@@ -92,6 +92,7 @@ public static class MapUtil
                     location = new Location() {
                         id = currentLocationId,
                         position = point,
+                        type = LocationType.Available,
                     };
                     locations.Add(pointKey, location);
                     currentLocationId++;

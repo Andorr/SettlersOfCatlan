@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("GameObject")]
     public GameObject workerPrefab;
-    public GameObject pathPrefab;
     
     
     public void Start() {
@@ -34,6 +33,11 @@ public class PlayerController : MonoBehaviour
         paths = new List<Path>();
         workers = new List<WorkerController>();
         mapController = GameObject.FindGameObjectWithTag("GameController").GetComponent<MapController>();
+    }
+
+    public void Initialize(Player player)
+    {
+        this.player = player;
     }
 
     public void CreateWorker(Location location) {
@@ -77,17 +81,12 @@ public class PlayerController : MonoBehaviour
 
     public void BuildPath(PathController controller)
     {   
-        // Set path as occupied by player
-        controller.path.occupiedBy = player;
-
         // Calculate the rotation of the object
-        Path path = controller.path;
-        Vector3 between = path.between.Item2.position - path.between.Item1.position;
-        var angle = (float)(Mathf.Atan2(between.x, between.z) * Mathf.Rad2Deg + 90f);
+        controller.BuildPath(player);
+    }
 
-        // Instantiate path object
-        GameObject pathObject = GameObject.Instantiate(pathPrefab, controller.transform.position, Quaternion.Euler(0, angle, 0));
-        pathObject.transform.SetParent(controller.pathHolder.transform);
-
+    public void BuildHouse(LocationController controller)
+    {
+        controller.BuildHouse(player);
     }
 }
