@@ -86,7 +86,7 @@ public static class MapUtil
             {
                 Vector3 point = surroundingPoints[i];
                 Location location = null;
-                String pointKey = point.x.ToString("0.00000") + "_" + point.z.ToString("0.00000");
+                String pointKey = point.x.ToString("0.000") + "_" + point.z.ToString("0.000");
                 if(!locations.ContainsKey(pointKey)) {
                     // Locatino does not already exist, add it to the dictionary
                     location = new Location() {
@@ -141,6 +141,8 @@ public static class MapUtil
 
         // Generate map tile types
         tiles = GenerateTileTypes(generation, tiles, seed);
+
+        Debug.Log("Location Length: " + locations.Values.Count);
 
         // Convert map attributes to 
         Map map = new Map();

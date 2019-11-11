@@ -15,6 +15,10 @@ public class PathController : MonoBehaviour
 
     private bool isSelectable = false;
 
+    public void Start() {
+        
+    }
+
     public void Initialize(Path newPath, float radius)
     {
         path = newPath;

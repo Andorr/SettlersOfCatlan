@@ -19,6 +19,12 @@ namespace State
         public string id;
         public PlayerColor color;
 
+        public int wood = 0;
+        public int stone = 0;
+        public int clay = 0;
+        public int wheat = 0;
+        public int wool = 0;
+
         public Color GetColor() {
             switch(color) {
                 case PlayerColor.Red: {
