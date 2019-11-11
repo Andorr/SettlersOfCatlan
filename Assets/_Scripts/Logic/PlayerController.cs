@@ -83,10 +83,14 @@ public class PlayerController : MonoBehaviour
     {   
         // Calculate the rotation of the object
         controller.BuildPath(player);
+
+        paths.Add(controller.path);
     }
 
     public void BuildHouse(LocationController controller)
     {
         controller.BuildHouse(player);
+
+        locations.Add(controller.location);
     }
 }

@@ -124,7 +124,7 @@ public static class MapUtil
 
             // Add a path between the previous location and the start location
             // Check if there already is an existing path between the locations
-            if(!paths.ContainsKey((startLocation.id, prevLocation.id)) && !paths.ContainsKey((startLocation.id, prevLocation.id)))
+            if(!paths.ContainsKey((startLocation.id, prevLocation.id)) && !paths.ContainsKey((prevLocation.id, startLocation.id)))
             {
                 paths.Add((startLocation.id, prevLocation.id), new Path() {
                     id = currentPathId,

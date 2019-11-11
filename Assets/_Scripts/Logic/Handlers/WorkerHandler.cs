@@ -66,7 +66,7 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
                 return false;
             }
             controller.localPlayer.MoveWorker(workerController, lc.location);
-            workerController.state = WorkerController.WorkerState.Immovable;
+            // workerController.state = WorkerController.WorkerState.Immovable;
             shouldTryOverride = true;
             return true;
         }

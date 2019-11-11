@@ -381,6 +381,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1004205006}
@@ -439,31 +440,37 @@ MonoBehaviour:
       position: {x: -0.00000029802322, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 29
       type: 0
       position: {x: -4.3301272, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 26
       type: 0
       position: {x: -8.6602545, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 7
       type: 0
       position: {x: -8.660254, y: 0, z: -25}
       occupiedBy:
         id: 
+        color: 0
     - id: 6
       type: 0
       position: {x: -4.330127, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 11
       type: 0
       position: {x: -0.00000021855695, y: 0, z: -25}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 2116333827}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -540,6 +547,7 @@ MonoBehaviour:
     position: {x: 25.980762, y: 0, z: 10}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1771908552}
   selectableIndicator: {fileID: 963590015}
   structureHolder: {fileID: 0}
@@ -799,31 +807,37 @@ MonoBehaviour:
       position: {x: -4.330127, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 111
       type: 0
       position: {x: -8.660254, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
     - id: 108
       type: 0
       position: {x: -12.99038, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 94
       type: 0
       position: {x: -12.990381, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 93
       type: 0
       position: {x: -8.6602545, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 112
       type: 0
       position: {x: -4.330126, y: 0, z: 12.500001}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1151070577}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -971,6 +985,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1656906798}
@@ -1029,6 +1044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player:
     id: 
+    color: 0
   locations: []
   paths: []
   workers: []
@@ -1313,6 +1329,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1256965378}
@@ -1382,6 +1399,7 @@ MonoBehaviour:
     position: {x: 34.641014, y: 0, z: 10}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1359214429}
   selectableIndicator: {fileID: 41834968}
   structureHolder: {fileID: 0}
@@ -1585,6 +1603,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 2127987257}
@@ -1853,6 +1872,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1502536531}
@@ -2057,6 +2077,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1863893924}
@@ -2314,6 +2335,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: 10}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 74135006}
   selectableIndicator: {fileID: 1820724281}
   structureHolder: {fileID: 0}
@@ -2396,6 +2418,7 @@ MonoBehaviour:
     position: {x: 25.980762, y: 0, z: 5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 2103579666}
   selectableIndicator: {fileID: 994202614}
   structureHolder: {fileID: 0}
@@ -2538,6 +2561,7 @@ MonoBehaviour:
     position: {x: 12.990381, y: 0, z: -32.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1297582120}
   selectableIndicator: {fileID: 449903460}
   structureHolder: {fileID: 0}
@@ -2703,31 +2727,37 @@ MonoBehaviour:
       position: {x: -4.330127, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 141
       type: 0
       position: {x: -8.660254, y: 0, z: 35}
       occupiedBy:
         id: 
+        color: 0
     - id: 137
       type: 0
       position: {x: -12.99038, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 128
       type: 0
       position: {x: -12.990381, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 127
       type: 0
       position: {x: -8.6602545, y: 0, z: 25}
       occupiedBy:
         id: 
+        color: 0
     - id: 130
       type: 0
       position: {x: -4.3301272, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 783127496}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -2804,6 +2834,7 @@ MonoBehaviour:
     position: {x: 21.650637, y: 0, z: -2.500001}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1101211114}
   selectableIndicator: {fileID: 53341852}
   structureHolder: {fileID: 0}
@@ -2928,6 +2959,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1034894557}
@@ -3008,6 +3040,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 502961085}
@@ -3066,31 +3099,37 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 114
       type: 0
       position: {x: -0.00000021855695, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
     - id: 110
       type: 0
       position: {x: -4.330127, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 112
       type: 0
       position: {x: -4.330126, y: 0, z: 12.500001}
       occupiedBy:
         id: 
+        color: 0
     - id: 115
       type: 0
       position: {x: 0.000000059624405, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 116
       type: 0
       position: {x: 4.3301277, y: 0, z: 12.500001}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 649589420}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -3178,6 +3217,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 524349602}
@@ -3525,6 +3565,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: 32.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1382416582}
   selectableIndicator: {fileID: 436797461}
   structureHolder: {fileID: 0}
@@ -3648,6 +3689,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 702514748}
@@ -4050,31 +4092,37 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 118
       type: 0
       position: {x: 8.660254, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
     - id: 113
       type: 0
       position: {x: 4.330127, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 116
       type: 0
       position: {x: 4.3301277, y: 0, z: 12.500001}
       occupiedBy:
         id: 
+        color: 0
     - id: 98
       type: 0
       position: {x: 8.660254, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 97
       type: 0
       position: {x: 12.99038, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 384992394}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -4181,6 +4229,7 @@ MonoBehaviour:
     position: {x: -12.990379, y: 0, z: -32.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1411034299}
   selectableIndicator: {fileID: 1701290758}
   structureHolder: {fileID: 0}
@@ -4323,6 +4372,7 @@ MonoBehaviour:
     position: {x: -25.980762, y: 0, z: 20}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1834939592}
   selectableIndicator: {fileID: 175582972}
   structureHolder: {fileID: 0}
@@ -4416,6 +4466,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1323933939}
@@ -5051,6 +5102,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 497550900}
@@ -5191,6 +5243,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 342336059}
@@ -5271,6 +5324,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1965768911}
@@ -5469,6 +5523,7 @@ MonoBehaviour:
     position: {x: 30.310888, y: 0, z: -2.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 412366892}
   selectableIndicator: {fileID: 546234099}
   structureHolder: {fileID: 0}
@@ -5645,6 +5700,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: 2.5000002}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1553404894}
   selectableIndicator: {fileID: 2145926129}
   structureHolder: {fileID: 0}
@@ -5893,6 +5949,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 643323260}
@@ -6195,6 +6252,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: -17.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1800943729}
   selectableIndicator: {fileID: 1371605487}
   structureHolder: {fileID: 0}
@@ -6867,6 +6925,7 @@ MonoBehaviour:
     position: {x: 4.330127, y: 0, z: -27.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 677157248}
   selectableIndicator: {fileID: 570706389}
   structureHolder: {fileID: 0}
@@ -7148,6 +7207,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 636799585}
@@ -7661,6 +7721,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 237877915}
@@ -7844,6 +7905,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 631408432}
@@ -7913,6 +7975,7 @@ MonoBehaviour:
     position: {x: 4.330127, y: 0, z: 27.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 405590599}
   selectableIndicator: {fileID: 984306561}
   structureHolder: {fileID: 0}
@@ -8078,31 +8141,37 @@ MonoBehaviour:
       position: {x: 30.31089, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 122
       type: 0
       position: {x: 25.980762, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
     - id: 119
       type: 0
       position: {x: 21.650635, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 123
       type: 0
       position: {x: 21.650637, y: 0, z: 12.499999}
       occupiedBy:
         id: 
+        color: 0
     - id: 100
       type: 0
       position: {x: 25.980762, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 103
       type: 0
       position: {x: 30.310888, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1547843345}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -8220,6 +8289,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 955385324}
@@ -8278,31 +8348,37 @@ MonoBehaviour:
       position: {x: -8.6602545, y: 0, z: 25}
       occupiedBy:
         id: 
+        color: 0
     - id: 128
       type: 0
       position: {x: -12.990381, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 124
       type: 0
       position: {x: -17.320507, y: 0, z: 25}
       occupiedBy:
         id: 
+        color: 0
     - id: 109
       type: 0
       position: {x: -17.320507, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
     - id: 108
       type: 0
       position: {x: -12.99038, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 111
       type: 0
       position: {x: -8.660254, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1902130550}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -8390,6 +8466,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1399160669}
@@ -8831,6 +8908,7 @@ MonoBehaviour:
     position: {x: -4.330126, y: 0, z: 12.500001}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1926639987}
   selectableIndicator: {fileID: 526770916}
   structureHolder: {fileID: 0}
@@ -9093,6 +9171,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1773305237}
@@ -9173,6 +9252,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1030165687}
@@ -9396,6 +9476,7 @@ MonoBehaviour:
     position: {x: -0.00000029802322, y: 0, z: -20}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1294169531}
   selectableIndicator: {fileID: 783596301}
   structureHolder: {fileID: 0}
@@ -9842,6 +9923,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1277613358}
@@ -9900,31 +9982,37 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 11
       type: 0
       position: {x: -0.00000021855695, y: 0, z: -25}
       occupiedBy:
         id: 
+        color: 0
     - id: 6
       type: 0
       position: {x: -4.330127, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 9
       type: 0
       position: {x: -4.330126, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 12
       type: 0
       position: {x: 0.000000059624405, y: 0, z: -35}
       occupiedBy:
         id: 
+        color: 0
     - id: 13
       type: 0
       position: {x: 4.3301277, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1942666699}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -10189,6 +10277,7 @@ MonoBehaviour:
     position: {x: -34.641014, y: 0, z: -10.000001}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1504397531}
   selectableIndicator: {fileID: 1292187922}
   structureHolder: {fileID: 0}
@@ -10331,6 +10420,7 @@ MonoBehaviour:
     position: {x: -30.310888, y: 0, z: -2.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 519609635}
   selectableIndicator: {fileID: 1216966980}
   structureHolder: {fileID: 0}
@@ -10413,6 +10503,7 @@ MonoBehaviour:
     position: {x: -8.660254, y: 0, z: -25}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 660526319}
   selectableIndicator: {fileID: 263857791}
   structureHolder: {fileID: 0}
@@ -10683,6 +10774,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: -20}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1563617719}
   selectableIndicator: {fileID: 1712787290}
   structureHolder: {fileID: 0}
@@ -10949,6 +11041,7 @@ MonoBehaviour:
     position: {x: 38.97114, y: 0, z: 2.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 575578988}
   selectableIndicator: {fileID: 1708727102}
   structureHolder: {fileID: 0}
@@ -11042,6 +11135,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1317799277}
@@ -11111,6 +11205,7 @@ MonoBehaviour:
     position: {x: 34.641018, y: 0, z: -9.999999}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1587546330}
   selectableIndicator: {fileID: 245038580}
   structureHolder: {fileID: 0}
@@ -11283,6 +11378,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 176915212}
@@ -11601,6 +11697,7 @@ MonoBehaviour:
     position: {x: 25.980762, y: 0, z: -5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 907102555}
   selectableIndicator: {fileID: 1133788060}
   structureHolder: {fileID: 0}
@@ -12243,6 +12340,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 547434669}
@@ -12323,6 +12421,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 884101598}
@@ -12494,6 +12593,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1702863605}
@@ -12717,6 +12817,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: -35}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1492620715}
   selectableIndicator: {fileID: 1943089688}
   structureHolder: {fileID: 0}
@@ -12859,6 +12960,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: -4.9999995}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 384870511}
   selectableIndicator: {fileID: 545735781}
   structureHolder: {fileID: 0}
@@ -12941,6 +13043,7 @@ MonoBehaviour:
     position: {x: -8.6602545, y: 0, z: 25}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 2080331616}
   selectableIndicator: {fileID: 1332055515}
   structureHolder: {fileID: 0}
@@ -13023,6 +13126,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: 10}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 450227728}
   selectableIndicator: {fileID: 689120579}
   structureHolder: {fileID: 0}
@@ -13105,6 +13209,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: -10}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 942871372}
   selectableIndicator: {fileID: 492338830}
   structureHolder: {fileID: 0}
@@ -13273,6 +13378,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 901360339}
@@ -13342,6 +13448,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: 12.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1268950415}
   selectableIndicator: {fileID: 1726756423}
   structureHolder: {fileID: 0}
@@ -13733,6 +13840,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 257934978}
@@ -13916,6 +14024,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 84875225}
@@ -14098,31 +14207,37 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: -5}
       occupiedBy:
         id: 
+        color: 0
     - id: 60
       type: 0
       position: {x: -21.650635, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 55
       type: 0
       position: {x: -25.98076, y: 0, z: -5}
       occupiedBy:
         id: 
+        color: 0
     - id: 38
       type: 0
       position: {x: -25.980762, y: 0, z: -10}
       occupiedBy:
         id: 
+        color: 0
     - id: 37
       type: 0
       position: {x: -21.650635, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 42
       type: 0
       position: {x: -17.320507, y: 0, z: -10}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1711510245}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -14199,6 +14314,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: -20}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 918391394}
   selectableIndicator: {fileID: 1352726700}
   structureHolder: {fileID: 0}
@@ -14311,6 +14427,7 @@ MonoBehaviour:
     position: {x: -8.660254, y: 0, z: 5.000001}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 564441406}
   selectableIndicator: {fileID: 1506996016}
   structureHolder: {fileID: 0}
@@ -14487,6 +14604,7 @@ MonoBehaviour:
     position: {x: -8.6602545, y: 0, z: 10}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 2055454330}
   selectableIndicator: {fileID: 682244921}
   structureHolder: {fileID: 0}
@@ -14580,6 +14698,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 454949927}
@@ -14649,6 +14768,7 @@ MonoBehaviour:
     position: {x: -34.641014, y: 0, z: 10}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 2057554893}
   selectableIndicator: {fileID: 1619229150}
   structureHolder: {fileID: 0}
@@ -14731,6 +14851,7 @@ MonoBehaviour:
     position: {x: -34.641014, y: 0, z: 5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1683859818}
   selectableIndicator: {fileID: 1695134139}
   structureHolder: {fileID: 0}
@@ -14938,6 +15059,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: -25}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 114977647}
   selectableIndicator: {fileID: 557286388}
   structureHolder: {fileID: 0}
@@ -15246,6 +15368,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1162694749}
@@ -15830,31 +15953,37 @@ MonoBehaviour:
       position: {x: -30.310886, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 72
       type: 0
       position: {x: -34.641014, y: 0, z: 5}
       occupiedBy:
         id: 
+        color: 0
     - id: 73
       type: 0
       position: {x: -38.97114, y: 0, z: 2.5000002}
       occupiedBy:
         id: 
+        color: 0
     - id: 74
       type: 0
       position: {x: -38.97114, y: 0, z: -2.500001}
       occupiedBy:
         id: 
+        color: 0
     - id: 57
       type: 0
       position: {x: -34.641014, y: 0, z: -4.9999995}
       occupiedBy:
         id: 
+        color: 0
     - id: 56
       type: 0
       position: {x: -30.310888, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1454911826}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -15942,6 +16071,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 38266149}
@@ -16000,31 +16130,37 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: -5}
       occupiedBy:
         id: 
+        color: 0
     - id: 67
       type: 0
       position: {x: 21.650635, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 63
       type: 0
       position: {x: 17.320507, y: 0, z: -5}
       occupiedBy:
         id: 
+        color: 0
     - id: 50
       type: 0
       position: {x: 17.320507, y: 0, z: -10}
       occupiedBy:
         id: 
+        color: 0
     - id: 49
       type: 0
       position: {x: 21.650635, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 52
       type: 0
       position: {x: 25.980762, y: 0, z: -10}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1725625191}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -16202,6 +16338,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 2111083289}
@@ -16384,31 +16521,37 @@ MonoBehaviour:
       position: {x: -25.98076, y: 0, z: -5}
       occupiedBy:
         id: 
+        color: 0
     - id: 56
       type: 0
       position: {x: -30.310888, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 57
       type: 0
       position: {x: -34.641014, y: 0, z: -4.9999995}
       occupiedBy:
         id: 
+        color: 0
     - id: 58
       type: 0
       position: {x: -34.641014, y: 0, z: -10.000001}
       occupiedBy:
         id: 
+        color: 0
     - id: 39
       type: 0
       position: {x: -30.31089, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 38
       type: 0
       position: {x: -25.980762, y: 0, z: -10}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 317047219}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -16839,6 +16982,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 317213985}
@@ -17013,6 +17157,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1015904749}
@@ -17093,6 +17238,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1239807247}
@@ -17564,6 +17710,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 804912024}
@@ -17644,6 +17791,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 616198088}
@@ -17713,6 +17861,7 @@ MonoBehaviour:
     position: {x: 34.641018, y: 0, z: 5.000001}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 275490657}
   selectableIndicator: {fileID: 2072494754}
   structureHolder: {fileID: 0}
@@ -17806,6 +17955,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 597620805}
@@ -18040,6 +18190,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 2077113505}
@@ -18214,6 +18365,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1858333507}
@@ -18452,6 +18604,7 @@ MonoBehaviour:
     position: {x: -25.980762, y: 0, z: -20}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 910693260}
   selectableIndicator: {fileID: 255544447}
   structureHolder: {fileID: 0}
@@ -18628,6 +18781,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: 2.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1708856760}
   selectableIndicator: {fileID: 1078260168}
   structureHolder: {fileID: 0}
@@ -18721,6 +18875,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1119161016}
@@ -18779,31 +18934,37 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: 25}
       occupiedBy:
         id: 
+        color: 0
     - id: 134
       type: 0
       position: {x: 12.99038, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 131
       type: 0
       position: {x: 8.660254, y: 0, z: 25}
       occupiedBy:
         id: 
+        color: 0
     - id: 118
       type: 0
       position: {x: 8.660254, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
     - id: 117
       type: 0
       position: {x: 12.99038, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 120
       type: 0
       position: {x: 17.320507, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1933993022}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -19004,6 +19165,7 @@ MonoBehaviour:
     position: {x: -34.641014, y: 0, z: -4.9999995}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1838500722}
   selectableIndicator: {fileID: 1111723412}
   structureHolder: {fileID: 0}
@@ -19282,6 +19444,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 2065033344}
@@ -19351,6 +19514,7 @@ MonoBehaviour:
     position: {x: -0.00000021855695, y: 0, z: -25}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1318880487}
   selectableIndicator: {fileID: 764728824}
   structureHolder: {fileID: 0}
@@ -19663,6 +19827,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 458985464}
@@ -19743,6 +19908,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 2029775385}
@@ -20016,31 +20182,37 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 42
       type: 0
       position: {x: -17.320507, y: 0, z: -10}
       occupiedBy:
         id: 
+        color: 0
     - id: 37
       type: 0
       position: {x: -21.650635, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 23
       type: 0
       position: {x: -21.650635, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 22
       type: 0
       position: {x: -17.320507, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 27
       type: 0
       position: {x: -12.990381, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 340061358}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -20117,6 +20289,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: -35}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 590783956}
   selectableIndicator: {fileID: 1683150612}
   structureHolder: {fileID: 0}
@@ -20304,6 +20477,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 478220654}
@@ -20373,6 +20547,7 @@ MonoBehaviour:
     position: {x: -12.990381, y: 0, z: 12.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1350319812}
   selectableIndicator: {fileID: 805313426}
   structureHolder: {fileID: 0}
@@ -20466,6 +20641,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 653498292}
@@ -20535,6 +20711,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: 20}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 577939248}
   selectableIndicator: {fileID: 1355477224}
   structureHolder: {fileID: 0}
@@ -20628,6 +20805,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 657983757}
@@ -20697,6 +20875,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: -27.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1709306229}
   selectableIndicator: {fileID: 1504823048}
   structureHolder: {fileID: 0}
@@ -20790,6 +20969,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1159623721}
@@ -20870,6 +21050,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 888370490}
@@ -20950,6 +21131,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1051907992}
@@ -21030,6 +21212,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 517148258}
@@ -21629,6 +21812,7 @@ MonoBehaviour:
     position: {x: 38.97114, y: 0, z: -2.4999988}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 588559}
   selectableIndicator: {fileID: 1180046730}
   structureHolder: {fileID: 0}
@@ -21884,6 +22068,7 @@ MonoBehaviour:
     position: {x: 4.330127, y: 0, z: 32.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 415132850}
   selectableIndicator: {fileID: 1595886691}
   structureHolder: {fileID: 0}
@@ -22154,6 +22339,7 @@ MonoBehaviour:
     position: {x: -30.31089, y: 0, z: -12.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1845261314}
   selectableIndicator: {fileID: 174505667}
   structureHolder: {fileID: 0}
@@ -22371,6 +22557,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1025412987}
@@ -22481,6 +22668,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 404338921}
@@ -22561,6 +22749,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 16812984}
@@ -22889,6 +23078,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 107336702}
@@ -23255,31 +23445,37 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 109
       type: 0
       position: {x: -17.320507, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
     - id: 105
       type: 0
       position: {x: -21.650635, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 92
       type: 0
       position: {x: -21.650635, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 91
       type: 0
       position: {x: -17.320507, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 94
       type: 0
       position: {x: -12.990381, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1657992974}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -23499,31 +23695,37 @@ MonoBehaviour:
       position: {x: -8.6602545, y: 0, z: -5}
       occupiedBy:
         id: 
+        color: 0
     - id: 62
       type: 0
       position: {x: -12.990381, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 59
       type: 0
       position: {x: -17.320507, y: 0, z: -5}
       occupiedBy:
         id: 
+        color: 0
     - id: 42
       type: 0
       position: {x: -17.320507, y: 0, z: -10}
       occupiedBy:
         id: 
+        color: 0
     - id: 41
       type: 0
       position: {x: -12.99038, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 44
       type: 0
       position: {x: -8.660254, y: 0, z: -10}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 142498490}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -23735,6 +23937,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1513824884}
@@ -23964,31 +24167,37 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: 25}
       occupiedBy:
         id: 
+        color: 0
     - id: 136
       type: 0
       position: {x: 21.650635, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 133
       type: 0
       position: {x: 17.320507, y: 0, z: 25}
       occupiedBy:
         id: 
+        color: 0
     - id: 120
       type: 0
       position: {x: 17.320507, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
     - id: 119
       type: 0
       position: {x: 21.650635, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 122
       type: 0
       position: {x: 25.980762, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1413425991}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -24076,6 +24285,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 809587105}
@@ -24145,6 +24355,7 @@ MonoBehaviour:
     position: {x: 4.330127, y: 0, z: 17.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 626640902}
   selectableIndicator: {fileID: 579225892}
   structureHolder: {fileID: 0}
@@ -24351,6 +24562,7 @@ MonoBehaviour:
     position: {x: -8.660254, y: 0, z: 20}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 391691689}
   selectableIndicator: {fileID: 838918438}
   structureHolder: {fileID: 0}
@@ -24696,6 +24908,7 @@ MonoBehaviour:
     position: {x: 30.310888, y: 0, z: 12.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 111189266}
   selectableIndicator: {fileID: 2035578868}
   structureHolder: {fileID: 0}
@@ -25330,6 +25543,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: 5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1167047567}
   selectableIndicator: {fileID: 1225744465}
   structureHolder: {fileID: 0}
@@ -25673,6 +25887,7 @@ MonoBehaviour:
     position: {x: -0.00000021855695, y: 0, z: -10}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 77203747}
   selectableIndicator: {fileID: 1578140232}
   structureHolder: {fileID: 0}
@@ -25860,6 +26075,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 938014245}
@@ -25970,6 +26186,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 914937518}
@@ -26099,6 +26316,7 @@ MonoBehaviour:
     position: {x: -8.660254, y: 0, z: -10}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1683381423}
   selectableIndicator: {fileID: 2126882402}
   structureHolder: {fileID: 0}
@@ -26192,6 +26410,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1085853529}
@@ -26441,6 +26660,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 45159738}
@@ -26799,6 +27019,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 167420738}
@@ -26972,6 +27193,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1424597628}
@@ -27101,6 +27323,7 @@ MonoBehaviour:
     position: {x: 25.980762, y: 0, z: 25}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1633968805}
   selectableIndicator: {fileID: 150973433}
   structureHolder: {fileID: 0}
@@ -27183,6 +27406,7 @@ MonoBehaviour:
     position: {x: -8.6602545, y: 0, z: -20}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 130815949}
   selectableIndicator: {fileID: 1240353185}
   structureHolder: {fileID: 0}
@@ -27265,6 +27489,7 @@ MonoBehaviour:
     position: {x: -30.310888, y: 0, z: 12.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 79778462}
   selectableIndicator: {fileID: 1240831504}
   structureHolder: {fileID: 0}
@@ -27358,6 +27583,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1178489365}
@@ -27427,6 +27653,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: 2.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1016848521}
   selectableIndicator: {fileID: 332904195}
   structureHolder: {fileID: 0}
@@ -27644,6 +27871,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1684066578}
@@ -27755,6 +27983,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 103237131}
@@ -28016,31 +28245,37 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 101
       type: 0
       position: {x: 21.650635, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 96
       type: 0
       position: {x: 17.320507, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 80
       type: 0
       position: {x: 17.320507, y: 0, z: 5}
       occupiedBy:
         id: 
+        color: 0
     - id: 79
       type: 0
       position: {x: 21.650635, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 83
       type: 0
       position: {x: 25.980762, y: 0, z: 5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 510881248}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -28425,6 +28660,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1229881717}
@@ -28494,6 +28730,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: 20}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1890215060}
   selectableIndicator: {fileID: 243362384}
   structureHolder: {fileID: 0}
@@ -28587,6 +28824,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 178077891}
@@ -28667,6 +28905,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1918848143}
@@ -28736,6 +28975,7 @@ MonoBehaviour:
     position: {x: 25.980762, y: 0, z: 20}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 583281458}
   selectableIndicator: {fileID: 350694928}
   structureHolder: {fileID: 0}
@@ -28818,6 +29058,7 @@ MonoBehaviour:
     position: {x: -30.310888, y: 0, z: -17.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1988329288}
   selectableIndicator: {fileID: 1198414897}
   structureHolder: {fileID: 0}
@@ -29077,31 +29318,37 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 50
       type: 0
       position: {x: 17.320507, y: 0, z: -10}
       occupiedBy:
         id: 
+        color: 0
     - id: 47
       type: 0
       position: {x: 12.99038, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 33
       type: 0
       position: {x: 12.99038, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 32
       type: 0
       position: {x: 17.320507, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 35
       type: 0
       position: {x: 21.650635, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 724211708}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -29167,31 +29414,37 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 35
       type: 0
       position: {x: 21.650635, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 32
       type: 0
       position: {x: 17.320507, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 19
       type: 0
       position: {x: 17.320507, y: 0, z: -25}
       occupiedBy:
         id: 
+        color: 0
     - id: 18
       type: 0
       position: {x: 21.650635, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 36
       type: 0
       position: {x: 25.980762, y: 0, z: -24.999998}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1880908091}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -29362,6 +29615,7 @@ MonoBehaviour:
     position: {x: -25.980762, y: 0, z: -10}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 831185696}
   selectableIndicator: {fileID: 2001664878}
   structureHolder: {fileID: 0}
@@ -29549,6 +29803,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 424395593}
@@ -29953,6 +30208,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1592870540}
@@ -30345,6 +30601,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1981798329}
@@ -30425,6 +30682,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1487775257}
@@ -30667,31 +30925,37 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 97
       type: 0
       position: {x: 12.99038, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 98
       type: 0
       position: {x: 8.660254, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 99
       type: 0
       position: {x: 8.660254, y: 0, z: 4.999999}
       occupiedBy:
         id: 
+        color: 0
     - id: 81
       type: 0
       position: {x: 12.99038, y: 0, z: 2.5000002}
       occupiedBy:
         id: 
+        color: 0
     - id: 80
       type: 0
       position: {x: 17.320507, y: 0, z: 5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1905271010}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -30779,6 +31043,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 815470412}
@@ -31351,6 +31616,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1030561748}
@@ -31514,6 +31780,7 @@ MonoBehaviour:
     position: {x: -25.980762, y: 0, z: 25}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 336384438}
   selectableIndicator: {fileID: 902223654}
   structureHolder: {fileID: 0}
@@ -31701,6 +31968,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1517989933}
@@ -31988,6 +32256,7 @@ MonoBehaviour:
     position: {x: -4.3301272, y: 0, z: 27.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 567505870}
   selectableIndicator: {fileID: 217470120}
   structureHolder: {fileID: 0}
@@ -32277,31 +32546,37 @@ MonoBehaviour:
       position: {x: -4.330127, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 7
       type: 0
       position: {x: -8.660254, y: 0, z: -25}
       occupiedBy:
         id: 
+        color: 0
     - id: 0
       type: 0
       position: {x: -12.99038, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 5
       type: 0
       position: {x: -12.990379, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 8
       type: 0
       position: {x: -8.660254, y: 0, z: -35}
       occupiedBy:
         id: 
+        color: 0
     - id: 9
       type: 0
       position: {x: -4.330126, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 55197101}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -32378,6 +32653,7 @@ MonoBehaviour:
     position: {x: -0.00000021855695, y: 0, z: 35}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 919859992}
   selectableIndicator: {fileID: 166661384}
   structureHolder: {fileID: 0}
@@ -32449,31 +32725,37 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: 25}
       occupiedBy:
         id: 
+        color: 0
     - id: 125
       type: 0
       position: {x: -21.650635, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 126
       type: 0
       position: {x: -25.980762, y: 0, z: 25}
       occupiedBy:
         id: 
+        color: 0
     - id: 106
       type: 0
       position: {x: -25.980762, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
     - id: 105
       type: 0
       position: {x: -21.650635, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 109
       type: 0
       position: {x: -17.320507, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 427656586}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -32727,31 +33009,37 @@ MonoBehaviour:
       position: {x: -8.6602545, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 94
       type: 0
       position: {x: -12.990381, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 91
       type: 0
       position: {x: -17.320507, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 78
       type: 0
       position: {x: -17.320507, y: 0, z: 5}
       occupiedBy:
         id: 
+        color: 0
     - id: 77
       type: 0
       position: {x: -12.99038, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 95
       type: 0
       position: {x: -8.660254, y: 0, z: 5.000001}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 2125806531}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -32933,6 +33221,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 50371463}
@@ -33032,6 +33321,7 @@ MonoBehaviour:
     position: {x: -12.990381, y: 0, z: -2.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1879830376}
   selectableIndicator: {fileID: 169040283}
   structureHolder: {fileID: 0}
@@ -33666,6 +33956,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1517017231}
@@ -34048,6 +34339,7 @@ MonoBehaviour:
     position: {x: -0.00000021855695, y: 0, z: 20}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1931451433}
   selectableIndicator: {fileID: 250376586}
   structureHolder: {fileID: 0}
@@ -34637,6 +34929,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1966280740}
@@ -34706,6 +34999,7 @@ MonoBehaviour:
     position: {x: -12.990381, y: 0, z: -17.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 558017717}
   selectableIndicator: {fileID: 401177315}
   structureHolder: {fileID: 0}
@@ -34818,6 +35112,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: 35}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1186266173}
   selectableIndicator: {fileID: 1237045817}
   structureHolder: {fileID: 0}
@@ -35110,6 +35405,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: -12.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1494667076}
   selectableIndicator: {fileID: 309453762}
   structureHolder: {fileID: 0}
@@ -35233,6 +35529,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 643270747}
@@ -35291,31 +35588,37 @@ MonoBehaviour:
       position: {x: -0.00000029802322, y: 0, z: 25}
       occupiedBy:
         id: 
+        color: 0
     - id: 130
       type: 0
       position: {x: -4.3301272, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 127
       type: 0
       position: {x: -8.6602545, y: 0, z: 25}
       occupiedBy:
         id: 
+        color: 0
     - id: 111
       type: 0
       position: {x: -8.660254, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
     - id: 110
       type: 0
       position: {x: -4.330127, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 114
       type: 0
       position: {x: -0.00000021855695, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 924178965}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -35761,6 +36064,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1707114581}
@@ -35841,6 +36145,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 108556618}
@@ -35899,31 +36204,37 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 48
       type: 0
       position: {x: 8.660254, y: 0, z: -10}
       occupiedBy:
         id: 
+        color: 0
     - id: 45
       type: 0
       position: {x: 4.330127, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 31
       type: 0
       position: {x: 4.330127, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 30
       type: 0
       position: {x: 8.660254, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 33
       type: 0
       position: {x: 12.99038, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 517928309}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -36113,31 +36424,37 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 31
       type: 0
       position: {x: 4.330127, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 28
       type: 0
       position: {x: -0.00000029802322, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 11
       type: 0
       position: {x: -0.00000021855695, y: 0, z: -25}
       occupiedBy:
         id: 
+        color: 0
     - id: 10
       type: 0
       position: {x: 4.330127, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 15
       type: 0
       position: {x: 8.660254, y: 0, z: -25}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1744046227}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -36475,6 +36792,7 @@ MonoBehaviour:
     position: {x: -30.310886, y: 0, z: 2.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1318264008}
   selectableIndicator: {fileID: 18922972}
   structureHolder: {fileID: 0}
@@ -36662,6 +36980,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1741482433}
@@ -36897,6 +37216,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 345587253}
@@ -36977,6 +37297,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1633667765}
@@ -37354,6 +37675,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1501209748}
@@ -37491,31 +37813,37 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 80
       type: 0
       position: {x: 17.320507, y: 0, z: 5}
       occupiedBy:
         id: 
+        color: 0
     - id: 81
       type: 0
       position: {x: 12.99038, y: 0, z: 2.5000002}
       occupiedBy:
         id: 
+        color: 0
     - id: 64
       type: 0
       position: {x: 12.99038, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 63
       type: 0
       position: {x: 17.320507, y: 0, z: -5}
       occupiedBy:
         id: 
+        color: 0
     - id: 67
       type: 0
       position: {x: 21.650635, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 379750225}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -37686,6 +38014,7 @@ MonoBehaviour:
     position: {x: 25.980762, y: 0, z: -10}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 557390405}
   selectableIndicator: {fileID: 402130624}
   structureHolder: {fileID: 0}
@@ -37862,6 +38191,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: 10}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1720977650}
   selectableIndicator: {fileID: 722590334}
   structureHolder: {fileID: 0}
@@ -38173,6 +38503,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1538265825}
@@ -38678,6 +39009,7 @@ MonoBehaviour:
     position: {x: -12.99038, y: 0, z: -12.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 660970627}
   selectableIndicator: {fileID: 463012568}
   structureHolder: {fileID: 0}
@@ -38865,6 +39197,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 943087620}
@@ -38945,6 +39278,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1768206132}
@@ -39014,6 +39348,7 @@ MonoBehaviour:
     position: {x: 30.31089, y: 0, z: -12.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1156006013}
   selectableIndicator: {fileID: 1565272675}
   structureHolder: {fileID: 0}
@@ -39409,6 +39744,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: -5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 274326204}
   selectableIndicator: {fileID: 1686829074}
   structureHolder: {fileID: 0}
@@ -39582,6 +39918,7 @@ MonoBehaviour:
     position: {x: 4.3301277, y: 0, z: 12.500001}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1907213169}
   selectableIndicator: {fileID: 942591883}
   structureHolder: {fileID: 0}
@@ -39848,6 +40185,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1477359874}
@@ -40082,6 +40420,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 343111177}
@@ -40151,6 +40490,7 @@ MonoBehaviour:
     position: {x: 30.31089, y: 0, z: 17.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1323266787}
   selectableIndicator: {fileID: 844369783}
   structureHolder: {fileID: 0}
@@ -40406,31 +40746,37 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 15
       type: 0
       position: {x: 8.660254, y: 0, z: -25}
       occupiedBy:
         id: 
+        color: 0
     - id: 10
       type: 0
       position: {x: 4.330127, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 13
       type: 0
       position: {x: 4.3301277, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 16
       type: 0
       position: {x: 8.660254, y: 0, z: -35}
       occupiedBy:
         id: 
+        color: 0
     - id: 17
       type: 0
       position: {x: 12.990381, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 700962757}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -40507,6 +40853,7 @@ MonoBehaviour:
     position: {x: -12.99038, y: 0, z: -27.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1840988334}
   selectableIndicator: {fileID: 1472517648}
   structureHolder: {fileID: 0}
@@ -41469,6 +41816,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1163039329}
@@ -41767,6 +42115,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 2090593818}
@@ -41836,6 +42185,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: 5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 880550814}
   selectableIndicator: {fileID: 1184066102}
   structureHolder: {fileID: 0}
@@ -41929,6 +42279,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 544309077}
@@ -41998,6 +42349,7 @@ MonoBehaviour:
     position: {x: -4.330127, y: 0, z: 17.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1459907362}
   selectableIndicator: {fileID: 70920059}
   structureHolder: {fileID: 0}
@@ -42080,6 +42432,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: -10}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1464568398}
   selectableIndicator: {fileID: 1927732157}
   structureHolder: {fileID: 0}
@@ -42361,6 +42714,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1778680597}
@@ -42535,6 +42889,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 238744232}
@@ -42728,6 +43083,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: -10}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 847490691}
   selectableIndicator: {fileID: 1001562744}
   structureHolder: {fileID: 0}
@@ -42945,6 +43301,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 925270981}
@@ -43134,6 +43491,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 148068072}
@@ -43573,6 +43931,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 393629305}
@@ -43740,31 +44099,37 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 147
       type: 0
       position: {x: 17.320507, y: 0, z: 35}
       occupiedBy:
         id: 
+        color: 0
     - id: 144
       type: 0
       position: {x: 12.99038, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 134
       type: 0
       position: {x: 12.99038, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 133
       type: 0
       position: {x: 17.320507, y: 0, z: 25}
       occupiedBy:
         id: 
+        color: 0
     - id: 136
       type: 0
       position: {x: 21.650635, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 508595376}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -44056,6 +44421,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1613181087}
@@ -44249,6 +44615,7 @@ MonoBehaviour:
     position: {x: -38.97114, y: 0, z: 2.5000002}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1048118271}
   selectableIndicator: {fileID: 2141123323}
   structureHolder: {fileID: 0}
@@ -44342,6 +44709,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1624200351}
@@ -44411,6 +44779,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: -2.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1036634644}
   selectableIndicator: {fileID: 819122652}
   structureHolder: {fileID: 0}
@@ -44587,6 +44956,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: -25}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 615199428}
   selectableIndicator: {fileID: 302213963}
   structureHolder: {fileID: 0}
@@ -44669,6 +45039,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: -2.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1363218327}
   selectableIndicator: {fileID: 1418927730}
   structureHolder: {fileID: 0}
@@ -44740,31 +45111,37 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 46
       type: 0
       position: {x: -0.00000021855695, y: 0, z: -10}
       occupiedBy:
         id: 
+        color: 0
     - id: 43
       type: 0
       position: {x: -4.330127, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 29
       type: 0
       position: {x: -4.3301272, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 28
       type: 0
       position: {x: -0.00000029802322, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 31
       type: 0
       position: {x: 4.330127, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1269151324}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -45040,6 +45417,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 919604923}
@@ -45429,6 +45807,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 2112533215}
@@ -45693,6 +46072,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 504702269}
@@ -45762,6 +46142,7 @@ MonoBehaviour:
     position: {x: -4.330127, y: 0, z: -27.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1453922270}
   selectableIndicator: {fileID: 854117534}
   structureHolder: {fileID: 0}
@@ -45885,6 +46266,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1903893319}
@@ -46142,6 +46524,7 @@ MonoBehaviour:
     position: {x: -8.660254, y: 0, z: 35}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 746461125}
   selectableIndicator: {fileID: 1083104244}
   structureHolder: {fileID: 0}
@@ -46329,6 +46712,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1330079863}
@@ -46387,31 +46771,37 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 1
       type: 0
       position: {x: -17.320507, y: 0, z: -25}
       occupiedBy:
         id: 
+        color: 0
     - id: 2
       type: 0
       position: {x: -21.650635, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 3
       type: 0
       position: {x: -21.650633, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 4
       type: 0
       position: {x: -17.320507, y: 0, z: -35}
       occupiedBy:
         id: 
+        color: 0
     - id: 5
       type: 0
       position: {x: -12.990379, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1004748499}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -46680,31 +47070,37 @@ MonoBehaviour:
       position: {x: -8.6602545, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 27
       type: 0
       position: {x: -12.990381, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 22
       type: 0
       position: {x: -17.320507, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 1
       type: 0
       position: {x: -17.320507, y: 0, z: -25}
       occupiedBy:
         id: 
+        color: 0
     - id: 0
       type: 0
       position: {x: -12.99038, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 7
       type: 0
       position: {x: -8.660254, y: 0, z: -25}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 624737894}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -46792,6 +47188,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 2146951108}
@@ -46872,6 +47269,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1590885169}
@@ -47035,6 +47433,7 @@ MonoBehaviour:
     position: {x: -25.98076, y: 0, z: -5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1106567922}
   selectableIndicator: {fileID: 1089969713}
   structureHolder: {fileID: 0}
@@ -47519,6 +47918,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: 25}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 878474852}
   selectableIndicator: {fileID: 1868223027}
   structureHolder: {fileID: 0}
@@ -47590,31 +47990,37 @@ MonoBehaviour:
       position: {x: 34.641014, y: 0, z: -5}
       occupiedBy:
         id: 
+        color: 0
     - id: 69
       type: 0
       position: {x: 30.310888, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 66
       type: 0
       position: {x: 25.980762, y: 0, z: -5}
       occupiedBy:
         id: 
+        color: 0
     - id: 52
       type: 0
       position: {x: 25.980762, y: 0, z: -10}
       occupiedBy:
         id: 
+        color: 0
     - id: 51
       type: 0
       position: {x: 30.31089, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 70
       type: 0
       position: {x: 34.641018, y: 0, z: -9.999999}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1944566770}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -47702,6 +48108,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 721596272}
@@ -47865,6 +48272,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: 35}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 144943196}
   selectableIndicator: {fileID: 1490494976}
   structureHolder: {fileID: 0}
@@ -48146,6 +48554,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 574922875}
@@ -48215,6 +48624,7 @@ MonoBehaviour:
     position: {x: -4.330127, y: 0, z: -12.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 859561686}
   selectableIndicator: {fileID: 1242894322}
   structureHolder: {fileID: 0}
@@ -48327,6 +48737,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: 27.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 728919172}
   selectableIndicator: {fileID: 584869139}
   structureHolder: {fileID: 0}
@@ -48969,6 +49380,7 @@ MonoBehaviour:
     position: {x: 34.641014, y: 0, z: -5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 309748640}
   selectableIndicator: {fileID: 1029322076}
   structureHolder: {fileID: 0}
@@ -49442,6 +49854,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: -17.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1358839120}
   selectableIndicator: {fileID: 1019368520}
   structureHolder: {fileID: 0}
@@ -49535,6 +49948,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1237916461}
@@ -49770,6 +50184,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 307519953}
@@ -49869,6 +50284,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: 35}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1241540525}
   selectableIndicator: {fileID: 656126343}
   structureHolder: {fileID: 0}
@@ -49951,6 +50367,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: -20}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1201215470}
   selectableIndicator: {fileID: 449686935}
   structureHolder: {fileID: 0}
@@ -50052,31 +50469,37 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 92
       type: 0
       position: {x: -21.650635, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 88
       type: 0
       position: {x: -25.98076, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 76
       type: 0
       position: {x: -25.980762, y: 0, z: 5}
       occupiedBy:
         id: 
+        color: 0
     - id: 75
       type: 0
       position: {x: -21.650635, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 78
       type: 0
       position: {x: -17.320507, y: 0, z: 5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 2030343920}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -50183,6 +50606,7 @@ MonoBehaviour:
     position: {x: -21.650633, y: 0, z: -32.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1293022859}
   selectableIndicator: {fileID: 730061046}
   structureHolder: {fileID: 0}
@@ -50513,6 +50937,7 @@ MonoBehaviour:
     position: {x: 30.31089, y: 0, z: 2.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1515819234}
   selectableIndicator: {fileID: 1384049507}
   structureHolder: {fileID: 0}
@@ -50584,31 +51009,37 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 145
       type: 0
       position: {x: 8.660254, y: 0, z: 35}
       occupiedBy:
         id: 
+        color: 0
     - id: 142
       type: 0
       position: {x: 4.330127, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 132
       type: 0
       position: {x: 4.330127, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 131
       type: 0
       position: {x: 8.660254, y: 0, z: 25}
       occupiedBy:
         id: 
+        color: 0
     - id: 134
       type: 0
       position: {x: 12.99038, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 697694469}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -50944,6 +51375,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1014629136}
@@ -51024,6 +51456,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1378558466}
@@ -51104,6 +51537,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 817177009}
@@ -51488,6 +51922,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1966686057}
@@ -51848,6 +52283,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1040166057}
@@ -51928,6 +52364,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1276910854}
@@ -52211,6 +52648,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 2014079006}
@@ -52637,6 +53075,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 788406286}
@@ -53108,6 +53547,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: -25}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 981245567}
   selectableIndicator: {fileID: 498707073}
   structureHolder: {fileID: 0}
@@ -53273,31 +53713,37 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 120
       type: 0
       position: {x: 17.320507, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
     - id: 117
       type: 0
       position: {x: 12.99038, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 97
       type: 0
       position: {x: 12.99038, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 96
       type: 0
       position: {x: 17.320507, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 101
       type: 0
       position: {x: 21.650635, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 644619777}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -53385,6 +53831,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 356945849}
@@ -53837,6 +54284,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 2000966501}
@@ -53906,6 +54354,7 @@ MonoBehaviour:
     position: {x: 25.980762, y: 0, z: -20}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 112686036}
   selectableIndicator: {fileID: 587225351}
   structureHolder: {fileID: 0}
@@ -54154,6 +54603,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1407325857}
@@ -54358,6 +54808,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1965331}
@@ -54769,6 +55220,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: 32.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1654016904}
   selectableIndicator: {fileID: 904380203}
   structureHolder: {fileID: 0}
@@ -54851,6 +55303,7 @@ MonoBehaviour:
     position: {x: 25.980762, y: 0, z: -24.999998}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 685320802}
   selectableIndicator: {fileID: 370918952}
   structureHolder: {fileID: 0}
@@ -54963,6 +55416,7 @@ MonoBehaviour:
     position: {x: 21.650637, y: 0, z: 12.499999}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 916457531}
   selectableIndicator: {fileID: 1994486446}
   structureHolder: {fileID: 0}
@@ -55527,6 +55981,7 @@ MonoBehaviour:
     position: {x: -4.3301272, y: 0, z: -17.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 907722157}
   selectableIndicator: {fileID: 1966271504}
   structureHolder: {fileID: 0}
@@ -55598,31 +56053,37 @@ MonoBehaviour:
       position: {x: 38.97114, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 86
       type: 0
       position: {x: 34.641014, y: 0, z: 5}
       occupiedBy:
         id: 
+        color: 0
     - id: 82
       type: 0
       position: {x: 30.31089, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 69
       type: 0
       position: {x: 30.310888, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 68
       type: 0
       position: {x: 34.641014, y: 0, z: -5}
       occupiedBy:
         id: 
+        color: 0
     - id: 87
       type: 0
       position: {x: 38.97114, y: 0, z: -2.4999988}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1553266325}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -55951,6 +56412,7 @@ MonoBehaviour:
     position: {x: -25.980762, y: 0, z: 5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1305191288}
   selectableIndicator: {fileID: 1147104840}
   structureHolder: {fileID: 0}
@@ -56044,6 +56506,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 474996792}
@@ -56124,6 +56587,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1592345345}
@@ -56204,6 +56668,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1821593542}
@@ -56284,6 +56749,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 181831290}
@@ -56364,6 +56830,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 967925630}
@@ -56433,6 +56900,7 @@ MonoBehaviour:
     position: {x: -30.31089, y: 0, z: 17.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 603202933}
   selectableIndicator: {fileID: 1076387525}
   structureHolder: {fileID: 0}
@@ -56694,6 +57162,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: -12.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 341864259}
   selectableIndicator: {fileID: 1015330093}
   structureHolder: {fileID: 0}
@@ -56836,6 +57305,7 @@ MonoBehaviour:
     position: {x: 4.330127, y: 0, z: -12.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1025042110}
   selectableIndicator: {fileID: 556111710}
   structureHolder: {fileID: 0}
@@ -56918,6 +57388,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: -32.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 784649049}
   selectableIndicator: {fileID: 1847422472}
   structureHolder: {fileID: 0}
@@ -57188,6 +57659,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: -5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 705570032}
   selectableIndicator: {fileID: 32587093}
   structureHolder: {fileID: 0}
@@ -57388,6 +57860,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 220982675}
@@ -57675,6 +58148,7 @@ MonoBehaviour:
     position: {x: 0.000000059624405, y: 0, z: -35}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1198616029}
   selectableIndicator: {fileID: 35210371}
   structureHolder: {fileID: 0}
@@ -57851,6 +58325,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: 17.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 428081762}
   selectableIndicator: {fileID: 1357186940}
   structureHolder: {fileID: 0}
@@ -58082,6 +58557,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 71651526}
@@ -58395,6 +58871,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1866339071}
@@ -58475,6 +58952,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 607588339}
@@ -58769,6 +59247,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 574969111}
@@ -58879,6 +59358,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1724141804}
@@ -59083,6 +59563,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1734148770}
@@ -59344,31 +59825,37 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 138
       type: 0
       position: {x: -17.320507, y: 0, z: 35}
       occupiedBy:
         id: 
+        color: 0
     - id: 139
       type: 0
       position: {x: -21.650635, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 125
       type: 0
       position: {x: -21.650635, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 124
       type: 0
       position: {x: -17.320507, y: 0, z: 25}
       occupiedBy:
         id: 
+        color: 0
     - id: 128
       type: 0
       position: {x: -12.990381, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 350468780}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -59535,6 +60022,7 @@ MonoBehaviour:
     position: {x: -12.990381, y: 0, z: 27.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 97941352}
   selectableIndicator: {fileID: 1789071678}
   structureHolder: {fileID: 0}
@@ -59805,6 +60293,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: 27.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 17009418}
   selectableIndicator: {fileID: 1523477963}
   structureHolder: {fileID: 0}
@@ -59928,6 +60417,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1200409276}
@@ -60058,6 +60548,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: -27.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 650849879}
   selectableIndicator: {fileID: 738749441}
   structureHolder: {fileID: 0}
@@ -60377,31 +60868,37 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 23
       type: 0
       position: {x: -21.650635, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 24
       type: 0
       position: {x: -25.980762, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 25
       type: 0
       position: {x: -25.98076, y: 0, z: -25}
       occupiedBy:
         id: 
+        color: 0
     - id: 2
       type: 0
       position: {x: -21.650635, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 1
       type: 0
       position: {x: -17.320507, y: 0, z: -25}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1722046604}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -60613,6 +61110,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 358833625}
@@ -60724,6 +61222,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 257358351}
@@ -60782,31 +61281,37 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 19
       type: 0
       position: {x: 17.320507, y: 0, z: -25}
       occupiedBy:
         id: 
+        color: 0
     - id: 14
       type: 0
       position: {x: 12.99038, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 17
       type: 0
       position: {x: 12.990381, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 20
       type: 0
       position: {x: 17.320507, y: 0, z: -35}
       occupiedBy:
         id: 
+        color: 0
     - id: 21
       type: 0
       position: {x: 21.650635, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1002685446}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -60988,6 +61493,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1358733138}
@@ -61068,6 +61574,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 918396123}
@@ -61427,6 +61934,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1720770387}
@@ -61579,31 +62087,37 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 78
       type: 0
       position: {x: -17.320507, y: 0, z: 5}
       occupiedBy:
         id: 
+        color: 0
     - id: 75
       type: 0
       position: {x: -21.650635, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 60
       type: 0
       position: {x: -21.650635, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 59
       type: 0
       position: {x: -17.320507, y: 0, z: -5}
       occupiedBy:
         id: 
+        color: 0
     - id: 62
       type: 0
       position: {x: -12.990381, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 189264879}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -62022,6 +62536,7 @@ MonoBehaviour:
     position: {x: -12.99038, y: 0, z: 17.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 246725263}
   selectableIndicator: {fileID: 1591500146}
   structureHolder: {fileID: 0}
@@ -62198,6 +62713,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: 17.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1428214537}
   selectableIndicator: {fileID: 2021260989}
   structureHolder: {fileID: 0}
@@ -62385,6 +62901,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 616155648}
@@ -62784,31 +63301,37 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 33
       type: 0
       position: {x: 12.99038, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 30
       type: 0
       position: {x: 8.660254, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 15
       type: 0
       position: {x: 8.660254, y: 0, z: -25}
       occupiedBy:
         id: 
+        color: 0
     - id: 14
       type: 0
       position: {x: 12.99038, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 19
       type: 0
       position: {x: 17.320507, y: 0, z: -25}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 2044684490}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -63084,6 +63607,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1935684744}
@@ -63476,6 +64000,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 685087940}
@@ -63680,6 +64205,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 293235866}
@@ -63760,6 +64286,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1860288281}
@@ -63829,6 +64356,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: 20}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 883229767}
   selectableIndicator: {fileID: 867792104}
   structureHolder: {fileID: 0}
@@ -64016,6 +64544,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1897722712}
@@ -64391,6 +64920,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1942430961}
@@ -64471,6 +65001,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1934712729}
@@ -64540,6 +65071,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: 27.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 206727986}
   selectableIndicator: {fileID: 1807651089}
   structureHolder: {fileID: 0}
@@ -64960,6 +65492,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 95210978}
@@ -65040,6 +65573,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 95567151}
@@ -65408,6 +65942,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1410803602}
@@ -65937,6 +66472,7 @@ MonoBehaviour:
     position: {x: 0.000000059624405, y: 0, z: 10}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 876611913}
   selectableIndicator: {fileID: 472828616}
   structureHolder: {fileID: 0}
@@ -66293,6 +66829,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 977769355}
@@ -66486,6 +67023,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: 32.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 201956655}
   selectableIndicator: {fileID: 506477253}
   structureHolder: {fileID: 0}
@@ -67410,6 +67948,7 @@ MonoBehaviour:
     position: {x: -25.98076, y: 0, z: 10}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 885586482}
   selectableIndicator: {fileID: 1406709377}
   structureHolder: {fileID: 0}
@@ -67918,31 +68457,37 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: -5}
       occupiedBy:
         id: 
+        color: 0
     - id: 64
       type: 0
       position: {x: 12.99038, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 65
       type: 0
       position: {x: 8.660254, y: 0, z: -4.9999995}
       occupiedBy:
         id: 
+        color: 0
     - id: 48
       type: 0
       position: {x: 8.660254, y: 0, z: -10}
       occupiedBy:
         id: 
+        color: 0
     - id: 47
       type: 0
       position: {x: 12.99038, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 50
       type: 0
       position: {x: 17.320507, y: 0, z: -10}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1398176757}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -68155,6 +68700,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 947753856}
@@ -68235,6 +68781,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1273866801}
@@ -68791,6 +69338,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 366818855}
@@ -68849,31 +69397,37 @@ MonoBehaviour:
       position: {x: 34.641014, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 103
       type: 0
       position: {x: 30.310888, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 100
       type: 0
       position: {x: 25.980762, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 83
       type: 0
       position: {x: 25.980762, y: 0, z: 5}
       occupiedBy:
         id: 
+        color: 0
     - id: 82
       type: 0
       position: {x: 30.31089, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 104
       type: 0
       position: {x: 34.641018, y: 0, z: 5.000001}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 700203271}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -68961,6 +69515,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1844667240}
@@ -69632,6 +70187,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1091045185}
@@ -69930,6 +70486,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1541106266}
@@ -70010,6 +70567,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1915061439}
@@ -70278,6 +70836,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 897224759}
@@ -70347,6 +70906,7 @@ MonoBehaviour:
     position: {x: -4.330127, y: 0, z: 32.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1375324136}
   selectableIndicator: {fileID: 1588974683}
   structureHolder: {fileID: 0}
@@ -70534,6 +71094,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1006555145}
@@ -70708,6 +71269,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 778259155}
@@ -70901,6 +71463,7 @@ MonoBehaviour:
     position: {x: -8.660254, y: 0, z: -35}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1532610330}
   selectableIndicator: {fileID: 1844505153}
   structureHolder: {fileID: 0}
@@ -70994,6 +71557,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1607698071}
@@ -71375,6 +71939,7 @@ MonoBehaviour:
     position: {x: -0.00000029802322, y: 0, z: 25}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1825856778}
   selectableIndicator: {fileID: 953966629}
   structureHolder: {fileID: 0}
@@ -71570,31 +72135,37 @@ MonoBehaviour:
       position: {x: -4.330127, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 44
       type: 0
       position: {x: -8.660254, y: 0, z: -10}
       occupiedBy:
         id: 
+        color: 0
     - id: 41
       type: 0
       position: {x: -12.99038, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 27
       type: 0
       position: {x: -12.990381, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 26
       type: 0
       position: {x: -8.6602545, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 29
       type: 0
       position: {x: -4.3301272, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 25749746}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -71776,6 +72347,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1685165645}
@@ -71954,31 +72526,37 @@ MonoBehaviour:
       position: {x: -25.98076, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 89
       type: 0
       position: {x: -30.310888, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 90
       type: 0
       position: {x: -34.641014, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 72
       type: 0
       position: {x: -34.641014, y: 0, z: 5}
       occupiedBy:
         id: 
+        color: 0
     - id: 71
       type: 0
       position: {x: -30.310886, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 76
       type: 0
       position: {x: -25.980762, y: 0, z: 5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1111950947}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -72291,6 +72869,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 787930242}
@@ -72465,6 +73044,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 339151218}
@@ -72595,6 +73175,7 @@ MonoBehaviour:
     position: {x: -12.99038, y: 0, z: 2.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 157710109}
   selectableIndicator: {fileID: 1152219352}
   structureHolder: {fileID: 0}
@@ -72677,6 +73258,7 @@ MonoBehaviour:
     position: {x: 4.330127, y: 0, z: -17.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 672786297}
   selectableIndicator: {fileID: 1788004575}
   structureHolder: {fileID: 0}
@@ -73112,6 +73694,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 675359705}
@@ -73170,31 +73753,37 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 76
       type: 0
       position: {x: -25.980762, y: 0, z: 5}
       occupiedBy:
         id: 
+        color: 0
     - id: 71
       type: 0
       position: {x: -30.310886, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 56
       type: 0
       position: {x: -30.310888, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 55
       type: 0
       position: {x: -25.98076, y: 0, z: -5}
       occupiedBy:
         id: 
+        color: 0
     - id: 60
       type: 0
       position: {x: -21.650635, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 955626868}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -73376,6 +73965,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1320446564}
@@ -73535,6 +74125,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: -17.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1406959843}
   selectableIndicator: {fileID: 236627401}
   structureHolder: {fileID: 0}
@@ -73628,6 +74219,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 2072089955}
@@ -73727,6 +74319,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: -2.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 2142750051}
   selectableIndicator: {fileID: 321590508}
   structureHolder: {fileID: 0}
@@ -74027,6 +74620,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: 25}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1474749130}
   selectableIndicator: {fileID: 18808870}
   structureHolder: {fileID: 0}
@@ -74120,6 +74714,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 292691513}
@@ -74178,31 +74773,37 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 143
       type: 0
       position: {x: -0.00000021855695, y: 0, z: 35}
       occupiedBy:
         id: 
+        color: 0
     - id: 140
       type: 0
       position: {x: -4.330127, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 130
       type: 0
       position: {x: -4.3301272, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 129
       type: 0
       position: {x: -0.00000029802322, y: 0, z: 25}
       occupiedBy:
         id: 
+        color: 0
     - id: 132
       type: 0
       position: {x: 4.330127, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 893739434}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -74384,6 +74985,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1498032851}
@@ -74514,6 +75116,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: 25}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1500474228}
   selectableIndicator: {fileID: 1012874959}
   structureHolder: {fileID: 0}
@@ -75328,6 +75931,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1996842943}
@@ -75562,6 +76166,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 2015658684}
@@ -75849,6 +76454,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: 12.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1871849044}
   selectableIndicator: {fileID: 1793930509}
   structureHolder: {fileID: 0}
@@ -76025,6 +76631,7 @@ MonoBehaviour:
     position: {x: 4.3301277, y: 0, z: -32.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1554473980}
   selectableIndicator: {fileID: 629351959}
   structureHolder: {fileID: 0}
@@ -76615,6 +77222,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1667792860}
@@ -76695,6 +77303,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1814206718}
@@ -76775,6 +77384,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1323537211}
@@ -76938,6 +77548,7 @@ MonoBehaviour:
     position: {x: -4.330126, y: 0, z: -32.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1623543318}
   selectableIndicator: {fileID: 889789367}
   structureHolder: {fileID: 0}
@@ -77300,6 +77911,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: 17.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1012420198}
   selectableIndicator: {fileID: 140392192}
   structureHolder: {fileID: 0}
@@ -77660,6 +78272,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1824295073}
@@ -77740,6 +78353,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 146169134}
@@ -77820,6 +78434,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1492728537}
@@ -77878,31 +78493,37 @@ MonoBehaviour:
       position: {x: 30.31089, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 52
       type: 0
       position: {x: 25.980762, y: 0, z: -10}
       occupiedBy:
         id: 
+        color: 0
     - id: 49
       type: 0
       position: {x: 21.650635, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 53
       type: 0
       position: {x: 21.650637, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 34
       type: 0
       position: {x: 25.980762, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 54
       type: 0
       position: {x: 30.31089, y: 0, z: -17.499998}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1841823724}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -78167,6 +78788,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: -12.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 406422121}
   selectableIndicator: {fileID: 1209044421}
   structureHolder: {fileID: 0}
@@ -78444,6 +79066,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 583074679}
@@ -78513,6 +79136,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: -35}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 81952503}
   selectableIndicator: {fileID: 1671127814}
   structureHolder: {fileID: 0}
@@ -78674,6 +79298,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: 12.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 116539230}
   selectableIndicator: {fileID: 2012791975}
   structureHolder: {fileID: 0}
@@ -78767,6 +79392,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 309244450}
@@ -78908,6 +79534,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 910751611}
@@ -78988,6 +79615,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1902184850}
@@ -79057,6 +79685,7 @@ MonoBehaviour:
     position: {x: -8.6602545, y: 0, z: -5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 608026082}
   selectableIndicator: {fileID: 1313655342}
   structureHolder: {fileID: 0}
@@ -79139,6 +79768,7 @@ MonoBehaviour:
     position: {x: 34.641014, y: 0, z: 5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 185618371}
   selectableIndicator: {fileID: 405245431}
   structureHolder: {fileID: 0}
@@ -79489,6 +80119,7 @@ MonoBehaviour:
     position: {x: -12.99038, y: 0, z: 32.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 903903644}
   selectableIndicator: {fileID: 1258507040}
   structureHolder: {fileID: 0}
@@ -79601,6 +80232,7 @@ MonoBehaviour:
     position: {x: 21.650637, y: 0, z: -17.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1896171213}
   selectableIndicator: {fileID: 555006662}
   structureHolder: {fileID: 0}
@@ -80100,6 +80732,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 687078440}
@@ -80674,6 +81307,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1401847628}
@@ -80754,6 +81388,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1545021267}
@@ -80834,6 +81469,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1154135367}
@@ -81008,6 +81644,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 271241193}
@@ -81125,6 +81762,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1570077855}
@@ -81303,6 +81941,7 @@ MonoBehaviour:
     position: {x: -25.98076, y: 0, z: -25}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 925289054}
   selectableIndicator: {fileID: 1271198791}
   structureHolder: {fileID: 0}
@@ -81604,6 +82243,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: 4.999999}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 1726737585}
   selectableIndicator: {fileID: 100850594}
   structureHolder: {fileID: 0}
@@ -81791,6 +82431,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 2113797371}
@@ -81974,31 +82615,37 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: 25}
       occupiedBy:
         id: 
+        color: 0
     - id: 132
       type: 0
       position: {x: 4.330127, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 129
       type: 0
       position: {x: -0.00000029802322, y: 0, z: 25}
       occupiedBy:
         id: 
+        color: 0
     - id: 114
       type: 0
       position: {x: -0.00000021855695, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
     - id: 113
       type: 0
       position: {x: 4.330127, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 118
       type: 0
       position: {x: 8.660254, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 106118633}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -82086,6 +82733,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1528153963}
@@ -82166,6 +82814,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 404536054}
@@ -82557,6 +83206,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: -27.5}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 191674191}
   selectableIndicator: {fileID: 1052345162}
   structureHolder: {fileID: 0}
@@ -82701,31 +83351,37 @@ MonoBehaviour:
       position: {x: 30.31089, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 83
       type: 0
       position: {x: 25.980762, y: 0, z: 5}
       occupiedBy:
         id: 
+        color: 0
     - id: 79
       type: 0
       position: {x: 21.650635, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 84
       type: 0
       position: {x: 21.650637, y: 0, z: -2.500001}
       occupiedBy:
         id: 
+        color: 0
     - id: 66
       type: 0
       position: {x: 25.980762, y: 0, z: -5}
       occupiedBy:
         id: 
+        color: 0
     - id: 69
       type: 0
       position: {x: 30.310888, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1532199222}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -83403,6 +84059,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1012670208}
@@ -83483,6 +84140,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 983387650}
@@ -83541,31 +84199,37 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 106
       type: 0
       position: {x: -25.980762, y: 0, z: 20}
       occupiedBy:
         id: 
+        color: 0
     - id: 107
       type: 0
       position: {x: -30.31089, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 89
       type: 0
       position: {x: -30.310888, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 88
       type: 0
       position: {x: -25.98076, y: 0, z: 10}
       occupiedBy:
         id: 
+        color: 0
     - id: 92
       type: 0
       position: {x: -21.650635, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1980540037}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -83683,6 +84347,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1504841}
@@ -83763,6 +84428,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 390452420}
@@ -83843,6 +84509,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 474606971}
@@ -84220,6 +84887,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1813034088}
@@ -84330,6 +84998,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 1206583742}
@@ -84429,6 +85098,7 @@ MonoBehaviour:
     position: {x: -38.97114, y: 0, z: -2.500001}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 2144222668}
   selectableIndicator: {fileID: 1596889351}
   structureHolder: {fileID: 0}
@@ -84922,31 +85592,37 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 38
       type: 0
       position: {x: -25.980762, y: 0, z: -10}
       occupiedBy:
         id: 
+        color: 0
     - id: 39
       type: 0
       position: {x: -30.31089, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 40
       type: 0
       position: {x: -30.310888, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
     - id: 24
       type: 0
       position: {x: -25.980762, y: 0, z: -20}
       occupiedBy:
         id: 
+        color: 0
     - id: 23
       type: 0
       position: {x: -21.650635, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        color: 0
   prefabHolder: {fileID: 1486512998}
   forestPrefab: {fileID: 5711558636588302791, guid: acce0a91c8e5ed446bbf64649c2edd47,
     type: 3}
@@ -85236,6 +85912,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      color: 0
   pathPrefab: {fileID: 2305956411107863227, guid: 1362e1882620ca64fb79ab362f442ed5,
     type: 3}
   pathHolder: {fileID: 416713160}
@@ -85735,6 +86412,7 @@ MonoBehaviour:
     position: {x: 30.31089, y: 0, z: -17.499998}
     occupiedBy:
       id: 
+      color: 0
   prefabHolder: {fileID: 873695684}
   selectableIndicator: {fileID: 419415545}
   structureHolder: {fileID: 0}
