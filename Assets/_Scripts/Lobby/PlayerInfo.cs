@@ -9,6 +9,7 @@ using Photon.Realtime;
 public class PlayerInfo
 {    
     private InputField _inputField;
+    private Dictionary<string, Player> players;
     const string playerNamePrefKey = "PlayerName";
     const string _defaultName = "Default Name";
 
@@ -17,7 +18,19 @@ public class PlayerInfo
         if(!string.IsNullOrEmpty(name)){
             name = name.Trim();
             PlayerPrefs.SetString(playerNamePrefKey,name);
+        }else{
+            PlayerPrefs.SetString(playerNamePrefKey, _defaultName);
         }
-        PlayerPrefs.SetString(playerNamePrefKey, _defaultName);
     }
+
+
+
+    public void SetPlayers(){
+
+    }
+
+    public Dictionary<string, Player> GetPlayers(){
+        return players;
+    }
+
 }

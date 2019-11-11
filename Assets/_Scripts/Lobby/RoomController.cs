@@ -29,7 +29,9 @@ public class RoomController
         }
 
     }
-
+    public void Clear(){
+        this.rooms.Clear();
+    }
     public Dictionary<string, RoomInfo> GetRooms(){
         return this.rooms;
     }
