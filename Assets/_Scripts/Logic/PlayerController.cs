@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     }
 
     [Header("Player Belongings")]
+    public Player player;
     public List<Location> locations;
     public List<Path> paths;
     public List<WorkerController> workers;
@@ -25,11 +26,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("GameObject")]
     public GameObject workerPrefab;
-    public GameObject pathTargetPrefab;
-
-    [Header("Placement variables")]
-    private PathController[] selectablePaths;
-    private GameObject pathTarget;
     
     
     public void Start() {
@@ -37,6 +33,11 @@ public class PlayerController : MonoBehaviour
         paths = new List<Path>();
         workers = new List<WorkerController>();
         mapController = GameObject.FindGameObjectWithTag("GameController").GetComponent<MapController>();
+    }
+
+    public void Initialize(Player player)
+    {
+        this.player = player;
     }
 
     public void CreateWorker(Location location) {
@@ -59,11 +60,7 @@ public class PlayerController : MonoBehaviour
 
     public void SetState(State newState) {
         // CLEAN PREVIOUS STATE
-        if(state == State.PathPlacement)
-        {
-            pathTarget.SetActive(false);
-            selectablePaths = null;
-        }
+
 
         // NEW STATE LOGIC
         if(newState == State.WaitForTurn)
@@ -82,37 +79,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void StartHousePlacement(WorkerController worker) {
+    public void BuildPath(PathController controller)
+    {   
+        // Calculate the rotation of the object
+        controller.BuildPath(player);
 
+        paths.Add(controller.path);
     }
 
-    public void StartPathPlacement(WorkerController worker, PathController[] pathControllers) {
-        
-        selectablePaths = pathControllers;
-
-        // Instatiate path target holder
-        if(pathTarget == null)
-        {
-            pathTarget = GameObject.Instantiate(pathTargetPrefab, Vector3.zero, Quaternion.identity);
-        }
-        pathTarget.SetActive(true);
-
-        // Show selectable indicator
-        foreach(var pathC in selectablePaths)
-        {
-            pathC.SetSelectable(true);
-        }
-
-        // Change state
-        SetState(State.PathPlacement);
-    }
-
-    public void Update()
+    public void BuildHouse(LocationController controller)
     {
-        if(state == State.PathPlacement)
-        {
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            pathTarget.transform.position = new Vector3(mousePos.x, 0, mousePos.z);
-        }
+        controller.BuildHouse(player);
+
+        locations.Add(controller.location);
     }
 }

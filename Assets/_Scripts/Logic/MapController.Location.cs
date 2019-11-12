@@ -6,6 +6,18 @@ using UnityEngine;
 
 public partial class MapController
 {
+    public bool GetLocationController(Location location, out LocationController lc)
+    {
+        var hasController = locations.TryGetValue(location.id, out GameObject obj);
+        if(!hasController) {
+            lc = null;
+            return false;
+        }
+
+        lc = obj.GetComponent<LocationController>();
+        return lc != null;
+    }
+
     public LocationController[] GetAdjecentLocations(Location location, bool mustBeAvailable = false) {
         // Get the paths connected to the location
         var connectedPaths = map.paths.Values.Where(path => path.between.Item1.id == location.id || path.between.Item2.id == location.id);

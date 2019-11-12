@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace State
 {
+    [System.Serializable]
     public class Path
     {
         public int id;

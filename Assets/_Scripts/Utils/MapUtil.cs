@@ -86,12 +86,13 @@ public static class MapUtil
             {
                 Vector3 point = surroundingPoints[i];
                 Location location = null;
-                String pointKey = point.x.ToString("0.00000") + "_" + point.z.ToString("0.00000");
+                String pointKey = point.x.ToString("0.000") + "_" + point.z.ToString("0.000");
                 if(!locations.ContainsKey(pointKey)) {
                     // Locatino does not already exist, add it to the dictionary
                     location = new Location() {
                         id = currentLocationId,
                         position = point,
+                        type = LocationType.Available,
                     };
                     locations.Add(pointKey, location);
                     currentLocationId++;
@@ -123,7 +124,7 @@ public static class MapUtil
 
             // Add a path between the previous location and the start location
             // Check if there already is an existing path between the locations
-            if(!paths.ContainsKey((startLocation.id, prevLocation.id)) && !paths.ContainsKey((startLocation.id, prevLocation.id)))
+            if(!paths.ContainsKey((startLocation.id, prevLocation.id)) && !paths.ContainsKey((prevLocation.id, startLocation.id)))
             {
                 paths.Add((startLocation.id, prevLocation.id), new Path() {
                     id = currentPathId,
@@ -140,6 +141,8 @@ public static class MapUtil
 
         // Generate map tile types
         tiles = GenerateTileTypes(generation, tiles, seed);
+
+        Debug.Log("Location Length: " + locations.Values.Count);
 
         // Convert map attributes to 
         Map map = new Map();

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using State;
 using UnityEngine;
+using System;
 
 public class GameController : MonoBehaviour
 {
@@ -30,9 +32,16 @@ public class GameController : MonoBehaviour
 
         // TODO: When on multiplayer, initiate player objects and set this to PhotonView.isMine
         localPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-        players = new PlayerController[1] {
+        players = new PlayerController[] {
             localPlayer,
         };
+        for(int i = 0; i < players.Length; i++)
+        {
+            players[i].Initialize(new Player {
+                id = Guid.NewGuid().ToString(),
+                color = PlayerColor.Red,
+            });
+        }
         currentPlayer = localPlayer;
     }
 
