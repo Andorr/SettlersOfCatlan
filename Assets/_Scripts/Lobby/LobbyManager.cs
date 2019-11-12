@@ -52,7 +52,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         roomListGameObjects = new Dictionary<string, GameObject>();
         ConnectToServer();
         PhotonNetwork.AutomaticallySyncScene = true;
-
+        players = new Dictionary<int, GameObject>();
     }
 
     public void ConnectToServer() {
@@ -112,7 +112,6 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         ClearRoomList();
 
         roomController.UpdateRooms(roomList);
-
         Dictionary<string, RoomInfo> cacheRoomList = roomController.GetRooms();
 
         foreach(RoomInfo room in cacheRoomList.Values)
@@ -184,8 +183,8 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         PhotonNetwork.LoadLevel(GAMESCENE);
     }
 
-    private void ClearRoomList()
-    {
+    private void ClearRoomList(){
+        
         foreach(GameObject obj in roomListGameObjects.Values)
         {
             Destroy(obj);
@@ -199,7 +198,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         playerListEntryObject.transform.SetParent(listPlayerParent.transform);
         playerListEntryObject.transform.localScale = Vector3.one;
 
-        playerListEntryObject.transform.Find("PlayerNameText").GetComponent<Text>().text  = player.NickName;
+        playerListEntryObject.transform.GetComponentInChildren<Text>().text  = player.NickName;
 
         players.Add(player.ActorNumber, playerListEntryObject);
     }

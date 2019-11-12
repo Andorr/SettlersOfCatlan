@@ -9,9 +9,13 @@ public class RoomController
 {    
     private Dictionary<string, RoomInfo> rooms;
 
+    public RoomController(){
+        this.rooms = new Dictionary<string, RoomInfo>();
+    }
+
     // Use this function to filter all the rooms to give gameObject rooms.
     public void UpdateRooms(List<RoomInfo> new_rooms){
-        
+
         foreach(RoomInfo room in new_rooms)
         {
             if(!room.IsVisible || room.RemovedFromList) {

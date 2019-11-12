@@ -15,7 +15,8 @@ public class PlayerInfo
 
     // return true if the name is valid and return false if its not
     public void SetPlayerName(string name){
-        if(!string.IsNullOrEmpty(name)){
+       //Checking if the name is null or empty, if it is then the user will recive a default name 
+	if(!string.IsNullOrEmpty(name)){
             name = name.Trim();
             PlayerPrefs.SetString(playerNamePrefKey,name);
         }else{
