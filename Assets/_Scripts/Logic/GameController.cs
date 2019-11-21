@@ -41,6 +41,7 @@ public class GameController : MonoBehaviour
                 id = Guid.NewGuid().ToString(),
                 color = PlayerColor.Red,
             });
+            uiController.AddPlayer(players[i].player);
         }
         currentPlayer = localPlayer;
     }
@@ -83,6 +84,21 @@ public class GameController : MonoBehaviour
 
         }
     }
+
+    // This function is only here temporarly for testing
+    public void GainResources() {
+        (int wood, int stone, int clay, int wheat, int wool) = mapController.CalculateGainableResources(currentPlayer.player);
+
+        currentPlayer.player.wood += wood;
+        currentPlayer.player.stone += stone;
+        currentPlayer.player.clay += clay;
+        currentPlayer.player.wheat += wheat;
+        currentPlayer.player.wool += wool;
+
+        // Update UI
+        uiController.UpdatePlayerUI(currentPlayer.player);
+    }
+
     # endregion
 
     # region Handler Logic

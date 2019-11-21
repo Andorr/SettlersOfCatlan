@@ -17,6 +17,7 @@ namespace State
     public class Player
     {
         public string id;
+        public int victoryPoints;
         public PlayerColor color;
 
         public int wood = 0;
@@ -34,7 +35,7 @@ namespace State
                     return new Color(66/255f, 135/255f, 245/255f);
                 }
                 case PlayerColor.Green: {
-                    return new Color(66/255f, 245/255f, 117/255f);
+                    return new Color(48/255f, 178/255f, 85/255f);
                 }
                 case PlayerColor.Purple: {
                     return new Color(188/255f, 66/255f, 245/255f);

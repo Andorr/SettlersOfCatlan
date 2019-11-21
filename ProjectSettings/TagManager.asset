@@ -8,6 +8,11 @@ TagManager:
   - Location
   - Path
   - Map
+  - WoodCount
+  - StoneCount
+  - ClayCount
+  - WheatCount
+  - WoolCount
   layers:
   - Default
   - TransparentFX
