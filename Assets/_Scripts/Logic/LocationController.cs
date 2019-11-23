@@ -13,6 +13,7 @@ public class LocationController : MonoBehaviour
     [Header("Prefabs")]
     public GameObject structureHolder;
     public GameObject housePrefab;
+    public GameObject cityPrefab;
 
     private bool isSelectable = false;
 
@@ -40,10 +41,33 @@ public class LocationController : MonoBehaviour
         location.occupiedBy = player;
         location.type = LocationType.House;
         
-        // Instantiate path object
+        // Instantiate house object
         GameObject houseObject = GameObject.Instantiate(housePrefab, transform.position, Quaternion.Euler(-90, 0, 0));
         houseObject.transform.SetParent(structureHolder.transform);
         houseObject.transform.localPosition = Vector3.zero;
         houseObject.GetComponentInChildren<MeshRenderer>().material.SetColor("_BaseColor", player.GetColor());
+    }
+
+    public void BuildCity(Player player)
+    {
+        if(location.type != LocationType.House)
+        {
+            return;
+        }
+
+        location.occupiedBy = player;
+        location.type = LocationType.City;
+
+        // Remove existing house if exists
+        foreach(Transform child in structureHolder.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+
+        // Instatiate city object
+        GameObject cityObject = GameObject.Instantiate(cityPrefab, transform.position, Quaternion.identity);
+        cityObject.transform.SetParent(structureHolder.transform);
+        cityObject.transform.localPosition = Vector3.zero;
+        cityObject.GetComponentInChildren<MeshRenderer>().material.SetColor("_BaseColor", player.GetColor());
     }
 }

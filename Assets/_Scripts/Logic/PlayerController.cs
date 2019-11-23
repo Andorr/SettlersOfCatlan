@@ -93,4 +93,9 @@ public class PlayerController : MonoBehaviour
 
         locations.Add(controller.location);
     }
+
+    public void BuildCity(LocationController controller)
+    {
+        controller.BuildCity(player);
+    }
 }

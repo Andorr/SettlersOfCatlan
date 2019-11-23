@@ -23,17 +23,22 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
     {   
 
         // Show UI action panel
-        controller.uiController.EnableActionButtons(true, workerController.worker.location.type == LocationType.Available);
+        controller.uiController.EnableActionButtons(
+            controller.mapController.GetAdjecentPaths(workerController.worker.location, true).Length > 0, 
+            workerController.worker.location.type == LocationType.Available,
+            workerController.worker.location.type == LocationType.House && workerController.worker.location.occupiedBy == controller.GetLocalPlayer().player
+        );
         controller.uiController.EnableActionPanel(
             true, 
             () => EnableRoadPlacement(controller),
-            () => BuildHouse(controller)
+            () => BuildHouse(controller),
+            () => BuildCity(controller)
         );
 
         // Initialize moves to show
         if(workerController.state == WorkerController.WorkerState.Movable)
         {
-            currentAvailableMoves = controller.mapController.GetAdjecentLocations(workerController.worker.location);
+            currentAvailableMoves = controller.mapController.GetReachableLocations(workerController.worker.location, controller.GetLocalPlayer().player);
             foreach(var lc in currentAvailableMoves)
             {
                 lc.SetSelectable(true);
@@ -104,6 +109,18 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
             return;
         }
         controller.GetLocalPlayer().BuildHouse(lc);
+        OnUnselected(controller);
+    }
+
+    private void BuildCity(GameController controller) 
+    {
+        var exists = controller.mapController.GetLocationController(workerController.worker.location, out LocationController lc);
+        if(!exists)
+        {
+            return;
+        }
+        controller.GetLocalPlayer().BuildCity(lc);
+        OnUnselected(controller);
     }
 
     private void DisableMovement()
