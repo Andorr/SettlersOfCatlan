@@ -40,11 +40,22 @@ public class PlayerController : MonoBehaviour
         this.player = player;
     }
 
-    public void CreateWorker(Location location) {
+    public void EnableTurn(bool enable)
+    {
+        EnableWorkers(enable);
+        if(enable) {
+            SetState(State.None);
+        } else {
+            SetState(State.WaitForTurn);
+        }
+    }
+
+    public WorkerController CreateWorker(Location location) {
         // Initialize workers
         Worker worker = new Worker() {
             id = Guid.NewGuid(),
-            location = location
+            location = location,
+            belongsTo = player,
         };
 
         // Initialize worker in scene
@@ -52,6 +63,8 @@ public class PlayerController : MonoBehaviour
         WorkerController workerController = workerObject.GetComponent<WorkerController>();
         workerController.Initialize(worker);
         workers.Add(workerController);
+
+        return workerController;
     }
 
     public void MoveWorker(WorkerController worker, Location location) {
@@ -76,6 +89,7 @@ public class PlayerController : MonoBehaviour
         foreach(WorkerController w in workers)
         {
             w.enabled = enable;
+            w.EnableWorker(enable);
         }
     }
 
@@ -83,6 +97,7 @@ public class PlayerController : MonoBehaviour
     {   
         // Calculate the rotation of the object
         controller.BuildPath(player);
+        ResourceUtil.PurchasePath(player);
 
         paths.Add(controller.path);
     }
@@ -90,6 +105,7 @@ public class PlayerController : MonoBehaviour
     public void BuildHouse(LocationController controller)
     {
         controller.BuildHouse(player);
+        ResourceUtil.PurchaseHouse(player);
 
         locations.Add(controller.location);
     }
@@ -97,5 +113,6 @@ public class PlayerController : MonoBehaviour
     public void BuildCity(LocationController controller)
     {
         controller.BuildCity(player);
+        ResourceUtil.PurchaseCity(player);
     }
 }

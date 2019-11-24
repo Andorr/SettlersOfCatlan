@@ -17,6 +17,7 @@ namespace State
     {
         public int id;
         public TileType type;
+        public int probability;
         public Vector3 position;
         public Location[] locations;
     }

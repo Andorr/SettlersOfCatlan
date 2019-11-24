@@ -6,12 +6,14 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
     private WorkerController workerController;
     private LocationController[] currentAvailableMoves;
     private PathController[] adjecentPaths;
+    private Player player;
 
     private bool shouldTryOverride = false;
     public bool TryOverride => shouldTryOverride;
 
     public void Start() {
         workerController = GetComponent<WorkerController>();
+        player = workerController.worker.belongsTo;
     }
 
     public void OnHover(GameController controller)
@@ -21,12 +23,16 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
 
     public void OnSelected(GameController controller)
     {   
+        Player player = controller.GetLocalPlayer().player;
 
         // Show UI action panel
         controller.uiController.EnableActionButtons(
-            controller.mapController.GetAdjecentPaths(workerController.worker.location, true).Length > 0, 
-            workerController.worker.location.type == LocationType.Available,
-            workerController.worker.location.type == LocationType.House && workerController.worker.location.occupiedBy == controller.GetLocalPlayer().player
+            ResourceUtil.CanAffordPath(player) && 
+                controller.mapController.GetAdjecentPaths(workerController.worker.location, true).Length > 0, 
+            ResourceUtil.CanAffordHouse(player) && 
+                workerController.worker.location.type == LocationType.Available,
+            ResourceUtil.CanAffordCity(player) && 
+                workerController.worker.location.type == LocationType.House && workerController.worker.location.occupiedBy == controller.GetLocalPlayer().player
         );
         controller.uiController.EnableActionPanel(
             true, 
@@ -83,6 +89,7 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
             }
             
             controller.GetLocalPlayer().BuildPath(pc);
+            controller.uiController.UpdatePlayerUI(player);
             return true;
         }
         return false;
@@ -109,6 +116,7 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
             return;
         }
         controller.GetLocalPlayer().BuildHouse(lc);
+        controller.uiController.UpdatePlayerUI(player);
         OnUnselected(controller);
     }
 
@@ -120,6 +128,7 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
             return;
         }
         controller.GetLocalPlayer().BuildCity(lc);
+        controller.uiController.UpdatePlayerUI(player);
         OnUnselected(controller);
     }
 

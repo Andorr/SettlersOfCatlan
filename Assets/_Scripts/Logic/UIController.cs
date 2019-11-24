@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    [Header("UI")]
+    public Font font;
+
     [Header("Player Elements")]
     public GameObject actionPanel;
     public GameObject playerOnePanel;
@@ -15,6 +18,10 @@ public class UIController : MonoBehaviour
     public GameObject playerFourPanel;
 
     private Dictionary<string, GameObject> playerPanels = new Dictionary<string, GameObject>(); // (playerId, playerPanel)
+
+    public void Awake() {
+        InitializeFonts();
+    }
 
     public bool AddPlayer(Player player) {
         if (playerPanels.ContainsKey(player.id)) {
@@ -70,16 +77,19 @@ public class UIController : MonoBehaviour
 
         if(roadAction != null)
         {
+            btns[0].onClick.RemoveAllListeners();
             btns[0].onClick.AddListener(roadAction);
         }
 
         if(houseAction != null)
         {
+            btns[1].onClick.RemoveAllListeners();
             btns[1].onClick.AddListener(houseAction);
         }
 
         if(cityAction != null)
         {
+            btns[2].onClick.RemoveAllListeners();
             btns[2].onClick.AddListener(cityAction);
         }
     }
@@ -90,5 +100,12 @@ public class UIController : MonoBehaviour
         btns[0].interactable = pathButton;
         btns[1].interactable = houseButton;
         btns[2].interactable = cityButton;
+    }
+
+    private void InitializeFonts() {
+        var font = Resources.Load<Font>("Fonts/AUGUSTUS");
+        foreach(Text t in Component.FindObjectsOfType<Text>()) {
+            t.font = font;
+        }
     }
 }
