@@ -70,7 +70,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         string gameName = this.gameName.text.Trim();
 
         if(!string.IsNullOrEmpty(gameName)){
-            PhotonNetwork.CreateRoom(gameName, new RoomOptions{MaxPlayers = 4});
+            PhotonNetwork.CreateRoom(gameName, new RoomOptions{ MaxPlayers = 4, PublishUserId = true });
         }
     }
 
