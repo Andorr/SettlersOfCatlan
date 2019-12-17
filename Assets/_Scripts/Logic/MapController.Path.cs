@@ -1,8 +1,25 @@
 using System.Linq;
 using State;
+using UnityEngine;
 
 public partial class MapController
 {
+    public Path GetPathById(int id) {
+        return map.paths[id];
+    }
+
+    public bool GetPathController(Path location, out PathController pc)
+    {
+        var hasController = paths.TryGetValue(location.id, out GameObject obj);
+        if(!hasController) {
+            pc = null;
+            return false;
+        }
+
+        pc = obj.GetComponent<PathController>();
+        return pc != null;
+    }
+
     public PathController[] GetAdjecentPaths(Location location, bool mustBeAvailable = false)
     {
         // Get all paths connected to the location

@@ -5,6 +5,10 @@ using UnityEngine;
 
 public partial class MapController
 {
+    public Location GetLocationById(int id) {
+        return map.locations[id];
+    }
+
     public bool GetLocationController(Location location, out LocationController lc)
     {
         var hasController = locations.TryGetValue(location.id, out GameObject obj);
