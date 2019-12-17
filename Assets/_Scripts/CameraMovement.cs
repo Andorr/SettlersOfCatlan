@@ -49,5 +49,14 @@ public class CameraMovement : MonoBehaviour
         newPosition.x = transform.position.x;
         newPosition.z = transform.position.z;
         transform.position = newPosition;
+
+        float rotY = 0f;
+        if(Input.GetKey(KeyCode.E)) {
+            rotY += 1f;
+        } else if(Input.GetKey(KeyCode.Q)) {
+            rotY -= 1f;
+        }
+        Vector3 camRot = this.transform.rotation.eulerAngles;
+        this.transform.rotation = Quaternion.Euler(camRot.x, camRot.y + rotY, camRot.z);
     }
 }

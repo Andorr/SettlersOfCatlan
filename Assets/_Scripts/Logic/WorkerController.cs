@@ -32,6 +32,10 @@ public class WorkerController : MonoBehaviour
         StartCoroutine(MoveWorkerWithAnim(location));
     }
 
+    public void EnableWorker(bool enable) {
+        GetComponent<BoxCollider>().enabled = enable;
+    }
+
     private IEnumerator MoveWorkerWithAnim(Location location)
     {
         

@@ -65,6 +65,8 @@ public static class MapUtil
         int currentPathId = 0;
         int currentTileId = 0;
 
+        UnityEngine.Random.InitState(seed);
+
         // Generate tiles with given map shape
         Vector3[] tileLocations = GenerateTilesOfShape(shape, size, radius);
 
@@ -75,6 +77,7 @@ public static class MapUtil
             Tile tile = new Tile() {
                 id = currentTileId,
                 position = l,
+                probability = UnityEngine.Random.Range(1, 10),
             };
             currentTileId++;
             

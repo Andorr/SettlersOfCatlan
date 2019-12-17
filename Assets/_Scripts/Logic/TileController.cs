@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using State;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TileController : MonoBehaviour
 {
     [SerializeField]
     public Tile tile;
     public Transform prefabHolder;
+    public Text probabilityText;
 
     [Header("Prefabs")]
     public GameObject forestPrefab;
@@ -54,6 +56,11 @@ public class TileController : MonoBehaviour
         envPrefab.transform.localRotation = Quaternion.Euler(0, 30, 0);
         envPrefab.transform.localPosition = Vector3.zero;
         envPrefab.transform.localScale = new Vector3(radius, 3, radius);
+
+        // Set probability text
+        if(probabilityText != null) {
+            probabilityText.text = tile.probability.ToString();
+        }
     } 
 
 }

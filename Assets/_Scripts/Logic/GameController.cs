@@ -13,12 +13,12 @@ public class GameController : MonoBehaviour
     public PlayerController localPlayer { get; private set; }
     private PlayerController currentPlayer;
     public enum GameState {
-        PlayersCreateWorker,
+        PlayersCreateHouses,
         Play,
         End,
     }
 
-    public GameState state = GameState.PlayersCreateWorker;
+    public GameState state = GameState.PlayersCreateHouses;
 
     private PlayerController[] players;
 
@@ -41,6 +41,7 @@ public class GameController : MonoBehaviour
                 id = Guid.NewGuid().ToString(),
                 color = PlayerColor.Red,
             });
+            uiController.AddPlayer(players[i].player);
         }
         currentPlayer = localPlayer;
     }
@@ -64,7 +65,7 @@ public class GameController : MonoBehaviour
 
     public void ChangeState(GameState newState)
     {
-        if(state == GameState.PlayersCreateWorker && newState == GameState.Play)
+        if(state == GameState.PlayersCreateHouses && newState == GameState.Play)
         {
             mapController.EnableLocationBoxColliders(false);
         }
@@ -73,16 +74,34 @@ public class GameController : MonoBehaviour
 
     public void EndTurn()
     {
-        if(state == GameState.PlayersCreateWorker) {
-            // TODO: Check if all players have created a worker
-            ChangeState(GameState.Play);
+        if(state == GameState.PlayersCreateHouses) {
+            // TODO: Check if all players have created two houses and a worker
+            if(currentPlayer.locations.Count == 2) {
+                ChangeState(GameState.Play);
+                currentPlayer.EnableTurn(true);
+            }
         } else {
             currentPlayer.SetState(PlayerController.State.WaitForTurn);
-            currentPlayer.EnableWorkers(false);
+            currentPlayer.EnableTurn(false);
 
 
         }
     }
+
+    // This function is only here temporarly for testing
+    public void GainResources() {
+        (int wood, int stone, int clay, int wheat, int wool) = mapController.CalculateGainableResources(currentPlayer.player);
+
+        currentPlayer.player.wood += wood;
+        currentPlayer.player.stone += stone;
+        currentPlayer.player.clay += clay;
+        currentPlayer.player.wheat += wheat;
+        currentPlayer.player.wool += wool;
+
+        // Update UI
+        uiController.UpdatePlayerUI(currentPlayer.player);
+    }
+
     # endregion
 
     # region Handler Logic

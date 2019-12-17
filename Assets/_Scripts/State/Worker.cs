@@ -6,5 +6,6 @@ namespace State
     {
         public Guid id;
         public Location location;
+        public Player belongsTo;
     }
 }

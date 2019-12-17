@@ -96,11 +96,19 @@ MonoBehaviour:
     position: {x: 0, y: 0, z: 0}
     occupiedBy:
       id: 
+      victoryPoints: 0
       color: 0
+      wood: 0
+      stone: 0
+      clay: 0
+      wheat: 0
+      wool: 0
   prefabHolder: {fileID: 4984126332126638599}
   selectableIndicator: {fileID: 7418539852136598897}
   structureHolder: {fileID: 501689831344137090}
   housePrefab: {fileID: 5578524970295904113, guid: 3628587c17b039b49aa7688f1c96c275,
+    type: 3}
+  cityPrefab: {fileID: 4413260971282238266, guid: befab7837052e8e429a3929e3e5cf174,
     type: 3}
 --- !u!114 &4071756229455877349
 MonoBehaviour:
