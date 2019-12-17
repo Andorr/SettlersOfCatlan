@@ -180,7 +180,10 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     public void StartGame(){
         // Here to player starts the game! by clicking the button
-        PhotonNetwork.LoadLevel(GAMESCENE);
+        // TODO: Call start turn based
+        if (PhotonNetwork.IsMasterClient) {
+            PhotonNetwork.LoadLevel(GAMESCENE);
+        }
     }
 
     private void ClearRoomList(){

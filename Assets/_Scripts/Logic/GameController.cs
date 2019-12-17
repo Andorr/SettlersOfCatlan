@@ -31,19 +31,19 @@ public class GameController : MonoBehaviour
         mapController.EnableLocationBoxColliders(true);
 
         // TODO: When on multiplayer, initiate player objects and set this to PhotonView.isMine
-        localPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-        players = new PlayerController[] {
-            localPlayer,
-        };
-        for(int i = 0; i < players.Length; i++)
-        {
-            players[i].Initialize(new Player {
-                id = Guid.NewGuid().ToString(),
-                color = PlayerColor.Red,
-            });
-            uiController.AddPlayer(players[i].player);
-        }
-        currentPlayer = localPlayer;
+        // localPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        // players = new PlayerController[] {
+        //     localPlayer,
+        // };
+        // for(int i = 0; i < players.Length; i++)
+        // {
+        //     players[i].Initialize(new Player {
+        //         id = Guid.NewGuid().ToString(),
+        //         color = PlayerColor.Red,
+        //     });
+        //     uiController.AddPlayer(players[i].player);
+        // }
+        // currentPlayer = localPlayer;
     }
 
     public void Update() {

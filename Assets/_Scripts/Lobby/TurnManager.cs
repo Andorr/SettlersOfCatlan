@@ -24,10 +24,15 @@ public class TurnManager : MonoBehaviour, ITurnManager
     private string currentPlayerTurn = ""; // Saved for every client
     private Player currentPlayer; // Saved for master client only
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
         photonView = GetComponent<PhotonView>();
+        if (PhotonNetwork.IsMasterClient && photonView.IsMine) {
+            this.StartTurnBased();
+        }
     }
 
     public void StartTurnBased() {
