@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace State
 {
+    [System.Serializable]
     public enum LocationType {
         Available = 0,
         House = 1,

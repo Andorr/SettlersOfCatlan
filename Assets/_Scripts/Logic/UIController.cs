@@ -21,9 +21,13 @@ public class UIController : MonoBehaviour
 
     public void Awake() {
         InitializeFonts();
+        playerOnePanel.SetActive(false);
+        playerTwoPanel.SetActive(false);
+        playerThreePanel.SetActive(false);
+        playerFourPanel.SetActive(false);
     }
 
-    public bool AddPlayer(Player player) {
+    public bool AddPlayer(Player player, string nickName) {
         if (playerPanels.ContainsKey(player.id)) {
             return false;
         }
@@ -48,8 +52,12 @@ public class UIController : MonoBehaviour
 
         // Set player color
         panel.transform.GetChild(0).GetComponent<Image>().color = player.GetColor();
-        panel.transform.GetChild(1).GetComponent<Image>().color = player.GetColor();
+        var namePanel = panel.transform.GetChild(1);
+        namePanel.GetComponent<Image>().color = player.GetColor();
+        namePanel.GetComponentInChildren<Text>().text = nickName;
+
         
+        panel.SetActive(true);
 
         return true;
     }

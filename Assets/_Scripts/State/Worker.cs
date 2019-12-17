@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace State
+﻿namespace State
 {
     public class Worker
     {
-        public Guid id;
+        public string id;
         public Location location;
         public Player belongsTo;
     }

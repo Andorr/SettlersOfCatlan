@@ -70,7 +70,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         string gameName = this.gameName.text.Trim();
 
         if(!string.IsNullOrEmpty(gameName)){
-            PhotonNetwork.CreateRoom(gameName, new RoomOptions{ MaxPlayers = 4, PublishUserId = true });
+            PhotonNetwork.CreateRoom(gameName, new RoomOptions{ MaxPlayers = 4, PublishUserId = true});
         }
     }
 
@@ -204,5 +204,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         playerListEntryObject.transform.GetComponentInChildren<Text>().text  = player.NickName;
 
         players.Add(player.ActorNumber, playerListEntryObject);
+
+        player.CustomProperties.Add("Color", Enum.ToObject(typeof(State.PlayerColor), (players.Count - 1)%4));
     }
 }
