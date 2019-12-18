@@ -44,7 +44,7 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
         // Initialize moves to show
         if(workerController.state == WorkerController.WorkerState.Movable)
         {
-            currentAvailableMoves = controller.mapController.GetReachableLocations(workerController.worker.location, controller.GetLocalPlayer().player);
+            currentAvailableMoves = controller.mapController.GetReachableLocations(workerController.worker.location, player);
             foreach(var lc in currentAvailableMoves)
             {
                 lc.SetSelectable(true);

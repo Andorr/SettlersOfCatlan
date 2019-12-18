@@ -59,6 +59,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
     public void SetState(State newState) {
         // CLEAN PREVIOUS STATE
+        if(state == State.WaitForTurn && newState != State.WaitForTurn && photonView.IsMine) {
+            // It is now the player's turn -> Gain resources
+            (int wood, int stone, int clay, int wheat, int wool) = mapController.CalculateGainableResources(player);
+            AddResources(wood, stone, clay, wheat, wool);
+
+        }
 
 
         // NEW STATE LOGIC
@@ -107,6 +113,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
         if(photonView.IsMine) {
             photonView.RPC("OnMoveWorker", RpcTarget.Others, worker.worker.id, location.id);
+            BroadcastResourceChange();
         }
     }
 
@@ -120,6 +127,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
         if(photonView.IsMine) {
             photonView.RPC("OnPathCreated", RpcTarget.Others, controller.path.id);
+            BroadcastResourceChange();
         }
     }
 
@@ -132,6 +140,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
         if(photonView.IsMine) {
             photonView.RPC("OnHouseCreated", RpcTarget.Others, controller.location.id);
+            BroadcastResourceChange();
         }
     }
 
@@ -142,7 +151,26 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
         if(photonView.IsMine) {
             photonView.RPC("OnCityCreated", RpcTarget.Others, controller.location.id);
+            BroadcastResourceChange();
         }
+    }
+
+    public void AddResources(int wood, int stone, int clay, int wheat, int wool) {
+        player.wood += wood;
+        player.stone += stone;
+        player.clay += clay;
+        player.wheat += wheat;
+        player.wool += wool;
+
+        uiController.UpdatePlayerUI(player);
+
+        if(photonView.IsMine) {
+            BroadcastResourceChange();
+        }
+    }
+
+    private void BroadcastResourceChange() {
+        photonView.RPC("OnResourcesChanged", RpcTarget.Others, player.wood, player.stone, player.clay, player.wheat, player.wool);
     }
     # endregion
 
@@ -196,6 +224,16 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             return;
         } 
         BuildPath(pc);
+    }
+
+    [PunRPC]
+    void OnResourcesChanged(int wood, int stone, int clay, int wheat, int wool) {
+        player.wood = wood;
+        player.stone = stone;
+        player.clay = clay;
+        player.wheat = wheat;
+        player.wool = wool;
+        uiController.UpdatePlayerUI(player);
     }
     # endregion
 

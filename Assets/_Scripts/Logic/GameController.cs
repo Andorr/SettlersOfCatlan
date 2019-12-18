@@ -73,17 +73,10 @@ public class GameController : MonoBehaviour
     }
 
     // This function is only here temporarly for testing
+    // THIS METHOD HAS ALREADY BEEN REPLACED IN PlayerController, SO REMOVE THIS WHEN THE "GAIN RESOURCES" BUTTON IS NO LONGER NEEDED!
     public void GainResources() {
         (int wood, int stone, int clay, int wheat, int wool) = mapController.CalculateGainableResources(localPlayer.player);
-
-        localPlayer.player.wood += wood;
-        localPlayer.player.stone += stone;
-        localPlayer.player.clay += clay;
-        localPlayer.player.wheat += wheat;
-        localPlayer.player.wool += wool;
-
-        // Update UI
-        uiController.UpdatePlayerUI(localPlayer.player);
+        localPlayer.AddResources(wood, stone, clay, wheat, wool);
     }
 
     # endregion

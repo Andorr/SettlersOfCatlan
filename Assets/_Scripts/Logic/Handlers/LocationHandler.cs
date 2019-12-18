@@ -30,7 +30,7 @@ public class LocationHandler : MonoBehaviour, IActionHandler
         }
         else if(controller.state == GameController.GameState.Play)
         {
-            Debug.Log("Times change!");
+            
         }
     }
 

@@ -145,8 +145,6 @@ public static class MapUtil
         // Generate map tile types
         tiles = GenerateTileTypes(generation, tiles, seed);
 
-        Debug.Log("Location Length: " + locations.Values.Count);
-
         // Convert map attributes to 
         Map map = new Map();
         map.AddLocations(locations.Values);

@@ -40,14 +40,12 @@ public partial class MapController
     }
 
     public LocationController[] GetReachableLocations(Location startLocation, Player player) {
-        // Get adjecent locations
-        var adjecentLocations = GetAdjecentLocations(startLocation);
-
+       
         // Check if other locations are reachable from the adjecent locations through paths
         var stack = new Stack<Location>();
         var result = new Dictionary<int, LocationController>();
 
-
+        // Deapth first search to find all the locations that are available between the player's paths
         Location current = startLocation;
         while(current != null) {
             if(result.ContainsKey(current.id)) {
@@ -69,7 +67,7 @@ public partial class MapController
 
                 // Get the location and add it to the stack
                 var reachableLocation = p.between.Item1.id == current.id ? p.between.Item2 : p.between.Item1;
-                if(reachableLocation.id == startLocation.id) {
+                if(reachableLocation.id == startLocation.id || (reachableLocation.occupiedBy != null && !reachableLocation.occupiedBy.id.Equals(player.id))) {
                     continue;
                 }
                 stack.Push(reachableLocation);
@@ -78,10 +76,17 @@ public partial class MapController
             current = stack.Count > 0 ? stack.Pop() : null;
         }
 
-        // Add adjecent locations if not already added
-        foreach(LocationController l in adjecentLocations) {
-            if(!result.ContainsKey(l.location.id)) {
-                result.Add(l.location.id, l);
+        // Add adjecent locations if there is no opponent locations around
+        var adjecentLocations = map.paths.Values
+            .Where(p => (p.between.Item1.id == startLocation.id || p.between.Item2.id == startLocation.id)
+                     && (p.occupiedBy == null || p.occupiedBy.id.Equals(player.id)))
+            .Select(p => p.between.Item1.id == startLocation.id ? p.between.Item2 : p.between.Item1)
+            .Where(l => l.occupiedBy == null || l.occupiedBy.id.Equals(player.id));
+
+        foreach(Location l in adjecentLocations) {
+            if(!result.ContainsKey(l.id)) {
+                LocationController lc = locations[l.id].GetComponent<LocationController>();
+                result.Add(l.id, lc);
             }
         }
 
