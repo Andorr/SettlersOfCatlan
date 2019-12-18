@@ -21,8 +21,8 @@ public class TurnManager : MonoBehaviour, ITurnManager
 
     private PhotonView photonView;
 
-    private string currentPlayerTurn = ""; // Saved for every client
-    private Player currentPlayer; // Saved for master client only
+    private static string currentPlayerTurn = ""; // Saved for every client
+    private static Player currentPlayer; // Saved for master client only
 
     
 
@@ -31,9 +31,18 @@ public class TurnManager : MonoBehaviour, ITurnManager
     {
         photonView = GetComponent<PhotonView>();
         if (PhotonNetwork.IsMasterClient && photonView.IsMine) {
-            this.StartTurnBased();
+            // TODO: Wait for all players to load the game scene before calling StartTurnBased().
+            // This is only a temporary solution.
+            StartCoroutine(WaitAndStartTurnedBased(2f));
         }
     }
+
+    private IEnumerator WaitAndStartTurnedBased(float duration) {
+        yield return new WaitForSeconds(duration);
+        this.StartTurnBased();
+    }
+
+
 
     public void StartTurnBased() {
         if (currentPlayerTurn != "") {
@@ -55,7 +64,7 @@ public class TurnManager : MonoBehaviour, ITurnManager
 
     [PunRPC]
     void RPCAssignTurnToPlayer(string playerID) {
-        this.currentPlayerTurn = playerID;
+        currentPlayerTurn = playerID;
         foreach (var listener in FindObjectsOfType<MonoBehaviour>().OfType<ITurnCallback>()) {
             listener.NewTurn(playerID);
         }
@@ -64,7 +73,6 @@ public class TurnManager : MonoBehaviour, ITurnManager
 
 
     public void EndTurn() {
-        Debug.Log($"Current Player Turn: {currentPlayerTurn} ----- LocalPlayer User Id: {PhotonNetwork.LocalPlayer.UserId}");
         if (currentPlayerTurn.Equals(PhotonNetwork.LocalPlayer.UserId)) {
             this.photonView.RPC("RPCMasterCallEndTurn", RpcTarget.MasterClient, PhotonNetwork.LocalPlayer.UserId);
         } else {
@@ -74,13 +82,17 @@ public class TurnManager : MonoBehaviour, ITurnManager
 
     [PunRPC]
     void RPCMasterCallEndTurn(string playerID) {
+        Debug.Log("Master Client assigning new player's turn.");
         if (PhotonNetwork.IsMasterClient) {
+            Debug.Log($"Is {playerID} equal to {currentPlayer.UserId}");
             if (playerID == currentPlayer.UserId) {
+                
                 var nextPlayer = currentPlayer.GetNext();
                 if(nextPlayer == null) {
                     nextPlayer = currentPlayer;
                 }
-                this.currentPlayer = nextPlayer;
+                currentPlayer = nextPlayer;
+                Debug.Log($"It is! New player is {currentPlayer.UserId}");
                 this.photonView.RPC("RPCAssignTurnToPlayer", RpcTarget.All, nextPlayer.UserId);
             }
         }
