@@ -8,4 +8,5 @@ public interface IPlayerAction
     void BuildPath(PathController controller);
     void BuildHouse(LocationController controller);
     void BuildCity(LocationController controller);
+    void EndTurn();
 }

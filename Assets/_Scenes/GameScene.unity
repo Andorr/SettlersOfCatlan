@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -291,6 +291,7 @@ MonoBehaviour:
     id: 26
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -378,6 +379,7 @@ MonoBehaviour:
     id: 145
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -454,6 +456,7 @@ MonoBehaviour:
     position: {x: -12.990381, y: 0, z: -2.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -557,6 +560,7 @@ MonoBehaviour:
     id: 94
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -721,6 +725,7 @@ MonoBehaviour:
     id: 170
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -1184,6 +1189,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: -25}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -1347,6 +1353,7 @@ MonoBehaviour:
     id: 46
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -1453,6 +1460,7 @@ MonoBehaviour:
     position: {x: -8.660254, y: 0, z: -25}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -1887,6 +1895,7 @@ MonoBehaviour:
     position: {x: 30.310888, y: 0, z: -2.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -1990,6 +1999,7 @@ MonoBehaviour:
     id: 50
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -2066,6 +2076,7 @@ MonoBehaviour:
     position: {x: -25.98076, y: 0, z: 10}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -2359,6 +2370,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: 5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -2785,6 +2797,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -2797,6 +2810,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -2809,6 +2823,7 @@ MonoBehaviour:
       position: {x: -25.98076, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -2821,6 +2836,7 @@ MonoBehaviour:
       position: {x: -25.980762, y: 0, z: 5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -2833,6 +2849,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -2845,6 +2862,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: 5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -2959,6 +2977,7 @@ MonoBehaviour:
     position: {x: 38.97114, y: 0, z: 2.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -3092,6 +3111,7 @@ MonoBehaviour:
     id: 147
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -3273,6 +3293,7 @@ MonoBehaviour:
     id: 66
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -3481,6 +3502,7 @@ MonoBehaviour:
     id: 8
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -4623,6 +4645,7 @@ MonoBehaviour:
     position: {x: -4.330127, y: 0, z: -12.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -4860,6 +4883,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -4872,6 +4896,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -4884,6 +4909,7 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -4896,6 +4922,7 @@ MonoBehaviour:
       position: {x: 4.3301277, y: 0, z: 12.500001}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -4908,6 +4935,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -4920,6 +4948,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -5139,6 +5168,7 @@ MonoBehaviour:
     id: 191
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -5393,6 +5423,7 @@ MonoBehaviour:
     id: 117
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -5431,7 +5462,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2033547679}
+  - {fileID: 1442661157}
   - {fileID: 783023653}
   - {fileID: 337144708}
   m_Father: {fileID: 2023111980}
@@ -5579,6 +5610,7 @@ MonoBehaviour:
     id: 72
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -5655,6 +5687,7 @@ MonoBehaviour:
     position: {x: -4.3301272, y: 0, z: 27.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -6007,6 +6040,7 @@ MonoBehaviour:
     id: 162
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -6207,6 +6241,7 @@ MonoBehaviour:
     position: {x: 34.641018, y: 0, z: -9.999999}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -6330,6 +6365,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: -25}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -6422,6 +6458,7 @@ MonoBehaviour:
     position: {x: -4.330127, y: 0, z: -27.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -6540,9 +6577,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2023111980}
-  - {fileID: 499307131}
   - {fileID: 2138544172}
   - {fileID: 2138792305}
+  - {fileID: 141264050}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6627,6 +6664,7 @@ MonoBehaviour:
     id: 129
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -6714,6 +6752,7 @@ MonoBehaviour:
     id: 61
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -6900,6 +6939,7 @@ MonoBehaviour:
     id: 47
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -6911,6 +6951,237 @@ MonoBehaviour:
     type: 3}
   pathHolder: {fileID: 1453391532}
   selectableIndicator: {fileID: 877616431}
+--- !u!1001 &137418048
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1768149939}
+    m_Modifications:
+    - target: {fileID: 4821852057285369519, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Name
+      value: VPHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 24.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665628806680880056, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.25882354
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665628806680880056, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665628806680880056, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9607843
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c91cee065dec5a5498459cb0d27cda56, type: 3}
+--- !u!1 &141264049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 141264050}
+  - component: {fileID: 141264052}
+  - component: {fileID: 141264051}
+  - component: {fileID: 141264053}
+  m_Layer: 5
+  m_Name: EventText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &141264050
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141264049}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 131527170}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -225}
+  m_SizeDelta: {x: 0, y: 150}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &141264051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141264049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 0ffdf4897e47c46488f16409b4f34625, type: 3}
+    m_FontSize: 89
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 162
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: It's Your TURN
+--- !u!222 &141264052
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141264049}
+  m_CullTransparentMesh: 0
+--- !u!95 &141264053
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141264049}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cfb6f06cbf7b8a4296d6eed895aac73, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &142585421
 GameObject:
   m_ObjectHideFlags: 0
@@ -6976,6 +7247,7 @@ MonoBehaviour:
     position: {x: -8.660254, y: 0, z: 35}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -7344,6 +7616,7 @@ MonoBehaviour:
     id: 161
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -7907,6 +8180,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: -5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -8308,6 +8582,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: -20}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -8485,6 +8760,7 @@ MonoBehaviour:
       position: {x: -8.6602545, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -8497,6 +8773,7 @@ MonoBehaviour:
       position: {x: -12.990381, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -8509,6 +8786,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -8521,6 +8799,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: 5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -8533,6 +8812,7 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -8545,6 +8825,7 @@ MonoBehaviour:
       position: {x: -8.660254, y: 0, z: 5.000001}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -8670,6 +8951,7 @@ MonoBehaviour:
     id: 182
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -8776,6 +9058,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: 35}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -9161,6 +9444,7 @@ MonoBehaviour:
     id: 119
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -9993,6 +10277,7 @@ MonoBehaviour:
     id: 82
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -10080,6 +10365,7 @@ MonoBehaviour:
     id: 189
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -10167,6 +10453,7 @@ MonoBehaviour:
     id: 100
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -10726,6 +11013,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: 10}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -11352,6 +11640,7 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -11364,6 +11653,7 @@ MonoBehaviour:
       position: {x: -0.00000021855695, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -11376,6 +11666,7 @@ MonoBehaviour:
       position: {x: -4.330127, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -11388,6 +11679,7 @@ MonoBehaviour:
       position: {x: -4.330126, y: 0, z: 12.500001}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -11400,6 +11692,7 @@ MonoBehaviour:
       position: {x: 0.000000059624405, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -11412,6 +11705,7 @@ MonoBehaviour:
       position: {x: 4.3301277, y: 0, z: 12.500001}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -12119,6 +12413,7 @@ MonoBehaviour:
     id: 143
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -12195,6 +12490,7 @@ MonoBehaviour:
     position: {x: -25.980762, y: 0, z: 25}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -12623,6 +12919,7 @@ MonoBehaviour:
     id: 176
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -12729,6 +13026,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: 12.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -12915,6 +13213,7 @@ MonoBehaviour:
     position: {x: -34.641014, y: 0, z: -10.000001}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -13068,7 +13367,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 675292278}
+  - {fileID: 626578779}
   - {fileID: 2104480009}
   - {fileID: 372853167}
   m_Father: {fileID: 2023111980}
@@ -13527,6 +13826,7 @@ MonoBehaviour:
     id: 183
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -13708,6 +14008,7 @@ MonoBehaviour:
     id: 107
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -13919,6 +14220,7 @@ MonoBehaviour:
     id: 166
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -14006,6 +14308,7 @@ MonoBehaviour:
     id: 141
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -14276,6 +14579,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -14288,6 +14592,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: -10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -14300,6 +14605,7 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -14312,6 +14618,7 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -14324,6 +14631,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -14336,6 +14644,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -14420,6 +14729,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: 20}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -14786,6 +15096,7 @@ MonoBehaviour:
     id: 108
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -14873,6 +15184,7 @@ MonoBehaviour:
     id: 57
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -14960,6 +15272,7 @@ MonoBehaviour:
     id: 68
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -15160,6 +15473,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: -4.9999995}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -16192,6 +16506,7 @@ MonoBehaviour:
     id: 4
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -16309,6 +16624,7 @@ MonoBehaviour:
     id: 193
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -16524,6 +16840,7 @@ MonoBehaviour:
     position: {x: -12.99038, y: 0, z: 32.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -16627,6 +16944,7 @@ MonoBehaviour:
     id: 87
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -16810,6 +17128,7 @@ MonoBehaviour:
     position: {x: -21.650633, y: 0, z: -32.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -16837,83 +17156,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 1.5, z: 2.5}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!1 &360342901
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 360342902}
-  - component: {fileID: 360342904}
-  - component: {fileID: 360342903}
-  m_Layer: 5
-  m_Name: VPText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &360342902
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360342901}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 675292278}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &360342903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360342901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 2
---- !u!222 &360342904
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360342901}
-  m_CullTransparentMesh: 0
 --- !u!1 &360627464
 GameObject:
   m_ObjectHideFlags: 0
@@ -16990,6 +17232,7 @@ MonoBehaviour:
     id: 99
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -17077,6 +17320,7 @@ MonoBehaviour:
     id: 71
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -17485,6 +17729,7 @@ MonoBehaviour:
     position: {x: -4.330126, y: 0, z: 12.500001}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -17588,6 +17833,7 @@ MonoBehaviour:
     id: 18
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -18094,6 +18340,7 @@ MonoBehaviour:
     id: 85
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -18285,6 +18532,7 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -18297,6 +18545,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: 35}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -18309,6 +18558,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -18321,6 +18571,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -18333,6 +18584,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: 25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -18345,6 +18597,7 @@ MonoBehaviour:
       position: {x: -12.990381, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -18928,6 +19181,7 @@ MonoBehaviour:
     id: 23
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -19425,6 +19679,7 @@ MonoBehaviour:
     position: {x: 34.641014, y: 0, z: -5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -19568,6 +19823,7 @@ MonoBehaviour:
       position: {x: -25.98076, y: 0, z: -5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -19580,6 +19836,7 @@ MonoBehaviour:
       position: {x: -30.310888, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -19592,6 +19849,7 @@ MonoBehaviour:
       position: {x: -34.641014, y: 0, z: -4.9999995}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -19604,6 +19862,7 @@ MonoBehaviour:
       position: {x: -34.641014, y: 0, z: -10.000001}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -19616,6 +19875,7 @@ MonoBehaviour:
       position: {x: -30.31089, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -19628,6 +19888,7 @@ MonoBehaviour:
       position: {x: -25.980762, y: 0, z: -10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -19921,6 +20182,7 @@ MonoBehaviour:
       position: {x: 38.97114, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -19933,6 +20195,7 @@ MonoBehaviour:
       position: {x: 34.641014, y: 0, z: 5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -19945,6 +20208,7 @@ MonoBehaviour:
       position: {x: 30.31089, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -19957,6 +20221,7 @@ MonoBehaviour:
       position: {x: 30.310888, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -19969,6 +20234,7 @@ MonoBehaviour:
       position: {x: 34.641014, y: 0, z: -5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -19981,6 +20247,7 @@ MonoBehaviour:
       position: {x: 38.97114, y: 0, z: -2.4999988}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -20545,6 +20812,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: -35}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -20807,6 +21075,7 @@ MonoBehaviour:
     id: 59
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -20883,6 +21152,7 @@ MonoBehaviour:
     position: {x: -12.99038, y: 0, z: -12.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -21371,6 +21641,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: -27.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -21986,6 +22257,7 @@ MonoBehaviour:
     id: 62
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -22073,6 +22345,7 @@ MonoBehaviour:
     id: 96
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -22149,6 +22422,7 @@ MonoBehaviour:
     position: {x: -8.6602545, y: 0, z: -20}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -22632,6 +22906,7 @@ MonoBehaviour:
     position: {x: 30.31089, y: 0, z: -12.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -23229,6 +23504,7 @@ MonoBehaviour:
     position: {x: -8.660254, y: 0, z: 20}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -23321,6 +23597,7 @@ MonoBehaviour:
     position: {x: 4.330127, y: 0, z: -27.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -23348,135 +23625,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 1.5, z: 2.5}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!1 &499307130
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 499307131}
-  - component: {fileID: 499307134}
-  - component: {fileID: 499307133}
-  - component: {fileID: 499307132}
-  m_Layer: 5
-  m_Name: TempGainResourceButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &499307131
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499307130}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 508752025}
-  m_Father: {fileID: 131527170}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -82.27}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 1}
---- !u!114 &499307132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499307130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 499307133}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 833180598}
-        m_MethodName: GainResources
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &499307133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499307130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &499307134
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499307130}
-  m_CullTransparentMesh: 0
 --- !u!1 &501093325
 GameObject:
   m_ObjectHideFlags: 0
@@ -23845,6 +23993,7 @@ MonoBehaviour:
       position: {x: -8.6602545, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -23857,6 +24006,7 @@ MonoBehaviour:
       position: {x: -12.990381, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -23869,6 +24019,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -23881,6 +24032,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: -25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -23893,6 +24045,7 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -23905,6 +24058,7 @@ MonoBehaviour:
       position: {x: -8.660254, y: 0, z: -25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -24048,83 +24202,6 @@ Transform:
   m_Father: {fileID: 1035660361}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &508752024
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 508752025}
-  - component: {fileID: 508752027}
-  - component: {fileID: 508752026}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &508752025
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508752024}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 499307131}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &508752026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508752024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 0ffdf4897e47c46488f16409b4f34625, type: 3}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Gain resources
---- !u!222 &508752027
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508752024}
-  m_CullTransparentMesh: 0
 --- !u!1 &511680143
 GameObject:
   m_ObjectHideFlags: 0
@@ -24201,6 +24278,7 @@ MonoBehaviour:
     id: 15
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -24376,6 +24454,7 @@ MonoBehaviour:
     position: {x: -4.330127, y: 0, z: 17.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -24832,6 +24911,7 @@ MonoBehaviour:
     id: 171
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -24919,6 +24999,7 @@ MonoBehaviour:
     id: 80
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -25348,6 +25429,7 @@ MonoBehaviour:
     id: 3
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -25603,6 +25685,7 @@ MonoBehaviour:
       position: {x: 34.641014, y: 0, z: -5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -25615,6 +25698,7 @@ MonoBehaviour:
       position: {x: 30.310888, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -25627,6 +25711,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: -5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -25639,6 +25724,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: -10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -25651,6 +25737,7 @@ MonoBehaviour:
       position: {x: 30.31089, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -25663,6 +25750,7 @@ MonoBehaviour:
       position: {x: 34.641018, y: 0, z: -9.999999}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -25923,6 +26011,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: 35}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -25950,6 +26039,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 1.5, z: 2.5}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!224 &554631902 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+    type: 3}
+  m_PrefabInstance: {fileID: 137418048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &554993200
 GameObject:
   m_ObjectHideFlags: 0
@@ -26442,6 +26537,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -26454,6 +26550,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -26466,6 +26563,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -26478,6 +26576,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: -25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -26490,6 +26589,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -26502,6 +26602,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: -24.999998}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -26676,6 +26777,7 @@ MonoBehaviour:
     id: 104
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -26782,6 +26884,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: 35}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -26874,6 +26977,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: 27.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -26966,6 +27070,7 @@ MonoBehaviour:
     position: {x: -8.6602545, y: 0, z: -5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -27079,6 +27184,7 @@ MonoBehaviour:
       position: {x: -4.330127, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -27091,6 +27197,7 @@ MonoBehaviour:
       position: {x: -8.660254, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -27103,6 +27210,7 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -27115,6 +27223,7 @@ MonoBehaviour:
       position: {x: -12.990381, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -27127,6 +27236,7 @@ MonoBehaviour:
       position: {x: -8.6602545, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -27139,6 +27249,7 @@ MonoBehaviour:
       position: {x: -4.330126, y: 0, z: 12.500001}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -27214,6 +27325,7 @@ MonoBehaviour:
       position: {x: -4.330127, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -27226,6 +27338,7 @@ MonoBehaviour:
       position: {x: -8.660254, y: 0, z: 35}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -27238,6 +27351,7 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -27250,6 +27364,7 @@ MonoBehaviour:
       position: {x: -12.990381, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -27262,6 +27377,7 @@ MonoBehaviour:
       position: {x: -8.6602545, y: 0, z: 25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -27274,6 +27390,7 @@ MonoBehaviour:
       position: {x: -4.3301272, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -27369,6 +27486,7 @@ MonoBehaviour:
     id: 173
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -27550,6 +27668,7 @@ MonoBehaviour:
     id: 133
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -27637,6 +27756,7 @@ MonoBehaviour:
     id: 48
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -27724,6 +27844,7 @@ MonoBehaviour:
     id: 135
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -27811,6 +27932,7 @@ MonoBehaviour:
     id: 158
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -28497,6 +28619,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: 5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -28754,6 +28877,7 @@ MonoBehaviour:
     id: 10
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -28841,6 +28965,7 @@ MonoBehaviour:
     id: 79
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -28938,6 +29063,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -28950,6 +29076,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -28962,6 +29089,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -28974,6 +29102,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: -25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -28986,6 +29115,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -28998,6 +29128,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: -25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -29172,6 +29303,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626143466}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!224 &626578779 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+    type: 3}
+  m_PrefabInstance: {fileID: 1791448559}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &628156525
 GameObject:
   m_ObjectHideFlags: 0
@@ -29258,6 +29395,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -29270,6 +29408,7 @@ MonoBehaviour:
       position: {x: -25.980762, y: 0, z: -10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -29282,6 +29421,7 @@ MonoBehaviour:
       position: {x: -30.31089, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -29294,6 +29434,7 @@ MonoBehaviour:
       position: {x: -30.310888, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -29306,6 +29447,7 @@ MonoBehaviour:
       position: {x: -25.980762, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -29318,6 +29460,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -29393,6 +29536,7 @@ MonoBehaviour:
       position: {x: -8.6602545, y: 0, z: 25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -29405,6 +29549,7 @@ MonoBehaviour:
       position: {x: -12.990381, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -29417,6 +29562,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: 25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -29429,6 +29575,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -29441,6 +29588,7 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -29453,6 +29601,7 @@ MonoBehaviour:
       position: {x: -8.660254, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -29652,6 +29801,7 @@ MonoBehaviour:
     id: 134
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -30195,6 +30345,7 @@ MonoBehaviour:
     position: {x: -8.6602545, y: 0, z: 25}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -30287,6 +30438,7 @@ MonoBehaviour:
     position: {x: 25.980762, y: 0, z: -5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -30573,6 +30725,7 @@ MonoBehaviour:
       position: {x: 30.31089, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -30585,6 +30738,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: 5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -30597,6 +30751,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -30609,6 +30764,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -30621,6 +30777,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: -5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -30633,6 +30790,7 @@ MonoBehaviour:
       position: {x: 30.310888, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -30708,6 +30866,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -30720,6 +30879,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -30732,6 +30892,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -30744,6 +30905,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -30756,6 +30918,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -30768,6 +30931,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -31051,6 +31215,7 @@ MonoBehaviour:
     id: 103
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -31498,6 +31663,140 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654845269}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &657478690
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 106106832}
+    m_Modifications:
+    - target: {fileID: 4821852057285369519, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Name
+      value: VPHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 24.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665628806680880056, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.7372549
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665628806680880056, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.25882354
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665628806680880056, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9607843
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c91cee065dec5a5498459cb0d27cda56, type: 3}
 --- !u!1 &659516384
 GameObject:
   m_ObjectHideFlags: 0
@@ -31898,6 +32197,7 @@ MonoBehaviour:
     id: 151
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -31909,80 +32209,6 @@ MonoBehaviour:
     type: 3}
   pathHolder: {fileID: 1292034344}
   selectableIndicator: {fileID: 362715359}
---- !u!1 &675292277
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 675292278}
-  - component: {fileID: 675292280}
-  - component: {fileID: 675292279}
-  m_Layer: 5
-  m_Name: VPHolder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &675292278
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675292277}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 360342902}
-  m_Father: {fileID: 282786095}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25, y: 24.5}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &675292279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675292277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.18770024, g: 0.6981132, b: 0.33312514, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 298fda9c4eabccb4abf333905a5327c4, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 1
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &675292280
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675292277}
-  m_CullTransparentMesh: 0
 --- !u!1 &680886293
 GameObject:
   m_ObjectHideFlags: 0
@@ -32330,6 +32556,7 @@ MonoBehaviour:
     position: {x: -25.980762, y: 0, z: -20}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -32645,6 +32872,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: -10}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -32872,6 +33100,7 @@ MonoBehaviour:
     id: 112
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -32948,6 +33177,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: -12.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -33071,6 +33301,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: 17.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -33174,6 +33405,7 @@ MonoBehaviour:
     id: 36
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -33404,6 +33636,7 @@ MonoBehaviour:
     position: {x: -8.660254, y: 0, z: -35}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -33675,6 +33908,7 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -33687,6 +33921,7 @@ MonoBehaviour:
       position: {x: -0.00000021855695, y: 0, z: -25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -33699,6 +33934,7 @@ MonoBehaviour:
       position: {x: -4.330127, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -33711,6 +33947,7 @@ MonoBehaviour:
       position: {x: -4.330126, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -33723,6 +33960,7 @@ MonoBehaviour:
       position: {x: 0.000000059624405, y: 0, z: -35}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -33735,6 +33973,7 @@ MonoBehaviour:
       position: {x: 4.3301277, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -33924,6 +34163,7 @@ MonoBehaviour:
     id: 78
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -34099,6 +34339,7 @@ MonoBehaviour:
     position: {x: 38.97114, y: 0, z: -2.4999988}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -34232,6 +34473,7 @@ MonoBehaviour:
     id: 122
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -34531,6 +34773,7 @@ MonoBehaviour:
     position: {x: 30.310888, y: 0, z: 12.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -34684,6 +34927,7 @@ MonoBehaviour:
     position: {x: -0.00000021855695, y: 0, z: -25}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -34975,6 +35219,7 @@ MonoBehaviour:
     id: 76
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -35156,6 +35401,7 @@ MonoBehaviour:
     id: 164
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -35273,6 +35519,7 @@ MonoBehaviour:
     id: 12
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -35349,6 +35596,7 @@ MonoBehaviour:
     position: {x: -0.00000029802322, y: 0, z: 25}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -35764,6 +36012,7 @@ MonoBehaviour:
     id: 52
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -36039,6 +36288,7 @@ MonoBehaviour:
     id: 93
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -36126,6 +36376,7 @@ MonoBehaviour:
     id: 95
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -36193,6 +36444,7 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -36205,6 +36457,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: -25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -36217,6 +36470,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -36229,6 +36483,7 @@ MonoBehaviour:
       position: {x: -21.650633, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -36241,6 +36496,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: -35}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -36253,6 +36509,7 @@ MonoBehaviour:
       position: {x: -12.990379, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -36442,6 +36699,7 @@ MonoBehaviour:
     id: 188
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -36689,6 +36947,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: 20}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -37241,6 +37500,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: -32.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -38348,6 +38608,7 @@ MonoBehaviour:
     id: 109
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -38534,6 +38795,7 @@ MonoBehaviour:
     id: 34
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -38908,6 +39170,7 @@ MonoBehaviour:
     id: 149
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -39315,12 +39578,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17e875fd26b069428392a6b245c5767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  font: {fileID: 0}
+  font: {fileID: 12800000, guid: 0ffdf4897e47c46488f16409b4f34625, type: 3}
+  endTurnButton: {fileID: 2138544173}
+  eventText: {fileID: 141264051}
   actionPanel: {fileID: 2138792304}
   playerOnePanel: {fileID: 1909934524}
   playerTwoPanel: {fileID: 1768149938}
   playerThreePanel: {fileID: 106106831}
   playerFourPanel: {fileID: 282786094}
+  shrinkClip: {fileID: 7400000, guid: 79f2a0a87c4b85f4c8471ba94a04a9fe, type: 2}
+  growClip: {fileID: 7400000, guid: c6133f60640b46f48baf9888c63ea309, type: 2}
 --- !u!114 &833180600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39515,6 +39782,7 @@ MonoBehaviour:
       position: {x: -4.330127, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -39527,6 +39795,7 @@ MonoBehaviour:
       position: {x: -8.660254, y: 0, z: -25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -39539,6 +39808,7 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -39551,6 +39821,7 @@ MonoBehaviour:
       position: {x: -12.990379, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -39563,6 +39834,7 @@ MonoBehaviour:
       position: {x: -8.660254, y: 0, z: -35}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -39575,6 +39847,7 @@ MonoBehaviour:
       position: {x: -4.330126, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -39764,6 +40037,7 @@ MonoBehaviour:
     id: 110
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -39851,6 +40125,7 @@ MonoBehaviour:
     id: 123
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -40062,6 +40337,7 @@ MonoBehaviour:
     id: 125
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -40530,6 +40806,7 @@ MonoBehaviour:
     id: 88
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -40617,6 +40894,7 @@ MonoBehaviour:
     id: 91
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -40858,6 +41136,7 @@ MonoBehaviour:
     id: 178
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -41163,6 +41442,7 @@ MonoBehaviour:
     id: 137
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -41658,6 +41938,7 @@ MonoBehaviour:
     id: 127
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -42035,6 +42316,7 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -42047,6 +42329,7 @@ MonoBehaviour:
       position: {x: -0.00000021855695, y: 0, z: 35}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -42059,6 +42342,7 @@ MonoBehaviour:
       position: {x: -4.330127, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -42071,6 +42355,7 @@ MonoBehaviour:
       position: {x: -4.3301272, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -42083,6 +42368,7 @@ MonoBehaviour:
       position: {x: -0.00000029802322, y: 0, z: 25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -42095,6 +42381,7 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -42427,6 +42714,7 @@ MonoBehaviour:
     position: {x: -0.00000021855695, y: 0, z: 20}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -42560,6 +42848,7 @@ MonoBehaviour:
     id: 42
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -42854,6 +43143,7 @@ MonoBehaviour:
     position: {x: -12.990381, y: 0, z: 12.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -43040,6 +43330,7 @@ MonoBehaviour:
     position: {x: -8.660254, y: 0, z: -10}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -43461,6 +43752,7 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -43473,6 +43765,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: -10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -43485,6 +43778,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -43497,6 +43791,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -43509,6 +43804,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -43521,6 +43817,7 @@ MonoBehaviour:
       position: {x: -12.990381, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -43605,6 +43902,7 @@ MonoBehaviour:
     position: {x: 34.641014, y: 0, z: 10}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -44069,6 +44367,7 @@ MonoBehaviour:
     id: 11
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -44136,6 +44435,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -44148,6 +44448,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -44160,6 +44461,7 @@ MonoBehaviour:
       position: {x: -25.980762, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -44172,6 +44474,7 @@ MonoBehaviour:
       position: {x: -25.98076, y: 0, z: -25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -44184,6 +44487,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -44196,6 +44500,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: -25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -44667,6 +44972,7 @@ MonoBehaviour:
     id: 106
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -44784,6 +45090,7 @@ MonoBehaviour:
     id: 153
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -44967,6 +45274,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: -5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -45153,6 +45461,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: 2.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -45245,6 +45554,7 @@ MonoBehaviour:
     position: {x: 4.330127, y: 0, z: 27.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -45472,6 +45782,7 @@ MonoBehaviour:
     id: 83
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -46053,6 +46364,7 @@ MonoBehaviour:
     position: {x: 25.980762, y: 0, z: 25}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -46156,6 +46468,7 @@ MonoBehaviour:
     id: 14
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -46356,6 +46669,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: -17.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -46459,6 +46773,7 @@ MonoBehaviour:
     id: 74
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -47094,6 +47409,7 @@ MonoBehaviour:
     id: 113
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -47161,6 +47477,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -47173,6 +47490,7 @@ MonoBehaviour:
       position: {x: -25.980762, y: 0, z: 5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -47185,6 +47503,7 @@ MonoBehaviour:
       position: {x: -30.310886, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -47197,6 +47516,7 @@ MonoBehaviour:
       position: {x: -30.310888, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -47209,6 +47529,7 @@ MonoBehaviour:
       position: {x: -25.98076, y: 0, z: -5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -47221,6 +47542,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -48447,6 +48769,7 @@ MonoBehaviour:
     position: {x: 12.990381, y: 0, z: -32.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -48624,6 +48947,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: 25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -48636,6 +48960,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -48648,6 +48973,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: 25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -48660,6 +48986,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -48672,6 +48999,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -48684,6 +49012,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -48934,6 +49263,7 @@ MonoBehaviour:
     id: 196
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -49081,6 +49411,7 @@ MonoBehaviour:
     id: 126
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -49236,6 +49567,7 @@ MonoBehaviour:
     position: {x: -12.99038, y: 0, z: 17.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -49339,6 +49671,7 @@ MonoBehaviour:
     id: 54
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -49426,6 +49759,7 @@ MonoBehaviour:
     id: 169
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -50087,6 +50421,7 @@ MonoBehaviour:
     id: 13
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -50154,6 +50489,7 @@ MonoBehaviour:
       position: {x: -30.310886, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -50166,6 +50502,7 @@ MonoBehaviour:
       position: {x: -34.641014, y: 0, z: 5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -50178,6 +50515,7 @@ MonoBehaviour:
       position: {x: -38.97114, y: 0, z: 2.5000002}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -50190,6 +50528,7 @@ MonoBehaviour:
       position: {x: -38.97114, y: 0, z: -2.500001}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -50202,6 +50541,7 @@ MonoBehaviour:
       position: {x: -34.641014, y: 0, z: -4.9999995}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -50214,6 +50554,7 @@ MonoBehaviour:
       position: {x: -30.310888, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -50319,6 +50660,7 @@ MonoBehaviour:
       position: {x: 30.31089, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -50331,6 +50673,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: -10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -50343,6 +50686,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -50355,6 +50699,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -50367,6 +50712,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -50379,6 +50725,7 @@ MonoBehaviour:
       position: {x: 30.31089, y: 0, z: -17.499998}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -50634,6 +50981,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: -2.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -50756,6 +51104,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: -12.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -51037,6 +51386,7 @@ MonoBehaviour:
     id: 44
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -51143,6 +51493,7 @@ MonoBehaviour:
     position: {x: -30.31089, y: 0, z: -12.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -51305,6 +51656,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: 25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -51317,6 +51669,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -51329,6 +51682,7 @@ MonoBehaviour:
       position: {x: -25.980762, y: 0, z: 25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -51341,6 +51695,7 @@ MonoBehaviour:
       position: {x: -25.980762, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -51353,6 +51708,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -51365,6 +51721,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -51740,6 +52097,7 @@ MonoBehaviour:
     id: 33
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -51827,6 +52185,7 @@ MonoBehaviour:
     id: 38
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -52052,83 +52411,6 @@ Transform:
   m_Father: {fileID: 473803950}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1103978913
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1103978914}
-  - component: {fileID: 1103978916}
-  - component: {fileID: 1103978915}
-  m_Layer: 5
-  m_Name: VPText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1103978914
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103978913}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2059292249}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1103978915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103978913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 2
---- !u!222 &1103978916
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103978913}
-  m_CullTransparentMesh: 0
 --- !u!1 &1105748356
 GameObject:
   m_ObjectHideFlags: 0
@@ -52459,6 +52741,7 @@ MonoBehaviour:
     id: 142
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -52629,6 +52912,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: 12.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -53029,6 +53313,7 @@ MonoBehaviour:
     id: 37
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -53210,6 +53495,7 @@ MonoBehaviour:
     id: 30
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -53297,6 +53583,7 @@ MonoBehaviour:
     id: 5
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -53373,6 +53660,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: -17.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -53831,6 +54119,7 @@ MonoBehaviour:
     id: 148
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -53948,6 +54237,7 @@ MonoBehaviour:
     id: 152
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -54332,6 +54622,7 @@ MonoBehaviour:
     id: 27
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -54419,6 +54710,7 @@ MonoBehaviour:
     id: 177
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -54506,6 +54798,7 @@ MonoBehaviour:
     id: 168
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -54593,6 +54886,7 @@ MonoBehaviour:
     id: 31
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -54669,6 +54963,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: -27.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -55124,6 +55419,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: -10}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -55425,6 +55721,7 @@ MonoBehaviour:
       position: {x: 34.641014, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -55437,6 +55734,7 @@ MonoBehaviour:
       position: {x: 30.310888, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -55449,6 +55747,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -55461,6 +55760,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: 5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -55473,6 +55773,7 @@ MonoBehaviour:
       position: {x: 30.31089, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -55485,6 +55786,7 @@ MonoBehaviour:
       position: {x: 34.641014, y: 0, z: 5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -55504,83 +55806,6 @@ MonoBehaviour:
     type: 3}
   hillPrefab: {fileID: 5711558636588302791, guid: 25851ff091448454585b0433a0a10b19,
     type: 3}
---- !u!1 &1187538669
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1187538670}
-  - component: {fileID: 1187538672}
-  - component: {fileID: 1187538671}
-  m_Layer: 5
-  m_Name: VPText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1187538670
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187538669}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1194782726}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1187538671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187538669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 2
---- !u!222 &1187538672
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187538669}
-  m_CullTransparentMesh: 0
 --- !u!1 &1190553850
 GameObject:
   m_ObjectHideFlags: 0
@@ -55657,6 +55882,7 @@ MonoBehaviour:
     id: 29
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -55744,6 +55970,7 @@ MonoBehaviour:
     id: 146
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -55908,6 +56135,7 @@ MonoBehaviour:
     id: 19
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -55980,80 +56208,6 @@ Transform:
   m_Father: {fileID: 1455440493}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1194782725
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1194782726}
-  - component: {fileID: 1194782728}
-  - component: {fileID: 1194782727}
-  m_Layer: 5
-  m_Name: VPHolder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1194782726
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194782725}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1187538670}
-  m_Father: {fileID: 1768149939}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25, y: 24.5}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1194782727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194782725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.25882354, g: 0.5294118, b: 0.9607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 298fda9c4eabccb4abf333905a5327c4, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 1
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1194782728
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194782725}
-  m_CullTransparentMesh: 0
 --- !u!1 &1196789864
 GameObject:
   m_ObjectHideFlags: 0
@@ -56213,6 +56367,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: -35}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -56316,6 +56471,7 @@ MonoBehaviour:
     id: 157
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -56580,6 +56736,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: -2.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -56694,6 +56851,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -56706,6 +56864,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: 5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -56718,6 +56877,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: 2.5000002}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -56730,6 +56890,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -56742,6 +56903,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: -5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -56754,6 +56916,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -56838,6 +57001,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: -10}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -56971,6 +57135,7 @@ MonoBehaviour:
     id: 121
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -57141,6 +57306,7 @@ MonoBehaviour:
     position: {x: -30.310888, y: 0, z: -17.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -57333,6 +57499,7 @@ MonoBehaviour:
       position: {x: -8.6602545, y: 0, z: -5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -57345,6 +57512,7 @@ MonoBehaviour:
       position: {x: -12.990381, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -57357,6 +57525,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: -5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -57369,6 +57538,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: -10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -57381,6 +57551,7 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -57393,6 +57564,7 @@ MonoBehaviour:
       position: {x: -8.660254, y: 0, z: -10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -57830,6 +58002,7 @@ MonoBehaviour:
     id: 116
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -58173,6 +58346,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: 10}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -58791,6 +58965,7 @@ MonoBehaviour:
     id: 175
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -58858,6 +59033,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: 25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -58870,6 +59046,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -58882,6 +59059,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: 25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -58894,6 +59072,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -58906,6 +59085,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -58918,6 +59098,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -59137,6 +59318,7 @@ MonoBehaviour:
     id: 67
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -59491,6 +59673,7 @@ MonoBehaviour:
     position: {x: 4.330127, y: 0, z: -12.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -59677,6 +59860,7 @@ MonoBehaviour:
     position: {x: 4.330127, y: 0, z: 17.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -59760,6 +59944,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -59772,6 +59957,7 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -59784,6 +59970,7 @@ MonoBehaviour:
       position: {x: -0.00000029802322, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -59796,6 +59983,7 @@ MonoBehaviour:
       position: {x: -0.00000021855695, y: 0, z: -25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -59808,6 +59996,7 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -59820,6 +60009,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: -25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -60127,6 +60317,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: -27.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -60230,6 +60421,7 @@ MonoBehaviour:
     id: 118
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -60336,6 +60528,7 @@ MonoBehaviour:
     position: {x: -25.980762, y: 0, z: 5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -60731,6 +60924,7 @@ MonoBehaviour:
     position: {x: -12.990381, y: 0, z: 27.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -60853,6 +61047,7 @@ MonoBehaviour:
     position: {x: -25.98076, y: 0, z: -5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -61069,6 +61264,7 @@ MonoBehaviour:
     position: {x: -30.310886, y: 0, z: 2.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -61161,6 +61357,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: 27.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -61354,6 +61551,7 @@ MonoBehaviour:
     id: 89
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -61890,6 +62088,7 @@ MonoBehaviour:
     id: 194
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -62549,6 +62748,7 @@ MonoBehaviour:
     position: {x: 25.980762, y: 0, z: 20}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -62652,6 +62852,7 @@ MonoBehaviour:
     id: 40
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -62833,6 +63034,7 @@ MonoBehaviour:
     id: 69
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -63063,6 +63265,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: -2.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -63166,6 +63369,7 @@ MonoBehaviour:
     id: 70
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -63272,6 +63476,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: -20}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -63702,6 +63907,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -63714,6 +63920,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: -25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -63726,6 +63933,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -63738,6 +63946,7 @@ MonoBehaviour:
       position: {x: 12.990381, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -63750,6 +63959,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: -35}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -63762,6 +63972,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -63846,6 +64057,7 @@ MonoBehaviour:
     position: {x: -30.310888, y: 0, z: 12.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -64156,6 +64368,7 @@ MonoBehaviour:
     position: {x: -12.990379, y: 0, z: -32.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -64248,6 +64461,7 @@ MonoBehaviour:
     position: {x: -25.98076, y: 0, z: -25}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -64601,6 +64815,7 @@ MonoBehaviour:
     id: 105
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -65438,6 +65653,7 @@ MonoBehaviour:
     id: 6
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -65555,6 +65771,7 @@ MonoBehaviour:
     id: 197
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -65642,6 +65859,7 @@ MonoBehaviour:
     id: 90
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -66136,6 +66354,7 @@ MonoBehaviour:
     id: 43
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -66396,6 +66615,7 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -66408,6 +66628,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: 5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -66420,6 +66641,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -66432,6 +66654,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -66444,6 +66667,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: -5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -66456,6 +66680,7 @@ MonoBehaviour:
       position: {x: -12.990381, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -66600,6 +66825,7 @@ MonoBehaviour:
     position: {x: 25.980762, y: 0, z: -20}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -67114,6 +67340,7 @@ MonoBehaviour:
     id: 53
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -67258,6 +67485,7 @@ MonoBehaviour:
       position: {x: -4.330127, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -67270,6 +67498,7 @@ MonoBehaviour:
       position: {x: -8.660254, y: 0, z: -10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -67282,6 +67511,7 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -67294,6 +67524,7 @@ MonoBehaviour:
       position: {x: -12.990381, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -67306,6 +67537,7 @@ MonoBehaviour:
       position: {x: -8.6602545, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -67318,6 +67550,7 @@ MonoBehaviour:
       position: {x: -4.3301272, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -67755,6 +67988,7 @@ MonoBehaviour:
     id: 180
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -67842,6 +68076,7 @@ MonoBehaviour:
     id: 20
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -67853,6 +68088,12 @@ MonoBehaviour:
     type: 3}
   pathHolder: {fileID: 1558525559}
   selectableIndicator: {fileID: 469344011}
+--- !u!224 &1442661157 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+    type: 3}
+  m_PrefabInstance: {fileID: 657478690}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1444013991
 GameObject:
   m_ObjectHideFlags: 0
@@ -68254,6 +68495,7 @@ MonoBehaviour:
     position: {x: 25.980762, y: 0, z: 10}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -68397,6 +68639,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -68409,6 +68652,7 @@ MonoBehaviour:
       position: {x: -25.980762, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -68421,6 +68665,7 @@ MonoBehaviour:
       position: {x: -30.31089, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -68433,6 +68678,7 @@ MonoBehaviour:
       position: {x: -30.310888, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -68445,6 +68691,7 @@ MonoBehaviour:
       position: {x: -25.98076, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -68457,6 +68704,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -68532,6 +68780,7 @@ MonoBehaviour:
       position: {x: -0.00000029802322, y: 0, z: 25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -68544,6 +68793,7 @@ MonoBehaviour:
       position: {x: -4.3301272, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -68556,6 +68806,7 @@ MonoBehaviour:
       position: {x: -8.6602545, y: 0, z: 25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -68568,6 +68819,7 @@ MonoBehaviour:
       position: {x: -8.660254, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -68580,6 +68832,7 @@ MonoBehaviour:
       position: {x: -4.330127, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -68592,6 +68845,7 @@ MonoBehaviour:
       position: {x: -0.00000021855695, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -68676,6 +68930,7 @@ MonoBehaviour:
     position: {x: -38.97114, y: 0, z: 2.5000002}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -68809,6 +69064,7 @@ MonoBehaviour:
     id: 55
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -68979,6 +69235,7 @@ MonoBehaviour:
     position: {x: -30.310888, y: 0, z: -2.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -69112,6 +69369,7 @@ MonoBehaviour:
     id: 144
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -69199,6 +69457,7 @@ MonoBehaviour:
     id: 86
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -69266,6 +69525,7 @@ MonoBehaviour:
       position: {x: -12.99038, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -69278,6 +69538,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -69290,6 +69551,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -69302,6 +69564,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -69314,6 +69577,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -69326,6 +69590,7 @@ MonoBehaviour:
       position: {x: -12.990381, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -69519,6 +69784,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: -12.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -69622,6 +69888,7 @@ MonoBehaviour:
     id: 35
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -69719,6 +69986,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -69731,6 +69999,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -69743,6 +70012,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -69755,6 +70025,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: 5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -69767,6 +70038,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -69779,6 +70051,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: 5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -69874,6 +70147,7 @@ MonoBehaviour:
     id: 159
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -69941,6 +70215,7 @@ MonoBehaviour:
       position: {x: -25.98076, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -69953,6 +70228,7 @@ MonoBehaviour:
       position: {x: -30.310888, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -69965,6 +70241,7 @@ MonoBehaviour:
       position: {x: -34.641014, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -69977,6 +70254,7 @@ MonoBehaviour:
       position: {x: -34.641014, y: 0, z: 5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -69989,6 +70267,7 @@ MonoBehaviour:
       position: {x: -30.310886, y: 0, z: 2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -70001,6 +70280,7 @@ MonoBehaviour:
       position: {x: -25.980762, y: 0, z: 5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -70127,6 +70407,7 @@ MonoBehaviour:
     id: 154
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -70509,6 +70790,7 @@ MonoBehaviour:
     id: 192
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -70866,6 +71148,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -70878,6 +71161,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: -10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -70890,6 +71174,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -70902,6 +71187,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -70914,6 +71200,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -70926,6 +71213,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -71010,6 +71298,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: 32.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -71207,6 +71496,7 @@ MonoBehaviour:
     id: 84
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -71294,6 +71584,7 @@ MonoBehaviour:
     id: 98
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -71526,6 +71817,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: 17.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -71772,6 +72064,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: -17.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -72374,6 +72667,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: -20}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -72607,6 +72901,7 @@ MonoBehaviour:
     id: 81
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -72694,6 +72989,7 @@ MonoBehaviour:
     id: 56
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -72894,6 +73190,7 @@ MonoBehaviour:
     position: {x: -25.980762, y: 0, z: 20}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -73121,6 +73418,7 @@ MonoBehaviour:
     id: 45
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -73208,6 +73506,7 @@ MonoBehaviour:
     id: 1
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -73295,6 +73594,7 @@ MonoBehaviour:
     id: 131
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -74199,6 +74499,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: 25}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -74509,6 +74810,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: 2.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -74612,6 +74914,7 @@ MonoBehaviour:
     id: 138
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -74729,6 +75032,7 @@ MonoBehaviour:
     id: 97
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -75032,6 +75336,7 @@ MonoBehaviour:
     id: 28
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -75119,6 +75424,7 @@ MonoBehaviour:
     id: 39
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -75206,6 +75512,7 @@ MonoBehaviour:
     id: 155
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -75324,83 +75631,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612416155}
   m_CullTransparentMesh: 0
---- !u!1 &1613344174
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1613344175}
-  - component: {fileID: 1613344177}
-  - component: {fileID: 1613344176}
-  m_Layer: 5
-  m_Name: VPText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1613344175
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613344174}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2033547679}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1613344176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613344174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 2
---- !u!222 &1613344177
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613344174}
-  m_CullTransparentMesh: 0
 --- !u!1 &1615837199
 GameObject:
   m_ObjectHideFlags: 0
@@ -75457,6 +75687,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: -5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -75469,6 +75700,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -75481,6 +75713,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: -4.9999995}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -75493,6 +75726,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: -10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -75505,6 +75739,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -75517,6 +75752,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: -10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -75601,6 +75837,7 @@ MonoBehaviour:
     position: {x: -25.980762, y: 0, z: -10}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -75684,6 +75921,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -75696,6 +75934,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: -25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -75708,6 +75947,7 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -75720,6 +75960,7 @@ MonoBehaviour:
       position: {x: 4.3301277, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -75732,6 +75973,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: -35}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -75744,6 +75986,7 @@ MonoBehaviour:
       position: {x: 12.990381, y: 0, z: -32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -75858,6 +76101,7 @@ MonoBehaviour:
     position: {x: 4.3301277, y: 0, z: 12.500001}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -76055,6 +76299,7 @@ MonoBehaviour:
     id: 114
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -76461,6 +76706,7 @@ MonoBehaviour:
     id: 172
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -77050,6 +77296,7 @@ MonoBehaviour:
     id: 165
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -77137,6 +77384,7 @@ MonoBehaviour:
     id: 9
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -77224,6 +77472,7 @@ MonoBehaviour:
     id: 102
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -77311,6 +77560,7 @@ MonoBehaviour:
     id: 167
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -77665,6 +77915,7 @@ MonoBehaviour:
     position: {x: -0.00000029802322, y: 0, z: -20}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -77971,6 +78222,7 @@ MonoBehaviour:
     id: 179
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -78424,6 +78676,7 @@ MonoBehaviour:
     id: 163
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -78530,6 +78783,7 @@ MonoBehaviour:
     position: {x: -8.6602545, y: 0, z: 10}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -78694,6 +78948,7 @@ MonoBehaviour:
     id: 58
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -78864,6 +79119,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: 25}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -78997,6 +79253,7 @@ MonoBehaviour:
     id: 190
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -79268,6 +79525,7 @@ MonoBehaviour:
     id: 130
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -79701,6 +79959,7 @@ MonoBehaviour:
     id: 24
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -79777,6 +80036,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: 20}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -80066,6 +80326,7 @@ MonoBehaviour:
     id: 92
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -80230,6 +80491,7 @@ MonoBehaviour:
     id: 16
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -80317,6 +80579,7 @@ MonoBehaviour:
     id: 139
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -80404,6 +80667,7 @@ MonoBehaviour:
     id: 186
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -80480,6 +80744,7 @@ MonoBehaviour:
     position: {x: 4.330127, y: 0, z: -17.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -80572,6 +80837,7 @@ MonoBehaviour:
     position: {x: -30.31089, y: 0, z: 17.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -80705,6 +80971,7 @@ MonoBehaviour:
     id: 77
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -81165,6 +81432,7 @@ MonoBehaviour:
     id: 2
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -81897,6 +82165,7 @@ MonoBehaviour:
     position: {x: -34.641014, y: 0, z: 5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -82097,6 +82366,7 @@ MonoBehaviour:
     position: {x: -4.330127, y: 0, z: 32.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -82189,6 +82459,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: -25}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -82292,6 +82563,7 @@ MonoBehaviour:
     id: 115
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -82508,6 +82780,7 @@ MonoBehaviour:
     id: 49
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -82584,6 +82857,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: 32.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -82715,7 +82989,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1194782726}
+  - {fileID: 554631902}
   - {fileID: 217774831}
   - {fileID: 1498598340}
   m_Father: {fileID: 2023111980}
@@ -82876,6 +83150,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -82888,6 +83163,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: 35}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -82900,6 +83176,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -82912,6 +83189,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -82924,6 +83202,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: 25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -82936,6 +83215,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -83174,6 +83454,7 @@ MonoBehaviour:
     position: {x: -4.3301272, y: 0, z: -17.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -83450,6 +83731,7 @@ MonoBehaviour:
     id: 156
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -83600,6 +83882,140 @@ Transform:
   m_Father: {fileID: 1863107660}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1791448559
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 282786095}
+    m_Modifications:
+    - target: {fileID: 4821852057285369519, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Name
+      value: VPHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 24.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369517, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665628806680880056, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.1882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665628806680880056, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.69803923
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c91cee065dec5a5498459cb0d27cda56, type: 3}
 --- !u!1 &1794797135
 GameObject:
   m_ObjectHideFlags: 0
@@ -83676,6 +84092,7 @@ MonoBehaviour:
     id: 185
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -83846,6 +84263,7 @@ MonoBehaviour:
     position: {x: -12.99038, y: 0, z: 2.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -84048,6 +84466,7 @@ MonoBehaviour:
     id: 124
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -84165,6 +84584,7 @@ MonoBehaviour:
     id: 17
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -84608,6 +85028,7 @@ MonoBehaviour:
     id: 65
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -85492,6 +85913,7 @@ MonoBehaviour:
     position: {x: -0.00000021855695, y: 0, z: 35}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -85870,6 +86292,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: 2.5000002}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -86061,6 +86484,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: -35}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -86428,6 +86852,7 @@ MonoBehaviour:
     id: 184
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -86598,6 +87023,7 @@ MonoBehaviour:
     position: {x: 25.980762, y: 0, z: -10}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -86681,6 +87107,7 @@ MonoBehaviour:
       position: {x: -0.00000029802322, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -86693,6 +87120,7 @@ MonoBehaviour:
       position: {x: -4.3301272, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -86705,6 +87133,7 @@ MonoBehaviour:
       position: {x: -8.6602545, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -86717,6 +87146,7 @@ MonoBehaviour:
       position: {x: -8.660254, y: 0, z: -25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -86729,6 +87159,7 @@ MonoBehaviour:
       position: {x: -4.330127, y: 0, z: -27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -86741,6 +87172,7 @@ MonoBehaviour:
       position: {x: -0.00000021855695, y: 0, z: -25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -86915,6 +87347,7 @@ MonoBehaviour:
     id: 160
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -87098,6 +87531,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: 27.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -87262,6 +87696,7 @@ MonoBehaviour:
     id: 75
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -87725,6 +88160,7 @@ MonoBehaviour:
     id: 181
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -88545,6 +88981,7 @@ MonoBehaviour:
     id: 111
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -88632,6 +89069,7 @@ MonoBehaviour:
     id: 195
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -88708,6 +89146,7 @@ MonoBehaviour:
     position: {x: 25.980762, y: 0, z: -24.999998}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -88917,6 +89356,7 @@ MonoBehaviour:
     position: {x: -12.99038, y: 0, z: -27.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -89009,6 +89449,7 @@ MonoBehaviour:
     position: {x: 21.650635, y: 0, z: 12.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -89101,6 +89542,7 @@ MonoBehaviour:
     position: {x: 25.980762, y: 0, z: 5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -89193,6 +89635,7 @@ MonoBehaviour:
     position: {x: 12.99038, y: 0, z: 17.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -89467,6 +89910,7 @@ MonoBehaviour:
     id: 136
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -90506,6 +90950,7 @@ MonoBehaviour:
     position: {x: 0.000000059624405, y: 0, z: -35}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -90609,6 +91054,7 @@ MonoBehaviour:
     id: 63
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -90715,6 +91161,7 @@ MonoBehaviour:
     position: {x: 34.641014, y: 0, z: 5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -90798,6 +91245,7 @@ MonoBehaviour:
       position: {x: 30.31089, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -90810,6 +91258,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -90822,6 +91271,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -90834,6 +91284,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -90846,6 +91297,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -90858,6 +91310,7 @@ MonoBehaviour:
       position: {x: 30.310888, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -90942,6 +91395,7 @@ MonoBehaviour:
     position: {x: 4.330127, y: 0, z: 32.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -91065,6 +91519,7 @@ MonoBehaviour:
     position: {x: 30.31089, y: 0, z: 2.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -91157,6 +91612,7 @@ MonoBehaviour:
     position: {x: 0.000000059624405, y: 0, z: 10}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -91450,6 +91906,7 @@ MonoBehaviour:
     position: {x: 4.3301277, y: 0, z: -32.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -91696,6 +92153,7 @@ MonoBehaviour:
     position: {x: 30.31089, y: 0, z: -17.499998}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -91788,6 +92246,7 @@ MonoBehaviour:
     position: {x: -34.641014, y: 0, z: 10}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -92015,6 +92474,7 @@ MonoBehaviour:
     id: 187
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -92133,6 +92593,7 @@ MonoBehaviour:
     id: 73
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -92209,6 +92670,7 @@ MonoBehaviour:
     position: {x: 30.31089, y: 0, z: 17.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -92498,6 +92960,7 @@ MonoBehaviour:
     id: 128
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -92662,6 +93125,7 @@ MonoBehaviour:
     id: 21
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -92780,6 +93244,7 @@ MonoBehaviour:
     id: 120
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -93065,6 +93530,7 @@ MonoBehaviour:
     position: {x: -38.97114, y: 0, z: -2.500001}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -93242,6 +93708,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -93254,6 +93721,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: 12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -93266,6 +93734,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: 10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -93278,6 +93747,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: 4.999999}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -93290,6 +93760,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: 2.5000002}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -93302,6 +93773,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: 5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -93377,6 +93849,7 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -93389,6 +93862,7 @@ MonoBehaviour:
       position: {x: -0.00000021855695, y: 0, z: -10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -93401,6 +93875,7 @@ MonoBehaviour:
       position: {x: -4.330127, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -93413,6 +93888,7 @@ MonoBehaviour:
       position: {x: -4.3301272, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -93425,6 +93901,7 @@ MonoBehaviour:
       position: {x: -0.00000029802322, y: 0, z: -20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -93437,6 +93914,7 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: -17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -93641,6 +94119,7 @@ MonoBehaviour:
     position: {x: 17.320507, y: 0, z: 10}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -93733,6 +94212,7 @@ MonoBehaviour:
     position: {x: -4.330126, y: 0, z: -32.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -93931,6 +94411,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: -5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -93943,6 +94424,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -93955,6 +94437,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: -5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -93967,6 +94450,7 @@ MonoBehaviour:
       position: {x: 17.320507, y: 0, z: -10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -93979,6 +94463,7 @@ MonoBehaviour:
       position: {x: 21.650635, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -93991,6 +94476,7 @@ MonoBehaviour:
       position: {x: 25.980762, y: 0, z: -10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -94268,6 +94754,7 @@ MonoBehaviour:
     position: {x: -12.990381, y: 0, z: -17.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -94520,80 +95007,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028622464}
   m_Mesh: {fileID: 6099800089077584851, guid: 09049d621a8724c46ab1c8b181b81e84, type: 3}
---- !u!1 &2033547678
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2033547679}
-  - component: {fileID: 2033547681}
-  - component: {fileID: 2033547680}
-  m_Layer: 5
-  m_Name: VPHolder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2033547679
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033547678}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1613344175}
-  m_Father: {fileID: 106106832}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25, y: 24.5}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2033547680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033547678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.7372549, g: 0.25882354, b: 0.9607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 298fda9c4eabccb4abf333905a5327c4, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 1
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2033547681
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033547678}
-  m_CullTransparentMesh: 0
 --- !u!1 &2034786886
 GameObject:
   m_ObjectHideFlags: 0
@@ -94731,6 +95144,7 @@ MonoBehaviour:
     id: 64
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -94818,6 +95232,7 @@ MonoBehaviour:
     id: 60
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -95048,80 +95463,12 @@ Transform:
   m_Father: {fileID: 307628334}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2059292248
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2059292249}
-  - component: {fileID: 2059292251}
-  - component: {fileID: 2059292250}
-  m_Layer: 5
-  m_Name: VPHolder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2059292249
+--- !u!224 &2059292249 stripped
 RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+    type: 3}
+  m_PrefabInstance: {fileID: 4821852058514968823}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059292248}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1103978914}
-  m_Father: {fileID: 1909934525}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25, y: 24.5}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2059292250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059292248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.8490566, g: 0.33241364, b: 0.33241364, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 298fda9c4eabccb4abf333905a5327c4, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 1
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2059292251
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059292248}
-  m_CullTransparentMesh: 0
 --- !u!1 &2063159637
 GameObject:
   m_ObjectHideFlags: 0
@@ -95198,6 +95545,7 @@ MonoBehaviour:
     id: 32
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -95439,6 +95787,7 @@ MonoBehaviour:
     id: 22
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -95526,6 +95875,7 @@ MonoBehaviour:
     id: 51
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -95613,6 +95963,7 @@ MonoBehaviour:
     id: 101
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -95807,6 +96158,7 @@ MonoBehaviour:
     id: 150
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -95960,6 +96312,7 @@ MonoBehaviour:
     position: {x: -17.320507, y: 0, z: 25}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -96052,6 +96405,7 @@ MonoBehaviour:
     position: {x: -0.00000021855695, y: 0, z: -10}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -96144,6 +96498,7 @@ MonoBehaviour:
     position: {x: -21.650635, y: 0, z: 32.5}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -96236,6 +96591,7 @@ MonoBehaviour:
     position: {x: -8.660254, y: 0, z: 5.000001}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -96319,6 +96675,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: 25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -96331,6 +96688,7 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -96343,6 +96701,7 @@ MonoBehaviour:
       position: {x: -0.00000029802322, y: 0, z: 25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -96355,6 +96714,7 @@ MonoBehaviour:
       position: {x: -0.00000021855695, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -96367,6 +96727,7 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: 17.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -96379,6 +96740,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: 20}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -96873,6 +97235,7 @@ MonoBehaviour:
     id: 41
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -96990,6 +97353,7 @@ MonoBehaviour:
     id: 7
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -97401,6 +97765,7 @@ MonoBehaviour:
     position: {x: -34.641014, y: 0, z: -4.9999995}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -97545,6 +97910,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -97557,6 +97923,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: 35}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -97569,6 +97936,7 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: 32.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -97581,6 +97949,7 @@ MonoBehaviour:
       position: {x: 4.330127, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -97593,6 +97962,7 @@ MonoBehaviour:
       position: {x: 8.660254, y: 0, z: 25}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -97605,6 +97975,7 @@ MonoBehaviour:
       position: {x: 12.99038, y: 0, z: 27.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -97824,6 +98195,7 @@ MonoBehaviour:
     id: 25
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -97977,6 +98349,7 @@ MonoBehaviour:
     position: {x: 8.660254, y: 0, z: 4.999999}
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -98182,6 +98555,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: -5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -98194,6 +98568,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: -2.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -98206,6 +98581,7 @@ MonoBehaviour:
       position: {x: -25.98076, y: 0, z: -5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -98218,6 +98594,7 @@ MonoBehaviour:
       position: {x: -25.980762, y: 0, z: -10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -98230,6 +98607,7 @@ MonoBehaviour:
       position: {x: -21.650635, y: 0, z: -12.5}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -98242,6 +98620,7 @@ MonoBehaviour:
       position: {x: -17.320507, y: 0, z: -10}
       occupiedBy:
         id: 
+        name: 
         victoryPoints: 0
         color: 0
         wood: 0
@@ -98367,6 +98746,7 @@ MonoBehaviour:
     id: 132
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -99325,6 +99705,7 @@ MonoBehaviour:
     id: 174
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -99458,12 +99839,12 @@ GameObject:
   - component: {fileID: 2138544174}
   - component: {fileID: 2138544173}
   m_Layer: 5
-  m_Name: End turn
+  m_Name: EndTurnButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2138544172
 RectTransform:
   m_ObjectHideFlags: 0
@@ -99477,7 +99858,7 @@ RectTransform:
   m_Children:
   - {fileID: 1979756590}
   m_Father: {fileID: 131527170}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -99596,7 +99977,7 @@ RectTransform:
   - {fileID: 2128100290}
   - {fileID: 852859714}
   m_Father: {fileID: 131527170}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -99811,6 +100192,7 @@ MonoBehaviour:
     id: 140
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -99898,6 +100280,7 @@ MonoBehaviour:
     id: 0
     occupiedBy:
       id: 
+      name: 
       victoryPoints: 0
       color: 0
       wood: 0
@@ -100332,3 +100715,122 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bebbb364c1f862643995dc14c69e3a23, type: 3}
+--- !u!1001 &4821852058514968823
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1909934525}
+    m_Modifications:
+    - target: {fileID: 4821852057285369519, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Name
+      value: VPHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 24.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821852057285369518, guid: c91cee065dec5a5498459cb0d27cda56,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c91cee065dec5a5498459cb0d27cda56, type: 3}

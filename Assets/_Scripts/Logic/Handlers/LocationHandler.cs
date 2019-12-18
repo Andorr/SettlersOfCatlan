@@ -25,8 +25,7 @@ public class LocationHandler : MonoBehaviour, IActionHandler
             var wc = controller.GetLocalPlayer().CreateWorker(location);
             wc.EnableWorker(false);
             controller.GetLocalPlayer().BuildHouse(locationController);
-
-            controller.EndTurn();
+            controller.GetLocalPlayer().EndTurn();
         }
         else if(controller.state == GameController.GameState.Play)
         {

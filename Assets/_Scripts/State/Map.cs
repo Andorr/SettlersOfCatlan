@@ -6,7 +6,6 @@ namespace State
 {
     public class Map 
     {
-        public Player[] players;
         public Dictionary<int, Location> locations;
         public Dictionary<int, Tile> tiles;
         public Dictionary<int, Path> paths;

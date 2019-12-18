@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player:
     id: 
+    name: 
     victoryPoints: 0
     color: 0
     wood: 0

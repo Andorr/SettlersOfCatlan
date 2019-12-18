@@ -9,6 +9,8 @@ public class UIController : MonoBehaviour
 {
     [Header("UI")]
     public Font font;
+    public Button endTurnButton;
+    public Text eventText;
 
     [Header("Player Elements")]
     public GameObject actionPanel;
@@ -16,6 +18,10 @@ public class UIController : MonoBehaviour
     public GameObject playerTwoPanel;
     public GameObject playerThreePanel;
     public GameObject playerFourPanel;
+
+    [Header("Animations")]
+    public AnimationClip shrinkClip;
+    public AnimationClip growClip;
 
     private Dictionary<string, GameObject> playerPanels = new Dictionary<string, GameObject>(); // (playerId, playerPanel)
 
@@ -51,7 +57,7 @@ public class UIController : MonoBehaviour
         playerPanels.Add(player.id, panel);
 
         // Set player color
-        panel.transform.GetChild(0).GetComponent<Image>().color = player.GetColor();
+        panel.transform.GetChild(0).GetChild(0).GetComponent<Image>().color = player.GetColor();
         var namePanel = panel.transform.GetChild(1);
         namePanel.GetComponent<Image>().color = player.GetColor();
         namePanel.GetComponentInChildren<Text>().text = nickName;
@@ -74,9 +80,13 @@ public class UIController : MonoBehaviour
 
         // Update player victory points count
         panel.transform.GetChild(0).GetComponentInChildren<Text>().text = player.victoryPoints.ToString();
-
     }
 
+    public void ShowPlayerTurn(string playerId) {
+        foreach(var player in playerPanels.Keys) {
+            playerPanels[player].transform.GetChild(0).GetComponent<Image>().enabled = player.Equals(playerId);
+        }
+    }
 
     public void EnableActionPanel(bool enable, UnityAction roadAction = null, UnityAction houseAction = null, UnityAction cityAction = null)
     {
@@ -110,8 +120,30 @@ public class UIController : MonoBehaviour
         btns[2].interactable = cityButton;
     }
 
+    public void EnableEndTurnButton(bool enable, UnityAction action)
+    {
+        endTurnButton.gameObject.SetActive(enable);
+        endTurnButton.onClick.RemoveAllListeners();
+        endTurnButton.onClick.AddListener(action);
+    }
+
+    public void DisplayText(string title, float duration = 3) {
+        StartCoroutine(DisplayEventText(title, duration));
+    }
+
+    private IEnumerator DisplayEventText(string title, float duration) {
+        eventText.enabled = true;
+        eventText.text = title;
+        var anim = eventText.GetComponent<Animator>();
+        anim.SetTrigger("Grow");
+        yield return new WaitForSeconds(duration);
+        anim.SetTrigger("Shrink");
+        yield return new WaitForSeconds(duration);
+        eventText.enabled = false;
+        eventText.text = "";
+    } 
+
     private void InitializeFonts() {
-        var font = Resources.Load<Font>("Fonts/AUGUSTUS");
         foreach(Text t in Component.FindObjectsOfType<Text>()) {
             t.font = font;
         }

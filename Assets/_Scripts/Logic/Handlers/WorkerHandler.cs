@@ -50,7 +50,7 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
                 lc.SetSelectable(true);
             }
             shouldTryOverride = true;
-            controller.localPlayer.SetState(PlayerController.State.WorkerMovement);
+            controller.GetLocalPlayer().SetState(PlayerController.State.WorkerMovement);
         }
         
     }
@@ -70,25 +70,26 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
     public bool OnTryOverride(GameController controller, GameObject other)
     {
         // Worker is selected, try to move the player
-        if(controller.localPlayer.state == PlayerController.State.WorkerMovement)
+        var localPlayer = controller.GetLocalPlayer();
+        if(localPlayer.state == PlayerController.State.WorkerMovement)
         {
             var lc = other.GetComponent<LocationController>();
             if(lc == null) {
                 return false;
             }
-            controller.localPlayer.MoveWorker(workerController, lc.location);
+            localPlayer.MoveWorker(workerController, lc.location);
             // workerController.state = WorkerController.WorkerState.Immovable;
             shouldTryOverride = true;
             return true;
         }
-        else if(controller.localPlayer.state == PlayerController.State.PathPlacement)
+        else if(localPlayer.state == PlayerController.State.PathPlacement)
         {
             var pc = other.GetComponent<PathController>();
             if(pc == null) {
                 return false;
             }
             
-            controller.GetLocalPlayer().BuildPath(pc);
+            localPlayer.BuildPath(pc);
             controller.uiController.UpdatePlayerUI(player);
             return true;
         }

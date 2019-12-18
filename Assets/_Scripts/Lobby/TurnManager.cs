@@ -59,11 +59,13 @@ public class TurnManager : MonoBehaviour, ITurnManager
         foreach (var listener in FindObjectsOfType<MonoBehaviour>().OfType<ITurnCallback>()) {
             listener.NewTurn(playerID);
         }
+        Debug.Log($"[TurnManager]: It is now {playerID}'s turn!");
     }
 
 
     public void EndTurn() {
-        if (currentPlayerTurn == PhotonNetwork.LocalPlayer.UserId) {
+        Debug.Log($"Current Player Turn: {currentPlayerTurn} ----- LocalPlayer User Id: {PhotonNetwork.LocalPlayer.UserId}");
+        if (currentPlayerTurn.Equals(PhotonNetwork.LocalPlayer.UserId)) {
             this.photonView.RPC("RPCMasterCallEndTurn", RpcTarget.MasterClient, PhotonNetwork.LocalPlayer.UserId);
         } else {
             Debug.Log("Not your turn: " + PhotonNetwork.LocalPlayer.UserId);
@@ -75,6 +77,9 @@ public class TurnManager : MonoBehaviour, ITurnManager
         if (PhotonNetwork.IsMasterClient) {
             if (playerID == currentPlayer.UserId) {
                 var nextPlayer = currentPlayer.GetNext();
+                if(nextPlayer == null) {
+                    nextPlayer = currentPlayer;
+                }
                 this.currentPlayer = nextPlayer;
                 this.photonView.RPC("RPCAssignTurnToPlayer", RpcTarget.All, nextPlayer.UserId);
             }
