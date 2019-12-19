@@ -28,6 +28,19 @@ MonoBehaviour:
   EnableSupportLogger: 0
   RunInBackground: 1
   StartInOfflineMode: 0
-  RpcList: []
-  DisableAutoOpenWizard: 0
+  RpcList:
+  - ClickRpc
+  - DestroyRpc
+  - DestroySpaceship
+  - Fire
+  - OnCityCreated
+  - OnHouseCreated
+  - OnMoveWorker
+  - OnPathCreated
+  - OnWorkerCreated
+  - RespawnSpaceship
+  - RPCAssignTurnToPlayer
+  - RPCMasterCallEndTurn
+  - RPCMasterTurnInit
+  DisableAutoOpenWizard: 1
   ShowSettings: 0
