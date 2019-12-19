@@ -111,6 +111,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         workerController.Initialize(worker);
         workers.Add(workerController);
         workerController.EnableWorker(photonView.IsMine);
+        mapController.AddWorkerToMap(worker);
 
         if(photonView.IsMine) {
             photonView.RPC("OnWorkerCreated", RpcTarget.Others, location.id, worker.id.ToString());
@@ -273,8 +274,9 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             name = photonPlayer.NickName,
         };
         Initialize(gamePlayer);
-        uiController.AddPlayer(gamePlayer, photonPlayer.NickName);
         gameController.AddPlayer(this);
+        mapController.AddPlayerToMap(gamePlayer);
+        uiController.AddPlayer(gamePlayer, photonPlayer.NickName);
 
         if(photonView.IsMine) {
             gameController.SetLocalPlayer(this);

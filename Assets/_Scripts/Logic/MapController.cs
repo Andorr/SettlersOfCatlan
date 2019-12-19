@@ -78,4 +78,11 @@ public partial class MapController : MonoBehaviour
         }
     }
 
+    public void AddWorkerToMap(Worker worker) {
+        map.AddWorker(worker);
+    }
+
+    public void AddPlayerToMap(Player player) {
+        map.AddPlayer(player);
+    }
 }
