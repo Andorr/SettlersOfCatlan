@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace State
@@ -44,6 +45,23 @@ namespace State
 
         public void AddPlayer(Player player) {
             players.Add(player.id, player);
+        }
+
+        public int CalculateVictoryPoints(Player player) {
+            int victoryPoints = 0;
+
+            // Calculate victory points based on houses and cities
+            var ownedStructures = locations.Values.Where(l => player.id.Equals(l.occupiedBy));
+            var houseCount = ownedStructures.Where(l => l.type == LocationType.House).Count();
+            var cityCount = ownedStructures.Where(l => l.type == LocationType.City).Count();
+            victoryPoints += houseCount + cityCount*2; // One point for every house and two points for every city
+
+            // TODO: Calculate victory points based on longest road
+
+            // TODO: Calculate victory points based on Development cards
+
+            player.victoryPoints = victoryPoints;
+            return victoryPoints;
         }
     }
 

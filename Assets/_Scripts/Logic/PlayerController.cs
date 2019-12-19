@@ -75,15 +75,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     }
 
     public void SetState(State newState) {
-        // CLEAN PREVIOUS STATE
-        
-
-        // NEW STATE LOGIC
-        if(newState == State.WaitForTurn)
-        {
-            
-        }
-        
         state = newState;
     }
 
@@ -144,6 +135,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         // Calculate the rotation of the object
         pc.BuildPath(player);
         ResourceUtil.PurchasePath(player);
+        player.victoryPoints = mapController.CalculateVictoryPoints(player);
 
         paths.Add(pc.path);
 
@@ -162,6 +154,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
         lc.BuildHouse(player);
         ResourceUtil.PurchaseHouse(player);
+        player.victoryPoints = mapController.CalculateVictoryPoints(player);
 
         locations.Add(lc.location);
 
@@ -180,6 +173,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
         lc.BuildCity(player);
         ResourceUtil.PurchaseCity(player);
+        player.victoryPoints = mapController.CalculateVictoryPoints(player);
 
         if(photonView.IsMine) {
             photonView.RPC("OnCityCreated", RpcTarget.Others, location.id);
@@ -200,14 +194,13 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         player.wheat += wheat;
         player.wool += wool;
 
-        uiController.UpdatePlayerUI(player);
-
         if(photonView.IsMine) {
             BroadcastResourceChange();
         }
     }
 
     private void BroadcastResourceChange() {
+        uiController.UpdatePlayerUI(player);
         photonView.RPC("OnResourcesChanged", RpcTarget.Others, player.wood, player.stone, player.clay, player.wheat, player.wool);
     }
     # endregion
