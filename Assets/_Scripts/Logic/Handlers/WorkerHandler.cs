@@ -76,7 +76,7 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
             if(lc == null) {
                 return false;
             }
-            localPlayer.MoveWorker(workerController, lc.location);
+            localPlayer.MoveWorker(workerController.worker, lc.location);
             shouldTryOverride = true;
             return true;
         }
@@ -87,7 +87,7 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
                 return false;
             }
             
-            localPlayer.BuildPath(pc);
+            localPlayer.BuildPath(pc.path);
             return true;
         }
         return false;
@@ -113,7 +113,7 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
         {
             return;
         }
-        controller.GetLocalPlayer().BuildHouse(lc);
+        controller.GetLocalPlayer().BuildHouse(lc.location);
         OnUnselected(controller);
     }
 
@@ -124,7 +124,7 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
         {
             return;
         }
-        controller.GetLocalPlayer().BuildCity(lc);
+        controller.GetLocalPlayer().BuildCity(lc.location);
         OnUnselected(controller);
     }
 

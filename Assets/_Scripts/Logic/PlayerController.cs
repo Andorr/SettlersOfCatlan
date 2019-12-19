@@ -48,12 +48,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         this.player = player;
     }
 
+    public bool IsMine() {
+        return photonView.IsMine;
+    }
+
     public void EnableTurn(bool enable)
     {
-        if(!photonView.IsMine) {
-            return;
-        }
-
         EnableWorkers(enable);
         if(enable) {
             SetState(State.None);
@@ -120,49 +120,69 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         return workerController;
     }
 
-    public void MoveWorker(WorkerController worker, Location location) {
-        worker.MoveWorker(location);
+    public void MoveWorker(Worker worker, Location location) {
+        var wc = workers.Where(w => w.worker.id.Equals(worker.id)).FirstOrDefault();
+        if(wc == null) {
+            return;
+        }
+
+        wc.MoveWorker(location);
 
         if(photonView.IsMine) {
-            photonView.RPC("OnMoveWorker", RpcTarget.Others, worker.worker.id, location.id);
+            photonView.RPC("OnMoveWorker", RpcTarget.Others, worker.id, location.id);
             BroadcastResourceChange();
         }
     }
 
-    public void BuildPath(PathController controller)
+    public void BuildPath(Path path)
     {   
+        var exists = mapController.GetPathController(path, out var pc);
+        if(!exists) {
+            return;
+        }
+
         // Calculate the rotation of the object
-        controller.BuildPath(player);
+        pc.BuildPath(player);
         ResourceUtil.PurchasePath(player);
 
-        paths.Add(controller.path);
+        paths.Add(pc.path);
 
         if(photonView.IsMine) {
-            photonView.RPC("OnPathCreated", RpcTarget.Others, controller.path.id);
+            photonView.RPC("OnPathCreated", RpcTarget.Others, path.id);
             BroadcastResourceChange();
         }
     }
 
-    public void BuildHouse(LocationController controller)
+    public void BuildHouse(Location location)
     {
-        controller.BuildHouse(player);
+        var exists = mapController.GetLocationController(location, out var lc);
+        if(!exists) {
+            return;
+        }
+
+        lc.BuildHouse(player);
         ResourceUtil.PurchaseHouse(player);
 
-        locations.Add(controller.location);
+        locations.Add(lc.location);
 
         if(photonView.IsMine) {
-            photonView.RPC("OnHouseCreated", RpcTarget.Others, controller.location.id);
+            photonView.RPC("OnHouseCreated", RpcTarget.Others, location.id);
             BroadcastResourceChange();
         }
     }
 
-    public void BuildCity(LocationController controller)
+    public void BuildCity(Location location)
     {
-        controller.BuildCity(player);
+        var exists = mapController.GetLocationController(location, out var lc);
+        if(!exists) {
+            return;
+        }
+
+        lc.BuildCity(player);
         ResourceUtil.PurchaseCity(player);
 
         if(photonView.IsMine) {
-            photonView.RPC("OnCityCreated", RpcTarget.Others, controller.location.id);
+            photonView.RPC("OnCityCreated", RpcTarget.Others, location.id);
             BroadcastResourceChange();
         }
     }
@@ -208,40 +228,34 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             Debug.LogError("The worker by id " + workerId + " does not exist!");
             return;
         }
-        MoveWorker(wc, location);
+        MoveWorker(wc.worker, location);
     }
 
     [PunRPC]
     void OnHouseCreated(int locationId) {
         Location location = mapController.GetLocationById(locationId);
-        var exists = mapController.GetLocationController(location, out var lc);
-        if(!exists) {
-            Debug.LogError("The location by id " + locationId + " does not exist!");
+        if(location == null) {
             return;
         }
-        BuildHouse(lc);
+        BuildHouse(location);
     }
 
     [PunRPC]
     void OnCityCreated(int locationId) {
         Location location = mapController.GetLocationById(locationId);
-        var exists = mapController.GetLocationController(location, out var lc);
-        if(!exists) {
-            Debug.LogError("The location by id " + locationId + " does not exist!");
+        if(location == null) {
             return;
         }
-        BuildCity(lc);
+        BuildCity(location);
     }
 
     [PunRPC]
     void OnPathCreated(int pathId) {
         Path path = mapController.GetPathById(pathId);
-        var exists = mapController.GetPathController(path, out var pc);
-        if(!exists) {
-            Debug.LogError("The path by id " + pathId + " does not exist!");
+        if(path == null) {
             return;
-        } 
-        BuildPath(pc);
+        }
+        BuildPath(path);
     }
 
     [PunRPC]
