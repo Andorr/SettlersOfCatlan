@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         Worker worker = new Worker() {
             id = Guid.NewGuid().ToString(),
             location = location,
-            belongsTo = player,
+            belongsTo = player.id,
         };
 
         // Initialize worker in scene

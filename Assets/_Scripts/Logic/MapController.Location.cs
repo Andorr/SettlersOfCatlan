@@ -61,13 +61,13 @@ public partial class MapController
             var paths = map.paths.Values.Where(p => p.between.Item1.id == current.id || p.between.Item2.id == current.id);
             foreach(Path p in paths) {
                 // Check if path has a road on it and it belongs to given player
-                if(p.occupiedBy == null || p.occupiedBy.id != player.id) {
+                if(p.occupiedBy == null || !player.id.Equals(p.occupiedBy)) {
                     continue;
                 } 
 
                 // Get the location and add it to the stack
                 var reachableLocation = p.between.Item1.id == current.id ? p.between.Item2 : p.between.Item1;
-                if(reachableLocation.id == startLocation.id || (reachableLocation.occupiedBy != null && !reachableLocation.occupiedBy.id.Equals(player.id))) {
+                if(reachableLocation.id == startLocation.id || (reachableLocation.occupiedBy != null && !player.id.Equals(reachableLocation.occupiedBy))) {
                     continue;
                 }
                 stack.Push(reachableLocation);
@@ -79,9 +79,9 @@ public partial class MapController
         // Add adjecent locations if there is no opponent locations around
         var adjecentLocations = map.paths.Values
             .Where(p => (p.between.Item1.id == startLocation.id || p.between.Item2.id == startLocation.id)
-                     && (p.occupiedBy == null || p.occupiedBy.id.Equals(player.id)))
+                     && (p.occupiedBy == null || player.id.Equals(p.occupiedBy)))
             .Select(p => p.between.Item1.id == startLocation.id ? p.between.Item2 : p.between.Item1)
-            .Where(l => l.occupiedBy == null || l.occupiedBy.id.Equals(player.id));
+            .Where(l => l.occupiedBy == null || player.id.Equals(l.occupiedBy));
 
         foreach(Location l in adjecentLocations) {
             if(!result.ContainsKey(l.id)) {

@@ -38,7 +38,7 @@ public class LocationController : MonoBehaviour
             return;
         }
 
-        location.occupiedBy = player;
+        location.occupiedBy = player.id;
         location.type = LocationType.House;
         
         // Instantiate house object
@@ -55,7 +55,7 @@ public class LocationController : MonoBehaviour
             return;
         }
 
-        location.occupiedBy = player;
+        location.occupiedBy = player.id;
         location.type = LocationType.City;
 
         // Remove existing house if exists

@@ -4,6 +4,6 @@
     {
         public string id;
         public Location location;
-        public Player belongsTo;
+        public string belongsTo;
     }
 }

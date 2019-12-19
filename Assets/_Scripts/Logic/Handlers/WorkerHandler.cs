@@ -13,7 +13,6 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
 
     public void Start() {
         workerController = GetComponent<WorkerController>();
-        player = workerController.worker.belongsTo;
     }
 
     public void OnHover(GameController controller)
@@ -32,7 +31,7 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
             ResourceUtil.CanAffordHouse(player) && 
                 workerController.worker.location.type == LocationType.Available,
             ResourceUtil.CanAffordCity(player) && 
-                workerController.worker.location.type == LocationType.House && workerController.worker.location.occupiedBy == controller.GetLocalPlayer().player
+                workerController.worker.location.type == LocationType.House && controller.GetLocalPlayer().player.id.Equals(workerController.worker.location.occupiedBy)
         );
         controller.uiController.EnableActionPanel(
             true, 
@@ -78,7 +77,6 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
                 return false;
             }
             localPlayer.MoveWorker(workerController, lc.location);
-            // workerController.state = WorkerController.WorkerState.Immovable;
             shouldTryOverride = true;
             return true;
         }
