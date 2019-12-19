@@ -34,7 +34,7 @@ public class PathController : MonoBehaviour
 
     public void BuildPath(Player player)
     {
-        path.occupiedBy = player;
+        path.occupiedBy = player.id;
 
         Vector3 between = path.between.Item2.position - path.between.Item1.position;
         var angle = (float)(Mathf.Atan2(between.x, between.z) * Mathf.Rad2Deg + 90f);

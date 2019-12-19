@@ -13,7 +13,6 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
 
     public void Start() {
         workerController = GetComponent<WorkerController>();
-        player = workerController.worker.belongsTo;
     }
 
     public void OnHover(GameController controller)
@@ -32,7 +31,7 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
             ResourceUtil.CanAffordHouse(player) && 
                 workerController.worker.location.type == LocationType.Available,
             ResourceUtil.CanAffordCity(player) && 
-                workerController.worker.location.type == LocationType.House && workerController.worker.location.occupiedBy == controller.GetLocalPlayer().player
+                workerController.worker.location.type == LocationType.House && controller.GetLocalPlayer().player.id.Equals(workerController.worker.location.occupiedBy)
         );
         controller.uiController.EnableActionPanel(
             true, 
@@ -44,13 +43,13 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
         // Initialize moves to show
         if(workerController.state == WorkerController.WorkerState.Movable)
         {
-            currentAvailableMoves = controller.mapController.GetReachableLocations(workerController.worker.location, controller.GetLocalPlayer().player);
+            currentAvailableMoves = controller.mapController.GetReachableLocations(workerController.worker.location, player);
             foreach(var lc in currentAvailableMoves)
             {
                 lc.SetSelectable(true);
             }
             shouldTryOverride = true;
-            controller.localPlayer.SetState(PlayerController.State.WorkerMovement);
+            controller.GetLocalPlayer().SetState(PlayerController.State.WorkerMovement);
         }
         
     }
@@ -70,25 +69,25 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
     public bool OnTryOverride(GameController controller, GameObject other)
     {
         // Worker is selected, try to move the player
-        if(controller.localPlayer.state == PlayerController.State.WorkerMovement)
+        var localPlayer = controller.GetLocalPlayer();
+        if(localPlayer.state == PlayerController.State.WorkerMovement)
         {
             var lc = other.GetComponent<LocationController>();
             if(lc == null) {
                 return false;
             }
-            controller.localPlayer.MoveWorker(workerController, lc.location);
-            // workerController.state = WorkerController.WorkerState.Immovable;
+            localPlayer.MoveWorker(workerController, lc.location);
             shouldTryOverride = true;
             return true;
         }
-        else if(controller.localPlayer.state == PlayerController.State.PathPlacement)
+        else if(localPlayer.state == PlayerController.State.PathPlacement)
         {
             var pc = other.GetComponent<PathController>();
             if(pc == null) {
                 return false;
             }
             
-            controller.GetLocalPlayer().BuildPath(pc);
+            localPlayer.BuildPath(pc);
             controller.uiController.UpdatePlayerUI(player);
             return true;
         }

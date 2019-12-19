@@ -10,7 +10,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     private GameController gameController;
     private UIController uiController;
     private MapController mapController;
-    private PhotonView photonView;
+    private TurnManager turnManager;
+
     public enum State {
         None,
         WaitForTurn,
@@ -26,7 +27,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     public List<WorkerController> workers;
 
     [Header("State")]
-    public State state = State.None;
+    public State state = State.WaitForTurn;
 
     [Header("GameObject")]
     public GameObject workerPrefab;
@@ -39,7 +40,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         mapController = gameController.mapController;
         uiController = gameController.uiController;
-        photonView = GetComponent<PhotonView>();
+        turnManager = GetComponent<TurnManager>();
     }
 
     public void Initialize(Player player)
@@ -49,17 +50,33 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
     public void EnableTurn(bool enable)
     {
+        if(!photonView.IsMine) {
+            return;
+        }
+
         EnableWorkers(enable);
         if(enable) {
             SetState(State.None);
+            uiController.EnableEndTurnButton(true, () => EndTurn());
+           
+            if(gameController.state == GameController.GameState.PlayersCreateHouses) {
+                mapController.EnableLocationBoxColliders(true);
+            }
+
+            // Let the player gain resources
+            (int wood, int stone, int clay, int wheat, int wool) = mapController.CalculateGainableResources(player);
+            AddResources(wood, stone, clay, wheat, wool);
+
         } else {
             SetState(State.WaitForTurn);
+            uiController.EnableEndTurnButton(false, null);
+            mapController.EnableLocationBoxColliders(false);
         }
     }
 
     public void SetState(State newState) {
         // CLEAN PREVIOUS STATE
-
+        
 
         // NEW STATE LOGIC
         if(newState == State.WaitForTurn)
@@ -85,7 +102,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         Worker worker = new Worker() {
             id = Guid.NewGuid().ToString(),
             location = location,
-            belongsTo = player,
+            belongsTo = player.id,
         };
 
         // Initialize worker in scene
@@ -107,6 +124,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
         if(photonView.IsMine) {
             photonView.RPC("OnMoveWorker", RpcTarget.Others, worker.worker.id, location.id);
+            BroadcastResourceChange();
         }
     }
 
@@ -120,6 +138,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
         if(photonView.IsMine) {
             photonView.RPC("OnPathCreated", RpcTarget.Others, controller.path.id);
+            BroadcastResourceChange();
         }
     }
 
@@ -132,6 +151,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
         if(photonView.IsMine) {
             photonView.RPC("OnHouseCreated", RpcTarget.Others, controller.location.id);
+            BroadcastResourceChange();
         }
     }
 
@@ -142,7 +162,32 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
         if(photonView.IsMine) {
             photonView.RPC("OnCityCreated", RpcTarget.Others, controller.location.id);
+            BroadcastResourceChange();
         }
+    }
+
+    public void EndTurn()
+    {
+        EnableTurn(false);
+        turnManager.EndTurn();
+    }
+
+    public void AddResources(int wood, int stone, int clay, int wheat, int wool) {
+        player.wood += wood;
+        player.stone += stone;
+        player.clay += clay;
+        player.wheat += wheat;
+        player.wool += wool;
+
+        uiController.UpdatePlayerUI(player);
+
+        if(photonView.IsMine) {
+            BroadcastResourceChange();
+        }
+    }
+
+    private void BroadcastResourceChange() {
+        photonView.RPC("OnResourcesChanged", RpcTarget.Others, player.wood, player.stone, player.clay, player.wheat, player.wool);
     }
     # endregion
 
@@ -197,6 +242,16 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         } 
         BuildPath(pc);
     }
+
+    [PunRPC]
+    void OnResourcesChanged(int wood, int stone, int clay, int wheat, int wool) {
+        player.wood = wood;
+        player.stone = stone;
+        player.clay = clay;
+        player.wheat = wheat;
+        player.wool = wool;
+        uiController.UpdatePlayerUI(player);
+    }
     # endregion
 
     # region Photon-Callbacks
@@ -215,12 +270,14 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         Player gamePlayer = new Player{
             id = photonPlayer.UserId ?? Guid.NewGuid().ToString(),
             color = playerColor,
+            name = photonPlayer.NickName,
         };
         Initialize(gamePlayer);
         uiController.AddPlayer(gamePlayer, photonPlayer.NickName);
+        gameController.AddPlayer(this);
 
         if(photonView.IsMine) {
-            gameController.localPlayer = this;
+            gameController.SetLocalPlayer(this);
         }
     }
     #endregion

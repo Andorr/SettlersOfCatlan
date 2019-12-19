@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using State;
 using UnityEngine;
 using System;
+using System.Linq;
 
-public class GameController : MonoBehaviour
+public class GameController : MonoBehaviour, ITurnCallback
 {
     public MapController mapController;
     public UIController uiController;
     public IActionHandler handler;
 
-    public PlayerController localPlayer { get; set; }
+    private PlayerController localPlayer { get; set; }
+    private Dictionary<string, PlayerController> players;
     private PlayerController currentPlayer;
     public enum GameState {
         PlayersCreateHouses,
@@ -24,10 +26,11 @@ public class GameController : MonoBehaviour
     public void Start() {
         mapController = GetComponent<MapController>();
         uiController = GetComponent<UIController>();
+        
+        players = new Dictionary<string, PlayerController>();
 
         mapController.GenerateMap();
-        mapController.EnableLocationBoxColliders(true);
-
+        mapController.EnableLocationBoxColliders(false);
     }
 
     public void Update() {
@@ -46,6 +49,13 @@ public class GameController : MonoBehaviour
         return localPlayer;
     }
 
+    public void SetLocalPlayer(PlayerController pc) {
+        this.localPlayer = pc;
+    }
+
+    public void AddPlayer(PlayerController pc) {
+        players.Add(pc.player.id, pc);
+    }
 
     public void ChangeState(GameState newState)
     {
@@ -56,34 +66,23 @@ public class GameController : MonoBehaviour
         state = newState;
     }
 
-    public void EndTurn()
+    public void NewTurn(string newPlayer)
     {
+        UnselectHandler();
         if(state == GameState.PlayersCreateHouses) {
-            // TODO: Check if all players have created two houses and a worker
-            if(localPlayer.locations.Count == 2) {
+            // Check if all players have created two houses and a worker, if so change state. Maybe let this logic be a part of the master client?
+            if (players.Values.Where(p => p.locations.Count == 2 && p.workers.Count == 2).Count() == players.Count) {
                 ChangeState(GameState.Play);
-                localPlayer.EnableTurn(true);
             }
-        } else {
-            localPlayer.SetState(PlayerController.State.WaitForTurn);
-            localPlayer.EnableTurn(false);
-
-
         }
-    }
 
-    // This function is only here temporarly for testing
-    public void GainResources() {
-        (int wood, int stone, int clay, int wheat, int wool) = mapController.CalculateGainableResources(localPlayer.player);
+        // Enable turn for new player
+        currentPlayer = players[newPlayer];
+        currentPlayer.EnableTurn(true);
 
-        localPlayer.player.wood += wood;
-        localPlayer.player.stone += stone;
-        localPlayer.player.clay += clay;
-        localPlayer.player.wheat += wheat;
-        localPlayer.player.wool += wool;
-
-        // Update UI
-        uiController.UpdatePlayerUI(localPlayer.player);
+        Debug.Log($"It is now {currentPlayer.player.name}'s turn.");
+        uiController.DisplayText($"It's {currentPlayer.player.name} turn!");
+        uiController.ShowPlayerTurn(newPlayer);
     }
 
     # endregion

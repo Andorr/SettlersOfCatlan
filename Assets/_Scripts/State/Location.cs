@@ -17,6 +17,6 @@ namespace State
         public int id;
         public LocationType type;
         public Vector3 position;
-        public Player occupiedBy;
+        public string occupiedBy;
     }
 }

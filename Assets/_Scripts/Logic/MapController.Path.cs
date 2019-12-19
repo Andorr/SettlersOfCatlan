@@ -23,7 +23,7 @@ public partial class MapController
     public PathController[] GetAdjecentPaths(Location location, bool mustBeAvailable = false)
     {
         // Get all paths connected to the location
-        var adjecentPaths = map.paths.Values.Where(p => p.between.Item1.id == location.id || p.between.Item2.id == location.id);
+        var adjecentPaths = map.paths.Values.Where(p => (p.between.Item1.id == location.id || p.between.Item2.id == location.id));
         
         if(mustBeAvailable)
         {

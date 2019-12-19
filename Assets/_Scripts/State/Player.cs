@@ -17,6 +17,7 @@ namespace State
     public class Player
     {
         public string id;
+        public string name;
         public int victoryPoints;
         public PlayerColor color;
 

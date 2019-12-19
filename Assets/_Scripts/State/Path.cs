@@ -10,7 +10,7 @@ namespace State
     {
         public int id;
         public Tuple<Location, Location> between;
-        public Player occupiedBy;
+        public string occupiedBy;
     }
 
 }

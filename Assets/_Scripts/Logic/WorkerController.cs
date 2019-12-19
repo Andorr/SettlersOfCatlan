@@ -30,10 +30,17 @@ public class WorkerController : MonoBehaviour
     {
         worker.location = location;
         StartCoroutine(MoveWorkerWithAnim(location));
+        state = WorkerState.Immovable;
     }
 
     public void EnableWorker(bool enable) {
         GetComponent<BoxCollider>().enabled = enable;
+
+        if(enable) {
+            state = WorkerState.Movable;
+        } else {
+            state = WorkerState.Immovable;
+        }
     }
 
     private IEnumerator MoveWorkerWithAnim(Location location)

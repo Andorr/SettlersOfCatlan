@@ -10,7 +10,7 @@ public partial class MapController
         
         // Get the count where the player has one or more locations for each tile => (tileId, player's locations)
         var tileLocationCounts = map.tiles.Values
-            .Select(t => (t.id, t.locations.Where(l => l.occupiedBy != null && l.occupiedBy.id.Equals(player.id))));
+            .Select(t => (t.id, t.locations.Where(l => l.occupiedBy != null && player.id.Equals(l.occupiedBy))));
         
 
         int wood = 0;
