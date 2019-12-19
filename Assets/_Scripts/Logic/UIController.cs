@@ -19,10 +19,6 @@ public class UIController : MonoBehaviour
     public GameObject playerThreePanel;
     public GameObject playerFourPanel;
 
-    [Header("Animations")]
-    public AnimationClip shrinkClip;
-    public AnimationClip growClip;
-
     private Dictionary<string, GameObject> playerPanels = new Dictionary<string, GameObject>(); // (playerId, playerPanel)
 
     public void Awake() {

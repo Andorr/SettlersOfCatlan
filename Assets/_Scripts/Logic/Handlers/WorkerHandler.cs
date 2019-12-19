@@ -88,7 +88,6 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
             }
             
             localPlayer.BuildPath(pc);
-            controller.uiController.UpdatePlayerUI(player);
             return true;
         }
         return false;
@@ -115,7 +114,6 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
             return;
         }
         controller.GetLocalPlayer().BuildHouse(lc);
-        controller.uiController.UpdatePlayerUI(player);
         OnUnselected(controller);
     }
 
@@ -127,7 +125,6 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
             return;
         }
         controller.GetLocalPlayer().BuildCity(lc);
-        controller.uiController.UpdatePlayerUI(player);
         OnUnselected(controller);
     }
 
