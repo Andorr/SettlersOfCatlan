@@ -37,11 +37,11 @@ MonoBehaviour:
   - OnHouseCreated
   - OnMoveWorker
   - OnPathCreated
+  - OnResourcesChanged
   - OnWorkerCreated
   - RespawnSpaceship
   - RPCAssignTurnToPlayer
   - RPCMasterCallEndTurn
   - RPCMasterTurnInit
-  - OnResourcesChanged
   DisableAutoOpenWizard: 1
   ShowSettings: 1
