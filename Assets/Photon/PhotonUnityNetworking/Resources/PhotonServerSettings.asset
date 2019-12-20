@@ -43,5 +43,6 @@ MonoBehaviour:
   - RPCMasterCallEndTurn
   - RPCMasterTurnInit
   - OnResourcesChanged
+  - OnPlayerWon
   DisableAutoOpenWizard: 1
   ShowSettings: 1

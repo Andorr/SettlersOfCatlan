@@ -11,6 +11,7 @@ public class UIController : MonoBehaviour
     public Font font;
     public Button endTurnButton;
     public Text eventText;
+    public WinPanelController winPanel;
 
     [Header("Player Elements")]
     public GameObject actionPanel;
@@ -137,7 +138,11 @@ public class UIController : MonoBehaviour
         yield return new WaitForSeconds(duration);
         eventText.enabled = false;
         eventText.text = "";
-    } 
+    }
+
+    public void EnableWinPanel(bool enable, Player winner) {
+        winPanel.EnableWinPanel(enable, winner);
+    }
 
     private void InitializeFonts() {
         foreach(Text t in Component.FindObjectsOfType<Text>()) {
