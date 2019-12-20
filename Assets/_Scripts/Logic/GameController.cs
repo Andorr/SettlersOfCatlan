@@ -14,6 +14,9 @@ public class GameController : MonoBehaviour, ITurnCallback
     private PlayerController localPlayer { get; set; }
     private Dictionary<string, PlayerController> players;
     private PlayerController currentPlayer;
+
+    private int VICTORY_POINTS_TO_WIN = 10;
+
     public enum GameState {
         PlayersCreateHouses,
         Play,
@@ -85,6 +88,41 @@ public class GameController : MonoBehaviour, ITurnCallback
         Debug.Log($"It is now {currentPlayer.player.name}'s turn.");
         uiController.DisplayText($"It's {currentPlayer.player.name} turn!");
         uiController.ShowPlayerTurn(newPlayer);
+    }
+
+    public void ActionCallback(ActionInfo info) {
+        var player = info.player;
+
+        // Update the player's victory points
+        player.victoryPoints = mapController.CalculateVictoryPoints(player);
+        uiController.UpdatePlayerUI(player);
+
+        // Log the action
+        // TODO: Log action to the "Chat-log"
+        Debug.Log(info);
+
+        // Check if the player has won the game or not
+         if(Photon.Pun.PhotonNetwork.IsMasterClient) {
+            if(player.victoryPoints >= VICTORY_POINTS_TO_WIN) {
+                // TODO: Communicate to the other players that the player has won and the game is over.
+                ChangeState(GameState.End);
+                players[player.id].BroadcastVictory();
+            }
+        }
+    }
+
+    public void EndGame(Player winner) {
+        ChangeState(GameState.End);
+
+        // Deactivate all actions
+        UnselectHandler();
+        foreach(PlayerController player in players.Values) {
+            player.EnableTurn(false);
+        }
+        mapController.EnableLocationBoxColliders(false);
+
+        // Show win screen
+        uiController.EnableWinPanel(true, winner);
     }
 
     # endregion

@@ -7,10 +7,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicCallback, IPlayerAction
 {
+    // Controllers
     private GameController gameController;
     private UIController uiController;
     private MapController mapController;
     private TurnManager turnManager;
+
+    public delegate void ActionCallback(ActionInfo info);
+    public event ActionCallback onActionEvent;
 
     public enum State {
         None,
@@ -33,7 +37,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     public GameObject workerPrefab;
     
     
-    public void Awake() {
+    public void Awake()
+    {
         locations = new List<Location>();
         paths = new List<Path>();
         workers = new List<WorkerController>();
@@ -48,7 +53,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         this.player = player;
     }
 
-    public bool IsMine() {
+    public bool IsMine()
+    {
         return photonView.IsMine;
     }
 
@@ -74,7 +80,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         }
     }
 
-    public void SetState(State newState) {
+    public void SetState(State newState)
+    {
         state = newState;
     }
 
@@ -84,6 +91,18 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         {
             w.enabled = enable;
             w.EnableWorker(enable);
+        }
+    }
+
+    public void BroadcastVictory()
+    {
+        // Broadcasts to all the players that this player has won the game.
+        photonView.RPC("OnPlayerWon", RpcTarget.AllBufferedViaServer);
+    }
+
+    private void RaiseEvent(ActionType type) {
+        if(onActionEvent != null) {
+            onActionEvent(ActionInfo.New(type, player));
         }
     }
 
@@ -108,6 +127,9 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             photonView.RPC("OnWorkerCreated", RpcTarget.Others, location.id, worker.id.ToString());
         }
 
+        // Raise event
+        RaiseEvent(ActionType.CreateWorker);
+        
         return workerController;
     }
 
@@ -123,6 +145,9 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             photonView.RPC("OnMoveWorker", RpcTarget.Others, worker.id, location.id);
             BroadcastResourceChange();
         }
+
+        // Raise event
+        RaiseEvent(ActionType.MoveWorker);
     }
 
     public void BuildPath(Path path)
@@ -135,7 +160,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         // Calculate the rotation of the object
         pc.BuildPath(player);
         ResourceUtil.PurchasePath(player);
-        player.victoryPoints = mapController.CalculateVictoryPoints(player);
 
         paths.Add(pc.path);
 
@@ -143,6 +167,9 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             photonView.RPC("OnPathCreated", RpcTarget.Others, path.id);
             BroadcastResourceChange();
         }
+
+        // Raise event
+        RaiseEvent(ActionType.BuildPath);
     }
 
     public void BuildHouse(Location location)
@@ -154,7 +181,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
         lc.BuildHouse(player);
         ResourceUtil.PurchaseHouse(player);
-        player.victoryPoints = mapController.CalculateVictoryPoints(player);
 
         locations.Add(lc.location);
 
@@ -162,6 +188,9 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             photonView.RPC("OnHouseCreated", RpcTarget.Others, location.id);
             BroadcastResourceChange();
         }
+
+        // Raise event
+        RaiseEvent(ActionType.BuildHouse);
     }
 
     public void BuildCity(Location location)
@@ -173,18 +202,23 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
         lc.BuildCity(player);
         ResourceUtil.PurchaseCity(player);
-        player.victoryPoints = mapController.CalculateVictoryPoints(player);
 
         if(photonView.IsMine) {
             photonView.RPC("OnCityCreated", RpcTarget.Others, location.id);
             BroadcastResourceChange();
         }
+
+        // Raise event
+        RaiseEvent(ActionType.BuildCity);
     }
 
     public void EndTurn()
     {
         EnableTurn(false);
         turnManager.EndTurn();
+
+        // Raise event
+        RaiseEvent(ActionType.EndTurn);
     }
 
     public void AddResources(int wood, int stone, int clay, int wheat, int wool) {
@@ -260,6 +294,11 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         player.wool = wool;
         uiController.UpdatePlayerUI(player);
     }
+
+    [PunRPC]
+    void OnPlayerWon() {
+        gameController.EndGame(player);
+    }
     # endregion
 
     # region Photon-Callbacks
@@ -282,8 +321,9 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         };
         Initialize(gamePlayer);
         gameController.AddPlayer(this);
-        mapController.AddPlayerToMap(gamePlayer);
-        uiController.AddPlayer(gamePlayer, photonPlayer.NickName);
+        mapController.AddPlayerToMap(gamePlayer); // Add the player to the map game state
+        uiController.AddPlayer(gamePlayer, photonPlayer.NickName); // Add the player to the UI
+        onActionEvent += gameController.ActionCallback;
 
         if(photonView.IsMine) {
             gameController.SetLocalPlayer(this);
