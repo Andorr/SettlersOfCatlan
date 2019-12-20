@@ -15,9 +15,7 @@ public class SheepController : MonoBehaviour
     void Start()
     {
         randSpot = Random.Range(0,waypoints.Length);
-        Debug.Log(randSpot);
         newPos = waypoints[randSpot].transform.position;
-        Debug.Log(newPos);
     }
 
     // Update is called once per frame
@@ -25,14 +23,17 @@ public class SheepController : MonoBehaviour
     {
 
         float dist = Vector3.Distance(transform.position, newPos);
+        float step = speed * Time.deltaTime;
 
         if(dist < waypointRadius){
             randSpot = Random.Range(0,waypoints.Length);
             newPos = waypoints[randSpot].transform.position;
         }
-
-        float step = speed * Time.deltaTime;
+        
+        Vector3 newDirection = Vector3.RotateTowards(transform.forward, newPos, step, 0.0f);
+        
         transform.position = Vector3.MoveTowards(transform.position, newPos, step);
+        transform.rotation = Quaternion.LookRotation(newDirection);
 
     }
 
