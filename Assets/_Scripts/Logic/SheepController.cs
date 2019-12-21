@@ -30,7 +30,7 @@ public class SheepController : MonoBehaviour
             newPos = waypoints[randSpot].transform.position;
         }
         
-        Vector3 newDirection = Vector3.RotateTowards(transform.forward, newPos, step, 0.0f);
+        Vector3 newDirection = Vector3.RotateTowards(transform.forward, newPos, step, 3.0f);
         
         transform.position = Vector3.MoveTowards(transform.position, newPos, step);
         transform.rotation = Quaternion.LookRotation(newDirection);

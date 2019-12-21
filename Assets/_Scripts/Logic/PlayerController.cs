@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     public List<Location> locations;
     public List<Path> paths;
     public List<WorkerController> workers;
+    public Dictionary<Guid, Card> developmentCards;
 
     [Header("State")]
     public State state = State.WaitForTurn;
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         locations = new List<Location>();
         paths = new List<Path>();
         workers = new List<WorkerController>();
+        developmentCards = new Dictionary<Guid, Card>();
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         mapController = gameController.mapController;
         uiController = gameController.uiController;
@@ -237,6 +239,24 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         uiController.UpdatePlayerUI(player);
         photonView.RPC("OnResourcesChanged", RpcTarget.Others, player.wood, player.stone, player.clay, player.wheat, player.wool);
     }
+
+    public void UseCard(Guid id){
+        developmentCards[id].UseCard();
+
+        // brodcast the new usage to both uiController and RPC to other players
+    }
+
+    public void RetriveCard(CardType cardType){
+        Guid g = Guid.NewGuid();
+        Card card = new Card(g,cardType);
+
+        developmentCards.Add(g,card);
+    }
+
+    private void BroadcastCardUsage(){
+
+    }
+
     # endregion
 
     # region RPC Methods
@@ -328,6 +348,11 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         if(photonView.IsMine) {
             gameController.SetLocalPlayer(this);
         }
+    }
+
+    [PunRPC]
+    void OnCardUsage(){
+        
     }
     #endregion
 }
