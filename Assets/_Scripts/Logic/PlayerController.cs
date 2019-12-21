@@ -72,6 +72,13 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             // Let the player gain resources
             (int wood, int stone, int clay, int wheat, int wool) = mapController.CalculateGainableResources(player);
             AddResources(wood, stone, clay, wheat, wool);
+            RaiseEvent(ActionType.GainedResources, new ResourceStorage {
+                wood = wood,
+                stone = stone,
+                clay = clay,
+                wheat = wheat,
+                wool = wool,
+            });
 
         } else {
             SetState(State.WaitForTurn);
@@ -100,9 +107,11 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         photonView.RPC("OnPlayerWon", RpcTarget.AllBufferedViaServer);
     }
 
-    private void RaiseEvent(ActionType type) {
+    private void RaiseEvent(ActionType type, object data = null) {
         if(onActionEvent != null) {
-            onActionEvent(ActionInfo.New(type, player));
+            var info = ActionInfo.New(type, player);
+            info.data = data;
+            onActionEvent(info);
         }
     }
 
@@ -159,7 +168,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
         // Calculate the rotation of the object
         pc.BuildPath(player);
-        ResourceUtil.PurchasePath(player);
+        ResourceUtil.PurchasePath(player.resources);
 
         paths.Add(pc.path);
 
@@ -180,7 +189,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         }
 
         lc.BuildHouse(player);
-        ResourceUtil.PurchaseHouse(player);
+        ResourceUtil.PurchaseHouse(player.resources);
 
         locations.Add(lc.location);
 
@@ -201,7 +210,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         }
 
         lc.BuildCity(player);
-        ResourceUtil.PurchaseCity(player);
+        ResourceUtil.PurchaseCity(player.resources);
 
         if(photonView.IsMine) {
             photonView.RPC("OnCityCreated", RpcTarget.Others, location.id);
@@ -222,11 +231,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     }
 
     public void AddResources(int wood, int stone, int clay, int wheat, int wool) {
-        player.wood += wood;
-        player.stone += stone;
-        player.clay += clay;
-        player.wheat += wheat;
-        player.wool += wool;
+        var resourceStore = player.resources;
+        resourceStore.wood += wood;
+        resourceStore.stone += stone;
+        resourceStore.clay += clay;
+        resourceStore.wheat += wheat;
+        resourceStore.wool += wool;
 
         if(photonView.IsMine) {
             BroadcastResourceChange();
@@ -235,7 +245,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
     private void BroadcastResourceChange() {
         uiController.UpdatePlayerUI(player);
-        photonView.RPC("OnResourcesChanged", RpcTarget.Others, player.wood, player.stone, player.clay, player.wheat, player.wool);
+        var resourceStore = player.resources;
+        photonView.RPC("OnResourcesChanged", RpcTarget.Others, resourceStore.wood, resourceStore.stone, resourceStore.clay, resourceStore.wheat, resourceStore.wool);
     }
     # endregion
 
@@ -287,11 +298,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
     [PunRPC]
     void OnResourcesChanged(int wood, int stone, int clay, int wheat, int wool) {
-        player.wood = wood;
-        player.stone = stone;
-        player.clay = clay;
-        player.wheat = wheat;
-        player.wool = wool;
+        var resourceStore = player.resources;
+        resourceStore.wood = wood;
+        resourceStore.stone = stone;
+        resourceStore.clay = clay;
+        resourceStore.wheat = wheat;
+        resourceStore.wool = wool;
         uiController.UpdatePlayerUI(player);
     }
 
@@ -318,6 +330,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             id = photonPlayer.UserId ?? Guid.NewGuid().ToString(),
             color = playerColor,
             name = photonPlayer.NickName,
+            resources = new ResourceStorage(),
         };
         Initialize(gamePlayer);
         gameController.AddPlayer(this);

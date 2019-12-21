@@ -462,7 +462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4248491981881613532}
   - component: {fileID: 4248491981881613533}
-  - component: {fileID: 1911072555683903785}
+  - component: {fileID: 8267557561789209830}
   m_Layer: 5
   m_Name: ResourcePanel
   m_TagString: Untagged
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
---- !u!114 &1911072555683903785
+--- !u!114 &8267557561789209830
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -41,9 +41,31 @@ public partial class MapController
 
     public LocationController[] GetReachableLocations(Location startLocation, Player player) {
        
-        // Check if other locations are reachable from the adjecent locations through paths
+        var result = GetConnectedLocations(startLocation, player).ToDictionary(l => l.id);
+
+        // Add adjecent locations if there is no opponent locations around
+        var adjecentLocations = map.paths.Values
+            .Where(p => (p.between.Item1.id == startLocation.id || p.between.Item2.id == startLocation.id)
+                     && (p.occupiedBy == null || player.id.Equals(p.occupiedBy)))
+            .Select(p => p.between.Item1.id == startLocation.id ? p.between.Item2 : p.between.Item1)
+            .Where(l => l.occupiedBy == null || player.id.Equals(l.occupiedBy));
+
+        foreach(Location l in adjecentLocations) {
+            if(!result.ContainsKey(l.id)) {
+                result.Add(l.id, l);
+            }
+        }
+
+        // Remove the start location
+        result.Remove(startLocation.id);
+
+        return result.Values.Select(l => locations[l.id].GetComponent<LocationController>()).ToArray();
+    }
+
+    public List<Location> GetConnectedLocations(Location startLocation, Player player)
+    {
         var stack = new Stack<Location>();
-        var result = new Dictionary<int, LocationController>();
+        var result = new Dictionary<int, Location>();
 
         // Deapth first search to find all the locations that are available between the player's paths
         Location current = startLocation;
@@ -54,7 +76,7 @@ public partial class MapController
             }
 
             if(locations.ContainsKey(current.id)) {
-                result.Add(current.id, locations[current.id].GetComponent<LocationController>());
+                result.Add(current.id, GetLocationById(current.id));
             }
 
             // Get all reachable locations from a location
@@ -76,24 +98,7 @@ public partial class MapController
             current = stack.Count > 0 ? stack.Pop() : null;
         }
 
-        // Add adjecent locations if there is no opponent locations around
-        var adjecentLocations = map.paths.Values
-            .Where(p => (p.between.Item1.id == startLocation.id || p.between.Item2.id == startLocation.id)
-                     && (p.occupiedBy == null || player.id.Equals(p.occupiedBy)))
-            .Select(p => p.between.Item1.id == startLocation.id ? p.between.Item2 : p.between.Item1)
-            .Where(l => l.occupiedBy == null || player.id.Equals(l.occupiedBy));
-
-        foreach(Location l in adjecentLocations) {
-            if(!result.ContainsKey(l.id)) {
-                LocationController lc = locations[l.id].GetComponent<LocationController>();
-                result.Add(l.id, lc);
-            }
-        }
-
-        // Remove the start location
-        result.Remove(startLocation.id);
-
-        return result.Values.ToArray();
+        return result.Values.ToList();
     }
 
     public void EnableLocationBoxColliders(bool enable)

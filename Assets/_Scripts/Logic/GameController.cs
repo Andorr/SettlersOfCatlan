@@ -86,7 +86,7 @@ public class GameController : MonoBehaviour, ITurnCallback
         }
 
         Debug.Log($"It is now {currentPlayer.player.name}'s turn.");
-        uiController.DisplayText($"It's {currentPlayer.player.name} turn!");
+        uiController.DisplayEventText($"It's {currentPlayer.player.name} turn!");
         uiController.ShowPlayerTurn(newPlayer);
     }
 
@@ -102,12 +102,18 @@ public class GameController : MonoBehaviour, ITurnCallback
         Debug.Log(info);
 
         // Check if the player has won the game or not
-         if(Photon.Pun.PhotonNetwork.IsMasterClient) {
+        if(Photon.Pun.PhotonNetwork.IsMasterClient) {
             if(player.victoryPoints >= VICTORY_POINTS_TO_WIN) {
                 // TODO: Communicate to the other players that the player has won and the game is over.
                 ChangeState(GameState.End);
                 players[player.id].BroadcastVictory();
             }
+        }
+
+        // Display resources text if the player gained resources
+        if(info.actionType == ActionType.GainedResources) {
+            string diplayName = player.id.Equals(localPlayer.player.id) ? "You" : player.name;
+            uiController.DisplayGainedResource(diplayName, (ResourceStorage)info.data);
         }
     }
 

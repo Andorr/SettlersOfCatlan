@@ -20,15 +20,20 @@ public partial class MapController
         int wool = 0;
         // Foreach tile, get the count the number of locations and add to corresponding type
         foreach(var (tileId, playerLocations) in tileLocationCounts) {
+            var tile = map.tiles[tileId];
             int resourcesToAdd = 0;
+
             foreach(var l in playerLocations) {
+                // Decide if the resource should given to the player from this location, based on randomness and the tile number
+                var rollDice = Random.Range(1, 5) + Random.Range(1, 5);
+
                 // Two resource for a city and one for a house
-                resourcesToAdd += l.type == LocationType.City ? 2 : l.type == LocationType.House ? 1 : 0;
+                if(rollDice == tile.value) {
+                    resourcesToAdd += l.type == LocationType.City ? 2 : l.type == LocationType.House ? 1 : 0;
+                }
             }
 
-
-            var type = map.tiles[tileId].type;
-            switch(type) {
+            switch(tile.type) {
                 case TileType.Field: {
                     wheat += resourcesToAdd;
                     break;

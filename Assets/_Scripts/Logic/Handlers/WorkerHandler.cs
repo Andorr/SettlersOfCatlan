@@ -1,3 +1,4 @@
+using System.Linq;
 using State;
 using UnityEngine;
 
@@ -26,11 +27,12 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
 
         // Show UI action panel
         controller.uiController.EnableActionButtons(
-            ResourceUtil.CanAffordPath(player) && 
+            ResourceUtil.CanAffordPath(player.resources) && 
                 controller.mapController.GetAdjecentPaths(workerController.worker.location, true).Length > 0, 
-            ResourceUtil.CanAffordHouse(player) && 
-                workerController.worker.location.type == LocationType.Available,
-            ResourceUtil.CanAffordCity(player) && 
+            ResourceUtil.CanAffordHouse(player.resources) && 
+                workerController.worker.location.type == LocationType.Available &&
+                controller.mapController.GetConnectedLocations(workerController.worker.location, player).Where(l => l.type != LocationType.Available).Count() > 0,
+            ResourceUtil.CanAffordCity(player.resources) && 
                 workerController.worker.location.type == LocationType.House && controller.GetLocalPlayer().player.id.Equals(workerController.worker.location.occupiedBy)
         );
         controller.uiController.EnableActionPanel(
