@@ -117,6 +117,10 @@ public class GameController : MonoBehaviour, ITurnCallback
         }
     }
 
+    public void ExchangeResources(ResourceType from, ResourceType to) {
+        localPlayer.ExchangeResources(from, to);
+    }
+
     public void EndGame(Player winner) {
         ChangeState(GameState.End);
 
@@ -129,6 +133,11 @@ public class GameController : MonoBehaviour, ITurnCallback
 
         // Show win screen
         uiController.EnableWinPanel(true, winner);
+    }
+
+    public Player GetPlayers(out Player[] players) {
+        players = this.players.Values.Where(p => !p.player.id.Equals(localPlayer.player.id)).Select(pc => pc.player).ToArray();
+        return localPlayer.player;
     }
 
     # endregion

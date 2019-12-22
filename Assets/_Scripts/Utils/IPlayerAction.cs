@@ -8,5 +8,6 @@ public interface IPlayerAction
     void BuildPath(Path path);
     void BuildHouse(Location location);
     void BuildCity(Location location);
+    void ExchangeResources(ResourceType from, ResourceType to);
     void EndTurn();
 }

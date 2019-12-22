@@ -59,6 +59,7 @@ namespace State
             // TODO: Calculate victory points based on longest road
 
             // TODO: Calculate victory points based on Development cards
+  
 
             player.victoryPoints = victoryPoints;
             return victoryPoints;
