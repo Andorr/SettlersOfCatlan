@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ExchangeViewController : MonoBehaviour
 {
+    private static readonly string[] FEEDBACK_MESSAGES = {"Done!", "Exchange successful!", "Outstanding move!", "Remarkable!", "Times fly when you have fun, ey?"};
+
     public delegate void ExchangeHandler(ResourceType from, ResourceType to);
     private ResourceType fromResource = ResourceType.Wood;
     private ResourceType toResource = ResourceType.Stone;
@@ -15,6 +17,7 @@ public class ExchangeViewController : MonoBehaviour
     public Button exchangeButton;
     public Image fromResourceImage;
     public Image toResourceImage;
+    public Text feedbackText;
 
     [Header("Sprites")]
     public Sprite woodSprite;
@@ -31,6 +34,7 @@ public class ExchangeViewController : MonoBehaviour
     public void Initialize(ResourceStorage storage, ExchangeHandler handler) {
         this.storage = storage;
         this.onExchange = handler;
+        ValidateExchange(fromResource);
     }
 
     private void SetFromResource(ResourceType type) {
@@ -85,9 +89,17 @@ public class ExchangeViewController : MonoBehaviour
         }
     }
 
+    public void GiveFeedback() {
+        int messageIndex = Random.Range(0, FEEDBACK_MESSAGES.Length);
+        feedbackText.text = FEEDBACK_MESSAGES[messageIndex];
+        feedbackText.GetComponent<GraphicFade>().FadeInAndOut(1f, 2f);
+    }
+
     public void Exchange() {      
         if(onExchange != null) {
             onExchange(fromResource, toResource);
         }
+        ValidateExchange(fromResource);
+        GiveFeedback();
     }
 }

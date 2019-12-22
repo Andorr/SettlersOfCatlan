@@ -74,6 +74,7 @@ public class TurnManager : MonoBehaviour, ITurnManager
 
     public void EndTurn() {
         if (currentPlayerTurn.Equals(PhotonNetwork.LocalPlayer.UserId)) {
+            Debug.Log($"[TurnManager]: {currentPlayerTurn} ended his/her turn!");
             this.photonView.RPC("RPCMasterCallEndTurn", RpcTarget.MasterClient, PhotonNetwork.LocalPlayer.UserId);
         } else {
             Debug.Log("Not your turn: " + PhotonNetwork.LocalPlayer.UserId);
