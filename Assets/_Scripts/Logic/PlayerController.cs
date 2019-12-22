@@ -69,6 +69,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
            
             if(gameController.state == GameController.GameState.PlayersCreateHouses) {
                 mapController.EnableLocationBoxColliders(true);
+            } else {
+                uiController.EnableSideActionPanel(true);
             }
 
             // Let the player gain resources
@@ -86,6 +88,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             SetState(State.WaitForTurn);
             uiController.EnableEndTurnButton(false, null);
             mapController.EnableLocationBoxColliders(false);
+             uiController.EnableSideActionPanel(false);
         }
     }
 
@@ -245,6 +248,18 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         }
     }
 
+    public void ExchangeResources(ResourceType from, ResourceType to)
+    {
+        player.resources.AddResource(from, -3);
+        player.resources.AddResource(to, 1);
+        
+        if(photonView.IsMine) {
+            BroadcastResourceChange();
+        }
+
+        RaiseEvent(ActionType.ExchangedResources, new ResourceType[]{from, to});
+    }
+
     private void BroadcastResourceChange() {
         uiController.UpdatePlayerUI(player);
         var resourceStore = player.resources;
@@ -257,8 +272,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         if(photonView.IsMine) {
             BroadcastCardUsage(id);
         }
-
-        // brodcast the new usage to both uiController and RPC to other players
+        
     }
 
     public void RetriveCard(CardType cardType){
@@ -277,6 +291,13 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     private void BrodcastCardRetrived(string id, int type){
         photonView.RPC("OnCardRetrived", RpcTarget.Others, id, type);
     }
+
+    public void BroadcastEvent(string message) {
+        photonView.RPC("OnEventBroadcasted", RpcTarget.All, message);
+    }
+
+    
+
     # endregion
 
     # region RPC Methods
@@ -342,10 +363,9 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     }
 
     [PunRPC]
-    void OnCardRetrived(int id, int type){
-        
+    void OnEventBroadcasted(string message) {
+        uiController.DisplayEventText(message, 3);
     }
-
     # endregion
 
     # region Photon-Callbacks

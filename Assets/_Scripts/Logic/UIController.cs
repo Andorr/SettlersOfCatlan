@@ -7,12 +7,16 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    private GameController controller;
+
     [Header("UI")]
     public Font font;
     public Button endTurnButton;
     public Text eventText;
+    public GameObject sideActionPanel;
     public WinPanelController winPanel;
     public ResourceItemController resourceItemController;
+    public TradingViewController tradingViewController;
 
     [Header("Player Elements")]
     public GameObject actionPanel;
@@ -143,8 +147,14 @@ public class UIController : MonoBehaviour
         winPanel.EnableWinPanel(enable, winner);
     }
 
-    public void UseCard(){
-        
+    public void EnableSideActionPanel(bool enable) {
+        sideActionPanel.SetActive(enable);
+    }
+
+    public void EnableTrading() {
+        var gameController = GetComponent<GameController>();
+        var localPlayer = gameController.GetPlayers(out var otherPlayers);
+        tradingViewController.ShowTradingPanel(localPlayer, otherPlayers, gameController.ExchangeResources);
     }
 
     private void InitializeFonts() {
