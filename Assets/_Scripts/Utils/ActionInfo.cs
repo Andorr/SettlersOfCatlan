@@ -49,6 +49,11 @@ public class ActionInfo
                 output += $"gained {store.ToString()}";
                 break;
             }
+            case ActionType.ExchangedResources: {
+                ResourceType[] types = (ResourceType[])data;
+                output += $"exchanged 3 {ResourceUtil.TypeToString(types[0])} for 1 {ResourceUtil.TypeToString(types[1])}";
+                break;
+            }
         }
         return output;
     }
@@ -62,4 +67,6 @@ public enum ActionType {
     BuildCity,
     EndTurn,
     GainedResources,
+    ExchangedResources,
+    Traded,
 }

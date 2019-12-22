@@ -37,4 +37,19 @@ public static class ResourceUtil
         storage.clay = Mathf.Max(0, storage.clay - 1);
         storage.wood = Mathf.Max(0, storage.wood - 1);
     }
+
+    public static string TypeToString(ResourceType type) {
+        if(type == ResourceType.Wood) {
+            return "wood";
+        } else if(type == ResourceType.Stone) {
+            return "stone";
+        } else if(type == ResourceType.Clay) {
+            return "clay";
+        } else if(type == ResourceType.Wheat) {
+            return "wheat";
+        } else if(type == ResourceType.Wool) {
+            return "wool";
+        }
+        return null;
+    }
 }

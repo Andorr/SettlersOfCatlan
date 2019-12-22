@@ -79,6 +79,11 @@ public class GameController : MonoBehaviour, ITurnCallback
             }
         }
 
+        // Gain resources for the round
+        if(GameState.Play == state) {
+            localPlayer.GainResources();
+        }
+
         // Enable turn for new player
         currentPlayer = players[newPlayer];
         if(currentPlayer.IsMine()) {
@@ -86,7 +91,7 @@ public class GameController : MonoBehaviour, ITurnCallback
         }
 
         Debug.Log($"It is now {currentPlayer.player.name}'s turn.");
-        uiController.DisplayEventText($"It's {currentPlayer.player.name} turn!");
+        uiController.DisplayEventText($"It's {currentPlayer.player.name}'s turn!");
         uiController.ShowPlayerTurn(newPlayer);
     }
 
@@ -117,6 +122,10 @@ public class GameController : MonoBehaviour, ITurnCallback
         }
     }
 
+    public void ExchangeResources(ResourceType from, ResourceType to) {
+        localPlayer.ExchangeResources(from, to);
+    }
+
     public void EndGame(Player winner) {
         ChangeState(GameState.End);
 
@@ -129,6 +138,11 @@ public class GameController : MonoBehaviour, ITurnCallback
 
         // Show win screen
         uiController.EnableWinPanel(true, winner);
+    }
+
+    public Player GetPlayers(out Player[] players) {
+        players = this.players.Values.Where(p => !p.player.id.Equals(localPlayer.player.id)).Select(pc => pc.player).ToArray();
+        return localPlayer.player;
     }
 
     # endregion

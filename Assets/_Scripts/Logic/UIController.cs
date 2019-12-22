@@ -7,12 +7,16 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    private GameController controller;
+
     [Header("UI")]
     public Font font;
     public Button endTurnButton;
     public Text eventText;
+    public GameObject sideActionPanel;
     public WinPanelController winPanel;
     public ResourceItemController resourceItemController;
+    public TradingViewController tradingViewController;
 
     [Header("Player Elements")]
     public GameObject actionPanel;
@@ -126,6 +130,7 @@ public class UIController : MonoBehaviour
     }
 
     public void DisplayEventText(string title, float duration = 5) {
+        eventText.text = title;
         eventText.GetComponent<GraphicFade>().FadeInAndOut(1f, duration);
     }
 
@@ -135,6 +140,16 @@ public class UIController : MonoBehaviour
 
     public void EnableWinPanel(bool enable, Player winner) {
         winPanel.EnableWinPanel(enable, winner);
+    }
+
+    public void EnableSideActionPanel(bool enable) {
+        sideActionPanel.SetActive(enable);
+    }
+
+    public void EnableTrading() {
+        var gameController = GetComponent<GameController>();
+        var localPlayer = gameController.GetPlayers(out var otherPlayers);
+        tradingViewController.ShowTradingPanel(localPlayer, otherPlayers, gameController.ExchangeResources);
     }
 
     private void InitializeFonts() {
