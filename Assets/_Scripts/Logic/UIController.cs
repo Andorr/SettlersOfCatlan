@@ -12,6 +12,7 @@ public class UIController : MonoBehaviour
     public Button endTurnButton;
     public Text eventText;
     public WinPanelController winPanel;
+    public ResourceItemController resourceItemController;
 
     [Header("Player Elements")]
     public GameObject actionPanel;
@@ -72,12 +73,18 @@ public class UIController : MonoBehaviour
         }
 
         // Update resource count
-        var resourceController = panel.GetComponentInChildren<UIResourceController>();
+        var resourceController = panel.GetComponentInChildren<ResourceViewController>();
         resourceController.UpdateResourceCount(player);
+
+
+        var cardController = panel.GetComponentInChildren<CardViewController>();
+        cardController.UpdateCardCount(player);
 
         // Update player victory points count
         panel.transform.GetChild(0).GetComponentInChildren<Text>().text = player.victoryPoints.ToString();
     }
+
+
 
     public void ShowPlayerTurn(string playerId) {
         foreach(var player in playerPanels.Keys) {
@@ -124,24 +131,20 @@ public class UIController : MonoBehaviour
         endTurnButton.onClick.AddListener(action);
     }
 
-    public void DisplayText(string title, float duration = 3) {
-        StartCoroutine(DisplayEventText(title, duration));
+    public void DisplayEventText(string title, float duration = 5) {
+        eventText.GetComponent<GraphicFade>().FadeInAndOut(1f, duration);
     }
 
-    private IEnumerator DisplayEventText(string title, float duration) {
-        eventText.enabled = true;
-        eventText.text = title;
-        var anim = eventText.GetComponent<Animator>();
-        anim.SetTrigger("Grow");
-        yield return new WaitForSeconds(duration);
-        anim.SetTrigger("Shrink");
-        yield return new WaitForSeconds(duration);
-        eventText.enabled = false;
-        eventText.text = "";
+    public void DisplayGainedResource(string playerName, ResourceStorage storage) {
+        resourceItemController.ShowResources(playerName, storage);
     }
 
     public void EnableWinPanel(bool enable, Player winner) {
         winPanel.EnableWinPanel(enable, winner);
+    }
+
+    public void UseCard(){
+        
     }
 
     private void InitializeFonts() {
@@ -149,4 +152,5 @@ public class UIController : MonoBehaviour
             t.font = font;
         }
     }
+
 }

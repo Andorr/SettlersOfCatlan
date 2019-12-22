@@ -3,38 +3,38 @@ using UnityEngine;
 
 public static class ResourceUtil
 {
-    public static bool CanAffordHouse(Player player)
+    public static bool CanAffordHouse(ResourceStorage storage)
     {
-        return player.wood >= 1 && player.wheat >= 1 && player.wool >= 1 && player.clay >= 1;
+        return storage.wood >= 1 && storage.wheat >= 1 && storage.wool >= 1 && storage.clay >= 1;
     }
 
-    public static bool CanAffordCity(Player player)
+    public static bool CanAffordCity(ResourceStorage storage)
     {
-        return player.stone >= 3 && player.wheat >= 2;
+        return storage.stone >= 3 && storage.wheat >= 2;
     }
 
-    public static bool CanAffordPath(Player player)
+    public static bool CanAffordPath(ResourceStorage storage)
     {
-        return player.clay >= 1 && player.wood >= 1;
+        return storage.clay >= 1 && storage.wood >= 1;
     }
 
-    public static void PurchaseHouse(Player player)
+    public static void PurchaseHouse(ResourceStorage storage)
     {
-        player.wood = Mathf.Max(0, player.wood - 1);
-        player.wheat = Mathf.Max(0, player.wheat - 1);
-        player.wool = Mathf.Max(0, player.wool - 1);
-        player.clay = Mathf.Max(0, player.clay - 1);
+        storage.wood = Mathf.Max(0, storage.wood - 1);
+        storage.wheat = Mathf.Max(0, storage.wheat - 1);
+        storage.wool = Mathf.Max(0, storage.wool - 1);
+        storage.clay = Mathf.Max(0, storage.clay - 1);
     }
 
-    public static void PurchaseCity(Player player)
+    public static void PurchaseCity(ResourceStorage storage)
     {
-        player.stone = Mathf.Max(0, player.stone - 3);
-        player.wheat = Mathf.Max(0, player.wheat - 2);
+        storage.stone = Mathf.Max(0, storage.stone - 3);
+        storage.wheat = Mathf.Max(0, storage.wheat - 2);
     }
 
-    public static void PurchasePath(Player player)
+    public static void PurchasePath(ResourceStorage storage)
     {
-        player.clay = Mathf.Max(0, player.clay - 1);
-        player.wood = Mathf.Max(0, player.wood - 1);
+        storage.clay = Mathf.Max(0, storage.clay - 1);
+        storage.wood = Mathf.Max(0, storage.wood - 1);
     }
 }

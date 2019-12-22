@@ -6,6 +6,7 @@ public class ActionInfo
     public Player player;
     public ActionType actionType;
     public DateTimeOffset timestamp;
+    public object data;
 
     public static ActionInfo New(ActionType type, Player player) {
         return new ActionInfo {
@@ -15,7 +16,7 @@ public class ActionInfo
         };
     }
 
-    public String ToString() {
+    public override String ToString() {
         string output = $"[{timestamp.TimeOfDay}] - {player.name} ";
         
         switch(actionType) {
@@ -43,6 +44,11 @@ public class ActionInfo
                 output += "ended his/her turn.";
                 break;
             }
+            case ActionType.GainedResources: {
+                ResourceStorage store = (ResourceStorage)data;
+                output += $"gained {store.ToString()}";
+                break;
+            }
         }
         return output;
     }
@@ -55,4 +61,5 @@ public enum ActionType {
     BuildHouse,
     BuildCity,
     EndTurn,
+    GainedResources,
 }

@@ -3,16 +3,17 @@ namespace State
 using System;
     public enum CardType
     {
-        Thief
+        Thief,
+        VP
     }
 
     [System.Serializable]
     public class Card
     {
-        public Guid id;
+        public string id;
         public CardType cardType;
-        public bool used;
-        public Card(Guid id, CardType cardType){
+        public bool used = false;
+        public Card(string id, CardType cardType){
             this.id = id;
             this.cardType = cardType;
         }

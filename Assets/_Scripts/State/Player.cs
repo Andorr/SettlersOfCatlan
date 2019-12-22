@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace State
 {
@@ -20,12 +21,8 @@ namespace State
         public string name;
         public int victoryPoints;
         public PlayerColor color;
-
-        public int wood = 0;
-        public int stone = 0;
-        public int clay = 0;
-        public int wheat = 0;
-        public int wool = 0;
+        public ResourceStorage resources;
+        public Dictionary<string, Card> cards;
 
         public Color GetColor() {
             switch(color) {

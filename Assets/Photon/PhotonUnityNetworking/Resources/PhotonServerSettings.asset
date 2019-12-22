@@ -44,5 +44,6 @@ MonoBehaviour:
   - RPCMasterCallEndTurn
   - RPCMasterTurnInit
   - OnPlayerWon
+  - OnCardRetrived
   DisableAutoOpenWizard: 1
   ShowSettings: 1

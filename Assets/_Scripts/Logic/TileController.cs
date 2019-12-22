@@ -59,7 +59,7 @@ public class TileController : MonoBehaviour
 
         // Set probability text
         if(probabilityText != null) {
-            probabilityText.text = tile.probability.ToString();
+            probabilityText.text = tile.value.ToString();
         }
     } 
 

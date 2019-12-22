@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     public List<Location> locations;
     public List<Path> paths;
     public List<WorkerController> workers;
-    public Dictionary<Guid, Card> developmentCards;
 
     [Header("State")]
     public State state = State.WaitForTurn;
@@ -43,7 +42,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         locations = new List<Location>();
         paths = new List<Path>();
         workers = new List<WorkerController>();
-        developmentCards = new Dictionary<Guid, Card>();
+        player.cards = new Dictionary<string, Card>();
+
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         mapController = gameController.mapController;
         uiController = gameController.uiController;
@@ -74,6 +74,13 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             // Let the player gain resources
             (int wood, int stone, int clay, int wheat, int wool) = mapController.CalculateGainableResources(player);
             AddResources(wood, stone, clay, wheat, wool);
+            RaiseEvent(ActionType.GainedResources, new ResourceStorage {
+                wood = wood,
+                stone = stone,
+                clay = clay,
+                wheat = wheat,
+                wool = wool,
+            });
 
         } else {
             SetState(State.WaitForTurn);
@@ -102,9 +109,11 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         photonView.RPC("OnPlayerWon", RpcTarget.AllBufferedViaServer);
     }
 
-    private void RaiseEvent(ActionType type) {
+    private void RaiseEvent(ActionType type, object data = null) {
         if(onActionEvent != null) {
-            onActionEvent(ActionInfo.New(type, player));
+            var info = ActionInfo.New(type, player);
+            info.data = data;
+            onActionEvent(info);
         }
     }
 
@@ -161,7 +170,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
         // Calculate the rotation of the object
         pc.BuildPath(player);
-        ResourceUtil.PurchasePath(player);
+        ResourceUtil.PurchasePath(player.resources);
 
         paths.Add(pc.path);
 
@@ -182,7 +191,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         }
 
         lc.BuildHouse(player);
-        ResourceUtil.PurchaseHouse(player);
+        ResourceUtil.PurchaseHouse(player.resources);
 
         locations.Add(lc.location);
 
@@ -203,7 +212,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         }
 
         lc.BuildCity(player);
-        ResourceUtil.PurchaseCity(player);
+        ResourceUtil.PurchaseCity(player.resources);
 
         if(photonView.IsMine) {
             photonView.RPC("OnCityCreated", RpcTarget.Others, location.id);
@@ -224,11 +233,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     }
 
     public void AddResources(int wood, int stone, int clay, int wheat, int wool) {
-        player.wood += wood;
-        player.stone += stone;
-        player.clay += clay;
-        player.wheat += wheat;
-        player.wool += wool;
+        var resourceStore = player.resources;
+        resourceStore.wood += wood;
+        resourceStore.stone += stone;
+        resourceStore.clay += clay;
+        resourceStore.wheat += wheat;
+        resourceStore.wool += wool;
 
         if(photonView.IsMine) {
             BroadcastResourceChange();
@@ -237,26 +247,36 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
     private void BroadcastResourceChange() {
         uiController.UpdatePlayerUI(player);
-        photonView.RPC("OnResourcesChanged", RpcTarget.Others, player.wood, player.stone, player.clay, player.wheat, player.wool);
+        var resourceStore = player.resources;
+        photonView.RPC("OnResourcesChanged", RpcTarget.Others, resourceStore.wood, resourceStore.stone, resourceStore.clay, resourceStore.wheat, resourceStore.wool);
     }
 
-    public void UseCard(Guid id){
-        developmentCards[id].UseCard();
+    public void UseCard(string id){
+        player.cards[id].UseCard();
+
+        if(photonView.IsMine) {
+            BroadcastCardUsage(id);
+        }
 
         // brodcast the new usage to both uiController and RPC to other players
     }
 
     public void RetriveCard(CardType cardType){
-        Guid g = Guid.NewGuid();
-        Card card = new Card(g,cardType);
+        string g = Guid.NewGuid().ToString();
+        Card card = new Card(g.ToString(),cardType);
+        player.cards.Add(g,card);
 
-        developmentCards.Add(g,card);
+        if(photonView.IsMine) {
+            BrodcastCardRetrived(g, (int)card.cardType);
+        }
+
     }
-
-    private void BroadcastCardUsage(){
-
+    private void BroadcastCardUsage(string id){
+        photonView.RPC("OnCardUsage", RpcTarget.Others, id);
     }
-
+    private void BrodcastCardRetrived(string id, int type){
+        photonView.RPC("OnCardRetrived", RpcTarget.Others, id, type);
+    }
     # endregion
 
     # region RPC Methods
@@ -307,11 +327,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
     [PunRPC]
     void OnResourcesChanged(int wood, int stone, int clay, int wheat, int wool) {
-        player.wood = wood;
-        player.stone = stone;
-        player.clay = clay;
-        player.wheat = wheat;
-        player.wool = wool;
+        var resourceStore = player.resources;
+        resourceStore.wood = wood;
+        resourceStore.stone = stone;
+        resourceStore.clay = clay;
+        resourceStore.wheat = wheat;
+        resourceStore.wool = wool;
         uiController.UpdatePlayerUI(player);
     }
 
@@ -319,6 +340,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     void OnPlayerWon() {
         gameController.EndGame(player);
     }
+
+    [PunRPC]
+    void OnCardRetrived(int id, int type){
+        
+    }
+
     # endregion
 
     # region Photon-Callbacks
@@ -338,6 +365,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             id = photonPlayer.UserId ?? Guid.NewGuid().ToString(),
             color = playerColor,
             name = photonPlayer.NickName,
+            resources = new ResourceStorage(),
         };
         Initialize(gamePlayer);
         gameController.AddPlayer(this);
@@ -350,9 +378,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         }
     }
 
-    [PunRPC]
-    void OnCardUsage(){
-        
-    }
+
     #endregion
 }
