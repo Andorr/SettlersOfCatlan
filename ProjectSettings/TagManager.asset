@@ -13,6 +13,7 @@ TagManager:
   - ClayCount
   - WheatCount
   - WoolCount
+  - AudioController
   layers:
   - Default
   - TransparentFX
