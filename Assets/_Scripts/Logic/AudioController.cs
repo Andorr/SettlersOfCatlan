@@ -43,8 +43,10 @@ public class AudioController : MonoBehaviour
 
     // Function uses soundname to find audioclip from resources
     public void PlayOnPosition(Vector3 position, string soundname) {
-
         AudioSource newSource = gameObject.AddComponent<AudioSource>();
+        newSource.transform.position = position;
+        newSource.spatialBlend = 1f;
+        newSource.dopplerLevel = 0;
         AudioClip sound = GetCachedAudioClip(soundname);
 
         newSource.clip = sound;
