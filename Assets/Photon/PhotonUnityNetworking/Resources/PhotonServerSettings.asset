@@ -31,20 +31,16 @@ MonoBehaviour:
   RpcList:
   - ClickRpc
   - DestroyRpc
-  - DestroySpaceship
-  - Fire
   - OnCityCreated
+  - OnEventBroadcasted
   - OnHouseCreated
   - OnMoveWorker
   - OnPathCreated
+  - OnPlayerWon
   - OnResourcesChanged
   - OnWorkerCreated
-  - RespawnSpaceship
   - RPCAssignTurnToPlayer
   - RPCMasterCallEndTurn
   - RPCMasterTurnInit
-  - OnPlayerWon
-  - OnCardRetrived
-  - OnEventBroadcasted
   DisableAutoOpenWizard: 1
   ShowSettings: 1
