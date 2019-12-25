@@ -69,4 +69,5 @@ public enum ActionType {
     GainedResources,
     ExchangedResources,
     Traded,
+    BuyCard
 }

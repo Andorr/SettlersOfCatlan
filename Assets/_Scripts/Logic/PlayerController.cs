@@ -282,8 +282,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     public void RetriveCard(CardType cardType){
         string g = Guid.NewGuid().ToString();
         Card card = new Card(g.ToString(),cardType);
+
+        ResourceUtil.PurcahseCard(player.resources);
+        
         player.cards.Add(g,card);
 
+        RaiseEvent(ActionType.BuyCard);
         if(photonView.IsMine) {
             BrodcastCardRetrived(g, (int)card.cardType);
         }

@@ -33,8 +33,8 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
                 workerController.worker.location.type == LocationType.Available &&
                 controller.mapController.GetConnectedLocations(workerController.worker.location, player).Where(l => l.type != LocationType.Available).Count() > 0,
             ResourceUtil.CanAffordCity(player.resources) && 
-                workerController.worker.location.type == LocationType.House && controller.GetLocalPlayer().player.id.Equals(workerController.worker.location.occupiedBy)
-        );
+                workerController.worker.location.type == LocationType.House && controller.GetLocalPlayer().player.id.Equals(workerController.worker.location.occupiedBy),
+                ResourceUtil.CanAffordCard(player.resources));
         controller.uiController.EnableActionPanel(
             true, 
             () => EnableRoadPlacement(controller),

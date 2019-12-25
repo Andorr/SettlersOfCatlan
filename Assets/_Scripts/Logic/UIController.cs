@@ -96,7 +96,7 @@ public class UIController : MonoBehaviour
         }
     }
 
-    public void EnableActionPanel(bool enable, UnityAction roadAction = null, UnityAction houseAction = null, UnityAction cityAction = null)
+    public void EnableActionPanel(bool enable, UnityAction roadAction = null, UnityAction houseAction = null, UnityAction cityAction = null, UnityAction cardAction = null)
     {
         actionPanel.SetActive(enable);
         var btns = actionPanel.GetComponentsInChildren<Button>();
@@ -118,14 +118,21 @@ public class UIController : MonoBehaviour
             btns[2].onClick.RemoveAllListeners();
             btns[2].onClick.AddListener(cityAction);
         }
+        if(cardAction != null)
+        {
+            btns[3].onClick.RemoveAllListeners();
+            btns[3].onClick.AddListener(cardAction);
+
+        }
     }
 
-    public void EnableActionButtons(bool pathButton, bool houseButton, bool cityButton)
+    public void EnableActionButtons(bool pathButton, bool houseButton, bool cityButton, bool cardButton)
     {
         var btns = actionPanel.GetComponentsInChildren<Button>();
         btns[0].interactable = pathButton;
         btns[1].interactable = houseButton;
         btns[2].interactable = cityButton;
+        btns[3].interactable = cardButton;
     }
 
     public void EnableEndTurnButton(bool enable, UnityAction action)
