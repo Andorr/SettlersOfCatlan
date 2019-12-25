@@ -29,6 +29,21 @@ public class ResourceStorage : MonoBehaviour
         return false;
     }
 
+    public int GetResource(ResourceType type) {
+        if(ResourceType.Wood == type) {
+            return wood;
+        } else if(ResourceType.Stone == type) {
+            return stone;
+        } else if(ResourceType.Clay == type) {
+            return clay;
+        } else if(ResourceType.Wheat == type) {
+            return wheat;
+        } else if(ResourceType.Wool == type) {
+            return wool;
+        }
+        return 0;
+    }
+
     public void AddResource(ResourceType type, int value) {
         if(ResourceType.Wood == type) {
             wood = Mathf.Max(0, wood + value);

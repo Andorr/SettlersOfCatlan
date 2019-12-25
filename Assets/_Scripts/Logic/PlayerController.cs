@@ -72,18 +72,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             } else {
                 uiController.EnableSideActionPanel(true);
             }
-
-            // Let the player gain resources
-            (int wood, int stone, int clay, int wheat, int wool) = mapController.CalculateGainableResources(player);
-            AddResources(wood, stone, clay, wheat, wool);
-            RaiseEvent(ActionType.GainedResources, new ResourceStorage {
-                wood = wood,
-                stone = stone,
-                clay = clay,
-                wheat = wheat,
-                wool = wool,
-            });
-
         } else {
             SetState(State.WaitForTurn);
             uiController.EnableEndTurnButton(false, null);
@@ -117,6 +105,22 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             var info = ActionInfo.New(type, player);
             info.data = data;
             onActionEvent(info);
+        }
+    }
+
+    public void GainResources() {
+        // Let the player gain resources
+        (int wood, int stone, int clay, int wheat, int wool) = mapController.CalculateGainableResources(player);
+        AddResources(wood, stone, clay, wheat, wool);
+        
+        if(photonView.IsMine) {
+            RaiseEvent(ActionType.GainedResources, new ResourceStorage {
+                wood = wood,
+                stone = stone,
+                clay = clay,
+                wheat = wheat,
+                wool = wool,
+            });
         }
     }
 

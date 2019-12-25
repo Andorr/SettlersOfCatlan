@@ -136,6 +136,7 @@ public class UIController : MonoBehaviour
     }
 
     public void DisplayEventText(string title, float duration = 5) {
+        eventText.text = title;
         eventText.GetComponent<GraphicFade>().FadeInAndOut(1f, duration);
     }
 

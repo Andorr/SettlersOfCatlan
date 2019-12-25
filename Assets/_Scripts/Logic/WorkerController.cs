@@ -10,6 +10,8 @@ public class WorkerController : MonoBehaviour
     public Transform prefabHolder;
     private Animator anim;
 
+    private AudioController audioController;
+
     public enum WorkerState {
         Movable,
         Immovable,
@@ -19,6 +21,7 @@ public class WorkerController : MonoBehaviour
     public void Start()
     {
         anim = GetComponentInChildren<Animator>();
+        audioController = GameObject.FindGameObjectWithTag("AudioController").GetComponent<AudioController>();
     }
 
     public void Initialize(Worker newWorker)
@@ -29,6 +32,7 @@ public class WorkerController : MonoBehaviour
     public void MoveWorker(Location location)
     {
         worker.location = location;
+        audioController.PlayOnPosition(transform.position, "Sounds/Worker/Click");
         StartCoroutine(MoveWorkerWithAnim(location));
         state = WorkerState.Immovable;
     }
