@@ -39,7 +39,8 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
             true, 
             () => EnableRoadPlacement(controller),
             () => BuildHouse(controller),
-            () => BuildCity(controller)
+            () => BuildCity(controller),
+            () => BuyCard(controller)
         );
 
         // Initialize moves to show
@@ -128,6 +129,13 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
         }
         controller.GetLocalPlayer().BuildCity(lc.location);
         OnUnselected(controller);
+    }
+
+    private void BuyCard(GameController controller)
+    {
+        var rnd = new System.Random();
+        CardType card =  (CardType)rnd.Next(System.Enum.GetNames(typeof(CardType)).Length);
+        controller.GetLocalPlayer().RetriveCard(card);
     }
 
     private void DisableMovement()
