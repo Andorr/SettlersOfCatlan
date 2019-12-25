@@ -22,17 +22,14 @@ public class CardViewController : MonoBehaviour
 
     private Dictionary<int, int> Counter(Dictionary<string, Card> cards){
         Dictionary<int, int> temp = new Dictionary<int, int>();
+        
+        temp.Add((int)CardType.Thief,0);
+        temp.Add((int)CardType.VP,0);
 
         foreach(KeyValuePair<string, Card> card in cards)
         {
             if(!card.Value.used) continue;
-            
-            if(!temp.ContainsKey((int)card.Value.cardType)){
-                temp.Add((int)card.Value.cardType, 1);
-            }else{
-                temp[(int)card.Value.cardType] += 1;
-            }
-
+            temp[(int)card.Value.cardType] += 1;
         }
         return temp;
     }

@@ -22,7 +22,7 @@ namespace State
         public int victoryPoints;
         public PlayerColor color;
         public ResourceStorage resources;
-        public Dictionary<string, Card> cards;
+        public Dictionary<string, Card> cards = new Dictionary<string, Card>();
 
         public Color GetColor() {
             switch(color) {

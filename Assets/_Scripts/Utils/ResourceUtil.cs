@@ -18,7 +18,7 @@ public static class ResourceUtil
         return storage.clay >= 1 && storage.wood >= 1;
     }
     public static bool CanAffordCard(ResourceStorage storage){
-        return storage.wool >= 1 && storage.stone >= 1 && storage.wheat >= 1;
+        return true;//storage.wool >= 1 && storage.stone >= 1 && storage.wheat >= 1;
     }
 
     public static void PurchaseHouse(ResourceStorage storage)
@@ -41,10 +41,10 @@ public static class ResourceUtil
         storage.wood = Mathf.Max(0, storage.wood - 1);
     }
 
-    public static void PurcahseCard(ResourceStorage storage){
-        storage.wool = Mathf.Max(0,storage.wool-1);
-        storage.stone = Mathf.Max(0, storage.stone - 1);
-        storage.wheat = Mathf.Max(0, storage.wheat - 1);
+    public static void PurchaseCard(ResourceStorage storage){
+        storage.wool = storage.wool;// Mathf.Max(0,storage.wool - 1);
+        storage.stone = storage.stone; //Mathf.Max(0, storage.stone - 1);
+        storage.wheat = storage.wheat;//Mathf.Max(0, storage.wheat - 1);
     }
 
     public static string TypeToString(ResourceType type) {
