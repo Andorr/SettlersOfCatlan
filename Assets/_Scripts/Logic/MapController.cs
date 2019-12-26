@@ -89,4 +89,9 @@ public partial class MapController : MonoBehaviour
     public int CalculateVictoryPoints(Player player) {
         return map.CalculateVictoryPoints(player);
     }
+
+    public Map GetMap() {
+        return map;
+    }
+
 }

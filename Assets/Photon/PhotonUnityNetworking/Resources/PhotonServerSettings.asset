@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PhotonServerSettings
   m_EditorClassIdentifier: 
   AppSettings:
-    AppIdRealtime: c57dbecd-f7e9-41f6-9f1e-525b550dcf42
+    AppIdRealtime: 
     AppIdChat: 
     AppIdVoice: 
     AppVersion: 
@@ -28,19 +28,6 @@ MonoBehaviour:
   EnableSupportLogger: 0
   RunInBackground: 1
   StartInOfflineMode: 0
-  RpcList:
-  - ClickRpc
-  - DestroyRpc
-  - OnCityCreated
-  - OnEventBroadcasted
-  - OnHouseCreated
-  - OnMoveWorker
-  - OnPathCreated
-  - OnPlayerWon
-  - OnResourcesChanged
-  - OnWorkerCreated
-  - RPCAssignTurnToPlayer
-  - RPCMasterCallEndTurn
-  - RPCMasterTurnInit
-  DisableAutoOpenWizard: 1
-  ShowSettings: 1
+  RpcList: []
+  DisableAutoOpenWizard: 0
+  ShowSettings: 0
