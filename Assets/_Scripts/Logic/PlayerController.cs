@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         locations = new List<Location>();
         paths = new List<Path>();
         workers = new List<WorkerController>();
-        player.cards = new Dictionary<string, Card>();
 
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         mapController = gameController.mapController;
@@ -76,7 +75,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             SetState(State.WaitForTurn);
             uiController.EnableEndTurnButton(false, null);
             mapController.EnableLocationBoxColliders(false);
-             uiController.EnableSideActionPanel(false);
+            uiController.EnableSideActionPanel(false);
         }
     }
 

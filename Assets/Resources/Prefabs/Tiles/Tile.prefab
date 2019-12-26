@@ -237,7 +237,7 @@ MonoBehaviour:
   tile:
     id: 0
     type: 0
-    probability: 0
+    value: 0
     position: {x: 0, y: 0, z: 0}
     locations: []
   prefabHolder: {fileID: 1088948464826199427}
