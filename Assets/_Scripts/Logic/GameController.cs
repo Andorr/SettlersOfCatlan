@@ -187,6 +187,14 @@ public class GameController : MonoBehaviour, ITurnCallback
             uiController.DisplayEventText("Trade declined!", 4f);
         }
     }
+
+    public void SendTradeRequestCancellation(Player player) {
+        players[player.id].CancelTradeRequest();
+    }
+
+    public void OnTradeRequestCancelled() {
+        uiController.DisableTrading();
+    }
     # endregion
 
     # region Handler Logic

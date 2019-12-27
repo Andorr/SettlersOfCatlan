@@ -173,7 +173,7 @@ public class UIController : MonoBehaviour
         var gameController = GetComponent<GameController>();
         var localPlayer = gameController.GetPlayers(out var otherPlayers);
         tradingViewController.canCancelWithESC = true;
-        tradingViewController.ShowTradingPanel(localPlayer, otherPlayers, gameController.ExchangeResources, gameController.SendTradeRequest);
+        tradingViewController.ShowTradingPanel(localPlayer, otherPlayers, gameController.ExchangeResources, gameController.SendTradeRequest, gameController.SendTradeRequestCancellation);
     }
 
     public void DisableTrading() {

@@ -328,6 +328,10 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         photonView.RPC("OnTradeRequestAnswerReceived", RpcTarget.All,  playerToTradeWith.id, answer, from, to);
     }
 
+    public void CancelTradeRequest() {
+        photonView.RPC("OnTradeRequestCancelled", RpcTarget.All);
+    }
+
     # endregion
 
     # region RPC Methods
@@ -408,6 +412,13 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     void OnTradeRequestAnswerReceived(string playerIDToTradeWith, bool answer, ResourceStorage to, ResourceStorage from) {
         if(photonView.IsMine) {
             gameController.OnTradeRequestAnswered(answer, playerIDToTradeWith, from, to);
+        }
+    }
+
+    [PunRPC]
+    void OnTradeRequestCancelled() {
+        if(photonView.IsMine) {
+            gameController.OnTradeRequestCancelled();
         }
     }
     # endregion
