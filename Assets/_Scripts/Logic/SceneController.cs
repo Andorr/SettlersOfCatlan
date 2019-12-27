@@ -1,11 +1,18 @@
 ﻿using UnityEngine;
 using Photon.Pun;
 using System;
+using ExitGames.Client.Photon;
 
 public class SceneController : MonoBehaviour
 {
 
     public GameObject playerPrefab;
+
+    void Awake() {
+        if(!PhotonPeer.RegisterType(typeof(ResourceStorage), (byte)'L', ResourceStorage.Serialize, ResourceStorage.Deserialize)) {
+            throw new Exception("Was not able to register ResourceStorage to Photon");
+        }
+    }
 
     void Start()
     {

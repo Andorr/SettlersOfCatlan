@@ -122,10 +122,6 @@ public class GameController : MonoBehaviour, ITurnCallback
         }
     }
 
-    public void ExchangeResources(ResourceType from, ResourceType to) {
-        localPlayer.ExchangeResources(from, to);
-    }
-
     public void EndGame(Player winner) {
         ChangeState(GameState.End);
 
@@ -145,6 +141,52 @@ public class GameController : MonoBehaviour, ITurnCallback
         return localPlayer.player;
     }
 
+    public Player GetPlayerById(string playerId) {
+        return players[playerId].player;
+    }
+
+    # endregion
+
+    # region TradeLogic
+    public void ExecuteTrade(Player playerToTradeWith, ResourceStorage from, ResourceStorage to) {
+        var fromNegation = ResourceUtil.Negation(from);
+        var toNegation = ResourceUtil.Negation(to);
+
+        localPlayer.AddResources(fromNegation + to); // Remove "from", add "to"
+        players[playerToTradeWith.id].AddResources(from + toNegation, true); // Add "from", remove "to"
+    }
+
+    public void ExchangeResources(ResourceType from, ResourceType to) {
+        localPlayer.ExchangeResources(from, to);
+    }
+
+    public void SendTradeRequest(Player playerToTradeWith, ResourceStorage from, ResourceStorage to) {
+        players[playerToTradeWith.id].SendTradeRequest(localPlayer.player, from, to);
+    }
+
+    public void OnTradeRequested(string playerIDToTradeWith, ResourceStorage from, ResourceStorage to) {
+        PlayerController playerToTradeWith = players[playerIDToTradeWith];
+        uiController.ShowTradeRequest(playerToTradeWith.player, from, to);
+    }
+
+    public void SendTradeRequestAnswer(bool accepted, Player playerToTradeWith, ResourceStorage from, ResourceStorage to) { 
+        players[playerToTradeWith.id].SendTradeRequestAnswer(accepted, localPlayer.player, from, to);
+        uiController.DisableTrading();
+    }
+
+    public void OnTradeRequestAnswered(bool accepted, string playerIDToTradeWith, ResourceStorage from, ResourceStorage to) {
+        PlayerController playerToTradeWith = players[playerIDToTradeWith];
+        if(accepted) {
+            // Send request
+            ExecuteTrade(playerToTradeWith.player, from, to);
+            uiController.DisableTrading();
+            uiController.DisplayEventText("Trade accepted!", 4f);
+        } else {
+            // TODO: Fix better feedback for when the trade request was declined.
+            uiController.DisableTrading();
+            uiController.DisplayEventText("Trade declined!", 4f);
+        }
+    }
     # endregion
 
     # region Handler Logic

@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             SetState(State.WaitForTurn);
             uiController.EnableEndTurnButton(false, null);
             mapController.EnableLocationBoxColliders(false);
-             uiController.EnableSideActionPanel(false);
+            uiController.EnableSideActionPanel(false);
         }
     }
 
@@ -239,7 +239,11 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         RaiseEvent(ActionType.EndTurn);
     }
 
-    public void AddResources(int wood, int stone, int clay, int wheat, int wool) {
+    public void AddResources(ResourceStorage storage, bool shouldBroadcast = false) {
+        AddResources(storage.wood, storage.stone, storage.clay, storage.wheat, storage.wool, shouldBroadcast);
+    }
+
+    public void AddResources(int wood, int stone, int clay, int wheat, int wool, bool shouldBroadcast = false) {
         var resourceStore = player.resources;
         resourceStore.wood += wood;
         resourceStore.stone += stone;
@@ -247,9 +251,11 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         resourceStore.wheat += wheat;
         resourceStore.wool += wool;
 
-        if(photonView.IsMine) {
+        if(photonView.IsMine || shouldBroadcast) {
             BroadcastResourceChange();
         }
+
+        uiController.UpdatePlayerUI(player);
     }
 
     public void ExchangeResources(ResourceType from, ResourceType to)
@@ -276,7 +282,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         if(photonView.IsMine) {
             BroadcastCardUsage(id);
         }
-        
     }
 
     public void RetriveCard(CardType cardType){
@@ -305,7 +310,24 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         photonView.RPC("OnEventBroadcasted", RpcTarget.All, message);
     }
 
-    
+    public void SendTradeRequest(Player playerToTradeWith, ResourceStorage from, ResourceStorage to) {
+        // Should not be possible to trade with yourself
+        if(playerToTradeWith.id.Equals(player.id)) {
+            return;
+        }
+
+        // Send trade request
+        photonView.RPC("OnTradeRequestReceived", RpcTarget.All, playerToTradeWith.id, from, to);
+    }
+
+    public void SendTradeRequestAnswer(bool answer, Player playerToTradeWith, ResourceStorage from, ResourceStorage to) {
+        // Should not be possible to trade with yourself
+        if(playerToTradeWith.id.Equals(player.id)) {
+            return;
+        }
+
+        photonView.RPC("OnTradeRequestAnswerReceived", RpcTarget.All,  playerToTradeWith.id, answer, from, to);
+    }
 
     # endregion
 
@@ -374,6 +396,20 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     [PunRPC]
     void OnEventBroadcasted(string message) {
         uiController.DisplayEventText(message, 3);
+    }
+
+    [PunRPC]
+    void OnTradeRequestReceived(string playerIDToTradeWith, ResourceStorage to, ResourceStorage from) {
+        if(photonView.IsMine) {
+            gameController.OnTradeRequested(playerIDToTradeWith, from, to);
+        }
+    }
+
+    [PunRPC]
+    void OnTradeRequestAnswerReceived(string playerIDToTradeWith, bool answer, ResourceStorage to, ResourceStorage from) {
+        if(photonView.IsMine) {
+            gameController.OnTradeRequestAnswered(answer, playerIDToTradeWith, from, to);
+        }
     }
     # endregion
 

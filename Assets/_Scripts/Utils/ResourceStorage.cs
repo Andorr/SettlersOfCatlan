@@ -55,11 +55,45 @@ public class ResourceStorage : MonoBehaviour
             wheat = Mathf.Max(0, wheat + value);
         } else if(ResourceType.Wool == type) {
             wool = Mathf.Max(0, wool + value);
+        } else {
+            Debug.Log("Invalid resource type: " + type);
         }
+    }
+
+    public void AddResources(ResourceStorage storage) {
+        wood += storage.wood;
+        stone += storage.stone;
+        clay += storage.clay;
+        wheat += storage.wheat;
+        wool += storage.wool;
     }
 
     public override string ToString() {
         return $"{wood} wood, {stone} stone, {clay} clay, {wheat} wheat and {wool} wool";
+    }
+
+    public static ResourceStorage operator +(ResourceStorage a, ResourceStorage b) {
+        a.wood += b.wood;
+        a.stone += b.stone;
+        a.clay += b.clay;
+        a.wheat += b.wheat;
+        a.wool += b.wool;
+        return a;
+    }
+
+    public static byte[] Serialize(object customType) {
+        var storage = (ResourceStorage)customType;
+        return new byte[]{(byte)storage.wood, (byte)storage.stone, (byte)storage.clay, (byte)storage.wheat, (byte)storage.wool};
+    }
+
+    public static object Deserialize(byte[] data) {
+        var storage = new ResourceStorage();
+        storage.wood = (int)data[0];
+        storage.stone = (int)data[1];
+        storage.clay = (int)data[2];
+        storage.wheat = (int)data[3];
+        storage.wool = (int)data[4];
+        return storage;
     }
 }
 

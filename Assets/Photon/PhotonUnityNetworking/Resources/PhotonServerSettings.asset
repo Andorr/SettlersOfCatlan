@@ -42,5 +42,8 @@ MonoBehaviour:
   - RPCAssignTurnToPlayer
   - RPCMasterCallEndTurn
   - RPCMasterTurnInit
+  - OnTradeRequestAnswered
+  - OnTradeRequestReceived
+  - OnTradeRequestAnswerReceived
   DisableAutoOpenWizard: 1
   ShowSettings: 1

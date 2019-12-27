@@ -6,15 +6,19 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 using static ExchangeViewController;
+using static PlayerTradeViewController;
 
 public class TradingViewController : MonoBehaviour
 {
     private delegate void OnPlayerSelect(Player player);
     private OnPlayerSelect playerSelectHandler;
     private ExchangeHandler onExchange;
+    private TradeHandler onTradeRequestSent;
 
     private Player localPlayer;
     private Player[] playersToTradeWith;
+
+    public bool canCancelWithESC = true;
 
     [Header("Prefabs")]
     public GameObject playerCardPrefab;
@@ -25,10 +29,11 @@ public class TradingViewController : MonoBehaviour
     public GameObject exchangePanel;
     public GameObject playerTradePanel;
 
-    public void ShowTradingPanel(Player localPlayer, Player[] playersToTradeWith, ExchangeHandler exchangeHandler) {
+    public void ShowTradingPanel(Player localPlayer, Player[] playersToTradeWith, ExchangeHandler exchangeHandler, TradeHandler tradeHandler) {
         this.localPlayer = localPlayer;
         this.playersToTradeWith = playersToTradeWith;
         onExchange = exchangeHandler;
+        onTradeRequestSent = tradeHandler;
 
         // Select one player to trade with
         gameObject.SetActive(true);
@@ -54,12 +59,6 @@ public class TradingViewController : MonoBehaviour
         }
     }
 
-    private void EnablePlayerTrade(Player currentPlayer, Player[] playersToTradeWith) {
-        tradePanel.SetActive(true);
-        
-
-    }
-
     public void EnableExchangePanel() {
         exchangePanel.SetActive(true);
         playerTradePanel.SetActive(false);
@@ -71,18 +70,34 @@ public class TradingViewController : MonoBehaviour
     }
 
     public void EnablePlayerTradePanel() {
+        // Should not able able to open player trade panel if there is no players to trade with
+        if(playersToTradeWith.Length == 0) {
+            return;
+        }
+
         exchangePanel.SetActive(false);
         playerTradePanel.SetActive(true);
+        playerTradePanel.GetComponent<PlayerTradeViewController>().Initialize(localPlayer, playersToTradeWith, (playerToTradeWith, resourceA, resourceB) => {
+            if(onTradeRequestSent != null) {
+                canCancelWithESC = false;
+                onTradeRequestSent(playerToTradeWith, resourceA, resourceB);
+            }
+        });
     }
 
     public void Disable() {
+        var tradeRequestViewController = GetComponentInChildren<TradeRequestViewController>();
+        if(tradeRequestViewController != null) {
+            tradeRequestViewController.Show(false);
+        }
+
         playerTradePanel.SetActive(false);
         exchangePanel.SetActive(false);
         gameObject.SetActive(false);
     }
 
     public void Update() {
-        if(!gameObject.activeSelf) {
+        if(!gameObject.activeSelf || !canCancelWithESC) {
             return;
         }
 
