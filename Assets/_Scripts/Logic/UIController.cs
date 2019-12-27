@@ -18,6 +18,7 @@ public class UIController : MonoBehaviour
     public WinPanelController winPanel;
     public ResourceItemController resourceItemController;
     public TradingViewController tradingViewController;
+    public TradeRequestViewController tradeRequestViewController;
 
     [Header("Player Elements")]
     public GameObject actionPanel;
@@ -82,7 +83,9 @@ public class UIController : MonoBehaviour
 
 
         var cardController = panel.GetComponentInChildren<CardViewController>();
-        cardController.UpdateCardCount(player);
+        if(cardController != null) {
+            cardController.UpdateCardCount(player);
+        }
 
         //var cardItemController = panel.GetComponentInChildren<CardItemController>();
         //cardItemController.UpdateCards(player);
@@ -169,7 +172,20 @@ public class UIController : MonoBehaviour
     public void EnableTrading() {
         var gameController = GetComponent<GameController>();
         var localPlayer = gameController.GetPlayers(out var otherPlayers);
-        tradingViewController.ShowTradingPanel(localPlayer, otherPlayers, gameController.ExchangeResources);
+        tradingViewController.canCancelWithESC = true;
+        tradingViewController.ShowTradingPanel(localPlayer, otherPlayers, gameController.ExchangeResources, gameController.SendTradeRequest);
+    }
+
+    public void DisableTrading() {
+        tradingViewController.Disable();
+        tradingViewController.canCancelWithESC = true;
+    }
+
+    public void ShowTradeRequest(Player playerToTradeWith, ResourceStorage from, ResourceStorage to)
+    {
+        var gameController = GetComponent<GameController>();
+        tradingViewController.canCancelWithESC = false;
+        tradeRequestViewController.Initialize(playerToTradeWith, from, to, gameController.SendTradeRequestAnswer);
     }
 
     private void InitializeFonts() {

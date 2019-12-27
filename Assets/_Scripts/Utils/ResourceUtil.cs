@@ -1,3 +1,4 @@
+using System;
 using State;
 using UnityEngine;
 
@@ -45,6 +46,20 @@ public static class ResourceUtil
         storage.wool = storage.wool;// Mathf.Max(0,storage.wool - 1);
         storage.stone = storage.stone; //Mathf.Max(0, storage.stone - 1);
         storage.wheat = storage.wheat;//Mathf.Max(0, storage.wheat - 1);
+    }
+
+    public static ResourceStorage Negation(ResourceStorage storage) {
+        return new ResourceStorage {
+            wood = -storage.wood,
+            stone = -storage.stone,
+            clay = -storage.clay,
+            wheat = -storage.wheat,
+            wool = -storage.wool,
+        };
+    }
+
+    public static ResourceType IntToType(int value) {
+        return (ResourceType)Enum.ToObject(typeof(ResourceType), value);
     }
 
     public static string TypeToString(ResourceType type) {
