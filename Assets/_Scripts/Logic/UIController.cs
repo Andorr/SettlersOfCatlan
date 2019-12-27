@@ -32,6 +32,7 @@ public class UIController : MonoBehaviour
 
     public void Awake() {
         InitializeFonts();
+        controller = GetComponent<GameController>();
         playerOnePanel.SetActive(false);
         playerTwoPanel.SetActive(false);
         playerThreePanel.SetActive(false);
@@ -89,9 +90,10 @@ public class UIController : MonoBehaviour
             cardController.UpdateCardCount(player);
         }
 
-//        PlayerController playerCont = controller.GetLocalPlayer();
-        if(player != null){
-            cardItemController.UpdateCards(player);
+        PlayerController playerCont = controller.GetLocalPlayer();
+
+        if(playerCont != null){
+            cardItemController.UpdateCards(playerCont);
         }
        
 

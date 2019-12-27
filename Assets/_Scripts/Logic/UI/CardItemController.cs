@@ -15,10 +15,10 @@ public class CardItemController : MonoBehaviour
     public Dictionary<string, GameObject> cardListGameObjects = new Dictionary<string, GameObject>();
     private Dictionary<string, Card> tempCards = new Dictionary<string, Card>();
 
-    public void UpdateCards(Player player){
+    public void UpdateCards(PlayerController player){
         ClearCards();
 
-        List<Card> cacheCardList = CardUpdateCards(player.cards);
+        List<Card> cacheCardList = CardUpdateCards(player.player.cards);
 
 
         foreach(Card card in cacheCardList)
@@ -29,8 +29,10 @@ public class CardItemController : MonoBehaviour
             cardEntryObject.transform.localScale = Vector3.one;
             cardEntryObject.transform.Find("Container").transform.Find("Title").GetComponent<Text>().text = card.getTitle();
             cardEntryObject.transform.Find("Container").transform.Find("Image").GetComponent<RawImage>().texture = getTexture(card);
-
+            cardEntryObject.GetComponent<Clickable>().ResetEvent();
             cardEntryObject.GetComponent<Clickable>().OnClick += () => {
+                Debug.Log("clicked!");
+                player.UseCard(card.id);
             };
 
             cardListGameObjects.Add(card.id, cardEntryObject);
