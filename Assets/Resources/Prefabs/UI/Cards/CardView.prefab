@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -160,6 +160,10 @@ MonoBehaviour:
   cardObject: {fileID: 2690191160027967234, guid: c029a76841cd74c558a604735190445f,
     type: 3}
   cardContainer: {fileID: 3826849586702980911}
+  images:
+  - {fileID: 2800000, guid: cdfea49789d2a4dcea55dba5cc59eebb, type: 3}
+  - {fileID: 2800000, guid: 6671187fd43d641aa8f86f288f9d899b, type: 3}
+  - {fileID: 2800000, guid: 293365bc50a744bc18ef708d09854015, type: 3}
 --- !u!1 &2694294553884131536
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +289,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 20}
+  m_SizeDelta: {x: -2139, y: 20}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &4920629523207762746
 CanvasRenderer:
@@ -425,8 +429,8 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 3
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
+  m_Spacing: 20
+  m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0

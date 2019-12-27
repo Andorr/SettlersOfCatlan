@@ -19,6 +19,7 @@ public class UIController : MonoBehaviour
     public ResourceItemController resourceItemController;
     public TradingViewController tradingViewController;
     public TradeRequestViewController tradeRequestViewController;
+    public CardItemController cardItemController;
 
     [Header("Player Elements")]
     public GameObject actionPanel;
@@ -80,15 +81,19 @@ public class UIController : MonoBehaviour
         // Update resource count
         var resourceController = panel.GetComponentInChildren<ResourceViewController>();
         resourceController.UpdateResourceCount(player);
-
-
+    
+        
         var cardController = panel.GetComponentInChildren<CardViewController>();
+
         if(cardController != null) {
             cardController.UpdateCardCount(player);
         }
 
-        //var cardItemController = panel.GetComponentInChildren<CardItemController>();
-        //cardItemController.UpdateCards(player);
+//        PlayerController playerCont = controller.GetLocalPlayer();
+        if(player != null){
+            cardItemController.UpdateCards(player);
+        }
+       
 
         // Update player victory points count
         panel.transform.GetChild(0).GetComponentInChildren<Text>().text = player.victoryPoints.ToString();
@@ -186,6 +191,12 @@ public class UIController : MonoBehaviour
         var gameController = GetComponent<GameController>();
         tradingViewController.canCancelWithESC = false;
         tradeRequestViewController.Initialize(playerToTradeWith, from, to, gameController.SendTradeRequestAnswer);
+    }
+
+    public void EnableCardItems(){
+        var gameController = GetComponent<GameController>();
+        var localPlayer = gameController.GetPlayers(out var otherPlayers);
+        cardItemController.showCardItems();
     }
 
     private void InitializeFonts() {

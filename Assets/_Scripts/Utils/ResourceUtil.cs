@@ -43,9 +43,9 @@ public static class ResourceUtil
     }
 
     public static void PurchaseCard(ResourceStorage storage){
-        storage.wool = storage.wool;// Mathf.Max(0,storage.wool - 1);
-        storage.stone = storage.stone; //Mathf.Max(0, storage.stone - 1);
-        storage.wheat = storage.wheat;//Mathf.Max(0, storage.wheat - 1);
+        storage.wool =  Mathf.Max(0, storage.wool - 1);
+        storage.stone = Mathf.Max(0, storage.stone - 1);
+        storage.wheat = Mathf.Max(0, storage.wheat - 1);
     }
 
     public static ResourceStorage Negation(ResourceStorage storage) {

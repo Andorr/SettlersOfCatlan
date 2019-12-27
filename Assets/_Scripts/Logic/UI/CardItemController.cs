@@ -11,7 +11,7 @@ public class CardItemController : MonoBehaviour
     public GameObject cardView;
     public GameObject cardObject;
     public GameObject cardContainer;
-    public Player player;
+    public Texture[] images;
     public Dictionary<string, GameObject> cardListGameObjects = new Dictionary<string, GameObject>();
     private Dictionary<string, Card> tempCards = new Dictionary<string, Card>();
 
@@ -27,14 +27,30 @@ public class CardItemController : MonoBehaviour
 
             cardEntryObject.transform.SetParent(cardContainer.transform);
             cardEntryObject.transform.localScale = Vector3.one;
-            cardEntryObject.transform.Find("Title").GetComponent<Text>().text = card.getTitle();
-            cardEntryObject.GetComponent<Clickable>().OnClick += () => {
+            cardEntryObject.transform.Find("Container").transform.Find("Title").GetComponent<Text>().text = card.getTitle();
+            cardEntryObject.transform.Find("Container").transform.Find("Image").GetComponent<RawImage>().texture = getTexture(card);
 
+            cardEntryObject.GetComponent<Clickable>().OnClick += () => {
             };
+
             cardListGameObjects.Add(card.id, cardEntryObject);
         }
     }
 
+    public void showCardItems(){
+        this.cardView.SetActive(true);
+    }
+
+    private Texture getTexture(Card card){
+        switch(card.cardType){
+            case CardType.Thief:
+                return images[0];
+            case CardType.VP:
+                return images[1];
+            default:
+                return images[2];
+        }
+    }
     private void ClearCards(){
         foreach(GameObject obj in cardListGameObjects.Values)
         {
@@ -52,6 +68,14 @@ public class CardItemController : MonoBehaviour
             }
         }
         return temp;
+    }
+    private void Disable(){
+        this.cardView.SetActive(false);
+    }
 
+    public void Update() {
+        if(Input.GetKeyDown(KeyCode.Escape)) {
+            Disable();
+        }
     }
 }
