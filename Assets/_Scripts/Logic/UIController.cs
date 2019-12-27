@@ -14,6 +14,7 @@ public class UIController : MonoBehaviour
     public Button endTurnButton;
     public Text eventText;
     public GameObject sideActionPanel;
+    public GameObject cardView;
     public WinPanelController winPanel;
     public ResourceItemController resourceItemController;
     public TradingViewController tradingViewController;
@@ -76,7 +77,6 @@ public class UIController : MonoBehaviour
         if(!hasPlayer) {
             return;
         }
-
         // Update resource count
         var resourceController = panel.GetComponentInChildren<ResourceViewController>();
         resourceController.UpdateResourceCount(player);
@@ -86,6 +86,9 @@ public class UIController : MonoBehaviour
         if(cardController != null) {
             cardController.UpdateCardCount(player);
         }
+
+        //var cardItemController = panel.GetComponentInChildren<CardItemController>();
+        //cardItemController.UpdateCards(player);
 
         // Update player victory points count
         panel.transform.GetChild(0).GetComponentInChildren<Text>().text = player.victoryPoints.ToString();
@@ -160,6 +163,10 @@ public class UIController : MonoBehaviour
 
     public void EnableSideActionPanel(bool enable) {
         sideActionPanel.SetActive(enable);
+    }
+
+    public void EnableCardView(bool enable){
+        cardView.SetActive(enable);
     }
 
     public void EnableTrading() {

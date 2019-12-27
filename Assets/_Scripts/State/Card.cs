@@ -17,9 +17,20 @@ using System;
             this.id = id;
             this.cardType = cardType;
         }
-
         public void UseCard(){
             used = true;
+        }
+
+        public string getTitle(){
+            switch (this.cardType) {
+                case CardType.Thief:
+                    return "Thief";
+                case CardType.VP:
+                    return "1 + VictoryPoint";
+                default:
+                    return "No Title";
+
+            }
         }
 
     }
