@@ -10,6 +10,8 @@ public partial class MapController : MonoBehaviour
     private Dictionary<int, GameObject> locations;
     private Dictionary<int, GameObject> paths;
 
+    private Dictionary<int, GameObject> tiles;
+
     [Header("GameObjects")]
     public GameObject tilePrefab;
     public GameObject locationPrefab;
@@ -39,6 +41,7 @@ public partial class MapController : MonoBehaviour
         map = MapUtil.GenerateMap(size, radius, shape, generation, seed);
         locations = new Dictionary<int, GameObject>();
         paths = new Dictionary<int, GameObject>();
+        tiles = new Dictionary<int, GameObject>();
 
         // Visualize tiles
         GameObject tileParent = new GameObject();
@@ -49,6 +52,7 @@ public partial class MapController : MonoBehaviour
             TileController tileController = g.GetComponent<TileController>();
             tileController.Initialize(t, radius);
             g.transform.SetParent(tileParent.transform);
+            tiles.Add(t.id, g);
         }
 
         // Visualize locations

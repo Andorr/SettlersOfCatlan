@@ -107,9 +107,9 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         }
     }
 
-    public void GainResources() {
+    public void GainResources(int thiefTileId) {
         // Let the player gain resources
-        (int wood, int stone, int clay, int wheat, int wool) = mapController.CalculateGainableResources(player);
+        (int wood, int stone, int clay, int wheat, int wool) = mapController.CalculateGainableResources(player, thiefTileId);
         AddResources(wood, stone, clay, wheat, wool);
         
         if(photonView.IsMine) {
@@ -165,6 +165,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
         // Raise event
         RaiseEvent(ActionType.MoveWorker);
+    }
+
+    public void MoveThief(int newTileId) {
+        if (photonView.IsMine) {
+            photonView.RPC("OnMoveThief", RpcTarget.All, newTileId);
+        }
     }
 
     public void BuildPath(Path path)
@@ -347,6 +353,16 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             return;
         }
         MoveWorker(wc.worker, location);
+    }
+
+    [PunRPC]
+    public void OnMoveThief(int newTileId) {
+        if (gameController.thiefTileId != null) {
+            TileController oldTile = mapController.GetTileControllerById((int) gameController.thiefTileId);
+            oldTile.RemoveThief(gameController);
+        }
+        TileController newTile = mapController.GetTileControllerById(newTileId);
+        newTile.AddThief(gameController);
     }
 
     [PunRPC]

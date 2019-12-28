@@ -17,6 +17,8 @@ public class GameController : MonoBehaviour, ITurnCallback
 
     private int VICTORY_POINTS_TO_WIN = 10;
 
+    public int thiefTileId = 0;
+
     public enum GameState {
         PlayersCreateHouses,
         Play,
@@ -81,7 +83,7 @@ public class GameController : MonoBehaviour, ITurnCallback
 
         // Gain resources for the round
         if(GameState.Play == state) {
-            localPlayer.GainResources();
+            localPlayer.GainResources(thiefTileId);
         }
 
         // Enable turn for new player
@@ -236,5 +238,21 @@ public class GameController : MonoBehaviour, ITurnCallback
             handler = null;
         }
     }
+
+    // Temp function, should be removed... plays thief card for localplayer
+    public void PlayThief() {
+        foreach(var tileController in mapController.GetAllTileControllers()) {
+            tileController.SetSelectable(true);
+        }
+    }
+
+    public void SetThiefTile(int newTileId) {
+        thiefTileId = newTileId;
+    }
+
+    public TileController GetThiefTile() {
+        return thiefTileId != null ? mapController.GetTileControllerById((int) thiefTileId) : null;
+    }
+
     #endregion
 }
