@@ -51,7 +51,7 @@ public class TileHandler : MonoBehaviour, IActionHandler
 
     TradingViewController.OnPlayerSelect onPlayerSelect = (State.Player player) => {
         
-        player.resources
+        // player.resources
     };
 
     public bool OnTryOverride(GameController controller, GameObject other)
