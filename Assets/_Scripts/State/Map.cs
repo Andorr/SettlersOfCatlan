@@ -59,7 +59,8 @@ namespace State
             // TODO: Calculate victory points based on longest road
 
             // TODO: Calculate victory points based on Development cards
-  
+            // Calculate victorypoints based on victory point development cards
+            victoryPoints += player.cards.Values.Where(c => c.used && c.cardType == CardType.VP).Count();
 
             player.victoryPoints = victoryPoints;
             return victoryPoints;

@@ -119,8 +119,12 @@ public class GameController : MonoBehaviour, ITurnCallback
 
         // Display resources text if the player gained resources
         if(info.actionType == ActionType.GainedResources) {
-            string diplayName = player.id.Equals(localPlayer.player.id) ? "You" : player.name;
-            uiController.DisplayGainedResource(diplayName, (ResourceStorage)info.data);
+            string displayName = player.id.Equals(localPlayer.player.id) ? "You" : player.name;
+            uiController.DisplayGainedResource(displayName, (ResourceStorage)info.data);
+        }
+        else if(info.actionType == ActionType.UseCard) {
+            string displayName = player.id.Equals(localPlayer.player.id) ? "You" : player.name;
+            uiController.DisplayUsedCard(displayName, (Card)info.data);
         }
     }
 
@@ -188,6 +192,14 @@ public class GameController : MonoBehaviour, ITurnCallback
             uiController.DisableTrading();
             uiController.DisplayEventText("Trade declined!", 4f);
         }
+    }
+
+    public void SendTradeRequestCancellation(Player player) {
+        players[player.id].CancelTradeRequest();
+    }
+
+    public void OnTradeRequestCancelled() {
+        uiController.DisableTrading();
     }
     # endregion
 

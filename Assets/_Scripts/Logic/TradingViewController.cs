@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 
 using static ExchangeViewController;
 using static PlayerTradeViewController;
+using UnityEngine.Events;
 
 public class TradingViewController : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class TradingViewController : MonoBehaviour
     private OnPlayerSelect playerSelectHandler;
     private ExchangeHandler onExchange;
     private TradeHandler onTradeRequestSent;
+    private TradeCancellation onTradeCancel;
 
     private Player localPlayer;
     private Player[] playersToTradeWith;
@@ -24,21 +26,24 @@ public class TradingViewController : MonoBehaviour
     public GameObject playerCardPrefab;
 
     [Header("Trading Object")]
+    public GameObject tabs;
     public GameObject playerSelectPanel;
     public GameObject tradePanel;
     public GameObject exchangePanel;
     public GameObject playerTradePanel;
 
-    public void ShowTradingPanel(Player localPlayer, Player[] playersToTradeWith, ExchangeHandler exchangeHandler, TradeHandler tradeHandler) {
+    public void ShowTradingPanel(Player localPlayer, Player[] playersToTradeWith, ExchangeHandler exchangeHandler, TradeHandler tradeHandler, TradeCancellation onTradeCancel) {
         this.localPlayer = localPlayer;
         this.playersToTradeWith = playersToTradeWith;
         onExchange = exchangeHandler;
         onTradeRequestSent = tradeHandler;
+        this.onTradeCancel = onTradeCancel;
 
         // Select one player to trade with
         gameObject.SetActive(true);
         tradePanel.SetActive(true);
         EnableExchangePanel();
+        EnableClosability(true);
     }
 
     private void EnablePlayerSelect(Player[] players) {
@@ -79,10 +84,22 @@ public class TradingViewController : MonoBehaviour
         playerTradePanel.SetActive(true);
         playerTradePanel.GetComponent<PlayerTradeViewController>().Initialize(localPlayer, playersToTradeWith, (playerToTradeWith, resourceA, resourceB) => {
             if(onTradeRequestSent != null) {
-                canCancelWithESC = false;
                 onTradeRequestSent(playerToTradeWith, resourceA, resourceB);
+                EnableClosability(false);
+            }
+        }, (player) => {
+            if(onTradeCancel != null) {
+                onTradeCancel(player);
+                EnableClosability(true);
             }
         });
+    }
+
+    private void EnableClosability(bool enable) {
+        canCancelWithESC = enable;
+        foreach(Button b in tabs.GetComponentsInChildren<Button>()) {
+            b.interactable = enable;
+        }
     }
 
     public void Disable() {

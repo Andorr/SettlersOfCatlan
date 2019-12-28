@@ -13,12 +13,14 @@ public class UIController : MonoBehaviour
     public Font font;
     public Button endTurnButton;
     public Text eventText;
+    public Image eventImage;
     public GameObject sideActionPanel;
     public GameObject cardView;
     public WinPanelController winPanel;
     public ResourceItemController resourceItemController;
     public TradingViewController tradingViewController;
     public TradeRequestViewController tradeRequestViewController;
+    public CardItemController cardItemController;
 
     [Header("Player Elements")]
     public GameObject actionPanel;
@@ -27,10 +29,15 @@ public class UIController : MonoBehaviour
     public GameObject playerThreePanel;
     public GameObject playerFourPanel;
 
+    [Header("Sprites")]
+    public Sprite cardVP;
+    public Sprite cardKnight;
+
     private Dictionary<string, GameObject> playerPanels = new Dictionary<string, GameObject>(); // (playerId, playerPanel)
 
     public void Awake() {
         InitializeFonts();
+        controller = GetComponent<GameController>();
         playerOnePanel.SetActive(false);
         playerTwoPanel.SetActive(false);
         playerThreePanel.SetActive(false);
@@ -80,15 +87,20 @@ public class UIController : MonoBehaviour
         // Update resource count
         var resourceController = panel.GetComponentInChildren<ResourceViewController>();
         resourceController.UpdateResourceCount(player);
-
-
+    
+        
         var cardController = panel.GetComponentInChildren<CardViewController>();
+
         if(cardController != null) {
             cardController.UpdateCardCount(player);
         }
 
-        //var cardItemController = panel.GetComponentInChildren<CardItemController>();
-        //cardItemController.UpdateCards(player);
+        PlayerController playerCont = controller.GetLocalPlayer();
+
+        if(playerCont != null){
+            cardItemController.UpdateCards(playerCont);
+        }
+       
 
         // Update player victory points count
         panel.transform.GetChild(0).GetComponentInChildren<Text>().text = player.victoryPoints.ToString();
@@ -153,8 +165,38 @@ public class UIController : MonoBehaviour
         eventText.GetComponent<GraphicFade>().FadeInAndOut(1f, duration);
     }
 
+    public void DisplayEventImage(Sprite image, float duration) {
+        eventImage.sprite = image;
+        eventImage.GetComponent<GraphicFade>().FadeInAndOut(1f, duration);
+    }
+
     public void DisplayGainedResource(string playerName, ResourceStorage storage) {
         resourceItemController.ShowResources(playerName, storage);
+    }
+
+    public void DisplayUsedCard(string displayName, Card card) {
+        string title = null;
+        Sprite image = null;
+
+        switch(card.cardType) {
+            case CardType.VP: {
+                title = $"{displayName} gained one victory point!";
+                image = cardVP;
+                break;
+            }
+            case CardType.Thief: {
+                title = $"{displayName} gained a theif!";
+                image = cardKnight;
+                break;
+            }
+        }
+
+        if(title == null || image == null) {
+            return;
+        }
+                        
+        DisplayEventText(title, 3f);
+        DisplayEventImage(image, 3f);
     }
 
     public void EnableWinPanel(bool enable, Player winner) {
@@ -173,7 +215,7 @@ public class UIController : MonoBehaviour
         var gameController = GetComponent<GameController>();
         var localPlayer = gameController.GetPlayers(out var otherPlayers);
         tradingViewController.canCancelWithESC = true;
-        tradingViewController.ShowTradingPanel(localPlayer, otherPlayers, gameController.ExchangeResources, gameController.SendTradeRequest);
+        tradingViewController.ShowTradingPanel(localPlayer, otherPlayers, gameController.ExchangeResources, gameController.SendTradeRequest, gameController.SendTradeRequestCancellation);
     }
 
     public void DisableTrading() {
@@ -186,6 +228,12 @@ public class UIController : MonoBehaviour
         var gameController = GetComponent<GameController>();
         tradingViewController.canCancelWithESC = false;
         tradeRequestViewController.Initialize(playerToTradeWith, from, to, gameController.SendTradeRequestAnswer);
+    }
+
+    public void EnableCardItems(){
+        var gameController = GetComponent<GameController>();
+        var localPlayer = gameController.GetPlayers(out var otherPlayers);
+        cardItemController.showCardItems();
     }
 
     private void InitializeFonts() {

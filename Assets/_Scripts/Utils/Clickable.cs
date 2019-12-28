@@ -13,4 +13,9 @@ public class Clickable : MonoBehaviour, IPointerClickHandler
             OnClick();
         }
     }
+
+    public void ResetEvent()
+    {
+        OnClick = null;
+    }
 }
