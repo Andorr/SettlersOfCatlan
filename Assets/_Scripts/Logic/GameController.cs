@@ -117,8 +117,12 @@ public class GameController : MonoBehaviour, ITurnCallback
 
         // Display resources text if the player gained resources
         if(info.actionType == ActionType.GainedResources) {
-            string diplayName = player.id.Equals(localPlayer.player.id) ? "You" : player.name;
-            uiController.DisplayGainedResource(diplayName, (ResourceStorage)info.data);
+            string displayName = player.id.Equals(localPlayer.player.id) ? "You" : player.name;
+            uiController.DisplayGainedResource(displayName, (ResourceStorage)info.data);
+        }
+        else if(info.actionType == ActionType.UseCard) {
+            string displayName = player.id.Equals(localPlayer.player.id) ? "You" : player.name;
+            uiController.DisplayUsedCard(displayName, (Card)info.data);
         }
     }
 

@@ -276,11 +276,29 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     }
 
     public void UseCard(string id){
-        player.cards[id].UseCard();
-
+        Card card = player.cards[id];
+        if(card == null) {
+            return;
+        }
+        card.UseCard();
+        
         if(photonView.IsMine) {
             BroadcastCardUsage(id);
+            BroadcastResourceChange();
+
+            // Do something...
+            switch(card.cardType) {
+                case CardType.Thief: {
+                    // TODO: Start thief placement mode
+                    break;
+                }
+                case CardType.VP: {
+                    break;
+                }
+            }
         }
+
+        RaiseEvent(ActionType.UseCard, card);
     }
 
     public void RetriveCard(CardType cardType){
