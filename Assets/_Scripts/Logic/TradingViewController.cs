@@ -11,7 +11,7 @@ using UnityEngine.Events;
 
 public class TradingViewController : MonoBehaviour
 {
-    private delegate void OnPlayerSelect(Player player);
+    public delegate void OnPlayerSelect(Player player);
     private OnPlayerSelect playerSelectHandler;
     private ExchangeHandler onExchange;
     private TradeHandler onTradeRequestSent;
@@ -59,6 +59,24 @@ public class TradingViewController : MonoBehaviour
             entry.eventID = EventTriggerType.PointerClick;
             entry.callback.AddListener((data) => {
                 playerSelectHandler(p);
+            });
+            obj.GetComponent<EventTrigger>().triggers.Add(entry);
+        }
+    }
+
+    public void EnablePlayerSelect(Player[] players, OnPlayerSelect callback) {
+        playerSelectPanel.SetActive(true);
+
+        for(int i = playerSelectPanel.transform.childCount - 1; i >= 0; i--) {
+            Destroy(playerSelectPanel.transform.GetChild(i));
+        }
+        foreach(Player p in players) {
+            GameObject obj = GameObject.Instantiate(playerCardPrefab, Vector3.zero, Quaternion.identity);
+            obj.transform.SetParent(playerSelectPanel.transform.GetChild(1));
+            EventTrigger.Entry entry = new EventTrigger.Entry();
+            entry.eventID = EventTriggerType.PointerClick;
+            entry.callback.AddListener((data) => {
+                callback(p);
             });
             obj.GetComponent<EventTrigger>().triggers.Add(entry);
         }

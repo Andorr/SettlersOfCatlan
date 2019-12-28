@@ -218,6 +218,13 @@ public class UIController : MonoBehaviour
         tradingViewController.ShowTradingPanel(localPlayer, otherPlayers, gameController.ExchangeResources, gameController.SendTradeRequest, gameController.SendTradeRequestCancellation);
     }
 
+    public void EnablePlayerPick(TradingViewController.OnPlayerSelect callback) {
+        var gameController = GetComponent<GameController>();
+        var localplayer = gameController.GetPlayers(out var otherPlayers);
+        tradingViewController.canCancelWithESC = false;
+        tradingViewController.EnablePlayerSelect(otherPlayers);
+    }
+
     public void DisableTrading() {
         tradingViewController.Disable();
         tradingViewController.canCancelWithESC = true;
