@@ -21,6 +21,10 @@ using System;
             used = true;
         }
 
+        public bool IsUsed() {
+            return used;
+        }
+
         public string getTitle(){
             switch (this.cardType) {
                 case CardType.Thief:

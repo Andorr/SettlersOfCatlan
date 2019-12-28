@@ -17,6 +17,8 @@ public class GameController : MonoBehaviour, ITurnCallback
 
     private int VICTORY_POINTS_TO_WIN = 10;
 
+    public int thiefTileId = 0;
+
     public enum GameState {
         PlayersCreateHouses,
         Play,
@@ -81,7 +83,7 @@ public class GameController : MonoBehaviour, ITurnCallback
 
         // Gain resources for the round
         if(GameState.Play == state) {
-            localPlayer.GainResources();
+            localPlayer.GainResources(thiefTileId);
         }
 
         // Enable turn for new player
@@ -117,8 +119,12 @@ public class GameController : MonoBehaviour, ITurnCallback
 
         // Display resources text if the player gained resources
         if(info.actionType == ActionType.GainedResources) {
-            string diplayName = player.id.Equals(localPlayer.player.id) ? "You" : player.name;
-            uiController.DisplayGainedResource(diplayName, (ResourceStorage)info.data);
+            string displayName = player.id.Equals(localPlayer.player.id) ? "You" : player.name;
+            uiController.DisplayGainedResource(displayName, (ResourceStorage)info.data);
+        }
+        else if(info.actionType == ActionType.UseCard) {
+            string displayName = player.id.Equals(localPlayer.player.id) ? "You" : player.name;
+            uiController.DisplayUsedCard(displayName, (Card)info.data);
         }
     }
 
@@ -187,6 +193,14 @@ public class GameController : MonoBehaviour, ITurnCallback
             uiController.DisplayEventText("Trade declined!", 4f);
         }
     }
+
+    public void SendTradeRequestCancellation(Player player) {
+        players[player.id].CancelTradeRequest();
+    }
+
+    public void OnTradeRequestCancelled() {
+        uiController.DisableTrading();
+    }
     # endregion
 
     # region Handler Logic
@@ -236,5 +250,21 @@ public class GameController : MonoBehaviour, ITurnCallback
             handler = null;
         }
     }
+
+    // Temp function, should be removed... plays thief card for localplayer
+    public void PlayThief() {
+        foreach(var tileController in mapController.GetAllTileControllers()) {
+            tileController.SetSelectable(true);
+        }
+    }
+
+    public void SetThiefTile(int newTileId) {
+        thiefTileId = newTileId;
+    }
+
+    public TileController GetThiefTile() {
+        return thiefTileId != null ? mapController.GetTileControllerById((int) thiefTileId) : null;
+    }
+
     #endregion
 }

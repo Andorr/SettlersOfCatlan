@@ -1,5 +1,6 @@
 ﻿using State;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class PlayerTradeViewController : MonoBehaviour
@@ -14,34 +15,65 @@ public class PlayerTradeViewController : MonoBehaviour
     private Player selectedPlayer;
 
     public delegate void TradeHandler(Player playerToTradeWith, ResourceStorage a, ResourceStorage b);
+    public delegate void TradeCancellation(Player player);
     private TradeHandler onTradeRequested;
+    private TradeCancellation onCancel;
+    private bool waitingForAnswer;
 
     [Header("Players")]
     public GameObject playerPrefab;
     public GameObject playerHolder;
     public Text currentPlayerText;
 
+    [Header("Panels")]
+    public GameObject tradeSelectPanel;
+    public GameObject tradeViewPanel;
+    public GameObject resourceItemPrefab;
+
     [Header("Resource Buttons")]
+    public Button requestTradeBtn;
     public GameObject[] from;
     public GameObject[] to;
+
+    [Header("Sprites")]
+    public Sprite woodSprite;
+    public Sprite stoneSprite;
+    public Sprite claySprite;
+    public Sprite wheatSprite;
+    public Sprite woolSprite;
 
     public void Start() {
         InitializeButtons();
     }
 
-    public void Initialize(Player localPlayer, Player[] playersToTradeWith, TradeHandler handler) {
+    public void Initialize(Player localPlayer, Player[] playersToTradeWith, TradeHandler handler, TradeCancellation onCancel) {
         fromStorage = localPlayer.resources;
         fromSelected = new ResourceStorage();
         toSelected = new ResourceStorage();
         players = playersToTradeWith;
+        waitingForAnswer = false;
         InitializePlayers();
-        ChangePlayer(playersToTradeWith[0]);
+        ChangePlayer(players[0]);
+        ShowTradeView(false);
         onTradeRequested = handler;
+        this.onCancel = onCancel;
     }
 
     public void OnTradeRequestClick() {
+        if(waitingForAnswer) {
+            ShowTradeView(false);
+            if(onCancel != null) {
+                onCancel(selectedPlayer);
+                waitingForAnswer = false;
+            }
+            return;
+        }
+
+
         if(onTradeRequested != null) {
+            waitingForAnswer = true;
             onTradeRequested(selectedPlayer, fromSelected, toSelected);
+            ShowTradeView(true);
         }
     }
 
@@ -125,14 +157,70 @@ public class PlayerTradeViewController : MonoBehaviour
     }
 
     private void ChangePlayer(Player p) {
+        if(waitingForAnswer) {
+            return;
+        }
+
         selectedPlayer = p;
         toStorage = p.resources;
         toSelected = new ResourceStorage();
-        currentPlayerText.text = $"Trade with <color = {ColorUtility.ToHtmlStringRGB(p.GetColor())}>{p.name}</color>";
+        currentPlayerText.text = $"Trade with {p.name}";
         UpdateFromView();
         UpdateToView();
     }
 
+    private void ShowTradeView(bool enable) {
+        tradeSelectPanel.SetActive(!enable);
+        tradeViewPanel.SetActive(enable);
 
+        if(enable) {
+            UpdateResourceView(tradeViewPanel.transform.GetChild(0).gameObject, fromSelected);
+            UpdateResourceView(tradeViewPanel.transform.GetChild(2).gameObject, toSelected);
+            currentPlayerText.text = "Waiting for answer";
+            requestTradeBtn.GetComponentInChildren<Text>().text = "Cancel trade";
+        } else {
+            requestTradeBtn.GetComponentInChildren<Text>().text = "Request trade";
+            currentPlayerText.text = $"Trade with {selectedPlayer.name}";
+        }
+    }
+
+    private void UpdateResourceView(GameObject holder, ResourceStorage storage) {
+        // Delete all children
+        foreach(Transform child in holder.transform) {
+            Destroy(child.gameObject);
+        }
+
+        var resources = new int[]{storage.wood, storage.stone, storage.clay, storage.wheat, storage.wool};
+        for(int i = 0; i < resources.Length; i++) {
+            if(resources[i] <= 0) {
+                continue;
+            }
+            var resourceType = ResourceUtil.IntToType(i);
+            var resourceItem = GameObject.Instantiate(resourceItemPrefab);
+            resourceItem.transform.SetParent(holder.transform);
+            resourceItem.GetComponentInChildren<Image>().sprite = TypeToSprite(resourceType);
+            resourceItem.GetComponentInChildren<Text>().text = $"{resources[i]}x";
+        }
+    }
     
+    private Sprite TypeToSprite(ResourceType type) {
+        switch(type) {
+            case ResourceType.Wood: {
+                return woodSprite;
+            }
+            case ResourceType.Stone: {
+                return stoneSprite;
+            }
+            case ResourceType.Clay: {
+                return claySprite;
+            }
+            case ResourceType.Wheat: {
+                return wheatSprite;
+            }
+            case ResourceType.Wool: {
+                return woolSprite;
+            }
+        }
+        return null;
+    }
 }

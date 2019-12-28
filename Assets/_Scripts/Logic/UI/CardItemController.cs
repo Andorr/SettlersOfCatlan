@@ -11,7 +11,7 @@ public class CardItemController : MonoBehaviour
     public GameObject cardView;
     public GameObject cardObject;
     public GameObject cardContainer;
-    public Texture[] images;
+    public Sprite[] cardImages;
     public Dictionary<string, GameObject> cardListGameObjects = new Dictionary<string, GameObject>();
     private Dictionary<string, Card> tempCards = new Dictionary<string, Card>();
 
@@ -27,12 +27,12 @@ public class CardItemController : MonoBehaviour
 
             cardEntryObject.transform.SetParent(cardContainer.transform);
             cardEntryObject.transform.localScale = Vector3.one;
-            cardEntryObject.transform.Find("Container").transform.Find("Title").GetComponent<Text>().text = card.getTitle();
-            cardEntryObject.transform.Find("Container").transform.Find("Image").GetComponent<RawImage>().texture = getTexture(card);
+            cardEntryObject.GetComponent<Image>().sprite = getCardSprite(card);
+      
             cardEntryObject.GetComponent<Clickable>().ResetEvent();
             cardEntryObject.GetComponent<Clickable>().OnClick += () => {
-                Debug.Log("clicked!");
                 player.UseCard(card.id);
+                Disable();
             };
 
             cardListGameObjects.Add(card.id, cardEntryObject);
@@ -43,14 +43,14 @@ public class CardItemController : MonoBehaviour
         this.cardView.SetActive(true);
     }
 
-    private Texture getTexture(Card card){
+    private Sprite getCardSprite(Card card){
         switch(card.cardType){
             case CardType.Thief:
-                return images[0];
+                return cardImages[0];
             case CardType.VP:
-                return images[1];
+                return cardImages[1];
             default:
-                return images[2];
+                return cardImages[2];
         }
     }
     private void ClearCards(){

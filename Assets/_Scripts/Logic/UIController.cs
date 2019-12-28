@@ -13,6 +13,7 @@ public class UIController : MonoBehaviour
     public Font font;
     public Button endTurnButton;
     public Text eventText;
+    public Image eventImage;
     public GameObject sideActionPanel;
     public GameObject cardView;
     public WinPanelController winPanel;
@@ -27,6 +28,10 @@ public class UIController : MonoBehaviour
     public GameObject playerTwoPanel;
     public GameObject playerThreePanel;
     public GameObject playerFourPanel;
+
+    [Header("Sprites")]
+    public Sprite cardVP;
+    public Sprite cardKnight;
 
     private Dictionary<string, GameObject> playerPanels = new Dictionary<string, GameObject>(); // (playerId, playerPanel)
 
@@ -160,8 +165,38 @@ public class UIController : MonoBehaviour
         eventText.GetComponent<GraphicFade>().FadeInAndOut(1f, duration);
     }
 
+    public void DisplayEventImage(Sprite image, float duration) {
+        eventImage.sprite = image;
+        eventImage.GetComponent<GraphicFade>().FadeInAndOut(1f, duration);
+    }
+
     public void DisplayGainedResource(string playerName, ResourceStorage storage) {
         resourceItemController.ShowResources(playerName, storage);
+    }
+
+    public void DisplayUsedCard(string displayName, Card card) {
+        string title = null;
+        Sprite image = null;
+
+        switch(card.cardType) {
+            case CardType.VP: {
+                title = $"{displayName} gained one victory point!";
+                image = cardVP;
+                break;
+            }
+            case CardType.Thief: {
+                title = $"{displayName} gained a theif!";
+                image = cardKnight;
+                break;
+            }
+        }
+
+        if(title == null || image == null) {
+            return;
+        }
+                        
+        DisplayEventText(title, 3f);
+        DisplayEventImage(image, 3f);
     }
 
     public void EnableWinPanel(bool enable, Player winner) {
@@ -180,7 +215,14 @@ public class UIController : MonoBehaviour
         var gameController = GetComponent<GameController>();
         var localPlayer = gameController.GetPlayers(out var otherPlayers);
         tradingViewController.canCancelWithESC = true;
-        tradingViewController.ShowTradingPanel(localPlayer, otherPlayers, gameController.ExchangeResources, gameController.SendTradeRequest);
+        tradingViewController.ShowTradingPanel(localPlayer, otherPlayers, gameController.ExchangeResources, gameController.SendTradeRequest, gameController.SendTradeRequestCancellation);
+    }
+
+    public void EnablePlayerPick(TradingViewController.OnPlayerSelect callback) {
+        var gameController = GetComponent<GameController>();
+        var localplayer = gameController.GetPlayers(out var otherPlayers);
+        tradingViewController.canCancelWithESC = false;
+        // tradingViewController.EnablePlayerSelect(otherPlayers);
     }
 
     public void DisableTrading() {

@@ -107,9 +107,9 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         }
     }
 
-    public void GainResources() {
+    public void GainResources(int thiefTileId) {
         // Let the player gain resources
-        (int wood, int stone, int clay, int wheat, int wool) = mapController.CalculateGainableResources(player);
+        (int wood, int stone, int clay, int wheat, int wool) = mapController.CalculateGainableResources(player, thiefTileId);
         AddResources(wood, stone, clay, wheat, wool);
         
         if(photonView.IsMine) {
@@ -165,6 +165,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
         // Raise event
         RaiseEvent(ActionType.MoveWorker);
+    }
+
+    public void MoveThief(int newTileId) {
+        if (photonView.IsMine) {
+            photonView.RPC("OnMoveThief", RpcTarget.All, newTileId);
+        }
     }
 
     public void BuildPath(Path path)
@@ -276,15 +282,33 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     }
 
     public void UseCard(string id){
-        player.cards[id].UseCard();
-
+        Card card = player.cards[id];
+        if(card == null) {
+            return;
+        }
+        card.UseCard();
+        
         if(photonView.IsMine) {
             BroadcastCardUsage(id);
+            BroadcastResourceChange();
+
+            // Do something...
+            switch(card.cardType) {
+                case CardType.Thief: {
+                    // TODO: Start thief placement mode
+                    break;
+                }
+                case CardType.VP: {
+                    break;
+                }
+            }
         }
+
+        RaiseEvent(ActionType.UseCard, card);
     }
 
-    public void RetriveCard(CardType cardType){
-        string g = Guid.NewGuid().ToString();
+    public void RetriveCard(CardType cardType, string id = null){
+        string g = id == null ? Guid.NewGuid().ToString() : id;
         Card card = new Card(g.ToString(),cardType);
 
         ResourceUtil.PurchaseCard(player.resources);
@@ -294,15 +318,15 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         RaiseEvent(ActionType.BuyCard);
 
         if(photonView.IsMine){
-            BrodcastCardRetrived(g, (int)card.cardType);
+            BrodcastCardRetrieved(g, (int)card.cardType);
         }
 
     }
     private void BroadcastCardUsage(string id){
-        photonView.RPC("OnCardUsage", RpcTarget.Others, id);
+        photonView.RPC("OnCardUsed", RpcTarget.Others, id);
     }
-    private void BrodcastCardRetrived(string id, int type){
-        photonView.RPC("OnCardRetrived", RpcTarget.Others, id, type);
+    private void BrodcastCardRetrieved(string id, int type){
+        photonView.RPC("OnCardRetrieved", RpcTarget.Others, id, type);
     }
 
     public void BroadcastEvent(string message) {
@@ -328,6 +352,10 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         photonView.RPC("OnTradeRequestAnswerReceived", RpcTarget.All,  playerToTradeWith.id, answer, from, to);
     }
 
+    public void CancelTradeRequest() {
+        photonView.RPC("OnTradeRequestCancelled", RpcTarget.All);
+    }
+
     # endregion
 
     # region RPC Methods
@@ -347,6 +375,16 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             return;
         }
         MoveWorker(wc.worker, location);
+    }
+
+    [PunRPC]
+    public void OnMoveThief(int newTileId) {
+        if (gameController.thiefTileId != null) {
+            TileController oldTile = mapController.GetTileControllerById((int) gameController.thiefTileId);
+            oldTile.RemoveThief(gameController);
+        }
+        TileController newTile = mapController.GetTileControllerById(newTileId);
+        newTile.AddThief(gameController);
     }
 
     [PunRPC]
@@ -409,6 +447,24 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         if(photonView.IsMine) {
             gameController.OnTradeRequestAnswered(answer, playerIDToTradeWith, from, to);
         }
+    }
+
+    [PunRPC]
+    void OnTradeRequestCancelled() {
+        if(photonView.IsMine) {
+            gameController.OnTradeRequestCancelled();
+        }
+    }
+
+    [PunRPC]
+    void OnCardUsed(string id) {
+        UseCard(id);
+    }
+
+    [PunRPC]
+    void OnCardRetrieved(string cardId, int cardType) {
+        CardType type = (CardType)cardType;
+        RetriveCard(type, cardId);
     }
     # endregion
 

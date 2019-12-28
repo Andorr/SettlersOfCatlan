@@ -9,7 +9,9 @@ public class TileController : MonoBehaviour
     [SerializeField]
     public Tile tile;
     public Transform prefabHolder;
+    public Transform thiefHolder;
     public Text probabilityText;
+    public GameObject selectableIndicator;
 
     [Header("Prefabs")]
     public GameObject forestPrefab;
@@ -17,6 +19,12 @@ public class TileController : MonoBehaviour
     public GameObject fieldPrefab;
     public GameObject pasturePrefab;
     public GameObject hillPrefab;
+    public GameObject thiefPrefab;
+
+
+    private GameObject instantiatedThief;
+
+    
 
 
     public void Initialize(Tile newTile, float radius) {
@@ -63,4 +71,25 @@ public class TileController : MonoBehaviour
         }
     } 
 
+    public void SetSelectable(bool selectable) {
+        transform.GetComponent<BoxCollider>().enabled = selectable;
+        selectableIndicator.SetActive(selectable);
+    }
+
+    public void AddThief(GameController gameController) {
+        GameObject thiefObject = GameObject.Instantiate(thiefPrefab, transform.position, Quaternion.identity);
+        thiefObject.transform.SetParent(thiefHolder);
+        instantiatedThief = thiefObject;
+        gameController.SetThiefTile(tile.id);
+    }
+
+    public void RemoveThief(GameController gameController) {
+        if (instantiatedThief != null) {
+            instantiatedThief.GetComponent<Animator>().SetTrigger("Shrink");
+            instantiatedThief.GetComponent<ThiefController>().destroyOnFinishedAnimation = true;
+            instantiatedThief = null;
+        } else {
+            Debug.Log("Cannot destroy empty object!");
+        }
+    }
 }

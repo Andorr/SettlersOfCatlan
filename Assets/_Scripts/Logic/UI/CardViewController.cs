@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using State;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,24 +14,9 @@ public class CardViewController : MonoBehaviour
 
 
     public void UpdateCardCount(Player player) {
-        Dictionary<int, int> temp = Counter(player.cards);
-        Thief.text = temp[(int)CardType.Thief].ToString();
-        VP.text = temp[(int)CardType.VP].ToString();
-        TotalCards.text = player.cards.Count.ToString();
-    }
-
-
-    private Dictionary<int, int> Counter(Dictionary<string, Card> cards){
-        Dictionary<int, int> temp = new Dictionary<int, int>();
-        
-        temp.Add((int)CardType.Thief,0);
-        temp.Add((int)CardType.VP,0);
-
-        foreach(KeyValuePair<string, Card> card in cards)
-        {
-            if(!card.Value.used) continue;
-            temp[(int)card.Value.cardType] += 1;
-        }
-        return temp;
+        var usedCards = player.cards.Values.Where(c => c.used);
+        Thief.text = usedCards.Where(c => c.cardType == CardType.Thief).Count().ToString();
+        VP.text = usedCards.Where(c => c.cardType == CardType.VP).Count().ToString();
+        TotalCards.text = player.cards.Values.Where(c => !c.used).Count().ToString();
     }
 }

@@ -7,13 +7,15 @@ using UnityEngine.EventSystems;
 
 using static ExchangeViewController;
 using static PlayerTradeViewController;
+using UnityEngine.Events;
 
 public class TradingViewController : MonoBehaviour
 {
-    private delegate void OnPlayerSelect(Player player);
+    public delegate void OnPlayerSelect(Player player);
     private OnPlayerSelect playerSelectHandler;
     private ExchangeHandler onExchange;
     private TradeHandler onTradeRequestSent;
+    private TradeCancellation onTradeCancel;
 
     private Player localPlayer;
     private Player[] playersToTradeWith;
@@ -24,21 +26,24 @@ public class TradingViewController : MonoBehaviour
     public GameObject playerCardPrefab;
 
     [Header("Trading Object")]
+    public GameObject tabs;
     public GameObject playerSelectPanel;
     public GameObject tradePanel;
     public GameObject exchangePanel;
     public GameObject playerTradePanel;
 
-    public void ShowTradingPanel(Player localPlayer, Player[] playersToTradeWith, ExchangeHandler exchangeHandler, TradeHandler tradeHandler) {
+    public void ShowTradingPanel(Player localPlayer, Player[] playersToTradeWith, ExchangeHandler exchangeHandler, TradeHandler tradeHandler, TradeCancellation onTradeCancel) {
         this.localPlayer = localPlayer;
         this.playersToTradeWith = playersToTradeWith;
         onExchange = exchangeHandler;
         onTradeRequestSent = tradeHandler;
+        this.onTradeCancel = onTradeCancel;
 
         // Select one player to trade with
         gameObject.SetActive(true);
         tradePanel.SetActive(true);
         EnableExchangePanel();
+        EnableClosability(true);
     }
 
     private void EnablePlayerSelect(Player[] players) {
@@ -54,6 +59,24 @@ public class TradingViewController : MonoBehaviour
             entry.eventID = EventTriggerType.PointerClick;
             entry.callback.AddListener((data) => {
                 playerSelectHandler(p);
+            });
+            obj.GetComponent<EventTrigger>().triggers.Add(entry);
+        }
+    }
+
+    public void EnablePlayerSelect(Player[] players, OnPlayerSelect callback) {
+        playerSelectPanel.SetActive(true);
+
+        for(int i = playerSelectPanel.transform.childCount - 1; i >= 0; i--) {
+            Destroy(playerSelectPanel.transform.GetChild(i));
+        }
+        foreach(Player p in players) {
+            GameObject obj = GameObject.Instantiate(playerCardPrefab, Vector3.zero, Quaternion.identity);
+            obj.transform.SetParent(playerSelectPanel.transform.GetChild(1));
+            EventTrigger.Entry entry = new EventTrigger.Entry();
+            entry.eventID = EventTriggerType.PointerClick;
+            entry.callback.AddListener((data) => {
+                callback(p);
             });
             obj.GetComponent<EventTrigger>().triggers.Add(entry);
         }
@@ -79,10 +102,22 @@ public class TradingViewController : MonoBehaviour
         playerTradePanel.SetActive(true);
         playerTradePanel.GetComponent<PlayerTradeViewController>().Initialize(localPlayer, playersToTradeWith, (playerToTradeWith, resourceA, resourceB) => {
             if(onTradeRequestSent != null) {
-                canCancelWithESC = false;
                 onTradeRequestSent(playerToTradeWith, resourceA, resourceB);
+                EnableClosability(false);
+            }
+        }, (player) => {
+            if(onTradeCancel != null) {
+                onTradeCancel(player);
+                EnableClosability(true);
             }
         });
+    }
+
+    private void EnableClosability(bool enable) {
+        canCancelWithESC = enable;
+        foreach(Button b in tabs.GetComponentsInChildren<Button>()) {
+            b.interactable = enable;
+        }
     }
 
     public void Disable() {

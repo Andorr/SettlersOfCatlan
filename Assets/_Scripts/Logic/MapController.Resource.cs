@@ -6,7 +6,7 @@ using UnityEngine;
 
 public partial class MapController 
 {
-    public (int wood, int stone, int clay, int wheat, int wool) CalculateGainableResources(Player player) {
+    public (int wood, int stone, int clay, int wheat, int wool) CalculateGainableResources(Player player, int thiefTileId) {
         
         // Get the count where the player has one or more locations for each tile => (tileId, player's locations)
         var tileLocationCounts = map.tiles.Values
@@ -22,6 +22,9 @@ public partial class MapController
         foreach(var (tileId, playerLocations) in tileLocationCounts) {
             var tile = map.tiles[tileId];
             int resourcesToAdd = 0;
+
+            // If theif is on this tile, skip to next iteration of loop
+            if (tileId == thiefTileId) continue;
 
             foreach(var l in playerLocations) {
                 // Decide if the resource should given to the player from this location, based on randomness and the tile number
