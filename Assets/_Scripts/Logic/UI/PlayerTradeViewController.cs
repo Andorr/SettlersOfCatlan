@@ -53,8 +53,8 @@ public class PlayerTradeViewController : MonoBehaviour
         players = playersToTradeWith;
         waitingForAnswer = false;
         InitializePlayers();
+        ChangePlayer(players[0]);
         ShowTradeView(false);
-        ChangePlayer(playersToTradeWith[0]);
         onTradeRequested = handler;
         this.onCancel = onCancel;
     }
@@ -64,6 +64,7 @@ public class PlayerTradeViewController : MonoBehaviour
             ShowTradeView(false);
             if(onCancel != null) {
                 onCancel(selectedPlayer);
+                waitingForAnswer = false;
             }
             return;
         }
@@ -163,7 +164,7 @@ public class PlayerTradeViewController : MonoBehaviour
         selectedPlayer = p;
         toStorage = p.resources;
         toSelected = new ResourceStorage();
-        currentPlayerText.text = $"Trade with <color = {ColorUtility.ToHtmlStringRGB(p.GetColor())}>{p.name}</color>";
+        currentPlayerText.text = $"Trade with {p.name}";
         UpdateFromView();
         UpdateToView();
     }
@@ -174,12 +175,12 @@ public class PlayerTradeViewController : MonoBehaviour
 
         if(enable) {
             UpdateResourceView(tradeViewPanel.transform.GetChild(0).gameObject, fromSelected);
-            UpdateResourceView(tradeViewPanel.transform.GetChild(1).gameObject, toSelected);
+            UpdateResourceView(tradeViewPanel.transform.GetChild(2).gameObject, toSelected);
             currentPlayerText.text = "Waiting for answer";
             requestTradeBtn.GetComponentInChildren<Text>().text = "Cancel trade";
         } else {
             requestTradeBtn.GetComponentInChildren<Text>().text = "Request trade";
-            currentPlayerText.text = $"Trade with <color = {ColorUtility.ToHtmlStringRGB(selectedPlayer.GetColor())}>{selectedPlayer.name}</color>";
+            currentPlayerText.text = $"Trade with {selectedPlayer.name}";
         }
     }
 

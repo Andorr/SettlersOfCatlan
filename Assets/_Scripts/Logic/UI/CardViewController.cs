@@ -17,6 +17,6 @@ public class CardViewController : MonoBehaviour
         var usedCards = player.cards.Values.Where(c => c.used);
         Thief.text = usedCards.Where(c => c.cardType == CardType.Thief).Count().ToString();
         VP.text = usedCards.Where(c => c.cardType == CardType.VP).Count().ToString();
-        TotalCards.text = player.cards.Values.Where(c => !c.used).ToString();
+        TotalCards.text = player.cards.Values.Where(c => !c.used).Count().ToString();
     }
 }

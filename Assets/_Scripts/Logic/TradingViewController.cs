@@ -26,6 +26,7 @@ public class TradingViewController : MonoBehaviour
     public GameObject playerCardPrefab;
 
     [Header("Trading Object")]
+    public GameObject tabs;
     public GameObject playerSelectPanel;
     public GameObject tradePanel;
     public GameObject exchangePanel;
@@ -42,6 +43,7 @@ public class TradingViewController : MonoBehaviour
         gameObject.SetActive(true);
         tradePanel.SetActive(true);
         EnableExchangePanel();
+        EnableClosability(true);
     }
 
     private void EnablePlayerSelect(Player[] players) {
@@ -82,15 +84,22 @@ public class TradingViewController : MonoBehaviour
         playerTradePanel.SetActive(true);
         playerTradePanel.GetComponent<PlayerTradeViewController>().Initialize(localPlayer, playersToTradeWith, (playerToTradeWith, resourceA, resourceB) => {
             if(onTradeRequestSent != null) {
-                canCancelWithESC = false;
                 onTradeRequestSent(playerToTradeWith, resourceA, resourceB);
+                EnableClosability(false);
             }
         }, (player) => {
             if(onTradeCancel != null) {
                 onTradeCancel(player);
-                canCancelWithESC = true;
+                EnableClosability(true);
             }
         });
+    }
+
+    private void EnableClosability(bool enable) {
+        canCancelWithESC = enable;
+        foreach(Button b in tabs.GetComponentsInChildren<Button>()) {
+            b.interactable = enable;
+        }
     }
 
     public void Disable() {
