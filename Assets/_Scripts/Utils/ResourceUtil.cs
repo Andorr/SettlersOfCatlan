@@ -19,7 +19,7 @@ public static class ResourceUtil
         return storage.clay >= 1 && storage.wood >= 1;
     }
     public static bool CanAffordCard(ResourceStorage storage){
-        return true;//storage.wool >= 1 && storage.stone >= 1 && storage.wheat >= 1;
+        return storage.wool >= 1 && storage.stone >= 1 && storage.wheat >= 1;
     }
 
     public static void PurchaseHouse(ResourceStorage storage)
