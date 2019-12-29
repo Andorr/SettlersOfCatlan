@@ -66,6 +66,7 @@ public class TradingViewController : MonoBehaviour
                 callback(p);
             });
             obj.GetComponent<EventTrigger>().triggers.Add(entry);
+            obj.GetComponent<Image>().color = p.GetColor();
         }
     }
 
