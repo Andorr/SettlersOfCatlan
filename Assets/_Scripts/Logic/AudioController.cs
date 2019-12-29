@@ -69,20 +69,20 @@ public class AudioController : MonoBehaviour
         Destroy(newSource, clip.length);
     }
 
-    public void PlayClip(AudioClip clip) {
+    public void PlayClip(AudioClip clip, float volume = 0.5f) {
         if(clip == null) {
             return;
         }
 
         AudioSource newSource = gameObject.AddComponent<AudioSource>();
         newSource.clip = clip;
-        newSource.volume = 0.5f;
+        newSource.volume = volume;
         newSource.Play();
         Destroy(newSource, clip.length);
     }
 
-    public void PlayClip(string soundname) {
-        PlayClip(GetCachedAudioClip(soundname));
+    public void PlayClip(string soundname, float volume = 0.5f) {
+        PlayClip(GetCachedAudioClip(soundname), volume);
     }
 
     public void BackgroundMusic(bool shouldPlay) {

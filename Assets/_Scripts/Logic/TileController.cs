@@ -81,6 +81,7 @@ public class TileController : MonoBehaviour
         thiefObject.transform.SetParent(thiefHolder);
         instantiatedThief = thiefObject;
         gameController.SetThiefTile(tile.id);
+        thiefObject.GetComponent<ThiefController>().PlayAnim();
     }
 
     public void RemoveThief(GameController gameController) {

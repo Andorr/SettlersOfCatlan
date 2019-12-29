@@ -88,10 +88,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             uiController.EnableSideActionPanel(false);
             uiController.EnableActionPanel(false);
             mapController.EnableLocationBoxColliders(false);
+            EnableWorkers(false);
         } else if (state == State.ThiefMovement) {
             uiController.EnableEndTurnButton(true, () => EndTurn());
             uiController.EnableSideActionPanel(true);
             mapController.EnableLocationBoxColliders(true);
+            EnableWorkers(true);
         }
         state = newState;
     }
@@ -349,12 +351,11 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         
         player.cards.Add(g,card);
 
-        RaiseEvent(ActionType.BuyCard);
+        RaiseEvent(ActionType.BuyCard, card);
 
         if(photonView.IsMine){
             BrodcastCardRetrieved(g, (int)card.cardType);
         }
-
     }
     private void BroadcastCardUsage(string id){
         photonView.RPC("OnCardUsed", RpcTarget.Others, id);

@@ -174,7 +174,7 @@ public class UIController : MonoBehaviour
         resourceItemController.ShowResources(playerName, storage);
     }
 
-    public void DisplayUsedCard(string displayName, Card card) {
+    public void DisplayUsedCard(string displayName, Card card, string customTitle = null) {
         string title = null;
         Sprite image = null;
 
@@ -189,6 +189,10 @@ public class UIController : MonoBehaviour
                 image = cardKnight;
                 break;
             }
+        }
+
+        if(customTitle != null) {
+            title = customTitle;
         }
 
         if(title == null || image == null) {
@@ -241,6 +245,10 @@ public class UIController : MonoBehaviour
         var gameController = GetComponent<GameController>();
         var localPlayer = gameController.GetPlayers(out var otherPlayers);
         cardItemController.showCardItems();
+    }
+
+    public bool IsUIPanelsOpen() {
+        return tradingViewController.gameObject.activeSelf || tradeRequestViewController.gameObject.activeSelf || cardItemController.gameObject.activeSelf;
     }
 
     private void InitializeFonts() {

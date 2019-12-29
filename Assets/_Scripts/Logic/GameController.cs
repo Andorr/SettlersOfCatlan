@@ -4,6 +4,7 @@ using State;
 using UnityEngine;
 using System;
 using System.Linq;
+using UnityEngine.EventSystems;
 
 public class GameController : MonoBehaviour, ITurnCallback
 {
@@ -41,6 +42,10 @@ public class GameController : MonoBehaviour, ITurnCallback
     }
 
     public void Update() {
+        if(uiController.IsUIPanelsOpen()) {
+            return;
+        }
+
         if(Input.GetMouseButtonDown(0)) {
             HandleMouseClick();
         }
@@ -130,6 +135,11 @@ public class GameController : MonoBehaviour, ITurnCallback
         else if(info.actionType == ActionType.UseCard) {
             string displayName = player.id.Equals(localPlayer.player.id) ? "You" : player.name;
             uiController.DisplayUsedCard(displayName, (Card)info.data);
+            audioController.PlayClip("Sounds/Card", 0.4f);
+        }
+        else if(info.actionType == ActionType.BuyCard && IsLocalPlayer(player)) {
+            uiController.DisplayUsedCard("You", (Card)info.data, "You earned:");
+            audioController.PlayClip("Sounds/Card", 0.4f);
         }
     }
 
@@ -154,6 +164,10 @@ public class GameController : MonoBehaviour, ITurnCallback
 
     public Player GetPlayerById(string playerId) {
         return players[playerId].player;
+    }
+
+    public bool IsLocalPlayer(Player player) {
+        return localPlayer.player.id.Equals(player.id);
     }
 
     # endregion
