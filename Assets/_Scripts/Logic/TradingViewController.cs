@@ -58,6 +58,7 @@ public class TradingViewController : MonoBehaviour
 
         foreach(Player p in players) {
             GameObject obj = GameObject.Instantiate(playerCardPrefab, Vector3.zero, Quaternion.identity);
+            obj.GetComponentInChildren<Text>().text = p.name;
             obj.transform.SetParent(playerSelectPanel.transform.GetChild(1));
             EventTrigger.Entry entry = new EventTrigger.Entry();
             entry.eventID = EventTriggerType.PointerClick;
