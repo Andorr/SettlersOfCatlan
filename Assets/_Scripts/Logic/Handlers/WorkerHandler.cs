@@ -55,6 +55,8 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
             controller.GetLocalPlayer().SetState(PlayerController.State.WorkerMovement);
         }
         
+        // Play sound effect
+        workerController.PlayRandomSound();
     }
 
     public void OnUnselected(GameController controller)
@@ -136,6 +138,7 @@ public class WorkerHandler : MonoBehaviour, IActionHandler
         var rnd = new System.Random();
         CardType card =  (CardType)rnd.Next(System.Enum.GetNames(typeof(CardType)).Length);
         controller.GetLocalPlayer().RetriveCard(card);
+        OnUnselected(controller);
     }
 
     private void DisableMovement()

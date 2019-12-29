@@ -7,10 +7,12 @@ public class WorkerController : MonoBehaviour
 {
     [SerializeField]
     public Worker worker;
-    public Transform prefabHolder;
     private Animator anim;
 
     private AudioController audioController;
+
+    [Header("AudioClips")]
+    public AudioClip[] soundEffects;
 
     public enum WorkerState {
         Movable,
@@ -32,7 +34,6 @@ public class WorkerController : MonoBehaviour
     public void MoveWorker(Location location)
     {
         worker.location = location;
-        audioController.PlayOnPosition(transform.position, "Sounds/Worker/Click");
         StartCoroutine(MoveWorkerWithAnim(location));
         state = WorkerState.Immovable;
     }
@@ -54,5 +55,19 @@ public class WorkerController : MonoBehaviour
         yield return new WaitForSeconds(1);
         transform.position = location.position;
         anim.SetTrigger("Grow");
+    }
+
+    public void PlayRandomSound() {
+        if(soundEffects == null || soundEffects.Length == 0) {
+            return;
+        }
+
+        // Do not always play a sound
+        if(Random.Range(0, 3) == 0) {
+            return;
+        }
+
+        var audioClip = soundEffects[Random.Range(0, soundEffects.Length)];
+        audioController.PlayClip(audioClip);
     }
 }

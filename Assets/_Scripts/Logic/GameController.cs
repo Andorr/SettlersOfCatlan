@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour, ITurnCallback
 {
     public MapController mapController;
     public UIController uiController;
+    public AudioController audioController;
     public IActionHandler handler;
 
     private PlayerController localPlayer { get; set; }
@@ -31,6 +32,7 @@ public class GameController : MonoBehaviour, ITurnCallback
     public void Start() {
         mapController = GetComponent<MapController>();
         uiController = GetComponent<UIController>();
+        audioController = GameObject.FindGameObjectWithTag("AudioController").GetComponent<AudioController>();
         
         players = new Dictionary<string, PlayerController>();
 
@@ -95,6 +97,9 @@ public class GameController : MonoBehaviour, ITurnCallback
         Debug.Log($"It is now {currentPlayer.player.name}'s turn.");
         uiController.DisplayEventText($"It's {currentPlayer.player.name}'s turn!");
         uiController.ShowPlayerTurn(newPlayer);
+
+        // Play sound effect
+        audioController.PlayClip("Sounds/NewTurn");
     }
 
     public void ActionCallback(ActionInfo info) {

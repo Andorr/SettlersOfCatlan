@@ -54,4 +54,42 @@ public class AudioController : MonoBehaviour
 
         Destroy(newSource, sound.length);
     }
+
+    public void PlayClipOnPosition(Vector3 position, AudioClip clip) {
+        if(clip == null) {
+            return;
+        }
+
+        AudioSource newSource = gameObject.AddComponent<AudioSource>();
+        newSource.transform.position = position;
+        newSource.spatialBlend = 1f;
+        newSource.dopplerLevel = 0;
+        newSource.clip = clip;
+        newSource.Play();
+        Destroy(newSource, clip.length);
+    }
+
+    public void PlayClip(AudioClip clip) {
+        if(clip == null) {
+            return;
+        }
+
+        AudioSource newSource = gameObject.AddComponent<AudioSource>();
+        newSource.clip = clip;
+        newSource.volume = 0.5f;
+        newSource.Play();
+        Destroy(newSource, clip.length);
+    }
+
+    public void PlayClip(string soundname) {
+        PlayClip(GetCachedAudioClip(soundname));
+    }
+
+    public void BackgroundMusic(bool shouldPlay) {
+        if(shouldPlay && !backgroundSource.isPlaying) {
+            backgroundSource.Play();
+        } else if (!shouldPlay) {
+            backgroundSource.Stop();
+        }
+    }
 }

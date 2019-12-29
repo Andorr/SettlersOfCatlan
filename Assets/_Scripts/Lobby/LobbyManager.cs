@@ -56,7 +56,16 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     }
 
     public void ConnectToServer() {
-        PhotonNetwork.ConnectUsingSettings();
+        if(!PhotonNetwork.IsConnected) {
+            PhotonNetwork.ConnectUsingSettings();
+        } else {
+            this.ActivePanel(menuPanel.name);
+        }
+    }
+
+    public override void OnConnectedToMaster() {
+        Debug.Log("GameVersion: " + PhotonNetwork.GameVersion);
+        Debug.Log("AppVersion: " + PhotonNetwork.AppVersion);
     }
 
     public void CreateNewUser(){
@@ -70,7 +79,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         string gameName = this.gameName.text.Trim();
 
         if(!string.IsNullOrEmpty(gameName)){
-            PhotonNetwork.CreateRoom(gameName, new RoomOptions{ MaxPlayers = 4, PublishUserId = true});
+            Debug.Log("Game created: " + PhotonNetwork.CreateRoom(gameName, new RoomOptions{ MaxPlayers = 4, PublishUserId = true}));
         }
     }
 
@@ -92,7 +101,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     public void FindGame(){
         if(!PhotonNetwork.InLobby){
-            PhotonNetwork.JoinLobby();
+           Debug.Log("Lobby joined: " +  PhotonNetwork.JoinLobby());
         }
         this.ActivePanel(allGamesPanel.name);
     }
@@ -103,12 +112,13 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     public void BackToMenu(){
         if(PhotonNetwork.InLobby){
-            PhotonNetwork.LeaveLobby();
+            Debug.Log("Jobby left: " + PhotonNetwork.LeaveLobby());
         }
         this.ActivePanel(menuPanel.name);
     }
 
     public override void OnRoomListUpdate(List<RoomInfo> roomList){
+        Debug.Log("RoomList: " + roomList.Count);
         ClearRoomList();
 
         roomController.UpdateRooms(roomList);

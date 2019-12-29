@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PathController : MonoBehaviour
 {
+    private AudioController audioController;
+
     [SerializeField]
     public Path path;
 
@@ -13,10 +15,13 @@ public class PathController : MonoBehaviour
     public Transform pathHolder;
     public GameObject selectableIndicator;
 
+    [Header("AudioClips")]
+    public AudioClip buildPathClip;
+
     private bool isSelectable = false;
 
     public void Start() {
-        
+        audioController = GameObject.FindGameObjectWithTag("AudioController").GetComponent<AudioController>();
     }
 
     public void Initialize(Path newPath, float radius)
@@ -43,5 +48,15 @@ public class PathController : MonoBehaviour
         GameObject pathObject = GameObject.Instantiate(pathPrefab, transform.position, Quaternion.Euler(0, angle, 0));
         pathObject.transform.SetParent(pathHolder.transform);
         pathObject.GetComponentInChildren<MeshRenderer>().material.SetColor("_BaseColor", player.GetColor());
+
+        PlaySound();
+    }
+
+    public void PlaySound() {
+        if(buildPathClip == null) {
+            return;
+        }
+
+        audioController.PlayClip(buildPathClip);
     }
 }

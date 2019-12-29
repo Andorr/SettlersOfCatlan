@@ -62,15 +62,16 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
     public void EnableTurn(bool enable)
     {
-        EnableWorkers(enable);
         if(enable) {
             SetState(State.None);
-            uiController.EnableEndTurnButton(true, () => EndTurn());
+            
            
             if(gameController.state == GameController.GameState.PlayersCreateHouses) {
                 mapController.EnableLocationBoxColliders(true);
             } else {
+                uiController.EnableEndTurnButton(true, () => EndTurn());
                 uiController.EnableSideActionPanel(true);
+                EnableWorkers(enable);
             }
         } else {
             SetState(State.WaitForTurn);
