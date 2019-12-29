@@ -49,4 +49,4 @@ MonoBehaviour:
   - RPCMasterCallEndTurn
   - RPCMasterTurnInit
   DisableAutoOpenWizard: 1
-  ShowSettings: 0
+  ShowSettings: 1
