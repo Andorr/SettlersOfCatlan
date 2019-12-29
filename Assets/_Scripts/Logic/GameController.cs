@@ -144,6 +144,7 @@ public class GameController : MonoBehaviour, ITurnCallback
         else if(info.actionType == ActionType.ThiefStoleResource) {
             uiController.DisplayEventText(info.ToString(), 4f);
             uiController.DisplayEventImage(uiController.knight, 4f);
+            audioController.PlayClip("Sounds/Gain", 0.3f);
         }
     }
 

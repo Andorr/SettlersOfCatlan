@@ -51,9 +51,11 @@ public class TradingViewController : MonoBehaviour
         playerSelectPanel.SetActive(true);
         EnableClosability(false);
 
-        for(int i = playerSelectPanel.transform.childCount - 1; i >= 0; i--) {
-            Destroy(playerSelectPanel.transform.GetChild(i));
+        // Delete previous gameObjects
+        foreach(Transform child in playerSelectPanel.transform.GetChild(1).transform) {
+            Destroy(child.gameObject);
         }
+
         foreach(Player p in players) {
             GameObject obj = GameObject.Instantiate(playerCardPrefab, Vector3.zero, Quaternion.identity);
             obj.transform.SetParent(playerSelectPanel.transform.GetChild(1));
