@@ -97,6 +97,10 @@ public class GameController : MonoBehaviour, ITurnCallback
         currentPlayer = players[newPlayer];
         if(currentPlayer.IsMine()) {
             currentPlayer.EnableTurn(true);
+        } else {
+            foreach(PlayerController p in players.Values) {
+                p.EnableTurn(false);
+            }
         }
 
         Debug.Log($"It is now {currentPlayer.player.name}'s turn.");
