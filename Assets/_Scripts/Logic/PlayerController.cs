@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         WorkerMovement,
         PathPlacement,
         HousePlacement,
+        ThiefMovement,
     }
 
     [Header("Player Belongings")]
@@ -81,6 +82,16 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
     public void SetState(State newState)
     {
+        if (newState == State.ThiefMovement) {
+            uiController.EnableEndTurnButton(false, null);
+            uiController.EnableSideActionPanel(false);
+            uiController.EnableActionPanel(false);
+            mapController.EnableLocationBoxColliders(false);
+        } else if (state == State.ThiefMovement) {
+            uiController.EnableEndTurnButton(true, () => EndTurn());
+            uiController.EnableSideActionPanel(true);
+            mapController.EnableLocationBoxColliders(true);
+        }
         state = newState;
     }
 
@@ -121,6 +132,23 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
                 wool = wool,
             });
         }
+    }
+
+    public void CannotStealResources(String stealeeName) {
+        if (photonView.IsMine) {
+            RaiseEvent(ActionType.CannotStealResouce);
+        }
+    }
+
+    public void StealResourceFromPlayer(Player stealee) {
+        var rnd = new System.Random();
+        var from = new ResourceStorage();
+        var to = new ResourceStorage();
+        var namesCount = Enum.GetNames(typeof(ResourceType)).Length;
+        ResourceType type = (ResourceType) rnd.Next(0, namesCount);
+        to.AddResource(type, 1);
+        gameController.ExecuteTrade(stealee, from, to);
+        RaiseEvent(ActionType.ThiefStoleResource, new object[]{type, PhotonNetwork.LocalPlayer.NickName, stealee.name});
     }
 
     # region Player Actions
@@ -171,6 +199,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         if (photonView.IsMine) {
             photonView.RPC("OnMoveThief", RpcTarget.All, newTileId);
         }
+
     }
 
     public void BuildPath(Path path)
@@ -296,6 +325,10 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             switch(card.cardType) {
                 case CardType.Thief: {
                     // TODO: Start thief placement mode
+                    SetState(State.ThiefMovement);
+                    foreach(var tileController in mapController.GetAllTileControllers()) {
+                        tileController.SetSelectable(true);
+                    }
                     break;
                 }
                 case CardType.VP: {
@@ -379,8 +412,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
     [PunRPC]
     public void OnMoveThief(int newTileId) {
-        if (gameController.thiefTileId != null) {
-            TileController oldTile = mapController.GetTileControllerById((int) gameController.thiefTileId);
+        if (gameController.thiefTileId != 0) {
+            TileController oldTile = mapController.GetTileControllerById(gameController.thiefTileId);
             oldTile.RemoveThief(gameController);
         }
         TileController newTile = mapController.GetTileControllerById(newTileId);

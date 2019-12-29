@@ -222,7 +222,7 @@ public class UIController : MonoBehaviour
         var gameController = GetComponent<GameController>();
         var localplayer = gameController.GetPlayers(out var otherPlayers);
         tradingViewController.canCancelWithESC = false;
-        // tradingViewController.EnablePlayerSelect(otherPlayers);
+        tradingViewController.EnablePlayerSelect(otherPlayers, callback);
     }
 
     public void DisableTrading() {

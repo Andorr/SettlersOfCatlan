@@ -33,7 +33,17 @@ public class TileHandler : MonoBehaviour, IActionHandler
             tile.SetSelectable(false);
         }
 
-        var locationsToStealFrom = tileController.tile.locations.Select(location => location.type != State.LocationType.Available && location.occupiedBy != PhotonNetwork.LocalPlayer.UserId);
+        TradingViewController.OnPlayerSelect onPlayerSelect = (State.Player player) => {
+            var from = player.resources;
+            if (from.IsEmpty()) {
+                // Stealing from player with no resources...
+                controller.GetLocalPlayer().CannotStealResources(player.name);
+                return;
+            }
+            controller.GetLocalPlayer().StealResourceFromPlayer(player);
+        };
+
+        var locationsToStealFrom = tileController.tile.locations.Where(location => location.type != State.LocationType.Available && location.occupiedBy != PhotonNetwork.LocalPlayer.UserId);
         if (locationsToStealFrom.Count() != 0) {
             if (locationsToStealFrom.Count() == 1) {
                 // Only one player to steal from
@@ -41,6 +51,10 @@ public class TileHandler : MonoBehaviour, IActionHandler
                 // eks. 'The thief stole 1 *insert resource* from *player name*'
                 // #1 Find player with id
                 // #2 call OnPlayerSelect callback with player
+                var playerId = locationsToStealFrom.First().occupiedBy;
+                controller.GetPlayers(out var otherPlayers);
+                var onlyPlayerToStealFrom = otherPlayers.Where(player => player.id == playerId).First();
+                onPlayerSelect(onlyPlayerToStealFrom);
             } else {
                 // More than one player to steal from, must select one
                 // open ui to pick player and continue with same ui/resource text from player count 1
@@ -49,10 +63,6 @@ public class TileHandler : MonoBehaviour, IActionHandler
         }
     }
 
-    TradingViewController.OnPlayerSelect onPlayerSelect = (State.Player player) => {
-        
-        // player.resources
-    };
 
     public bool OnTryOverride(GameController controller, GameObject other)
     {

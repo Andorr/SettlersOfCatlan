@@ -263,7 +263,7 @@ public class GameController : MonoBehaviour, ITurnCallback
     }
 
     public TileController GetThiefTile() {
-        return thiefTileId != null ? mapController.GetTileControllerById((int) thiefTileId) : null;
+        return thiefTileId != 0 ? mapController.GetTileControllerById((int) thiefTileId) : null;
     }
 
     #endregion

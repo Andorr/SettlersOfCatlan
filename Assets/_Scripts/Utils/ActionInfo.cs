@@ -1,5 +1,6 @@
 using System;
 using State;
+using Photon.Pun;
 
 public class ActionInfo
 {
@@ -54,6 +55,23 @@ public class ActionInfo
                 output += $"exchanged 3 {ResourceUtil.TypeToString(types[0])} for 1 {ResourceUtil.TypeToString(types[1])}";
                 break;
             }
+            case ActionType.ThiefStoleResource: {
+                var temp = (Object[]) data;
+                ResourceType type = (ResourceType) temp[0];
+                String stealer = (string) temp[1];
+                String stealee = (string) temp[2];
+                if (stealer == PhotonNetwork.LocalPlayer.NickName) stealer = "Your";
+                else if (stealee == PhotonNetwork.LocalPlayer.NickName) { stealee = "you"; stealer += "s"; }
+                else stealer += "s";
+
+                output += $"{stealer} thief stole 1 {ResourceUtil.TypeToString(type)} from {stealee}";
+                break;
+            }
+            case ActionType.CannotStealResouce: {
+                String playerName = (string) data;
+                output += $"{playerName} has no resources to steal";
+                break;
+            }
         }
         return output;
     }
@@ -71,4 +89,6 @@ public enum ActionType {
     Traded,
     BuyCard,
     UseCard,
+    ThiefStoleResource,
+    CannotStealResouce,
 }
