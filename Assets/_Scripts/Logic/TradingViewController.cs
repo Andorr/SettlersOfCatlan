@@ -69,6 +69,11 @@ public class TradingViewController : MonoBehaviour
         }
     }
 
+    public void DisablePlayerSelect() {
+        gameObject.SetActive(false);
+        playerSelectPanel.SetActive(false);
+    }
+
     public void EnableExchangePanel() {
         exchangePanel.SetActive(true);
         playerTradePanel.SetActive(false);
