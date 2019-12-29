@@ -230,6 +230,10 @@ public class UIController : MonoBehaviour
         tradingViewController.EnablePlayerSelect(otherPlayers, callback);
     }
 
+    public void DisablePlayerPick() {
+        tradingViewController.DisablePlayerSelect();
+    }
+
     public void DisableTrading() {
         tradingViewController.Disable();
         tradingViewController.canCancelWithESC = true;

@@ -148,10 +148,15 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
     public void StealResourceFromPlayer(Player stealee) {
         var rnd = new System.Random();
+        var stealeeResource = stealee.resources;
         var from = new ResourceStorage();
         var to = new ResourceStorage();
         var namesCount = Enum.GetNames(typeof(ResourceType)).Length;
-        ResourceType type = (ResourceType) rnd.Next(0, namesCount);
+        Func<ResourceType> getType = () => (ResourceType) rnd.Next(0, namesCount);
+        ResourceType type = getType();
+        while (!stealeeResource.HasResource(type, 1)) {
+            type = getType();
+        }
         to.AddResource(type, 1);
         gameController.ExecuteTrade(stealee, from, to);
         RaiseEvent(ActionType.ThiefStoleResource, new object[]{type, PhotonNetwork.LocalPlayer.NickName, stealee.name});

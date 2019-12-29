@@ -146,6 +146,9 @@ public class GameController : MonoBehaviour, ITurnCallback
             uiController.DisplayEventImage(uiController.knight, 4f);
             audioController.PlayClip("Sounds/Gain", 0.3f);
         }
+        else if(info.actionType == ActionType.CannotStealResouce && IsLocalPlayer(player)) {
+            uiController.DisplayEventText("There is no resources to steal.", 3f);
+        }
     }
 
     public void EndGame(Player winner) {

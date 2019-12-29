@@ -66,7 +66,13 @@ public class TradingViewController : MonoBehaviour
                 callback(p);
             });
             obj.GetComponent<EventTrigger>().triggers.Add(entry);
+            obj.GetComponent<Image>().color = p.GetColor();
         }
+    }
+
+    public void DisablePlayerSelect() {
+        gameObject.SetActive(false);
+        playerSelectPanel.SetActive(false);
     }
 
     public void EnableExchangePanel() {
