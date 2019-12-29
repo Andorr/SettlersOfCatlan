@@ -237,7 +237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f51402cd05d4e90acd0ec56bae63ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabHolder: {fileID: 0}
+  soundEffects:
+  - {fileID: 8300000, guid: e005fa82cba7ecd4280915427f4a650c, type: 3}
   state: 0
 --- !u!65 &-4670596218147432465
 BoxCollider:

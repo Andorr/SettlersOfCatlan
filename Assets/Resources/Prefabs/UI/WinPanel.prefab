@@ -511,6 +511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winnerText: {fileID: 8297738109904071960}
   leaveButton: {fileID: 8297738110602610127}
+  winClip: {fileID: 8300000, guid: 3b54d44f31b32c040b018583db5f0f40, type: 3}
 --- !u!114 &8297738111410777579
 MonoBehaviour:
   m_ObjectHideFlags: 0

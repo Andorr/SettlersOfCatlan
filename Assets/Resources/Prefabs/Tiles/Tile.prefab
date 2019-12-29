@@ -258,7 +258,7 @@ MonoBehaviour:
     type: 3}
   hillPrefab: {fileID: 5711558636588302791, guid: 25851ff091448454585b0433a0a10b19,
     type: 3}
-  thiefPrefab: {fileID: 9011678620556378145, guid: 35aa79cb668dd9b4891f071b8afa06c0,
+  thiefPrefab: {fileID: 1462507604382966689, guid: 9c8e41e385e489a44a9c7d8ce57188b0,
     type: 3}
 --- !u!65 &8465788108142940579
 BoxCollider:

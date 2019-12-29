@@ -178,6 +178,7 @@ MonoBehaviour:
     type: 3}
   pathHolder: {fileID: 3609470661032722633}
   selectableIndicator: {fileID: 3609470660695224602}
+  buildPathClip: {fileID: 8300000, guid: 6de3c01b3f70230499ab235da3afc400, type: 3}
 --- !u!114 &7586832319862748012
 MonoBehaviour:
   m_ObjectHideFlags: 0

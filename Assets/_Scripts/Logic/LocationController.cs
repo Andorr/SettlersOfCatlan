@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class LocationController : MonoBehaviour
 {
+    private AudioController audioController;
+
     [SerializeField]
     public Location location;
     public Transform prefabHolder;
@@ -15,7 +17,15 @@ public class LocationController : MonoBehaviour
     public GameObject housePrefab;
     public GameObject cityPrefab;
 
+    [Header("AudioClips")]
+    public AudioClip buildHouseClip;
+    public AudioClip buildCityClip;
+
     private bool isSelectable = false;
+
+    public void Start() {
+        audioController = GameObject.FindGameObjectWithTag("AudioController").GetComponent<AudioController>();
+    }
 
     public void Initialize(Location newLocation, float radius)
     {
@@ -46,6 +56,8 @@ public class LocationController : MonoBehaviour
         houseObject.transform.SetParent(structureHolder.transform);
         houseObject.transform.localPosition = Vector3.zero;
         houseObject.GetComponentInChildren<MeshRenderer>().material.SetColor("_BaseColor", player.GetColor());
+
+        PlaySound(buildHouseClip);
     }
 
     public void BuildCity(Player player)
@@ -69,5 +81,15 @@ public class LocationController : MonoBehaviour
         cityObject.transform.SetParent(structureHolder.transform);
         cityObject.transform.localPosition = Vector3.zero;
         cityObject.GetComponentInChildren<MeshRenderer>().material.SetColor("_BaseColor", player.GetColor());
+
+        PlaySound(buildCityClip);
+    }
+
+    public void PlaySound(AudioClip clip) {
+        if(clip == null) {
+            return;
+        }
+
+        audioController.PlayClip(clip);
     }
 }
