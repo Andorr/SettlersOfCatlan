@@ -53,7 +53,7 @@ public class TileHandler : MonoBehaviour, IActionHandler
                 // #2 call OnPlayerSelect callback with player
                 var playerId = locationsToStealFrom.First().occupiedBy;
                 controller.GetPlayers(out var otherPlayers);
-                var onlyPlayerToStealFrom = otherPlayers.Where(player => player.id == playerId).First();
+                var onlyPlayerToStealFrom = otherPlayers.First();
                 onPlayerSelect(onlyPlayerToStealFrom);
             } else {
                 // More than one player to steal from, must select one

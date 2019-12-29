@@ -84,6 +84,9 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     public void SetState(State newState)
     {
         if (newState == State.ThiefMovement) {
+            foreach(var tileController in mapController.GetAllTileControllers()) {
+                tileController.SetSelectable(true);
+            }
             uiController.EnableEndTurnButton(false, null);
             uiController.EnableSideActionPanel(false);
             uiController.EnableActionPanel(false);
@@ -329,9 +332,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
                 case CardType.Thief: {
                     // TODO: Start thief placement mode
                     SetState(State.ThiefMovement);
-                    foreach(var tileController in mapController.GetAllTileControllers()) {
-                        tileController.SetSelectable(true);
-                    }
                     break;
                 }
                 case CardType.VP: {

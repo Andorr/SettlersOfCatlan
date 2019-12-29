@@ -11,13 +11,7 @@ public class ThiefController : MonoBehaviour {
     public void Start() {
         animator = GetComponent<Animator>();
     }
-
-    public void PlayAnim() {
-        if(animator != null) {
-            animator.SetTrigger("Shrink");
-        }
-    }
-
+    
     public void Update() {
         if (destroyOnFinishedAnimation && !animator.IsInTransition(0)) {
             Destroy(this);
