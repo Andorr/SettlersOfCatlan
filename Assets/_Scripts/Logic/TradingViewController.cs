@@ -46,26 +46,10 @@ public class TradingViewController : MonoBehaviour
         EnableClosability(true);
     }
 
-    private void EnablePlayerSelect(Player[] players) {
-        playerSelectPanel.SetActive(true);
-
-        for(int i = playerSelectPanel.transform.childCount - 1; i >= 0; i--) {
-            Destroy(playerSelectPanel.transform.GetChild(i));
-        }
-        foreach(Player p in players) {
-            GameObject obj = GameObject.Instantiate(playerCardPrefab, Vector3.zero, Quaternion.identity);
-            obj.transform.SetParent(playerSelectPanel.transform.GetChild(1));
-            EventTrigger.Entry entry = new EventTrigger.Entry();
-            entry.eventID = EventTriggerType.PointerClick;
-            entry.callback.AddListener((data) => {
-                playerSelectHandler(p);
-            });
-            obj.GetComponent<EventTrigger>().triggers.Add(entry);
-        }
-    }
-
     public void EnablePlayerSelect(Player[] players, OnPlayerSelect callback) {
+        gameObject.SetActive(true);
         playerSelectPanel.SetActive(true);
+        EnableClosability(false);
 
         for(int i = playerSelectPanel.transform.childCount - 1; i >= 0; i--) {
             Destroy(playerSelectPanel.transform.GetChild(i));
@@ -126,6 +110,7 @@ public class TradingViewController : MonoBehaviour
             tradeRequestViewController.Show(false);
         }
 
+        playerSelectPanel.SetActive(false);
         playerTradePanel.SetActive(false);
         exchangePanel.SetActive(false);
         gameObject.SetActive(false);

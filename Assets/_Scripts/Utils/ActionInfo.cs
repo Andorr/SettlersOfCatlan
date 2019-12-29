@@ -56,7 +56,7 @@ public class ActionInfo
                 break;
             }
             case ActionType.ThiefStoleResource: {
-                var temp = (Object[]) data;
+                var temp = (object[]) data;
                 ResourceType type = (ResourceType) temp[0];
                 String stealer = (string) temp[1];
                 String stealee = (string) temp[2];

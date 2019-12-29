@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             uiController.EnableActionPanel(false);
             mapController.EnableLocationBoxColliders(false);
             EnableWorkers(false);
-        } else if (state == State.ThiefMovement) {
+        } else if (state == State.ThiefMovement && newState != State.WaitForTurn) {
             uiController.EnableEndTurnButton(true, () => EndTurn());
             uiController.EnableSideActionPanel(true);
             mapController.EnableLocationBoxColliders(true);

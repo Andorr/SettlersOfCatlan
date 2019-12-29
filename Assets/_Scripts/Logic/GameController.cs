@@ -141,6 +141,10 @@ public class GameController : MonoBehaviour, ITurnCallback
             uiController.DisplayUsedCard("You", (Card)info.data, "You earned:");
             audioController.PlayClip("Sounds/Card", 0.4f);
         }
+        else if(info.actionType == ActionType.ThiefStoleResource) {
+            uiController.DisplayEventText(info.ToString(), 4f);
+            uiController.DisplayEventImage(uiController.knight, 4f);
+        }
     }
 
     public void EndGame(Player winner) {

@@ -32,6 +32,7 @@ public class UIController : MonoBehaviour
     [Header("Sprites")]
     public Sprite cardVP;
     public Sprite cardKnight;
+    public Sprite knight;
 
     private Dictionary<string, GameObject> playerPanels = new Dictionary<string, GameObject>(); // (playerId, playerPanel)
 
