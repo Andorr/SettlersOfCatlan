@@ -62,7 +62,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
     public void EnableTurn(bool enable)
     {
-        EnableWorkers(enable);
         if(enable) {
             SetState(State.None);
             
@@ -72,6 +71,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             } else {
                 uiController.EnableEndTurnButton(true, () => EndTurn());
                 uiController.EnableSideActionPanel(true);
+                EnableWorkers(enable);
             }
         } else {
             SetState(State.WaitForTurn);

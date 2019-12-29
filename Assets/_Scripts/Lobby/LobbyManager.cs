@@ -56,7 +56,11 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     }
 
     public void ConnectToServer() {
-        PhotonNetwork.ConnectUsingSettings();
+        if(!PhotonNetwork.IsConnected) {
+            PhotonNetwork.ConnectUsingSettings();
+        } else {
+            this.ActivePanel(menuPanel.name);
+        }
     }
 
     public override void OnConnectedToMaster() {

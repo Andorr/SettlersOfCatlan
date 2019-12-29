@@ -81,6 +81,10 @@ public class AudioController : MonoBehaviour
         Destroy(newSource, clip.length);
     }
 
+    public void PlayClip(string soundname) {
+        PlayClip(GetCachedAudioClip(soundname));
+    }
+
     public void BackgroundMusic(bool shouldPlay) {
         if(shouldPlay && !backgroundSource.isPlaying) {
             backgroundSource.Play();

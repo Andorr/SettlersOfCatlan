@@ -34,4 +34,11 @@ public class WinPanelController : MonoBehaviour
         }
         winnerText.text = winner.name + " won!";
     }
+
+    public void OnLeaveButtonClicked() {
+        Photon.Pun.PhotonNetwork.LeaveRoom();
+        Photon.Pun.PhotonNetwork.LeaveLobby();
+
+        SceneController.LoadLobbyScene();
+    }
 }
