@@ -22,6 +22,6 @@ public class SceneController : MonoBehaviour
     }
 
     public static void LoadLobbyScene() {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Lobby");
     }
 }

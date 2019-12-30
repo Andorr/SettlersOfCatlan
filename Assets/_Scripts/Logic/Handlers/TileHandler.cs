@@ -25,7 +25,6 @@ public class TileHandler : MonoBehaviour, IActionHandler
 
     public void OnSelected(GameController controller)
     {
-        Debug.Log("Tile pressed");
         int newTileId = tileController.tile.id;
         controller.GetLocalPlayer().MoveThief(newTileId);
 
@@ -41,9 +40,10 @@ public class TileHandler : MonoBehaviour, IActionHandler
                 return;
             }
             controller.GetLocalPlayer().StealResourceFromPlayer(player);
+            controller.GetLocalPlayer().SetState(PlayerController.State.None);
         };
 
-        var locationsToStealFrom = tileController.tile.locations.Where(location => location.type != State.LocationType.Available && location.occupiedBy != PhotonNetwork.LocalPlayer.UserId);
+        var locationsToStealFrom = tileController.tile.locations.Where(location => location.type != State.LocationType.Available && !PhotonNetwork.LocalPlayer.UserId.Equals(location.occupiedBy));
         if (locationsToStealFrom.Count() != 0) {
             if (locationsToStealFrom.Count() == 1) {
                 // Only one player to steal from
@@ -52,9 +52,10 @@ public class TileHandler : MonoBehaviour, IActionHandler
                 // #1 Find player with id
                 // #2 call OnPlayerSelect callback with player
                 var playerId = locationsToStealFrom.First().occupiedBy;
-                controller.GetPlayers(out var otherPlayers);
-                var onlyPlayerToStealFrom = otherPlayers.First();
-                onPlayerSelect(onlyPlayerToStealFrom);
+                var onlyPlayerToStealFrom = controller.GetPlayerById(playerId);
+                if(onlyPlayerToStealFrom != null) {
+                    onPlayerSelect(onlyPlayerToStealFrom);
+                }
             } else {
                 // More than one player to steal from, must select one
                 // open ui to pick player and continue with same ui/resource text from player count 1
@@ -66,7 +67,7 @@ public class TileHandler : MonoBehaviour, IActionHandler
 
     public bool OnTryOverride(GameController controller, GameObject other)
     {
-        return true;
+        return false;
     }
 
     public void OnUnselected(GameController controller)

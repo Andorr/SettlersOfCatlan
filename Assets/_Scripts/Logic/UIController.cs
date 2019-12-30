@@ -214,24 +214,29 @@ public class UIController : MonoBehaviour
 
     public void EnableCardView(bool enable){
         cardView.SetActive(enable);
+        if(enable) {
+            var gameController = GetComponent<GameController>();
+            gameController.UnselectHandler();
+        }
     }
 
     public void EnableTrading() {
         var gameController = GetComponent<GameController>();
         var localPlayer = gameController.GetPlayers(out var otherPlayers);
-        tradingViewController.canCancelWithESC = true;
+        tradingViewController.EnableClosability(true);
         tradingViewController.ShowTradingPanel(localPlayer, otherPlayers, gameController.ExchangeResources, gameController.SendTradeRequest, gameController.SendTradeRequestCancellation);
+        gameController.UnselectHandler();
     }
 
     public void EnablePlayerPick(TradingViewController.OnPlayerSelect callback) {
         var gameController = GetComponent<GameController>();
         var localplayer = gameController.GetPlayers(out var otherPlayers);
-        tradingViewController.canCancelWithESC = false;
+        tradingViewController.EnableClosability(false);
         tradingViewController.EnablePlayerSelect(otherPlayers, callback);
     }
 
     public void DisablePlayerPick() {
-        tradingViewController.DisablePlayerSelect();
+        tradingViewController.Disable();
     }
 
     public void DisableTrading() {

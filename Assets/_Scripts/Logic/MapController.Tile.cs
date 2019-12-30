@@ -11,4 +11,10 @@ public partial class MapController{
     public TileController GetTileControllerById(int id) {
         return tiles[id].GetComponent<TileController>();
     }
+
+    public void EnableTileBoxColliders(bool enable) {
+        foreach(var tileController in GetAllTileControllers()) {
+            tileController.SetSelectable(enable);
+        }
+    }
 }

@@ -11,7 +11,10 @@ public class GameController : MonoBehaviour, ITurnCallback
     public MapController mapController;
     public UIController uiController;
     public AudioController audioController;
-    public IActionHandler handler;
+
+    private IActionHandler handler;
+    public bool enableHandlers = false;
+    public bool disableEsc = false;
 
     private PlayerController localPlayer { get; set; }
     private Dictionary<string, PlayerController> players;
@@ -19,7 +22,7 @@ public class GameController : MonoBehaviour, ITurnCallback
 
     private int VICTORY_POINTS_TO_WIN = 10;
 
-    public int thiefTileId = 0;
+    public int thiefTileId = -1;
 
     public enum GameState {
         PlayersCreateHouses,
@@ -42,14 +45,14 @@ public class GameController : MonoBehaviour, ITurnCallback
     }
 
     public void Update() {
-        if(uiController.IsUIPanelsOpen()) {
+        if(uiController.IsUIPanelsOpen() || !enableHandlers) {
             return;
         }
 
         if(Input.GetMouseButtonDown(0)) {
             HandleMouseClick();
         }
-        if(Input.GetKeyDown(KeyCode.Escape)) {
+        if(Input.GetKeyDown(KeyCode.Escape) && !disableEsc) {
             UnselectHandler();
         }
         HandleMouseHover();
@@ -97,11 +100,11 @@ public class GameController : MonoBehaviour, ITurnCallback
         currentPlayer = players[newPlayer];
         if(currentPlayer.IsMine()) {
             currentPlayer.EnableTurn(true);
+            enableHandlers = true;
         } else {
-            foreach(PlayerController p in players.Values) {
-                p.EnableTurn(false);
-            }
+            enableHandlers = false;
         }
+        disableEsc = false;
 
         Debug.Log($"It is now {currentPlayer.player.name}'s turn.");
         uiController.DisplayEventText($"It's {currentPlayer.player.name}'s turn!");
@@ -294,7 +297,7 @@ public class GameController : MonoBehaviour, ITurnCallback
     }
 
     public TileController GetThiefTile() {
-        return thiefTileId != 0 ? mapController.GetTileControllerById((int) thiefTileId) : null;
+        return thiefTileId != -1 ? mapController.GetTileControllerById((int) thiefTileId) : null;
     }
 
     #endregion

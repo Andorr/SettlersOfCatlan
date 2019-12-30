@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class WinPanelController : MonoBehaviour
 {
-    private AudioController audioController;
+    public AudioController audioController;
 
     [Header("Panels")]
     public Text winnerText;
@@ -14,10 +14,6 @@ public class WinPanelController : MonoBehaviour
 
     [Header("AudioClips")]
     public AudioClip winClip;
-
-    public void Start() {
-        audioController = GameObject.FindGameObjectWithTag("AudioController").GetComponent<AudioController>();
-    }
 
     public void EnableWinPanel(bool enable, Player winner) 
     {
@@ -27,7 +23,6 @@ public class WinPanelController : MonoBehaviour
             audioController.PlayClip(winClip);
             audioController.BackgroundMusic(false);
         }
-
 
         if(winner == null) {
             return;
