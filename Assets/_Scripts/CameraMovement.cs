@@ -11,6 +11,8 @@ public class CameraMovement : MonoBehaviour
     public float shiftMultiplier = 2;
     public float camSens = 0.25f;
 
+
+
     
     private float distance = 1f;
     private Vector3 lastMouse;

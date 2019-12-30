@@ -190,10 +190,12 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     public void StartGame(){
         var playerList = PhotonNetwork.PlayerList;
+        var mapSeed = UnityEngine.Random.Range(0, 1000);
         // First, give every player a color
         for(int i = 0; i < playerList.Length; i++) {
             var table = new ExitGames.Client.Photon.Hashtable();
             table.Add("Color", Enum.ToObject(typeof(State.PlayerColor), i%4));
+            table.Add("Seed", mapSeed);
             playerList[i].SetCustomProperties(table);
         }
 

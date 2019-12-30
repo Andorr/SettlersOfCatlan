@@ -70,7 +70,7 @@ public class PlayerTradeViewController : MonoBehaviour
         }
 
 
-        if(onTradeRequested != null) {
+        if(onTradeRequested != null && !fromSelected.IsEmpty() && !toSelected.IsEmpty()) {
             waitingForAnswer = true;
             onTradeRequested(selectedPlayer, fromSelected, toSelected);
             ShowTradeView(true);
@@ -86,6 +86,8 @@ public class PlayerTradeViewController : MonoBehaviour
             from[i].transform.GetChild(0).GetComponent<Text>().text = resources[i].ToString();
             from[i].transform.GetChild(1).GetComponent<Text>().text = selected[i].ToString();
         }
+
+        UpdateButton();
     }
 
     private void UpdateToView() {
@@ -96,6 +98,16 @@ public class PlayerTradeViewController : MonoBehaviour
             to[i].GetComponent<LeftRightClickable>().Interactable(resources[i] > 0);
             to[i].transform.GetChild(0).GetComponent<Text>().text = resources[i].ToString();
             to[i].transform.GetChild(1).GetComponent<Text>().text = selected[i].ToString();
+        }
+
+        UpdateButton();
+    }
+
+    private void UpdateButton() {
+        if(!fromSelected.IsEmpty() && !toSelected.IsEmpty()) {
+            requestTradeBtn.interactable = true;
+        } else {
+            requestTradeBtn.interactable = false;
         }
     }
 
@@ -181,6 +193,7 @@ public class PlayerTradeViewController : MonoBehaviour
         } else {
             requestTradeBtn.GetComponentInChildren<Text>().text = "Request trade";
             currentPlayerText.text = $"Trade with {selectedPlayer.name}";
+            UpdateButton();
         }
     }
 

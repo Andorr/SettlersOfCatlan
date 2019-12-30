@@ -40,6 +40,15 @@ public class GameController : MonoBehaviour, ITurnCallback
         
         players = new Dictionary<string, PlayerController>();
 
+        // Initialize seed
+        var player = Photon.Pun.PhotonNetwork.LocalPlayer;
+        if(player != null) {
+            var hasSeed = player.CustomProperties.TryGetValue("Seed", out object value);
+            if(hasSeed && value is int) {
+                mapController.seed = (int)value;
+            }
+        }
+
         mapController.GenerateMap();
         mapController.EnableLocationBoxColliders(false);
     }
@@ -149,7 +158,7 @@ public class GameController : MonoBehaviour, ITurnCallback
             audioController.PlayClip("Sounds/Card", 0.4f);
         }
         else if(info.actionType == ActionType.ThiefStoleResource) {
-            uiController.DisplayEventText(info.ToString(), 4f);
+            uiController.DisplayEventText(info.String(""), 4f);
             uiController.DisplayEventImage(uiController.knight, 4f);
             audioController.PlayClip("Sounds/Gain", 0.3f);
         }
