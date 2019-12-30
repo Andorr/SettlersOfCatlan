@@ -14,7 +14,7 @@ public class ThiefController : MonoBehaviour {
     
     public void Update() {
         if (destroyOnFinishedAnimation && !animator.IsInTransition(0)) {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }

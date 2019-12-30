@@ -189,6 +189,16 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     }
 
     public void StartGame(){
+        var playerList = PhotonNetwork.PlayerList;
+        var mapSeed = UnityEngine.Random.Range(0, 1000);
+        // First, give every player a color
+        for(int i = 0; i < playerList.Length; i++) {
+            var table = new ExitGames.Client.Photon.Hashtable();
+            table.Add("Color", Enum.ToObject(typeof(State.PlayerColor), i%4));
+            table.Add("Seed", mapSeed);
+            playerList[i].SetCustomProperties(table);
+        }
+
         // Here to player starts the game! by clicking the button
         // TODO: Call start turn based
         if (PhotonNetwork.IsMasterClient) {
@@ -214,7 +224,5 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         playerListEntryObject.transform.GetComponentInChildren<Text>().text  = player.NickName;
 
         players.Add(player.ActorNumber, playerListEntryObject);
-
-        player.CustomProperties.Add("Color", Enum.ToObject(typeof(State.PlayerColor), (players.Count - 1)%4));
     }
 }

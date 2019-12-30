@@ -78,25 +78,27 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
             uiController.EnableEndTurnButton(false, null);
             mapController.EnableLocationBoxColliders(false);
             uiController.EnableSideActionPanel(false);
+            EnableWorkers(false);
+            mapController.EnableTileBoxColliders(false);
         }
     }
 
     public void SetState(State newState)
     {
         if (newState == State.ThiefMovement) {
-            foreach(var tileController in mapController.GetAllTileControllers()) {
-                tileController.SetSelectable(true);
-            }
+            mapController.EnableTileBoxColliders(true);
             uiController.EnableEndTurnButton(false, null);
             uiController.EnableSideActionPanel(false);
             uiController.EnableActionPanel(false);
             mapController.EnableLocationBoxColliders(false);
             EnableWorkers(false);
+            gameController.disableEsc = true;
         } else if (state == State.ThiefMovement && newState != State.WaitForTurn) {
             uiController.EnableEndTurnButton(true, () => EndTurn());
             uiController.EnableSideActionPanel(true);
-            mapController.EnableLocationBoxColliders(true);
+            mapController.EnableTileBoxColliders(false);
             EnableWorkers(true);
+            gameController.disableEsc = false;
         }
         state = newState;
     }
@@ -147,14 +149,18 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
     }
 
     public void StealResourceFromPlayer(Player stealee) {
+        if(stealee.resources.IsEmpty()) {
+            return;
+        }
+
         var rnd = new System.Random();
-        var stealeeResource = stealee.resources;
+        var stealeeResources = stealee.resources;
         var from = new ResourceStorage();
         var to = new ResourceStorage();
         var namesCount = Enum.GetNames(typeof(ResourceType)).Length;
         Func<ResourceType> getType = () => (ResourceType) rnd.Next(0, namesCount);
         ResourceType type = getType();
-        while (!stealeeResource.HasResource(type, 1)) {
+        while (!stealeeResources.HasResource(type, 1)) {
             type = getType();
         }
         to.AddResource(type, 1);
@@ -419,7 +425,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
 
     [PunRPC]
     public void OnMoveThief(int newTileId) {
-        if (gameController.thiefTileId != 0) {
+        if (gameController.thiefTileId != -1) {
             TileController oldTile = mapController.GetTileControllerById(gameController.thiefTileId);
             oldTile.RemoveThief(gameController);
         }

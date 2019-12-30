@@ -40,15 +40,12 @@ public class TradingViewController : MonoBehaviour
         this.onTradeCancel = onTradeCancel;
 
         // Select one player to trade with
-        gameObject.SetActive(true);
-        tradePanel.SetActive(true);
         EnableExchangePanel();
         EnableClosability(true);
     }
 
     public void EnablePlayerSelect(Player[] players, OnPlayerSelect callback) {
-        gameObject.SetActive(true);
-        playerSelectPanel.SetActive(true);
+        ActivePanel(playerSelectPanel.name);
         EnableClosability(false);
 
         // Delete previous gameObjects
@@ -64,20 +61,15 @@ public class TradingViewController : MonoBehaviour
             entry.eventID = EventTriggerType.PointerClick;
             entry.callback.AddListener((data) => {
                 callback(p);
+                Disable();
             });
             obj.GetComponent<EventTrigger>().triggers.Add(entry);
             obj.GetComponent<Image>().color = p.GetColor();
         }
     }
 
-    public void DisablePlayerSelect() {
-        gameObject.SetActive(false);
-        playerSelectPanel.SetActive(false);
-    }
-
     public void EnableExchangePanel() {
-        exchangePanel.SetActive(true);
-        playerTradePanel.SetActive(false);
+        ActivePanel(exchangePanel.name);
         exchangePanel.GetComponent<ExchangeViewController>().Initialize(localPlayer.resources, (resourceA, resourceB) => {
             if(onExchange != null) {
                 onExchange(resourceA, resourceB);
@@ -91,8 +83,7 @@ public class TradingViewController : MonoBehaviour
             return;
         }
 
-        exchangePanel.SetActive(false);
-        playerTradePanel.SetActive(true);
+        ActivePanel(playerTradePanel.name);
         playerTradePanel.GetComponent<PlayerTradeViewController>().Initialize(localPlayer, playersToTradeWith, (playerToTradeWith, resourceA, resourceB) => {
             if(onTradeRequestSent != null) {
                 onTradeRequestSent(playerToTradeWith, resourceA, resourceB);
@@ -106,7 +97,7 @@ public class TradingViewController : MonoBehaviour
         });
     }
 
-    private void EnableClosability(bool enable) {
+    public void EnableClosability(bool enable) {
         canCancelWithESC = enable;
         foreach(Button b in tabs.GetComponentsInChildren<Button>()) {
             b.interactable = enable;
@@ -119,10 +110,7 @@ public class TradingViewController : MonoBehaviour
             tradeRequestViewController.Show(false);
         }
 
-        playerSelectPanel.SetActive(false);
-        playerTradePanel.SetActive(false);
-        exchangePanel.SetActive(false);
-        gameObject.SetActive(false);
+        ActivePanel(null);
     }
 
     public void Update() {
@@ -133,5 +121,15 @@ public class TradingViewController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape)) {
             Disable();
         }
+    }
+
+    private void ActivePanel(string panelName) {
+        gameObject.SetActive(panelName != null);
+        
+        playerSelectPanel.SetActive(playerSelectPanel.name.Equals(panelName));
+
+        playerTradePanel.SetActive(playerTradePanel.name.Equals(panelName));
+        exchangePanel.SetActive(exchangePanel.name.Equals(panelName));
+        tradePanel.SetActive(playerTradePanel.name.Equals(panelName) || exchangePanel.name.Equals(panelName));
     }
 }
