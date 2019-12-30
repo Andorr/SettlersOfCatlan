@@ -16,6 +16,7 @@ public class UIController : MonoBehaviour
     public Image eventImage;
     public GameObject sideActionPanel;
     public GameObject cardView;
+    public GameObject resourceTAB;
     public WinPanelController winPanel;
     public ResourceItemController resourceItemController;
     public TradingViewController tradingViewController;
@@ -43,6 +44,14 @@ public class UIController : MonoBehaviour
         playerTwoPanel.SetActive(false);
         playerThreePanel.SetActive(false);
         playerFourPanel.SetActive(false);
+    }
+
+    void Update(){
+        if(Input.GetKey(KeyCode.Tab)){
+            resourceTAB.SetActive(true);
+        }else{
+            resourceTAB.SetActive(false);
+        }
     }
 
     public bool AddPlayer(Player player, string nickName) {
