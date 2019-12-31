@@ -26,9 +26,17 @@ public class WorkerController : MonoBehaviour
         audioController = GameObject.FindGameObjectWithTag("AudioController").GetComponent<AudioController>();
     }
 
-    public void Initialize(Worker newWorker)
+    public void Initialize(Worker newWorker, Player player)
     {
         worker = newWorker;
+
+        // Set warhammer color
+        if(transform.childCount >= 1 && transform.GetChild(0).childCount >= 2) {
+            var hammer = transform.GetChild(0).GetChild(1);
+            var material = new Material(Shader.Find("Universal Render Pipeline/Lit"));
+            material.SetColor("_BaseColor", player.GetColor());
+            hammer.GetComponent<MeshRenderer>().material = material;
+        }
     }
 
     public void MoveWorker(Location location)
@@ -50,9 +58,11 @@ public class WorkerController : MonoBehaviour
 
     private IEnumerator MoveWorkerWithAnim(Location location)
     {
-        
+        var oldPosition = transform.position;
+
         anim.SetTrigger("Shrink");
         yield return new WaitForSeconds(1);
+        transform.LookAt((location.position - oldPosition).normalized + location.position, Vector3.up);
         transform.position = location.position;
         anim.SetTrigger("Grow");
     }

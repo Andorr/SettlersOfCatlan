@@ -180,7 +180,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunInstantiateMagicC
         // Initialize worker in scene
         GameObject workerObject = GameObject.Instantiate(workerPrefab, location.position, Quaternion.identity);
         WorkerController workerController = workerObject.GetComponent<WorkerController>();
-        workerController.Initialize(worker);
+        workerController.Initialize(worker, player);
         workers.Add(workerController);
         workerController.EnableWorker(photonView.IsMine);
         mapController.AddWorkerToMap(worker);
