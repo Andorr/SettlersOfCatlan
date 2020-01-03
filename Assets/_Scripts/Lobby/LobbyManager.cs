@@ -126,9 +126,6 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
         foreach(RoomInfo room in cacheRoomList.Values)
         {
-            if(!room.IsOpen) {
-                continue;
-            }
 
             GameObject roomListEntryGameObject = Instantiate(listObject);
 
