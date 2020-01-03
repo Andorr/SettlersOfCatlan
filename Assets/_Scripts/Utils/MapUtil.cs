@@ -77,7 +77,7 @@ public static class MapUtil
             Tile tile = new Tile() {
                 id = currentTileId,
                 position = l,
-                value = UnityEngine.Random.Range(2, 10),
+                value = UnityEngine.Random.Range(2, 11), // Random number in [2, 10]
             };
             currentTileId++;
             
