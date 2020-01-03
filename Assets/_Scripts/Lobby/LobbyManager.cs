@@ -126,6 +126,10 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
         foreach(RoomInfo room in cacheRoomList.Values)
         {
+            if(!room.IsOpen) {
+                continue;
+            }
+
             GameObject roomListEntryGameObject = Instantiate(listObject);
 
             roomListEntryGameObject.transform.SetParent(listParent.transform);
@@ -200,6 +204,8 @@ public class LobbyManager : MonoBehaviourPunCallbacks
             table.Add("Seed", mapSeed);
             playerList[i].SetCustomProperties(table);
         }
+
+        PhotonNetwork.CurrentRoom.IsOpen = false;
 
         // Here to player starts the game! by clicking the button
         // TODO: Call start turn based
