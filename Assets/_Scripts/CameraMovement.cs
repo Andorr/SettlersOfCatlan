@@ -11,8 +11,8 @@ public class CameraMovement : MonoBehaviour
     public float shiftMultiplier = 2;
     public float camSens = 0.25f;
 
-
-
+    public float minHeight = 0.2f;
+    public float maxHeight = 14f;
     
     private float distance = 1f;
     private Vector3 lastMouse;
@@ -37,7 +37,8 @@ public class CameraMovement : MonoBehaviour
     void Update() 
     {
         if (Input.mouseScrollDelta.y != 0) {
-            distance = Mathf.Clamp(distance - Input.mouseScrollDelta.y / 3, 0.2f, 50);
+            distance = Mathf.Clamp(distance - Input.mouseScrollDelta.y / 3, minHeight, maxHeight);
+            this.transform.position = new Vector3(this.transform.position.x, distance, this.transform.position.z);
         }
 
         Vector3 input = GetBaseInput() * speed;
@@ -52,6 +53,7 @@ public class CameraMovement : MonoBehaviour
         newPosition.z = transform.position.z;
         transform.position = newPosition;
 
+        // Add rotation
         float rotY = 0f;
         if(Input.GetKey(KeyCode.E)) {
             rotY += 1f;
