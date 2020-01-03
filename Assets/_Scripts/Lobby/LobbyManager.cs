@@ -134,9 +134,11 @@ public class LobbyManager : MonoBehaviourPunCallbacks
             roomListEntryGameObject.transform.Find("nameValue").GetComponent<Text>().text = room.Name;
             roomListEntryGameObject.transform.Find("playerValue").GetComponent<Text>().text = room.PlayerCount + "/" + room.MaxPlayers;
             roomListEntryGameObject.transform.Find("openValue").GetComponent<Text>().text = room.IsOpen ? "Open" :  "Closed";
+            if(room.IsOpen){
             roomListEntryGameObject.GetComponent<Clickable>().OnClick += () => {
                 PhotonNetwork.JoinRoom(room.Name);
             };
+            }
             roomListGameObjects.Add(room.Name, roomListEntryGameObject);
         }
     }
