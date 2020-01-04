@@ -24,6 +24,10 @@ public class TurnManager : MonoBehaviour, ITurnManager
     private static string currentPlayerTurn = ""; // Saved for every client
     private static Player currentPlayer; // Saved for master client only
 
+    private HashSet<string> readyPlayers = new HashSet<string>(); // Saved for master client only
+
+    private HashSet<string> totalPlayers; // Saved for master client only
+
     
 
     // Start is called before the first frame update
@@ -31,11 +35,22 @@ public class TurnManager : MonoBehaviour, ITurnManager
     {
         photonView = GetComponent<PhotonView>();
         if (PhotonNetwork.IsMasterClient && photonView.IsMine) {
-            // TODO: Wait for all players to load the game scene before calling StartTurnBased().
-            // This is only a temporary solution.
-            StartCoroutine(WaitAndStartTurnedBased(2f));
+            totalPlayers = new HashSet<string>(PhotonNetwork.PlayerList.Select(player => player.UserId));
+        }
+        photonView.RPC("RPCRegisterReadyPlayer", RpcTarget.AllBufferedViaServer, PhotonNetwork.LocalPlayer.UserId);
+    }
+
+    [PunRPC]
+    void RPCRegisterReadyPlayer(string userId) {
+        if (PhotonNetwork.IsMasterClient && photonView.IsMine) {
+            readyPlayers.Add(userId);
+            if (totalPlayers.SetEquals(readyPlayers)) {
+                StartCoroutine(WaitAndStartTurnedBased(0.2f));
+            }
         }
     }
+
+
 
     private IEnumerator WaitAndStartTurnedBased(float duration) {
         yield return new WaitForSeconds(duration);
