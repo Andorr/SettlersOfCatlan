@@ -22,6 +22,7 @@ public class SceneController : MonoBehaviour
     }
 
     public static void LoadLobbyScene() {
+        PhotonNetwork.LeaveRoom();
         SceneManager.LoadScene("Lobby");
     }
 }
