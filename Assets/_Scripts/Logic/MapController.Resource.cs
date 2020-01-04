@@ -28,7 +28,7 @@ public partial class MapController
 
             foreach(var l in playerLocations) {
                 // Decide if the resource should given to the player from this location, based on randomness and the tile number
-                var rollDice = Random.Range(1, 5) + Random.Range(1, 5);
+                var rollDice = Random.Range(1, 6) + Random.Range(1, 6); // Simulates the throw of two 5-sided dice. Number between 2-10
 
                 // Two resource for a city and one for a house
                 if(rollDice == tile.value) {

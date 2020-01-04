@@ -126,6 +126,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
         foreach(RoomInfo room in cacheRoomList.Values)
         {
+
             GameObject roomListEntryGameObject = Instantiate(listObject);
 
             roomListEntryGameObject.transform.SetParent(listParent.transform);
@@ -134,9 +135,11 @@ public class LobbyManager : MonoBehaviourPunCallbacks
             roomListEntryGameObject.transform.Find("nameValue").GetComponent<Text>().text = room.Name;
             roomListEntryGameObject.transform.Find("playerValue").GetComponent<Text>().text = room.PlayerCount + "/" + room.MaxPlayers;
             roomListEntryGameObject.transform.Find("openValue").GetComponent<Text>().text = room.IsOpen ? "Open" :  "Closed";
+            if(room.IsOpen){
             roomListEntryGameObject.GetComponent<Clickable>().OnClick += () => {
                 PhotonNetwork.JoinRoom(room.Name);
             };
+            }
             roomListGameObjects.Add(room.Name, roomListEntryGameObject);
         }
     }
@@ -198,6 +201,8 @@ public class LobbyManager : MonoBehaviourPunCallbacks
             table.Add("Seed", mapSeed);
             playerList[i].SetCustomProperties(table);
         }
+
+        PhotonNetwork.CurrentRoom.IsOpen = false;
 
         // Here to player starts the game! by clicking the button
         // TODO: Call start turn based
